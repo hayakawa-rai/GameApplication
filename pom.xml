@@ -3,4 +3,43 @@
   <groupId>sample</groupId>
   <artifactId>Game</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  <name>Game</name>
+  <url>http://maven.apache.org</url>
+ <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <!-- JavaFX の依存関係 -->
+  <dependencies>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-controls</artifactId>
+          <version>21</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-fxml</artifactId>
+          <version>21</version>
+      </dependency>
+  </dependencies>
+
+  <!-- ★ ここを追加する：JavaFX 実行プラグイン -->
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.openjfx</groupId>
+              <artifactId>javafx-maven-plugin</artifactId>
+              <version>0.0.8</version>
+              <configuration>
+                  <mainClass>test</mainClass>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+
 </project>
