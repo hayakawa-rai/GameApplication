@@ -50,18 +50,35 @@ public class gameover extends Application {
 				"-fx-font-size: 22px;" +
 				"-fx-background-radius: 10;";
 				
-		//ボタン作成
-		Button retryBtn = new Button("練習画面へ戻る");
+		//練習画面へ戻る
+		Button retryBtn = new Button("練習画面へ");
 		retryBtn.setPrefSize(300, 70);
 		retryBtn.setStyle(buttonStyle);
 		retryBtn.setOnMouseEntered(e -> retryBtn.setStyle(buttonHoverStyle));
 		retryBtn.setOnMouseExited(e -> retryBtn.setStyle(buttonStyle));
+		retryBtn.setOnAction(e -> {
+			practice practiceScreen = new practice();
+			try {
+				practiceScreen.start(stage);
+			}catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		});
 
-		Button titleBtn = new Button("タイトルへ戻る");
+		//タイトル画面へ戻る
+		Button titleBtn = new Button("タイトルへ");
 		titleBtn.setPrefSize(300, 70);
 		titleBtn.setStyle(buttonStyle);
 		titleBtn.setOnMouseEntered(e -> titleBtn.setStyle(buttonHoverStyle));
 		titleBtn.setOnMouseExited(e -> titleBtn.setStyle(buttonStyle));
+		titleBtn.setOnAction(e -> {
+			start titleScreen = new start();
+			try {
+				titleScreen.start(stage);
+			}catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		});
 
 		//ボタンを縦に並べる
 		VBox buttonColumn = new VBox(20, retryBtn, titleBtn);
