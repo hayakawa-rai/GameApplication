@@ -98,8 +98,4 @@ public class test extends Application {
         launch(args);
     }
 }
-	//6/16日だよ
-	//早川です
-	//成田大和大国女王小川ちぃ
-	//あいうえお
-	//和田だよ
+
