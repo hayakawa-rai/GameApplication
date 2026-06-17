@@ -76,6 +76,14 @@ public class start extends Application{
 
         Button btn2 = new Button("練習モード");
         btn2.setPrefSize(200, 50);  //練習モードボタン作成
+
+
+        btn2.setOnAction(e -> {
+        Stage prac = (Stage) btn2.getScene().getWindow();
+        prac.setScene(practice.createScene());
+});
+
+
         
         Button btn3 = new Button("無限モード");
         btn3.setPrefSize(200, 50);  //無限モードボタン作成
@@ -87,10 +95,9 @@ public class start extends Application{
         ui.getChildren().addAll(imageView, buttonBox);
         root.getChildren().addAll(bgPane,ui);
         
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,800,600);
         stage.setTitle("スタート画面");//画面の名前
         stage.setScene(scene);
-        stage.setFullScreen(true);
         stage.show();
     }
 

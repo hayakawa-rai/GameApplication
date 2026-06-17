@@ -15,9 +15,7 @@ import javafx.stage.Stage;
 
 public class practice extends Application {
 
-		@Override
-		public void start(Stage stage) {
-			
+			public static Scene createScene() {
 			//タイトル
 			Label title = new Label("練習モード");
 			title.setStyle("-fx-font-size: 40px; -fx-font-weight: bold;");
@@ -56,7 +54,7 @@ public class practice extends Application {
 			
 			//背景
 			Image bgImage = new Image(
-					getClass().getResource("/background.png").toExternalForm()
+					practice.class.getResource("/background.png").toExternalForm()
 					);
 			
 			ImageView bg1 = new ImageView(bgImage);
@@ -100,8 +98,15 @@ public class practice extends Application {
 			
 			root.getChildren().addAll(bgPane, ui);
 			
-			Scene scene = new Scene(root, 500, 400);
-			stage.setScene(scene);
+			Scene scene = new Scene(root, 800, 600);
+			return scene;
+}
+
+			// ★これは残す（ここは短くする）
+			@Override
+			public void start(Stage stage) {
+
+			stage.setScene(createScene());
 			stage.setTitle("練習モード");
 			stage.show();
 			
