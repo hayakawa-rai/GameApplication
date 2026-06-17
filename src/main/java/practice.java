@@ -14,117 +14,120 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class practice extends Application {
-	
-	private Stage stage;
-	
-	@Override
-	public void start(Stage stage) {
-		this.stage = stage;
-		stage.setScene(createScene());
-		stage.setTitle("練習モード");
-		stage.show();
-	}
 
-	public Scene createScene() {
+    private Stage stage;
 
-		//タイトル
-		Label title = new Label("練習モード");
-		title.setStyle("-fx-font-size: 40px; -fx-font-weight: bold;");
+    @Override
+    public void start(Stage stage) {
+        this.stage = stage;
+        stage.setScene(createScene());
+        stage.setTitle("練習モード");
+        stage.show();
+    }
 
-		//ステージ選択
-		Button stage1 = new Button("STAGE 1");
-		Button stage2 = new Button("STAGE 2");
-		Button stage3 = new Button("STAGE 3");
+    public Scene createScene() {
 
-		stage1.setPrefWidth(400);
-		stage2.setPrefWidth(400);
-		stage3.setPrefWidth(400);
+        // タイトル
+        Label title = new Label("練習モード");
+        title.setStyle("-fx-font-size: 40px; -fx-font-weight: bold;");
 
-		stage1.setPrefHeight(80);
-		stage2.setPrefHeight(80);
-		stage3.setPrefHeight(80);
+        // ステージ選択
+        Button stage1 = new Button("STAGE 1");
+        Button stage2 = new Button("STAGE 2");
+        Button stage3 = new Button("STAGE 3");
+        
 
-		stage1.setStyle(
-				"-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px;");
-		stage2.setStyle(
-				"-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px;");
-		stage3.setStyle(
-				"-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px;");
+        stage1.getStyleClass().add("game-button");
+        stage2.getStyleClass().add("game-button");
+        stage3.getStyleClass().add("game-button");
 
-		VBox stageButtons = new VBox(20, stage1, stage2, stage3);
-		stageButtons.setAlignment(Pos.CENTER);
+        stage1.setPrefWidth(400);
+        stage2.setPrefWidth(400);
+        stage3.setPrefWidth(400);
 
-		//タイトルへ戻る
-		Button backButton = new Button("タイトルへ");
-		backButton.setStyle(
-				"-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px;");
-		backButton.setPrefHeight(60);
-		backButton.setPrefWidth(200);
-		backButton.setOnAction(e -> {
-			start titleScreen = new start();
-			try {
-				titleScreen.start(stage);
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-		});
+        stage1.setPrefHeight(80);
+        stage2.setPrefHeight(80);
+        stage3.setPrefHeight(80);
 
-		HBox backBox = new HBox(backButton);
-		backBox.setAlignment(Pos.BOTTOM_RIGHT);
-		backBox.setStyle("-fx-padding: 20px;");
+        VBox stageButtons = new VBox(20, stage1, stage2, stage3);
+        stageButtons.setAlignment(Pos.CENTER);
+        
+        // 戻るボタン
+        Button backButton = new Button("タイトルへ");
+        backButton.getStyleClass().add("game-button");
+        backButton.setPrefHeight(60);
+        backButton.setPrefWidth(200);
 
-		//背景
-		Image bgImage = new Image(
-				practice.class.getResource("/background.png").toExternalForm());
+        // ★ master側の処理を残す
+        backButton.setOnAction(e -> {
+            start titleScreen = new start();
+            try {
+                titleScreen.start(stage);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
 
-		ImageView bg1 = new ImageView(bgImage);
-		ImageView bg2 = new ImageView(bgImage);
+        HBox backBox = new HBox(backButton);
+        backBox.setAlignment(Pos.BOTTOM_RIGHT);
+        backBox.setStyle("-fx-padding: 20px;");
 
-		bg2.setLayoutX(bgImage.getWidth());
+        // 背景
+        Image bgImage = new Image(
+                practice.class.getResource("/background.png").toExternalForm()
+        );
 
-		//アニメーション
-		AnimationTimer timer = new AnimationTimer() {
+        ImageView bg1 = new ImageView(bgImage);
+        ImageView bg2 = new ImageView(bgImage);
 
-			@Override
-			public void handle(long now) {
-				bg1.setLayoutX(bg1.getLayoutX() - 1);
-				bg2.setLayoutX(bg2.getLayoutX() - 1);
-				if (bg1.getLayoutX() + bgImage.getWidth() <= 0) {
-					bg1.setLayoutX(bg2.getLayoutX() + bgImage.getWidth());
-				}
-				if (bg2.getLayoutX() + bgImage.getWidth() <= 0) {
-					bg2.setLayoutX(bg1.getLayoutX() + bgImage.getWidth());
-				}
+        bg2.setLayoutX(bgImage.getWidth());
 
-			}
-		};
-		timer.start();
+        // アニメーション
+        AnimationTimer timer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                bg1.setLayoutX(bg1.getLayoutX() - 1);
+                bg2.setLayoutX(bg2.getLayoutX() - 1);
 
-		StackPane root = new StackPane();
+                if (bg1.getLayoutX() + bgImage.getWidth() <= 0) {
+                    bg1.setLayoutX(bg2.getLayoutX() + bgImage.getWidth());
+                }
+                if (bg2.getLayoutX() + bgImage.getWidth() <= 0) {
+                    bg2.setLayoutX(bg1.getLayoutX() + bgImage.getWidth());
+                }
+            }
+        };
+        timer.start();
 
-		// 背景用（自由に動かす）
-		Pane bgPane = new Pane();
-		bgPane.getChildren().addAll(bg1, bg2);//背景配置
+        StackPane root = new StackPane();
 
-		//レイアウト
-		VBox titleBox = new VBox(title);
-		titleBox.setAlignment(Pos.CENTER);
-		titleBox.setStyle("-fx-padding: 200px 0 20px 0;");
+        Pane bgPane = new Pane();
+        bgPane.getChildren().addAll(bg1, bg2);
 
-		BorderPane ui = new BorderPane();
-		ui.setTop(titleBox);
-		ui.setCenter(stageButtons);
-		ui.setBottom(backBox);
+        VBox titleBox = new VBox(title);
+        titleBox.setAlignment(Pos.CENTER);
+        titleBox.setStyle("-fx-padding: 200px 0 20px 0;");
 
-		root.getChildren().addAll(bgPane, ui);
+        BorderPane ui = new BorderPane();
+        ui.setTop(titleBox);
+        ui.setCenter(stageButtons);
+        ui.setBottom(backBox);
+        
 
+        root.getChildren().addAll(bgPane, ui);
+        
 		Scene scene = new Scene(root, 800, 600);
+		
+		 scene.getStylesheets().add(
+        		getClass().getResource("/style.css").toExternalForm()
+        );
+
 		return scene;
 	}
-		
 
-	public static void main(String[] args) {
-		launch();
-	}
+     
 
+    public static void main(String[] args) {
+        launch();
+    }
 }
