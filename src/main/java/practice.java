@@ -118,7 +118,7 @@ public class practice extends Application {
 
 		root.getChildren().addAll(bgPane, ui);
 
-		Scene scene = new Scene(root, 500, 400);
+		Scene scene = new Scene(root, 800, 600);
 		return scene;
 	}
 		
