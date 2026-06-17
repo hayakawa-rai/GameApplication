@@ -112,18 +112,20 @@ public class practice extends Application {
         ui.setTop(titleBox);
         ui.setCenter(stageButtons);
         ui.setBottom(backBox);
+        
 
         root.getChildren().addAll(bgPane, ui);
-
-
-        Scene scene = new Scene(root, 800, 600);
-
-        scene.getStylesheets().add(
+        
+		Scene scene = new Scene(root, 800, 600);
+		
+		 scene.getStylesheets().add(
         		getClass().getResource("/style.css").toExternalForm()
         );
 
-        return scene;// master側のサイズを採用
-    }
+		return scene;
+	}
+
+     
 
     public static void main(String[] args) {
         launch();
