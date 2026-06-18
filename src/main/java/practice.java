@@ -61,6 +61,10 @@ public class practice extends Application {
 		VBox stageButtons = new VBox(20, stage1, stage2, stage3);
 		stageButtons.setAlignment(Pos.CENTER);
 
+		public static void main(String[] args) {
+			launch();
+		
+
 		
 		// タイトルへ戻るボタン
 		Button backButton = new Button("タイトルへ");

@@ -115,6 +115,7 @@ public class gameover extends Application {
 		//シーン作成
 		Scene scene = new Scene(root, 800, 600);
 		
+		
 		scene.getStylesheets().add(gameover.class.getResource("/gameover.css").toExternalForm());
 
 		return scene;
