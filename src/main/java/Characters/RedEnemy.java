@@ -7,7 +7,7 @@ public class RedEnemy extends Enemy {
 	}
 	
 	@Override
-	public void move(Map map, Sengoku, sengoku) {
+	public void move(Map map, Sengoku sengoku){
 		
 		int dx = sengoku.getX() - x;
 		int dy = sengoku.getY() - y;
