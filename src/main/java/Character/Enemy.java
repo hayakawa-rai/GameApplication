@@ -9,8 +9,12 @@ public class Enemy extends Character{
 	private final double bliockSize = 28.0;
 	private final double characterSize = 24.0;
 	
-	//状態ごとの画像
-	private final Image normalImage
+	//状態ごとの画像(こんな感じで書く(多分))
+	//Image img = new Image(Chii.class.getResourceAsStream("/Chii.png"));通常状態敵
+	//Image img = new Image(Chii.class.getResourceAsStream("/Chii.png"));パワーアイテムを取得して逃げてる敵
+	//Image img = new Image(Chii.class.getResourceAsStream("/Chii.png"));食べられて初期地点に戻る敵
+	
+	//コンストラクタ
 	
 	
 
