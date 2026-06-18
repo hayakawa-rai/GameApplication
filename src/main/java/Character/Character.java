@@ -1,39 +1,40 @@
 package Character;
 
 public abstract class Character {
-	
-	private int x; //左右移動
-	private int y; //上下移動
-	
-	private int speed; //移動速度　定義
-	private Direction direction; //現在向いている方向
-	
 
-	public Character(int speed) { //コンストラクタ
-        this.speed = speed;
-    }
+	protected int x; // 現在のX座標(左右移動)
+	protected int y; // 現在のY座標（上下位置）
+	protected int speed; // 移動速度
+	protected Direction direction; // キャラクターが現在向いている方向
 
-	public void move() {         //キャラクターの移動処理
-		switch(direction) {
-			case UP:
-				y -= speed; // 上へ移動
-                break;
-
-            case DOWN:
-                y += speed; // 下へ移動
-                break;
-
-            case LEFT:
-                x -= speed; // 左へ移動
-                break;
-
-            case RIGHT:
-                x += speed; // 右へ移動
-                break;
-
-            case NONE: //不動
-                break;
-
-		}
+	public Character(int x, int y, int speed) {
+		this.x = x; // 初期X座標
+		this.y = y; // 初期Y座標
+		this.speed = speed; // 初期移動速度
+		this.direction = Direction.NONE; // 初期状態では停止
 	}
+
+	// 追加のコンストラクタ：速さデフォルトを 1 にして、Sengoku の呼び出しと互換性を持たせる
+	public Character(int x, int y) {
+		this(x, y, 1);
+	}
+
+	public int getX() {  //子クラスからx座標の情報をGET
+		return x;
+	}
+
+	public int getY() {  //子クラスからy座標の情報をGET
+		return y;
+	}
+
+	public int getSpeed() {  //子クラスから速度の情報をGET
+		return speed;
+	}
+
+	public Direction getDirection() {  //子クラスから向いている方向の情報をGET
+		return direction;
+	}
+
+	// キャラクターを移動させる処理
+	public abstract void move();
 }

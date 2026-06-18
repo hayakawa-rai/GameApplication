@@ -101,6 +101,8 @@ public class start extends Application {
 		//(e->:クリックされたら実行される処理を書いていくという記号)
 		btn2.setOnAction(e -> {
 			try {
+				// stop the title background timer before switching to practice
+				timer.stop();
 				//practiceクラスのインスタンス化とそのクラスのstart()の呼び出しを同時に実行
 				//現在と同じウィンドウを使用するためstageを渡す
 				new practice().start(stage);
@@ -130,7 +132,7 @@ public class start extends Application {
         Scene scene = new Scene(root,1000,800);
         //CSSを接続
         scene.getStylesheets().add(
-        	    getClass().getResource("/style.css").toExternalForm()
+         	    getClass().getResource("/style.css").toExternalForm()
         );
         //ウィンドウの名前を設定
         stage.setTitle("スタート画面");

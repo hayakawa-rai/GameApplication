@@ -1,5 +1,9 @@
 package Item;
 import Character.Sengoku;
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 import javafx.scene.Node;
 
 public abstract class Item {
