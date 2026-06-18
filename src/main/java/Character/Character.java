@@ -14,16 +14,12 @@ public abstract class Character {
 		this.direction = Direction.NONE; // 初期状態では停止
 	}
 
-<<<<<<< HEAD
 	// 追加のコンストラクタ：速さデフォルトを 1 にして、Sengoku の呼び出しと互換性を持たせる
 	public Character(int x, int y) {
 		this(x, y, 1);
 	}
 
-	public int getX() {
-=======
 	public int getX() {  //子クラスからx座標の情報をGET
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 		return x;
 	}
 
