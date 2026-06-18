@@ -15,7 +15,9 @@ public class Enemy extends Character{
 	//Image img = new Image(Chii.class.getResourceAsStream("/Chii.png"));食べられて初期地点に戻る敵
 	
 	//コンストラクタ
-	
-	
+	public Enemy(ImageView imageView,double x,double y,int speed) {
+		super(imageView,x,y,speed);
+		this.imageView.setImage(normalImage);
+	}
 
 }
