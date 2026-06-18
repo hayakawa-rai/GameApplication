@@ -38,15 +38,17 @@ public class practice extends Application {
 
 
 
-		// ステージ選択
+		// ステージ選択ボタン
 		Button stage1 = new Button("STAGE 1");
 		Button stage2 = new Button("STAGE 2");
 		Button stage3 = new Button("STAGE 3");
 
+		//CSSクラスの適用
 		stage1.getStyleClass().add("game-button");
 		stage2.getStyleClass().add("game-button");
 		stage3.getStyleClass().add("game-button");
 
+		//ボタンサイズ統一
 		stage1.setPrefWidth(400);
 		stage2.setPrefWidth(400);
 		stage3.setPrefWidth(400);
@@ -54,17 +56,19 @@ public class practice extends Application {
 		stage1.setPrefHeight(80);
 		stage2.setPrefHeight(80);
 		stage3.setPrefHeight(80);
-
+		
+		//ボタンを縦に並べる
 		VBox stageButtons = new VBox(20, stage1, stage2, stage3);
 		stageButtons.setAlignment(Pos.CENTER);
 
-		// 戻るボタン
+		
+		// タイトルへ戻るボタン
 		Button backButton = new Button("タイトルへ");
 		backButton.getStyleClass().add("game-button");
 		backButton.setPrefHeight(60);
 		backButton.setPrefWidth(200);
 
-		// ★ master側の処理を残す
+		// 画面遷移：start画面へ
 		backButton.setOnAction(e -> {
 			start titleScreen = new start();
 			try {
@@ -73,11 +77,15 @@ public class practice extends Application {
 				ex.printStackTrace();
 			}
 		});
+		
 
+		//右下に配置
 		HBox backBox = new HBox(backButton);
 		backBox.setAlignment(Pos.BOTTOM_RIGHT);
 		backBox.setStyle("-fx-padding: 20px;");
 
+		
+		
 		// 背景
 		Image bgImage = new Image(
 				practice.class.getResource("/background.png").toExternalForm());
@@ -85,15 +93,20 @@ public class practice extends Application {
 		ImageView bg1 = new ImageView(bgImage);
 		ImageView bg2 = new ImageView(bgImage);
 
+		//bg2をbg1の右側に配置して横スクロールできるようにする
 		bg2.setLayoutX(bgImage.getWidth());
 
-		// アニメーション
+		
+		// 背景アニメーション
 		AnimationTimer timer = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
+				
+				//左方向へスクロール
 				bg1.setLayoutX(bg1.getLayoutX() - 1);
 				bg2.setLayoutX(bg2.getLayoutX() - 1);
 
+				//画面外へ出たら右側へループさせる
 				if (bg1.getLayoutX() + bgImage.getWidth() <= 0) {
 					bg1.setLayoutX(bg2.getLayoutX() + bgImage.getWidth());
 				}
@@ -104,22 +117,28 @@ public class practice extends Application {
 		};
 		timer.start();
 
+		//レイアウト
 		StackPane root = new StackPane();
 
+		//背景画像を入れる Pane
 		Pane bgPane = new Pane();
 		bgPane.getChildren().addAll(bg1, bg2);
 
+		//タイトルを中央上に配置
 		VBox titleBox = new VBox(title);
 		titleBox.setAlignment(Pos.CENTER);
 		titleBox.setStyle("-fx-padding: 200px 0 20px 0;");
 
+		//UI全体の配置
 		BorderPane ui = new BorderPane();
 		ui.setTop(titleBox);
 		ui.setCenter(stageButtons);
 		ui.setBottom(backBox);
 
+		//rootに追加(背景→UIの順に重ねる)
 		root.getChildren().addAll(bgPane, ui);
 
+		//シーン追加
 		Scene scene = new Scene(root, 800, 600);
 
 		scene.getStylesheets().add(
