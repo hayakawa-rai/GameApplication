@@ -2,6 +2,7 @@ package Item;
 
 import java.util.Map;
 
+import Character.Sengoku;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -18,7 +19,7 @@ public class GameController {
     private int currentPage = 1;
     
 	private Map gameMap;         	      // MAP
-//    private Sengoku player;                 // プレイヤー（パックマン）
+    private Sengoku player;                 // プレイヤー（パックマン）
 //    private List<Enemy> ghosts;            // 敵（ゴースト）のリスト
     private boolean isRunning = false;     // ゲームが動いているか（falseの時は一時停止、ゲームオーバー時）
     
@@ -71,9 +72,34 @@ public class GameController {
         proceedToStage1(); // 途中のページを飛ばして本番へ
     }
 
-    // ゲーム本番（Stage1）への遷移
+ // ゲーム本番（Stage1）への遷移
     private void proceedToStage1() {
 
+        // ==========================================
+        // 2. 【追加】指定されたクラスの一斉インスタンス化
+        // ==========================================
+        
+        // MAPのインスタンス化
+       // this.gameMap = new Map();
+        
+        // プレイヤー（仙石さん）のインスタンス化
+        // 引数は Sengoku(初期X座標, 初期Y座標, 移動スピード) 
+        // ※座標の初期位置を0とし、速度を仮に「2」として設定しています。環境に合わせて調整してください。
+        this.player = new Sengoku(0, 0, 2);
+        
+        // 敵リストのインスタンス化
+      //  this.ghosts = new ArrayList<>();
+        
+        // 敵のインスタンスだけをリストに追加（例として初期座標違いで3匹分）
+        // ※Enemyクラスのコンストラクタがあると仮定しています。
+       // this.ghosts.add(new Enemy(24, 24, 2));
+       // this.ghosts.add(new Enemy(48, 48, 2));
+       // this.ghosts.add(new Enemy(72, 72, 2));
+
+        // ==========================================
+        // 3. 画面の構築と切り替え
+        // ==========================================
+        
         // ゲーム画面（GridPane）の組み立て
         GridPane gameGrid = new GridPane();
         // (省略: マップなどの描画処理)
@@ -88,7 +114,8 @@ public class GameController {
         this.stage.setScene(gameScene);
         this.isRunning = true;
         
-        System.out.println("すべてのストーリーが終了。Stage1を開始します！");
+        System.out.println("すべてのストーリーが終了。各インスタンス化が完了しました！");
+        System.out.println("Stage1を開始します！ isRunning: " + isRunning);
     }
 
     public void handleKeyPress(javafx.scene.input.KeyEvent event) {
