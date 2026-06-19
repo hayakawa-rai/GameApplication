@@ -1,21 +1,29 @@
+////最短で追いかける　RedEnemy(赤)
+//
 //package Characters;
 //
+//import java.util.List;
+//
+//import javafx.scene.image.ImageView;
+//
+//// 仙石さんを最短距離で追いかける
 //public class RedEnemy extends Enemy {
 //
-//	public RedEnemy(int x, int y) {
-//		//super(x, y, 1);
+//	// マップ右上からスタート （仮座標）
+//	public RedEnemy(ImageView imageView) {
+//		super(imageView, 27 * CELL_SIZE, 0, 1);
 //	}
-//	
+//
+//	// 次に進む方向を決定
 //	@Override
-//	public void move(Map map, Sengoku sengoku){
-//		
-//		int dx = sengoku.getX() - x;
-//		int dy = sengoku.getY() - y;
-//		
-//		if(Math.abs(dx) > Math.abs(dy)) {
-//			x += Integer.signum(dx);
-//		} else {
-//			y += Integer.signum(dy);\
-//		}
+//	protected Direction decideNextDirection(List<Direction> validDirections, int[][] map, Sengoku player) {
+//
+//		// プレイヤーの現在マス
+//		int targetCol = (int) ((player.getX() + CELL_SIZE / 2.0) / CELL_SIZE);
+//
+//		int targetRow = (int) ((player.getY() + CELL_SIZE / 2.0) / CELL_SIZE);
+//
+//		// 一番近づける方向をEnemyクラスに選ばせる
+//		return getClosestDirection(validDirections, targetCol, targetRow);
 //	}
 //}
