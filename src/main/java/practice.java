@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 public class practice extends Application {
 
 	private Stage stage;
+	// hold the background animation so we can stop it when switching scenes
+	private AnimationTimer timer;
 
 	@Override
 	public void start(Stage stage) {
@@ -66,6 +68,10 @@ public class practice extends Application {
 
 		// ★ master側の処理を残す
 		backButton.setOnAction(e -> {
+			// stop the background animation before switching back
+			if (timer != null) {
+				timer.stop();
+			}
 			start titleScreen = new start();
 			try {
 				titleScreen.start(stage);
@@ -88,7 +94,7 @@ public class practice extends Application {
 		bg2.setLayoutX(bgImage.getWidth());
 
 		// アニメーション
-		AnimationTimer timer = new AnimationTimer() {
+		this.timer = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
 				bg1.setLayoutX(bg1.getLayoutX() - 1);
@@ -102,7 +108,7 @@ public class practice extends Application {
 				}
 			}
 		};
-		timer.start();
+		this.timer.start();
 
 		StackPane root = new StackPane();
 

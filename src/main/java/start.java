@@ -91,39 +91,46 @@ public class start extends Application {
 		btn1.setPrefSize(300,100);
 		//btn1にCSSのgame-buttonを付与
 		btn1.getStyleClass().add("game-button");
-		//setOnAction:クリックしたときに実行する処理を記述
-		//(e->:クリックされたら実行される処理を書いていくという記号)
 		btn1.setOnAction(e -> {
-			try {
-				//ボタンを押したときに音が鳴る
-				clickSound.stop();
-				clickSound.play();
-				//practiceクラスのインスタンス化とそのクラスのstart()の呼び出しを同時に実行
-				//現在と同じウィンドウを使用するためstageを渡す
-				new story1().start(stage);
-			} catch (Exception ex) {
-			//エラー内容を表示する
-			ex.printStackTrace();
-			}
+		    try {
+		        // 音を鳴らす
+		        clickSound.stop();
+		        clickSound.play();
+
+		        // 背景タイマー停止
+		        timer.stop();
+
+		        // ストーリー画面へ
+		        new story1().start(stage);
+
+		        // ★もしGameControllerを使うならこっち
+		        // GameController controller = new GameController();
+		        // controller.start(stage);
+
+		    } catch (Exception ex) {
+		        ex.printStackTrace();
+		    }
 		});
-		
 		//練習モードへ飛ぶボタン作成
 		Button btn2 = new Button("⚔練習モード");
 		btn2.setPrefSize(300, 100); 
 		//setOnAction:クリックしたときに実行する処理を記述
 		//(e->:クリックされたら実行される処理を書いていくという記号)
 		btn2.setOnAction(e -> {
-			try {
-				//ボタンを押したときに音が鳴る
-				clickSound.stop();
-				clickSound.play();
-				//practiceクラスのインスタンス化とそのクラスのstart()の呼び出しを同時に実行
-				//現在と同じウィンドウを使用するためstageを渡す
-				new practice().start(stage);
-			} catch (Exception ex) {
-				//エラー内容を表示する
-				ex.printStackTrace();
-			}
+		    try {
+		        // 音を鳴らす
+		        clickSound.stop();
+		        clickSound.play();
+
+		        // 背景停止
+		        timer.stop();
+
+		        // 画面遷移
+		        new practice().start(stage);
+
+		    } catch (Exception ex) {
+		        ex.printStackTrace();
+		    }
 		});
 		//btn2にCSSのgame-buttonを付与
 		btn2.getStyleClass().add("game-button");
@@ -146,7 +153,7 @@ public class start extends Application {
         Scene scene = new Scene(root,1000,800);
         //CSSを接続
         scene.getStylesheets().add(
-        	    getClass().getResource("/style.css").toExternalForm()
+         	    getClass().getResource("/style.css").toExternalForm()
         );
         //ウィンドウの名前を設定
         stage.setTitle("スタート画面");
