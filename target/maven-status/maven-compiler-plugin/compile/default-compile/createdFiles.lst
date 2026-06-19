@@ -16,7 +16,6 @@ start$1.class
 test\controller\SampleController.class
 test\model\SampleModel.class
 Items\Point.class
-Characters\YellowEnemy.class
 Items\Chii.class
 scene\Story2.class
 test\view\SampleView.class
