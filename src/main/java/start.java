@@ -21,7 +21,7 @@ public class start extends Application {
 	public void start(Stage stage) {
 		//背景用の画像を読み込み
 		Image bgImage = new Image(
-				getClass().getResource("/background.png").toExternalForm());
+				getClass().getResource("/picture/background.png").toExternalForm());
 
 		// 背景用画像表示を２つ設定
 		ImageView bg1 = new ImageView(bgImage);
@@ -67,7 +67,7 @@ public class start extends Application {
 		ui.setAlignment(Pos.CENTER);
 		
 		//title用の画像読み込み
-		Image image = new Image(getClass().getResource("/title.png").toExternalForm());
+		Image image = new Image(getClass().getResource("/picture/title.png").toExternalForm());
 		//画像を表示、画像サイズを調整
 		ImageView imageView = new ImageView(image);
 		imageView.setFitWidth(500); 
@@ -84,7 +84,7 @@ public class start extends Application {
 		
 		
 		AudioClip clickSound = new AudioClip(
-			getClass().getResource("/select01.mp3").toExternalForm()
+			getClass().getResource("/music/select01.mp3").toExternalForm()
 		);
 		// 音量調整（おすすめ）
 		clickSound.setVolume(0.4);
@@ -153,7 +153,7 @@ public class start extends Application {
         Scene scene = new Scene(root,1000,800);
         //CSSを接続
         scene.getStylesheets().add(
-         	    getClass().getResource("/style.css").toExternalForm()
+         	    getClass().getResource("/css/style.css").toExternalForm()
         );
         //ウィンドウの名前を設定
         stage.setTitle("スタート画面");

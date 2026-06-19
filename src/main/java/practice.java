@@ -86,7 +86,7 @@ public class practice extends Application {
 
 		// 背景
 		Image bgImage = new Image(
-				practice.class.getResource("/background.png").toExternalForm());
+				practice.class.getResource("/picture/background.png").toExternalForm());
 
 		ImageView bg1 = new ImageView(bgImage);
 		ImageView bg2 = new ImageView(bgImage);
@@ -129,7 +129,7 @@ public class practice extends Application {
 		Scene scene = new Scene(root, 800, 600);
 
 		scene.getStylesheets().add(
-				getClass().getResource("/style.css").toExternalForm());
+				getClass().getResource("/css/style.css").toExternalForm());
 
 		return scene;
 	}

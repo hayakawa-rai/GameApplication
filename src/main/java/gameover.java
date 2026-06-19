@@ -84,7 +84,7 @@ public class gameover extends Application {
 		StackPane root = new StackPane();
 
 		//背景
-		Image bgImage = new Image(gameover.class.getResource("/gameover.jpg").toExternalForm());
+		Image bgImage = new Image(gameover.class.getResource("/picture/gameover.jpg").toExternalForm());
 		ImageView bg = new ImageView(bgImage);
 		bg.setPreserveRatio(false);
 
@@ -103,7 +103,7 @@ public class gameover extends Application {
 		root.getChildren().addAll(bg, whiteOverlay, ui);
 		
 		Scene scene = new Scene(root, 800, 600);
-		scene.getStylesheets().add(gameover.class.getResource("/gameover.css").toExternalForm());
+		scene.getStylesheets().add(gameover.class.getResource("/css/gameover.css").toExternalForm());
 
 		return scene;
 

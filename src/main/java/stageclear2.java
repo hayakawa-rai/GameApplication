@@ -33,7 +33,7 @@ public class stageclear2 extends Application{
     text.setStyle("-fx-font-size: 20px; -fx-fill: gray;");
     //獲得したアイテムの画像読み込み
     Image image = new Image(
-    		getClass().getResource("/keiyakusho.png").toExternalForm()
+    		getClass().getResource("/picture/keiyakusho.png").toExternalForm()
     );
     //読み込んだ画像を表示
     ImageView imageView = new ImageView(image);
@@ -84,7 +84,7 @@ public class stageclear2 extends Application{
     Scene scene = new Scene(buttonBox, 1000, 800);
     //CSSを接続
     scene.getStylesheets().add(
-        getClass().getResource("/style.css").toExternalForm()
+        getClass().getResource("/css/style.css").toExternalForm()
     );	
     //画面に表示させたいものを返す
     return scene;
