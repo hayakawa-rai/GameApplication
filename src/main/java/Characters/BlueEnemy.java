@@ -1,7 +1,5 @@
 package Characters;
-
-import java.util.List;
-
+/*
 public class BlueEnemy extends Enemy {
 
     private Sengoku player;
@@ -46,4 +44,5 @@ public class BlueEnemy extends Enemy {
         // 最も近づく方向を返す（Enemy にある共通メソッド）
         return getClosestDirection(validDirections, targetX, targetY);
     }
-}
+    
+}*/

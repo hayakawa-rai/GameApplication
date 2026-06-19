@@ -154,7 +154,7 @@ public class story1 extends Application{
         
         //背景画像を読み込み
         Image bgImage = new Image(
-        		getClass().getResourceAsStream("/emd-nottori.jpg")
+        		getClass().getResourceAsStream("/picture/emd-nottori.jpg")
         );
         //背景画像の表示
         ImageView bgView = new ImageView(bgImage);
@@ -165,7 +165,7 @@ public class story1 extends Application{
         
         //人物画像の読み込み
         Image charImage = new Image(
-        		getClass().getResourceAsStream("/hayakawa-udekumi.png")
+        		getClass().getResourceAsStream("/picture/hayakawa-udekumi.png")
         );
         //人物画像の表示
         ImageView charView = new ImageView(charImage);
@@ -237,7 +237,7 @@ public class story1 extends Application{
         
         //ジャンプ音の読み込み
         AudioClip jumpSound = new AudioClip(
-        	    getClass().getResource("/jump06.mp3").toExternalForm()
+        	    getClass().getResource("/music/jump06.mp3").toExternalForm()
         	);
         //音量調整
         jumpSound.setVolume(0.3); 

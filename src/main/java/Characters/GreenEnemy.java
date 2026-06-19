@@ -1,8 +1,8 @@
 // 遠くにいるときは追跡、近づくと自分の縄張りへ戻る　GreenEnemy(緑)
 package Characters;
-
+/*
 public class GreenEnemy extends Enemy {
-
+	
 	// この距離以上ならプレイヤーを追いかける
 	private static final double BORDER = 8 * CELL_SIZE;
 
@@ -37,4 +37,5 @@ public class GreenEnemy extends Enemy {
 		// 近いなら縄張りへ戻る(左下) //後から設定
 		return getClosestDirection(validDirections, CORNER_COL, CORNER_ROW);
 	}
-}
+	
+}*/
