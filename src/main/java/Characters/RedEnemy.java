@@ -1,6 +1,6 @@
 //最短で追いかける　RedEnemy(赤)
 package Characters;
-
+/*
 import java.util.List;
 
 import javafx.scene.image.ImageView;
@@ -29,3 +29,4 @@ public class RedEnemy extends Enemy {
 		return getClosestDirection(validDirections, targetCol, targetRow);
 	}
 }
+*/
