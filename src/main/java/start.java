@@ -1,4 +1,6 @@
 import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -10,6 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class start extends Application {
 	
@@ -84,7 +87,7 @@ public class start extends Application {
 			getClass().getResource("/select01.mp3").toExternalForm()
 		);
 		// 音量調整（おすすめ）
-		clickSound.setVolume(0.3);
+		clickSound.setVolume(0.4);
 
 		//ストーリーモードへ飛ぶボタンを作成
 		Button btn1 = new Button("▶ストーリー");
@@ -93,20 +96,17 @@ public class start extends Application {
 		btn1.getStyleClass().add("game-button");
 		btn1.setOnAction(e -> {
 		    try {
-		        // 音を鳴らす
-		        clickSound.stop();
-		        clickSound.play();
-
-		        // 背景タイマー停止
-		        timer.stop();
-
-		        // ストーリー画面へ
-		        new story1().start(stage);
-
-		        // ★もしGameControllerを使うならこっち
-		        // GameController controller = new GameController();
-		        // controller.start(stage);
-
+		    	 // 音を鳴らす
+		    	 clickSound.stop();
+		    	 clickSound.play();
+		    	// 0.15秒後に画面遷移
+		    	Timeline delay = new Timeline(
+		    			new KeyFrame(Duration.millis(500), ev -> {
+		    				timer.stop();
+		    	            new story1().start(stage);
+		    	})
+		    );
+		    delay.play();
 		    } catch (Exception ex) {
 		        ex.printStackTrace();
 		    }
