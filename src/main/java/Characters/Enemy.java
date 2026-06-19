@@ -3,7 +3,6 @@ package Characters;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javafx.scene.image.ImageView;
 
 public abstract class Enemy extends Character {
