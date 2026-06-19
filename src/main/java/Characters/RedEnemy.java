@@ -15,8 +15,7 @@ public class RedEnemy extends Enemy {
 		if(Math.abs(dx) > Math.abs(dy)) {
 			x += Integer.signum(dx);
 		} else {
-			y += Integer.signum(dy);
-			
+			y += Integer.signum(dy);\
 		}
 	}
 }
