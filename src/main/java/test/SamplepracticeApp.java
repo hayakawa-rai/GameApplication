@@ -11,29 +11,50 @@ import test.model.SampleModel;
 import test.view.SampleView;
 
 public class SamplepracticeApp extends Application {
-	@Override
+
+    @Override
     public void start(Stage stage) {
-        // 起動した瞬間に、ボタン操作なしでコントローラーの遷移処理を呼び出す
-        SampleController.switchToStart(stage);
+        // 起動したら練習モードへ
+        showPractice(stage);
     }
-    
+
+    // 練習モード画面へ遷移
+    public void showPractice(Stage stage) {
+        try {
+            sample.practice practiceScreen = new sample.practice();
+            practiceScreen.start(stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // STAGE1（ゲーム本編）へ遷移
     public void starts(Stage stage) {
+    	    // STAGE1 のゲームロジック（エサ復活つき）
         SampleModel model = new SampleModel();
+        // 描画処理（ステージ・キャラ・アイテム）
         SampleView view = new SampleView(model);
 
         Group root = new Group();
+        // マップサイズに合わせてウィンドウサイズを決定
         int viewWidth = model.getMap()[0].length * SampleModel.TILE_SIZE;
         int viewHeight = model.getMap().length * SampleModel.TILE_SIZE;
 
+        // 画面（Scene）を作成
         Scene scene = new Scene(root, viewWidth, viewHeight, Color.BLACK);
         Canvas canvas = new Canvas(viewWidth, viewHeight);
         root.getChildren().add(canvas);
-
-        // SampleController を起動
+        // コントローラーを起動（ゲームループ開始
+        
         new SampleController(model, view, canvas, scene);
 
+        // ウィンドウ設定
         stage.setTitle("JavaFX Pacman Stage MVC");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
