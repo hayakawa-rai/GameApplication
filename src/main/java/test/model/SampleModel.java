@@ -152,7 +152,6 @@ public class SampleModel {
 			}
 		}
 
-<<<<<<< HEAD
 		//  ワープゾーンにいない場合は、通常通りSengoku自身の移動ロジックを実行！
 		sengoku.move(map);
 
@@ -213,28 +212,6 @@ public class SampleModel {
 		sengoku.setnextdirection(dir);
 	}
 
-	// --- getters ---
-	public int[][] getMap() {
-		return map;
-	}
-
-	//Viewがアイテム配列を取得するためのゲッター
-	public Item[][] getItemMap() {
-		return itemMap;
-	}
-
-	public boolean isPaused() {
-		return paused;
-	}
-
-	public double getMouthAngle() {
-		return mouthAngle;
-	}
-
-	public Sengoku getSengoku() {
-		return sengoku;
-	}
-=======
     // --- getters ---
     public int[][] getMap() { return map; }
     //Viewがアイテム配列を取得するためのゲッター
@@ -283,5 +260,4 @@ public class SampleModel {
     public Enemy getEnemy() {
         return enemy;
     }
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 }
