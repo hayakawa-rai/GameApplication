@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
-import test.SampleMainApp;
+import test.SamplepracticeApp;
 import test.model.SampleModel;
 import test.view.SampleView;
 
@@ -26,9 +26,9 @@ public class SampleController {
     }
     public static void switchToStart(javafx.stage.Stage stage) {
         try {
-            // 1. startクラスのインスタンスを作る
+            // startクラスのインスタンスを作る
             sample.start titleScreen = new sample.start();
-            // 2. ウィンドウの権利(stage)を渡して、タイトル画面を起動・上書きする！
+            // ウィンドウの権利(stage)を渡して、タイトル画面を起動・上書きする！
             titleScreen.start(stage);
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,16 +37,16 @@ public class SampleController {
     
     public void switchTopractice(javafx.stage.Stage stage) {
         try {
-            // 1. practiceクラスのインスタンスを作る
+            // practiceクラスのインスタンスを作る
             sample.practice practiceScreen = new sample.practice();
-            // 2. ウィンドウの権利(stage)を渡して、練習モード画面を起動・上書きする！
+            // ウィンドウの権利(stage)を渡して、練習モード画面を起動・上書きする！
             practiceScreen.start(stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     public static void switchToGame(javafx.stage.Stage stage) {
-        try { SampleMainApp App = new SampleMainApp();
+        try { SamplepracticeApp App = new SamplepracticeApp();
             App.starts(stage);
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,8 +74,12 @@ public class SampleController {
         timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                model.updatePacman();
-                model.updateMouth();
+               // model.updatePacman();
+                //model.updateMouth();
+            	
+                // パックマンの移動、アイテム捕食、口パク、敵の移動がすべて入った update()
+                model.update();
+                
                 view.drawStage(gc);
                 view.drawPacman(gc);
             }
