@@ -5,6 +5,8 @@ import Characters.Sengoku;
 import Items.Chii;
 import Items.Item;
 import Items.Point;
+import test.Enemy;
+import test.RedEnemy;
 
 public class SampleModel {
 
@@ -150,6 +152,7 @@ public class SampleModel {
 			}
 		}
 
+<<<<<<< HEAD
 		//  ワープゾーンにいない場合は、通常通りSengoku自身の移動ロジックを実行！
 		sengoku.move(map);
 
@@ -231,4 +234,54 @@ public class SampleModel {
 	public Sengoku getSengoku() {
 		return sengoku;
 	}
+=======
+    // --- getters ---
+    public int[][] getMap() { return map; }
+    //Viewがアイテム配列を取得するためのゲッター
+    public Item[][] getItemMap() { return itemMap; }
+    public boolean isPaused() { return paused; }
+    public double getMouthAngle() { return mouthAngle; }
+    public Sengoku getSengoku() { return sengoku; }
+    
+ // ① メンバー変数エリアに追加（実際のゴーストクラスを保持する）
+    private Enemy enemy; 
+
+    // ② コンストラクタの中で初期化する
+    // ※ImageView、初期座標、スピード、プレイヤー(sengoku)を渡します
+    public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
+        // ここでは例として赤ゴースト(Blinky)の子クラスを生成する想定です
+        // もし子クラス名が異なる場合は、ここを適切なクラス名（new RedGhost 等）に変えてください
+        this.enemy = new RedEnemy(enemyImageView, this.sengoku);
+    }
+
+    // ③ update() メソッドの中に移動処理を追加
+    public void update() {
+        if (paused) return;
+
+        // パックマンの移動
+        sengoku.move(map);
+        
+        // ★【追加】敵キャラが存在すれば移動ロジックを実行！
+        if (enemy != null) {
+            enemy.move(map); // Enemy側の内部で自動的にImageViewの位置も同期されます
+        }
+
+        // （以下、既存のアイテム捕食処理や口パク処理はそのまま）
+        int currentTileX = (int) ((sengoku.getX() + TILE_SIZE / 2.0) / TILE_SIZE);
+        int currentTileY = (int) ((sengoku.getY() + TILE_SIZE / 2.0) / TILE_SIZE);
+        if (currentTileY >= 0 && currentTileY < map.length && currentTileX >= 0 && currentTileX < map[0].length) {
+            Item item = itemMap[currentTileY][currentTileX];
+            if (item != null) {
+                item.onEaten(sengoku);
+                itemMap[currentTileY][currentTileX] = null; 
+            }
+        }
+        updateMouth();
+    }
+
+    // ④ 外部から敵を取得するためのゲッター
+    public Enemy getEnemy() {
+        return enemy;
+    }
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 }
