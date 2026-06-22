@@ -12,28 +12,28 @@ import test.view.SampleView;
 
 public class SamplepracticeApp extends Application {
 	@Override
-    public void start(Stage stage) {
-        // 起動した瞬間に、ボタン操作なしでコントローラーの遷移処理を呼び出す
-        SampleController.switchToStart(stage);
-    }
-    
-    public void starts(Stage stage) {
-        SampleModel model = new SampleModel();
-        SampleView view = new SampleView(model);
+	public void start(Stage stage) {
+		// 起動した瞬間に、ボタン操作なしでコントローラーの遷移処理を呼び出す
+		SampleController.switchToStart(stage);
+	}
 
-        Group root = new Group();
-        int viewWidth = model.getMap()[0].length * SampleModel.TILE_SIZE;
-        int viewHeight = model.getMap().length * SampleModel.TILE_SIZE;
+	public void starts(Stage stage) {
+		SampleModel model = new SampleModel();
+		SampleView view = new SampleView(model);
 
-        Scene scene = new Scene(root, viewWidth, viewHeight, Color.BLACK);
-        Canvas canvas = new Canvas(viewWidth, viewHeight);
-        root.getChildren().add(canvas);
+		Group root = new Group();
+		int viewWidth = model.getMap()[0].length * SampleModel.TILE_SIZE;
+		int viewHeight = model.getMap().length * SampleModel.TILE_SIZE;
 
-        // SampleController を起動
-        new SampleController(model, view, canvas, scene);
+		Scene scene = new Scene(root, viewWidth, viewHeight, Color.BLACK);
+		Canvas canvas = new Canvas(viewWidth, viewHeight);
+		root.getChildren().add(canvas);
 
-        stage.setTitle("JavaFX Pacman Stage MVC");
-        stage.setScene(scene);
-        stage.show();
-    }
+		// SampleController を起動
+		new SampleController(model, view, canvas, scene);
+
+		stage.setTitle("JavaFX Pacman Stage MVC");
+		stage.setScene(scene);
+		stage.show();
+	}
 }
