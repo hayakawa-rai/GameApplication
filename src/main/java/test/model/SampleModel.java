@@ -71,7 +71,10 @@ public class SampleModel {
 		}
 		// 初期アイテム配置を保存（エサ復活用）
 		this.initialItemMap = copyItemMap(itemMap);
+		//ステージ起動時は、最初から一時停止していおく
+		this.paused = true;
 	}
+
 	// --- itemMap をコピーする ---（エサ復活用）
 	private Item[][] copyItemMap(Item[][] src) {
 		Item[][] dst = new Item[src.length][src[0].length];
@@ -187,28 +190,28 @@ public class SampleModel {
 		// 全部食べたかチェック（エサ復活用）
 		checkAllEaten();
 	}
+
 	// --- 全部食べたかチェック ---（エサ復活用）
-		private void checkAllEaten() {
-			for (int r = 0; r < itemMap.length; r++) {
-				for (int c = 0; c < itemMap[0].length; c++) {
-					if (itemMap[r][c] != null)
-						return; // まだ残っている
-				}
+	private void checkAllEaten() {
+		for (int r = 0; r < itemMap.length; r++) {
+			for (int c = 0; c < itemMap[0].length; c++) {
+				if (itemMap[r][c] != null)
+					return; // まだ残っている
 			}
-			// 全部食べた → 復活（エサ復活用）
-			resetItems();
 		}
+		// 全部食べた → 復活（エサ復活用）
+		resetItems();
+	}
 
-		// --- エサ復活 ---（エサ復活用）
-		private void resetItems() {
-			for (int r = 0; r < itemMap.length; r++) {
-				for (int c = 0; c < itemMap[0].length; c++) {
-					itemMap[r][c] = initialItemMap[r][c];
-				}
+	// --- エサ復活 ---（エサ復活用）
+	private void resetItems() {
+		for (int r = 0; r < itemMap.length; r++) {
+			for (int c = 0; c < itemMap[0].length; c++) {
+				itemMap[r][c] = initialItemMap[r][c];
 			}
-			System.out.println("ステージクリア！エサが復活しました！");
 		}
-
+		System.out.println("ステージクリア！エサが復活しました！");
+	}
 
 	public void updateMouth() {
 		if (paused || !sengoku.isAlive() || sengoku.getDirection() == Direction.NONE)
@@ -243,8 +246,28 @@ public class SampleModel {
 		double collisionThreshold = TILE_SIZE * 0.8;
 
 		if (distance < collisionThreshold) {
-			System.out.println("💥 敵に捕まった！ゲームオーバー！");
-			this.paused = true;
+			System.out.println("💥 敵に捕まった！");
+			// Sengokuクラスの takeDamage() を呼んでHP（残機）を1つ減らす
+			sengoku.takeDamage();
+			System.out.println("現在の残りHP: " + sengoku.getHp());
+
+			// HPがまだ残っている場合は、お互いの位置を初期位置に戻してリスタート
+			if (sengoku.isAlive()) {
+
+				// パックマンを初期配置のマス（行14, 列10）にリセット
+				sengoku.setPosition(10 * TILE_SIZE, 14 * TILE_SIZE);
+				// 進行方向も一旦リセット
+				sengoku.setnextdirection(Direction.NONE);
+
+				// 敵（RedEnemy）を水色の〇のマス（行9, 列9）にリセット
+				if (enemy.getImageView() != null) {
+					initEnemy(enemy.getImageView());
+				}
+
+			} else {
+				//ゲームオーバー
+				this.paused = true;
+			}
 		}
 	}
 

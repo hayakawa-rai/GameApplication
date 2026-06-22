@@ -73,7 +73,16 @@ public class SampleController {
                 model.togglePause();
                 return;
             }
-            if (model.isPaused()) return;
+            // ゲーム開始時の待機状態
+            // 何かキーが押されたら、自動的に一時停止を解除してゲームをスタート
+            if (model.isPaused() && model.getSengoku().isAlive()) {
+                // Pキー以外の入力があったら、強制的に一時停止を解除
+                model.togglePause(); // これで paused = false になります
+                
+            }
+
+            // パックマンが死亡している完全ゲームオーバー時は、これ以降の操作を受け付けない
+            if (!model.getSengoku().isAlive()) return;
  
             // 矢印キーでも操作できるように拡張
             if (code == KeyCode.W || code == KeyCode.UP)    model.setNextDirection(Direction.UP);
