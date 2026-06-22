@@ -1,7 +1,6 @@
 
 package test;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ public abstract class Enemy extends Character {
 
 	protected ImageView imageView;
 	protected static final int CELL_SIZE = 30;//1マスの大きさ
-	
+
 	//Sengokuをフィールドとして保持
 	protected Sengoku player;
 
@@ -26,7 +25,7 @@ public abstract class Enemy extends Character {
 	protected javafx.scene.image.Image deadImage; // 食べられて初期地点に戻る敵
 
 	//コンストラクタ
-	public Enemy(ImageView imageView, double startX, double startY, int speed,Characters.Sengoku sengoku) {
+	public Enemy(ImageView imageView, double startX, double startY, int speed, Characters.Sengoku sengoku) {
 		super(startX, startY, speed);
 		this.imageView = imageView;
 		this.player = sengoku;
@@ -34,7 +33,6 @@ public abstract class Enemy extends Character {
 		this.imageView.setLayoutX(startX);
 		this.imageView.setLayoutY(startY);
 	}
-
 
 	//全ての敵に共通する物理移動のルール
 	@Override
@@ -65,6 +63,34 @@ public abstract class Enemy extends Character {
 				this.y = row * CELL_SIZE;
 
 				this.direction = chosenDirection;
+
+				//現在のモードが「FEVER(イジケ状態)」のとき
+				if (this.currentState == EnemyState.FEVER) {
+					//子クラスのAI(追跡)を無視して、ランダムに方向を選ぶ
+					int randomIndex = (int) (Math.random() * validDirections.size());
+					chosenDirection = validDirections.get(randomIndex);
+				}
+				//	死亡状態(DEAD)
+				else if (this.currentState == EnemyState.DEAD) {
+					// ゴーストの巣の座標（一旦(行9, 列9)に移動させる）を目的地にして、三平方の定理で最短ルートを選ぶ
+					int nestCol = 9;
+					int nestRow = 9;
+					chosenDirection = getClosestDirection(validDirections, nestCol, nestRow);
+
+				}
+
+				else {
+					//通常時や死亡時は、今まで通りの子クラスのAIに選ばせる
+					chosenDirection = decideNextDirection(validDirections, map, player);
+				}
+
+				//位置補正
+				int targetCol = (int) (centerX / CELL_SIZE);
+				int targetRow = (int) (centerY / CELL_SIZE);
+				this.x = targetCol * CELL_SIZE;
+				this.y = targetRow * CELL_SIZE;
+
+				this.direction = chosenDirection;
 			}
 		}
 
@@ -91,6 +117,17 @@ public abstract class Enemy extends Character {
 		//計算した内部座標をJavaFXのImageView（画面上の見た目）に同期
 		this.imageView.setLayoutX(this.getX());
 		this.imageView.setLayoutY(this.getY());
+		
+		 // 死亡状態で無事に巣のマス（行9, 列9）の「中心」に到着したら生き返る
+        if (this.currentState == EnemyState.DEAD) {
+            int currentCol = (int) ((this.getX() + CELL_SIZE / 2.0) / CELL_SIZE);
+            int currentRow = (int) ((this.getY() + CELL_SIZE / 2.0) / CELL_SIZE);
+            
+            if (currentCol == 9 && currentRow == 9) {
+                System.out.println("もうこれで終わってもいい・・・！");
+                this.setCurrentState(EnemyState.SCATTER); // 縄張りモードで復活
+            }
+        }
 
 	}
 
@@ -130,10 +167,10 @@ public abstract class Enemy extends Character {
 	}
 
 	public void setCurrentState(EnemyState state) {
-		if(this.currentState != state) {
-		this.currentState = state;
-		//現在のモードに合わせて自動で画像を切り替える
-		updateImage();
+		if (this.currentState != state) {
+			this.currentState = state;
+			//現在のモードに合わせて自動で画像を切り替える
+			updateImage();
 		}
 	}
 
@@ -198,8 +235,8 @@ public abstract class Enemy extends Character {
 			return false;
 		}
 		//通常状態の時は、ゴーストの巣(行10以降、かつ中央の列8～10)への侵入を禁止にする
-		if(this.currentState != EnemyState.DEAD) {//死亡している時以外
-			if(nextRow >= 9 && nextRow <= 10 && nextCol >= 8 && nextCol <= 10) {
+		if (this.currentState != EnemyState.DEAD) {//死亡している時以外
+			if (nextRow >= 9 && nextRow <= 10 && nextCol >= 8 && nextCol <= 10) {
 				return false;//巣の方向の侵入禁止
 			}
 		}
