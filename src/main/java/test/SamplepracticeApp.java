@@ -11,13 +11,7 @@ import test.model.SampleModel;
 import test.view.SampleView;
 
 public class SamplepracticeApp extends Application {
-<<<<<<< HEAD
-	@Override
-	public void start(Stage stage) {
-		// 起動した瞬間に、ボタン操作なしでコントローラーの遷移処理を呼び出す
-		SampleController.switchToStart(stage);
-	}
-=======
+
 
     @Override
     public void start(Stage stage) {
@@ -41,38 +35,18 @@ public class SamplepracticeApp extends Application {
         SampleModel model = new SampleModel();
         // 描画処理（ステージ・キャラ・アイテム）
         SampleView view = new SampleView(model);
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
-<<<<<<< HEAD
-	public void starts(Stage stage) {
-		SampleModel model = new SampleModel();
-		SampleView view = new SampleView(model);
-=======
         Group root = new Group();
         // マップサイズに合わせてウィンドウサイズを決定
         int viewWidth = model.getMap()[0].length * SampleModel.TILE_SIZE;
         int viewHeight = model.getMap().length * SampleModel.TILE_SIZE;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
-<<<<<<< HEAD
-		Group root = new Group();
-		int viewWidth = model.getMap()[0].length * SampleModel.TILE_SIZE;
-		int viewHeight = model.getMap().length * SampleModel.TILE_SIZE;
-
-		Scene scene = new Scene(root, viewWidth, viewHeight, Color.BLACK);
-		Canvas canvas = new Canvas(viewWidth, viewHeight);
-		root.getChildren().add(canvas);
-=======
         // 画面（Scene）を作成
         Scene scene = new Scene(root, viewWidth, viewHeight, Color.BLACK);
         Canvas canvas = new Canvas(viewWidth, viewHeight);
         root.getChildren().add(canvas);
         // コントローラーを起動（ゲームループ開始
-        
-        new SampleController(model, view, canvas, scene);
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
-<<<<<<< HEAD
 		// SampleController を起動
 		new SampleController(model, view, canvas, scene);
 
@@ -80,15 +54,4 @@ public class SamplepracticeApp extends Application {
 		stage.setScene(scene);
 		stage.show();
 	}
-=======
-        // ウィンドウ設定
-        stage.setTitle("JavaFX Pacman Stage MVC");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 }
