@@ -1,22 +1,22 @@
 package test.controller;
- 
+
 import Characters.Direction;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
-import test.SampleMainApp; // 👈 【修正】本番用のメインアプリをインポート
+import test.SampleMainApp; // 👈 【修正】本番用のメインアプリをインポートします
 import test.model.SampleModel;
 import test.view.SampleView;
- 
+
 public class SampleController {
- 
+
     private final SampleModel model;
     private final SampleView view;
     private final Canvas canvas;
     private AnimationTimer timer;
- 
+
     public SampleController(SampleModel model, SampleView view, Canvas canvas, Scene scene) {
         this.model = model;
         this.view = view;
@@ -48,7 +48,7 @@ public class SampleController {
     }
     
     public static void switchToGame(javafx.stage.Stage stage) {
-        try {
+        try { 
            
             SampleMainApp App = new SampleMainApp();
             App.starts(stage);
@@ -56,7 +56,7 @@ public class SampleController {
             e.printStackTrace();
         }
     }
- 
+
     private void attachInput(Scene scene) {
         scene.setOnKeyPressed(e -> {
             KeyCode code = e.getCode();
@@ -65,7 +65,7 @@ public class SampleController {
                 return;
             }
             if (model.isPaused()) return;
- 
+
             // 矢印キーでも操作できるように拡張
             if (code == KeyCode.W || code == KeyCode.UP)    model.setNextDirection(Direction.UP);
             if (code == KeyCode.S || code == KeyCode.DOWN)  model.setNextDirection(Direction.DOWN);
@@ -73,7 +73,7 @@ public class SampleController {
             if (code == KeyCode.D || code == KeyCode.RIGHT) model.setNextDirection(Direction.RIGHT);
         });
     }
- 
+
     private void startLoop() {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         timer = new AnimationTimer() {
@@ -88,7 +88,7 @@ public class SampleController {
         };
         timer.start();
     }
- 
+
     public void stop() {
         if (timer != null) timer.stop();
     }

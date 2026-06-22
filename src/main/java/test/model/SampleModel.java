@@ -39,6 +39,8 @@ public class SampleModel {
 	private final Item[][] itemMap;
 	// 初期アイテム配置（エサ復活用）
 	private final Item[][] initialItemMap;
+	// エサ復活を有効にするか？
+	private boolean enableRespawn; 
 	// パックマンの状態
 	private final Sengoku sengoku;
 	private Enemy enemy;
@@ -54,7 +56,8 @@ public class SampleModel {
 	private int lastWarpX = -1;
 	private int lastWarpY = -1;
 
-	public SampleModel() {
+	public SampleModel(boolean enableRespawn) {
+		this.enableRespawn = enableRespawn; // これで練習/ストーリーを切り替えられる（エサ復活用）
 		this.sengoku = new Sengoku(10 * TILE_SIZE, 14 * TILE_SIZE, 2);
 		this.itemMap = new Item[map.length][map[0].length];
 		for (int row = 0; row < map.length; row++) {
@@ -69,9 +72,14 @@ public class SampleModel {
 				}
 			}
 		}
-		// 初期アイテム配置を保存（エサ復活用）
-		this.initialItemMap = copyItemMap(itemMap);
+	    // エサ復活が有効なときだけ初期状態を保存（エサ復活用）
+	    if (enableRespawn) {
+	        this.initialItemMap = copyItemMap(itemMap);
+	    } else {
+	        this.initialItemMap = null;
+	    }
 	}
+	
 	// --- itemMap をコピーする ---（エサ復活用）
 	private Item[][] copyItemMap(Item[][] src) {
 		Item[][] dst = new Item[src.length][src[0].length];
@@ -189,6 +197,8 @@ public class SampleModel {
 	}
 	// --- 全部食べたかチェック ---（エサ復活用）
 		private void checkAllEaten() {
+			if (!enableRespawn) return;  // ← ストーリーでは復活しない
+			
 			for (int r = 0; r < itemMap.length; r++) {
 				for (int c = 0; c < itemMap[0].length; c++) {
 					if (itemMap[r][c] != null)
@@ -201,6 +211,8 @@ public class SampleModel {
 
 		// --- エサ復活 ---（エサ復活用）
 		private void resetItems() {
+			if (!enableRespawn || initialItemMap == null) return;
+			
 			for (int r = 0; r < itemMap.length; r++) {
 				for (int c = 0; c < itemMap[0].length; c++) {
 					itemMap[r][c] = initialItemMap[r][c];
