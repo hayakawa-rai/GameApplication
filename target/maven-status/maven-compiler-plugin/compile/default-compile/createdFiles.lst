@@ -3,12 +3,12 @@ Characters\GameMap.class
 Characters\Character.class
 Characters\GreenEnemy.class
 Characters\Direction$1.class
-test\SampleMainApp.class
-test\controller\SampleController.class
-test\model\SampleModel.class
 test\view\SampleView.class
 test\test$1.class
 Characters\Direction.class
-test\test.class
 Characters\SengokuState.class
 test\controller\SampleController$1.class
+test\SampleMainApp.class
+test\controller\SampleController.class
+test\model\SampleModel.class
+test\test.class
