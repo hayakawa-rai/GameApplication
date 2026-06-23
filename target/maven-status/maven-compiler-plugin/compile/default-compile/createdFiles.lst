@@ -6,10 +6,6 @@ story\Stageclear3.class
 Characters\Character.class
 Characters\Direction$1.class
 test\Sengoku.class
-<<<<<<< HEAD
-=======
-test\Enemy.class
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 Items\Chii.class
 sample\stageclear2.class
 sample\practice$1.class
@@ -24,20 +20,17 @@ test\Character.class
 test\test2\MapData.class
 test\model\SampleModel.class
 story\Stageclear2.class
-META-INF\maven\sample\Game\pom.xml
 sample\start.class
 sample\practice.class
 test\Direction.class
-Map.class
 story\Practice.class
 test\test2\TestMainapp.class
 sample\stageclear1.class
 test\test2\GameController.class
-character\Direction$1.class
 story\Dialogue.class
 story\StoryUtils.class
+Character\Direction$1.class
 sample\start$1.class
-META-INF\MANIFEST.MF
 test\Enemy.class
 Characters\EnemyState.class
 story\Gameover.class
@@ -52,25 +45,7 @@ start\Start.class
 sample\gameover.class
 test\SampleMainApp.class
 test\controller\SampleController.class
-<<<<<<< HEAD
-META-INF\maven\sample\Game\pom.properties
-=======
-test\test2\MapData.class
-test\model\SampleModel.class
-<<<<<<< HEAD
-=======
-
-test\Direction$1.class
-
->>>>>>> branch 'otoha' of https://github.com/hayakawa-rai/GameApplication.git
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\SamplepracticeApp.class
 Items\Point.class
 test\Direction$1.class
-<<<<<<< HEAD
-=======
-sample\start.class
-sample\practice.class
-test\Direction.class
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 Items\Item.class
