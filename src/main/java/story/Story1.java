@@ -2,10 +2,8 @@ package story;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
@@ -26,7 +24,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class Story1 extends Application{
-	
 
 	//ウィンドウを保存してどのクラスでも共通のウィンドウを使用するため
     private Stage stage;
@@ -40,12 +37,7 @@ public class Story1 extends Application{
         stage.setTitle("story1");
         stage.show();
     }
-    //表示する会話内容をリストに格納
-    private List<String> messages = Arrays.asList(
-			"フハハハハ！","この会社はすでに我が支配下だ！","今日から社長は俺、そしてお前は“元・社員”だ！",
-			"返還請求だと？残念だがこの会社、もう休憩時間以外は全部俺のものだ",
-			"さあ先輩社員よ！業務命令だ、全力でかかってこい！","ただし残業代は出ない！！"
-	);
+    
     
     //今どのメッセージを表示しているかのカウント用
     private int messageIndex = 0;
@@ -57,7 +49,10 @@ public class Story1 extends Application{
     private Text text;
     //一定時間ことに処理を実行するタイマー
     private Timeline timeline;
-    
+    //ジャンプアクションをフィールドで管理
+    private Timeline jumpAniki;
+    private Timeline jumpSengoku;
+    private Timeline jumpNarinari;
     //新しいメッセージを表示するための準備用メソッド
     private void startTyping() {
     	//文字カウントをリセット
@@ -71,14 +66,36 @@ public class Story1 extends Application{
     
     public Scene story() {
     	
+    	 //ジャンプ音の読み込み
+        AudioClip jumpSound = new AudioClip(
+        	    getClass().getResource("/music/jump06.mp3").toExternalForm()
+        	);
+        //音量調整
+        jumpSound.setVolume(0.3); 
+      
+         List<Dialogue> dialogues = Arrays.asList( 
+        		new Dialogue("仙石さん", "おはよ～～！！",jumpSound,Color.WHITE),
+        	    new Dialogue("あにき", "先輩社員サン、ですか。",jumpSound,Color.RED),
+        	    new Dialogue("あにき", "今日からここの社長は俺だ。",jumpSound,Color.RED),
+        	    new Dialogue("あにき", "休憩時間以外は全て俺のものだ！！！",jumpSound,Color.RED),
+        	    new Dialogue("仙石さん", "ふざけるな。\n"+ "ここは俺たちの会社だ。",jumpSound,Color.WHITE),
+        	    new Dialogue("仙石さん", "取り戻してやる！！",jumpSound,Color.WHITE),
+        	    new Dialogue("あにき", "クク……熱いねえ",jumpSound,Color.RED),
+        	    new Dialogue("あにき", "だが、まずは順番ってものがある。",jumpSound,Color.RED),
+        	    new Dialogue("あにき", "新入社員を育てるのも、\n"+ "上司の務めだろう？",jumpSound,Color.RED),
+        	    new Dialogue("なりなり", "ここから先は通しませんよ、先輩。",jumpSound,Color.ORANGE),
+        	    new Dialogue("なりなり", "自分、もう\"研修\"は終わってるんで。",jumpSound,Color.ORANGE),
+        	    new Dialogue("仙石さん", "研修で覚えたのは、会社を乗っ取ることか？",jumpSound,Color.WHITE),
+        	    new Dialogue("仙石さん", "教育しなおしてやる！！",jumpSound,Color.WHITE)
+        );
+    	
     	//テキストクラスのインスタンスを作成
     	text = new Text("");
     	text.setStyle(
-    		"-fx-fill:white;" + //文字の色
     		"-fx-font-family: monospace;"  //等間隔フォント
     	);
     	//上にあげる
-        text.setTranslateY(-10);
+        text.setTranslateY(-5);
         
         
     	//吹き出し(textの背景)作成
@@ -105,31 +122,14 @@ public class Story1 extends Application{
         nextMark.setVisible(false);
         //下に下げる
         nextMark.setTranslateY(40);
-        //▼の点滅アニメーション(Timeline:一定時間ごとに処理を実行する)
-        Timeline blink = new Timeline(
-        //0.5秒ごとに処理を実行
-        new KeyFrame(Duration.seconds(0.5), e -> {
-        	//setVisible：表示するかどうかを切り替える
-        	//isVisible：今表示中かを確認
-            nextMark.setVisible(!nextMark.isVisible());
-        	})
-        );
-        //Timeline.INDEFINITE→無限ループ
-        blink.setCycleCount(Timeline.INDEFINITE);
-        //▼を上下に揺らす
-        Timeline arrowMove = new Timeline(
-        	new KeyFrame(Duration.seconds(0),
-        		new KeyValue(nextMark.translateYProperty(), 0)
-        	),
-        	new KeyFrame(Duration.seconds(0.5),
-        		new KeyValue(nextMark.translateYProperty(), 5)
-        	)
-        );
-        // 無限ループ
-        arrowMove.setCycleCount(Timeline.INDEFINITE);
-        // 行ったり来たり
-        arrowMove.setAutoReverse(true);
-
+        //▼のアニメーション設定
+        Timeline blink = StoryUtils.createBlink(nextMark);
+        Timeline arrowMove = StoryUtils.createArrowMove(nextMark);
+        
+        //会話している人の名前表示用
+        Text nameText = new Text();
+        nameText.setText(dialogues.get(messageIndex).speaker);
+       
         
         //textと▼をまとめる
         //縦に並べる箱を作成
@@ -149,7 +149,7 @@ public class Story1 extends Application{
         StackPane arrowBox = new StackPane(nextMark);
         arrowBox.setPadding(new Insets(0, 0, 15, 0));
         //テキストの下に▼を配置
-        bubble.getChildren().addAll(text, arrowBox);
+        bubble.getChildren().addAll(nameText,text, arrowBox);
         
         
         //背景画像を読み込み
@@ -158,19 +158,38 @@ public class Story1 extends Application{
         );
         //背景画像の表示
         ImageView bgView = new ImageView(bgImage);
-
         //余白を生まないために縦横比を無視
         bgView.setPreserveRatio(false);
         
         
-        //人物画像の読み込み
-        Image charImage = new Image(
+        //人物画像の読み込み(あにき)
+        Image anikiImage = new Image(
         		getClass().getResourceAsStream("/picture/hayakawa-udekumi.png")
         );
         //人物画像の表示
-        ImageView charView = new ImageView(charImage);
+        ImageView anikiView = new ImageView(anikiImage);
         //縦横比率を維持
-        charView.setPreserveRatio(true);
+        anikiView.setPreserveRatio(true);
+        //人物画像の読み込み(仙石さん)
+        Image sengokuImage = new Image(
+        		getClass().getResourceAsStream("/picture/sengoku.png")
+        );
+        //人物画像の表示
+        ImageView sengokuView = new ImageView(sengokuImage);
+        //縦横比率を維持
+        sengokuView.setPreserveRatio(true);
+        //人物画像の読み込み(なりなり)
+        Image narinariImage = new Image(
+        		getClass().getResourceAsStream("/picture/narinari.png")
+        );
+        //人物画像の表示
+        ImageView narinariView = new ImageView(narinariImage);
+        //縦横比率を維持
+        narinariView.setPreserveRatio(true);
+        //最初どちらの画像を表示するか設定
+        narinariView.setVisible(false);
+        anikiView.setVisible(true);
+        
         
         
         //box(吹き出し)とbubble(テキストと▼)をまとめる
@@ -197,7 +216,7 @@ public class Story1 extends Application{
         
         //ウィンドウ全体のレイヤー(下から背景、人物画像、吹き出しの順に配置)
         StackPane base = new StackPane();
-        base.getChildren().addAll(bgView,charView, root);
+        base.getChildren().addAll(bgView,sengokuView,anikiView,narinariView, root);
         //rootを中身とした1000×800のウィンドウを作成
         Scene scene = new Scene(base,1000,800);
         
@@ -205,10 +224,19 @@ public class Story1 extends Application{
         // 背景画像をウィンドウサイズに合わせる
         bgView.fitWidthProperty().bind(scene.widthProperty());
         bgView.fitHeightProperty().bind(scene.heightProperty());
-        // 人物画像をウィンドウサイズに合わせる
-        charView.fitWidthProperty().bind(scene.widthProperty());
-        charView.fitHeightProperty().bind(scene.heightProperty());
-        // Rectangle固定やめる
+        // 人物画像(あにき)をウィンドウサイズに合わせる(右に表示)
+        anikiView.fitWidthProperty().bind(scene.widthProperty().multiply(0.8));
+        anikiView.fitHeightProperty().bind(scene.heightProperty().multiply(1.2));
+        anikiView.translateXProperty().bind(scene.widthProperty().multiply(0.25));
+        // 人物画像(なりなり)をウィンドウサイズに合わせる(右に表示)
+        narinariView.fitWidthProperty().bind(scene.widthProperty().multiply(0.5));
+        narinariView.fitHeightProperty().bind(scene.heightProperty().multiply(0.9));
+        narinariView.translateXProperty().bind(scene.widthProperty().multiply(0.25));
+        // 人物画像(仙石)をウィンドウサイズに合わせる(左に表示)(下に調整)
+        sengokuView.fitWidthProperty().bind(scene.widthProperty().multiply(0.6));
+        sengokuView.fitHeightProperty().bind(scene.heightProperty().multiply(1.0));
+        sengokuView.translateXProperty().bind(scene.widthProperty().multiply(-0.25));
+        //boxのサイズをウィンドウに合わせる
         box.widthProperty().bind(scene.widthProperty().multiply(0.9));
         box.heightProperty().bind(scene.heightProperty().multiply(0.18));
         // テキストも追従
@@ -220,7 +248,7 @@ public class Story1 extends Application{
         text.styleProperty().bind(
         		Bindings.format(
         				"-fx-font-size: %.0fpx; -fx-fill: white; -fx-font-family: monospace;",
-        				scene.widthProperty().multiply(0.02)
+        				scene.widthProperty().multiply(0.03)
         		)
         );
         //▼のサイズも変化
@@ -230,59 +258,46 @@ public class Story1 extends Application{
         				scene.widthProperty().multiply(0.02)
         		)
         );
+        //名前表示も変化
+        nameText.styleProperty().bind(
+        	    Bindings.format(
+        	        "-fx-font-size: %.0fpx; -fx-fill: lightgray;",
+        	        scene.widthProperty().multiply(0.025)
+        	    )
+        );
         //ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
         stage.setMinWidth(800);
         stage.setMinHeight(600);
-       
         
-        //ジャンプ音の読み込み
-        AudioClip jumpSound = new AudioClip(
-        	    getClass().getResource("/music/jump06.mp3").toExternalForm()
-        	);
-        //音量調整
-        jumpSound.setVolume(0.3); 
-      
-        
-        // ボスをぴょんぴょんさせるアニメーション
-        Timeline jump = new Timeline(
-        		// 1回目
-        		//300ミリ秒後にe->以降の処理を実行
-        	    new KeyFrame(Duration.millis(300), e -> {
-        	    	//音が途中から再生されることを防ぐために一度止めてリセットしてから再生
-        	        jumpSound.stop();
-        	        jumpSound.play();
-        	    },
-        	    	//人物画像をy座標の上方向に90px移動	
-        	        new KeyValue(charView.translateYProperty(), -90)
-        	    ),
-        	    //700ミリ秒かけて人物画像のy座標を0に戻す
-        	    new KeyFrame(Duration.millis(700),
-        	        new KeyValue(charView.translateYProperty(), 0)
-        	    ),
-        	    // 2回目(1000ミリ秒後に実行)
-        	    new KeyFrame(Duration.millis(1000), e -> {
-        	        jumpSound.stop();
-        	        jumpSound.play();
-        	    },
-        	        new KeyValue(charView.translateYProperty(), -90)
-        	    ),
-        	    // 戻る(1400ミリ秒かけて戻す)
-        	    new KeyFrame(Duration.millis(1400),
-        	        new KeyValue(charView.translateYProperty(), 0)
-        	    )
-        	);
-       
-        
+     
         //文字表示用のタイマーを作成、50ミリ秒ごとに処理
         timeline = new Timeline(
         	new KeyFrame(Duration.millis(50),e->{
+        		//今再生されている会話テキストのリスト番号を取得
+                Dialogue d = dialogues.get(messageIndex);
         		//まだ文字が残っているかどうかを判断(文字が残っている間は処理を実行)
-        		if(charIndex < messages.get(messageIndex).length()) {
+        		if(charIndex < d.message.length()) {
         			//文字カウントを増やす
         			charIndex++;
+        			//誰が話しているか情報取得(話者によって話者名・テキストの色を変化)
+        			String speaker = d.speaker;
+        			nameText.setText(speaker);
+        			text.setFill(d.textColor);
+        			if (speaker.equals("あにき")) {
+        				//あにきの画像を表示・なりなりの画像を非表示
+        				anikiView.setVisible(true);
+        				narinariView.setVisible(false);
+        			} else if (speaker.equals("仙石さん")) {
+        			}else if (speaker.equals("なりなり")) {
+        				//あにきの画像を非表示・なりなりの画像を表示
+        				anikiView.setVisible(false);
+        				narinariView.setVisible(true);
+        			}
+        			
+        			
         			//表示しているメッセージに対して1文ずつ表示する文字数を増やしていく処理
         			//例：メッセージがhelloのとき、h→he→hel→hell→hello
-        			text.setText(messages.get(messageIndex).substring(0,charIndex));
+        			text.setText(d.message.substring(0,charIndex));
         			if(Math.random() < 0.5) {
         			}
         		}else {//全て表示し終わった後の処理
@@ -303,16 +318,17 @@ public class Story1 extends Application{
         timeline.setCycleCount(Timeline.INDEFINITE);
         		
         
-        //乱数を作成
-        Random rand = new Random();
         //クリックされたときの処理
         scene.addEventFilter(MouseEvent.MOUSE_CLICKED, e->{
+        	
         	//文字表示中ならスキップして全文表示する処理
         	if(isTyping) {
         		//タイピング停止
         		timeline.stop();
+        		//今再生されている会話テキストのリスト番号を取得
+                Dialogue d = dialogues.get(messageIndex);
         		//一気に全文表示
-        		text.setText(messages.get(messageIndex));
+        		text.setText(d.message);
         		//状態を更新してタイピングが終わったことにする
         		isTyping = false;
         		//▼を表示
@@ -324,7 +340,7 @@ public class Story1 extends Application{
         		return;
         	}
         	//まだメッセージがある場合if文内のの処理を実行
-        	if (messageIndex < messages.size() - 1) {
+        	if (messageIndex < dialogues.size() - 1) {
         		//メッセージカウントを増やす
         	    messageIndex++;
         	    //タイピングを再スタート
@@ -335,9 +351,25 @@ public class Story1 extends Application{
         	    blink.stop();
         	    //▼を上下に揺らすアニメーションを停止
         	    arrowMove.stop();
-        	    //ボスのジャンプ
-        	    if (rand.nextInt(2) == 0) { // 1/3の確率
-        	    	jump.playFromStart();
+        	    //今再生されている会話テキストのリスト番号を取得
+                Dialogue d = dialogues.get(messageIndex);
+        	    //誰が話しているかの情報取得
+        	    String speaker = d.speaker;
+        	    
+        	   	if (speaker.equals("あにき")) {
+        	   		//ジャンプを設定
+        	        jumpAniki = StoryUtils.createJumpAnimation(anikiView, d.sound);
+        	   		//ジャンプアニメーションを再生
+        	   		jumpAniki.playFromStart();
+        	   	} else if (speaker.equals("仙石さん")) {
+        	   		//ジャンプを設定
+        	        jumpSengoku = StoryUtils.createJumpAnimation(sengokuView, d.sound);
+        	   		jumpSengoku.playFromStart();
+        	    }else if (speaker.equals("なりなり")) {
+        	    	//ジャンプを設定
+        	    	jumpNarinari = StoryUtils.createJumpAnimation(narinariView, d.sound);
+        	    	//ジャンプアニメーションを再生
+        	   		jumpNarinari.playFromStart();
         	    }
         	} else {//メッセージの最後まで行った後の処理
         		//・・・を表示をする
@@ -352,5 +384,5 @@ public class Story1 extends Application{
 		return scene;
 	
     }
-    
 }
+

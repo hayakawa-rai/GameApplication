@@ -14,7 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import start.Start;
+import sample.start;
 
 public class Practice extends Application {
 
@@ -60,6 +60,16 @@ public class Practice extends Application {
 		stage2.setPrefHeight(80);
 		stage3.setPrefHeight(80);
 
+		stage1.setOnAction(e -> {
+			// 1. 練習モードの背景アニメーションを停止
+			if (timer != null) {
+				timer.stop();
+			}
+			
+			// 2. SampleController の遷移メソッドを直接呼び出す！
+			// (※ メソッド名が switchToStart で合っているか、確認してね！)
+			test.test2.GameController.switchToGame(stage);
+		});
 		VBox stageButtons = new VBox(20, stage1, stage2, stage3);
 		stageButtons.setAlignment(Pos.CENTER);
 
@@ -75,7 +85,7 @@ public class Practice extends Application {
 			if (timer != null) {
 				timer.stop();
 			}
-			Start titleScreen = new Start();
+			start titleScreen = new start();
 			try {
 				titleScreen.start(stage);
 			} catch (Exception ex) {

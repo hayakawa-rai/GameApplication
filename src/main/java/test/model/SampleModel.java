@@ -39,28 +39,26 @@ public class SampleModel {
 	private final Item[][] itemMap;
 	// 初期アイテム配置（エサ復活用）
 	private final Item[][] initialItemMap;
-
+	// エサ復活を有効にするか？
+	private boolean enableRespawn; 
 	// パックマンの状態
 	private final Sengoku sengoku;
+	private Enemy enemy;
 	private boolean paused = false;
 
-	// 口パク用の変数
+	// 口パク
 	private double mouthAngle = 45;
 	private int mouthOpening = -1;
-	private boolean isBlocked = false; // 現状未使用であれば削除してもOKです
+	private boolean isBlocked = false;
 
-	// ワープ抑止用の変数
+	// ワープ抑止
 	private boolean justWarped = false;
 	private int lastWarpX = -1;
 	private int lastWarpY = -1;
 
-	// 敵キャラクター（ゴースト）
-	private Enemy enemy;
-
-	public SampleModel() {
+	public SampleModel(boolean enableRespawn) {
+		this.enableRespawn = enableRespawn; // これで練習/ストーリーを切り替えられる（エサ復活用）
 		this.sengoku = new Sengoku(10 * TILE_SIZE, 14 * TILE_SIZE, 2);
-		
-		// マップと同じ大きさのアイテム配列を用意し、初期配置する
 		this.itemMap = new Item[map.length][map[0].length];
 		for (int row = 0; row < map.length; row++) {
 			for (int col = 0; col < map[0].length; col++) {
@@ -68,17 +66,21 @@ public class SampleModel {
 				double pixelY = row * TILE_SIZE + TILE_SIZE / 2.0;
 
 				if (map[row][col] == 0) {
-					itemMap[row][col] = new Point(pixelX, pixelY); // Pointインスタンス生成
+					itemMap[row][col] = new Point(pixelX, pixelY);
 				} else if (map[row][col] == 2) {
-					itemMap[row][col] = new Chii(pixelX, pixelY);   // Chiiインスタンス生成
+					itemMap[row][col] = new Chii(pixelX, pixelY);
 				}
 			}
 		}
-		// 初期アイテム配置を保存（エサ復活用）
-		this.initialItemMap = copyItemMap(itemMap);
+	    // エサ復活が有効なときだけ初期状態を保存（エサ復活用）
+	    if (enableRespawn) {
+	        this.initialItemMap = copyItemMap(itemMap);
+	    } else {
+	        this.initialItemMap = null;
+	    }
 	}
-
-	// --- itemMap をコピーする ---
+	
+	// --- itemMap をコピーする ---（エサ復活用）
 	private Item[][] copyItemMap(Item[][] src) {
 		Item[][] dst = new Item[src.length][src[0].length];
 		for (int r = 0; r < src.length; r++) {
@@ -89,16 +91,39 @@ public class SampleModel {
 		return dst;
 	}
 
+	public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
+		this.enemy = new RedEnemy(enemyImageView, this.sengoku);
+	}
+
 	public void togglePause() {
 		paused = !paused;
 	}
 
-	// --- 更新ロジック ---
+	//ゲーム全体の定期更新
+
+	public void update() {
+		if (paused)
+			return;
+
+		//パックマンの移動処理
+		updatePacman();
+
+		//敵キャラが存在すれば移動ロジックを実行
+		if (enemy != null) {
+			enemy.move(map);
+		}
+
+		//口パクの更新
+		updateMouth();
+
+		//パックマンと敵の当たり判定を毎フレーム確認
+		checkCollision();
+	}
+
 	public void updatePacman() {
 		if (paused || !sengoku.isAlive())
 			return;
 
-		// Sengokuの現在の座標から、現在のタイル位置を計算
 		int tileX = (int) (sengoku.getX() / TILE_SIZE);
 		int tileY = (int) (sengoku.getY() / TILE_SIZE);
 
@@ -106,7 +131,8 @@ public class SampleModel {
 		boolean skipWarp = false;
 		if (justWarped) {
 			if (tileX == lastWarpX && tileY == lastWarpY) {
-				skipWarp = true;
+				sengoku.move(map);
+				return;
 			} else {
 				justWarped = false;
 				lastWarpX = -1;
@@ -120,11 +146,9 @@ public class SampleModel {
 				int warpX = tileX;
 				int warpY = tileY;
 
-				// Sengokuの現在の進行方向を元に、ワープ先を探す
 				Direction currentDir = sengoku.getDirection();
-
+				// 横方向のワープ
 				if (currentDir != Direction.NONE) {
-					// 横方向のワープ
 					if (currentDir.getDX() != 0) {
 						for (int x = 0; x < map[0].length; x++) {
 							if (map[tileY][x] == 9 && x != tileX) {
@@ -144,7 +168,6 @@ public class SampleModel {
 					}
 				}
 
-				// Sengokuの位置を直接ワープ先のタイル中央に更新する
 				double newPacX = warpX * TILE_SIZE;
 				double newPacY = warpY * TILE_SIZE;
 				sengoku.setPosition(newPacX, newPacY);
@@ -153,54 +176,51 @@ public class SampleModel {
 				lastWarpX = warpX;
 				lastWarpY = warpY;
 
-				return; // ワープしたフレームは移動処理をスキップして終了
+				return;
 			}
 		}
 
-		// ワープゾーンにいない場合は、通常通りSengoku自身の移動ロジックを実行！
 		sengoku.move(map);
 
-		// 移動した後の新しいマス目の位置を再計算
 		int currentTileX = (int) ((sengoku.getX() + TILE_SIZE / 2.0) / TILE_SIZE);
 		int currentTileY = (int) ((sengoku.getY() + TILE_SIZE / 2.0) / TILE_SIZE);
 
-		// マップの範囲内であることを確認して捕食判定
 		if (currentTileY >= 0 && currentTileY < map.length && currentTileX >= 0 && currentTileX < map[0].length) {
 			Item item = itemMap[currentTileY][currentTileX];
 			if (item != null) {
-				// 各クラス（PointやChii）に定義された onEaten を実行してスコア加算
 				item.onEaten(sengoku);
-
-				// 食べたので配列から消去する
 				itemMap[currentTileY][currentTileX] = null;
 			}
 		}
-		
-		// 全部食べたかチェック
+		// 全部食べたかチェック（エサ復活用）
 		checkAllEaten();
 	}
-
-	// --- 全部食べたかチェック ---
-	private void checkAllEaten() {
-		for (int r = 0; r < itemMap.length; r++) {
-			for (int c = 0; c < itemMap[0].length; c++) {
-				if (itemMap[r][c] != null)
-					return; // まだ残っている
+	// --- 全部食べたかチェック ---（エサ復活用）
+		private void checkAllEaten() {
+			if (!enableRespawn) return;  // ← ストーリーでは復活しない
+			
+			for (int r = 0; r < itemMap.length; r++) {
+				for (int c = 0; c < itemMap[0].length; c++) {
+					if (itemMap[r][c] != null)
+						return; // まだ残っている
+				}
 			}
+			// 全部食べた → 復活（エサ復活用）
+			resetItems();
 		}
-		// 全部食べた → 復活
-		resetItems();
-	}
 
-	// --- エサ復活 ---
-	private void resetItems() {
-		for (int r = 0; r < itemMap.length; r++) {
-			for (int c = 0; c < itemMap[0].length; c++) {
-				itemMap[r][c] = initialItemMap[r][c];
+		// --- エサ復活 ---（エサ復活用）
+		private void resetItems() {
+			if (!enableRespawn || initialItemMap == null) return;
+			
+			for (int r = 0; r < itemMap.length; r++) {
+				for (int c = 0; c < itemMap[0].length; c++) {
+					itemMap[r][c] = initialItemMap[r][c];
+				}
 			}
+			System.out.println("ステージクリア！エサが復活しました！");
 		}
-		System.out.println("ステージクリア！エサが復活しました！");
-	}
+
 
 	public void updateMouth() {
 		if (paused || !sengoku.isAlive() || sengoku.getDirection() == Direction.NONE)
@@ -213,57 +233,30 @@ public class SampleModel {
 	}
 
 	public void setNextDirection(Direction dir) {
+
 		sengoku.setnextdirection(dir);
 	}
 
-	// コンストラクタ、または外部から呼び出して敵を初期化する
-	public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
-		this.enemy = new RedEnemy(enemyImageView, this.sengoku);
-	}
+	//敵との当たり判定
 
-	// ゲームループ等から毎フレーム呼ばれる総合アップデートメソッド
-	public void update() {
-		if (paused)
-			return;
-
-		// パックマンの移動と捕食処理
-		updatePacman();
-
-		// 敵キャラが存在すれば移動ロジックを実行
-		if (enemy != null) {
-			enemy.move(map); // Enemy側の内部で自動的にImageViewの位置も同期されます
-		}
-
-		// 口パク処理
-		updateMouth();
-
-		// 仙石さんと敵の当たり判定を毎フレームチェック
-		checkCollision();
-	}
-
-	// 敵との接触を判定するメソッド
 	private void checkCollision() {
 		if (enemy == null || !sengoku.isAlive())
 			return;
 
-		// お互いの中心座標を計算する
 		double pacCenterX = sengoku.getX() + TILE_SIZE / 2.0;
 		double pacCenterY = sengoku.getY() + TILE_SIZE / 2.0;
 		double enemyCenterX = enemy.getX() + TILE_SIZE / 2.0;
 		double enemyCenterY = enemy.getY() + TILE_SIZE / 2.0;
 
-		// 三平方の定理で2点間の直線距離を計算
 		double dx = pacCenterX - enemyCenterX;
 		double dy = pacCenterY - enemyCenterY;
 		double distance = Math.sqrt(dx * dx + dy * dy);
 
-		// 当たり判定の基準値（1タイルの8割ほどの距離「24ピクセル」以内に近づいたら接触となる）
 		double collisionThreshold = TILE_SIZE * 0.8;
 
 		if (distance < collisionThreshold) {
-			System.out.println("敵に捕まった！ゲームオーバー！");
-			// 例: sengoku.setAlive(false); 
-			this.paused = true; // ゲームを一時停止状態にする
+			System.out.println("💥 敵に捕まった！ゲームオーバー！");
+			this.paused = true;
 		}
 	}
 
