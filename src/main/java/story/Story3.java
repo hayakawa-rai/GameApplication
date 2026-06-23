@@ -420,8 +420,7 @@ public class Story3 extends Application{
         	    		
         	    }
 
-        	    
-        	    //差し込み絵の処理
+        	  
         	    //タイピングを再スタート
         	    startTyping();
         	    //▼を消す
@@ -463,21 +462,21 @@ public class Story3 extends Application{
 
         	    nextMark.setVisible(false);
 
-        	    // ✅ 黒いフェード用
+        	    //黒いフェード用
         	    Rectangle fadeRect = new Rectangle(1000, 800, Color.BLACK);
         	    fadeRect.setOpacity(0);
         	    base.getChildren().add(fadeRect);
 
-        	    // ✅ フェードアウト
+        	    //フェードアウト
         	    FadeTransition fade = new FadeTransition(Duration.seconds(1.5), fadeRect);
         	    fade.setFromValue(0);
         	    fade.setToValue(1);
 
         	    fade.setOnFinished(ev -> {
-        	        // ✅ BGM停止
+        	        //BGM停止
         	        Bgm.stopBGM();
 
-        	        // ✅ 次の画面へ
+        	        //次の画面へ
         	        test.test2.GameController.switchToGame(stage);
         	    });
 
