@@ -398,6 +398,19 @@ public class Story4 extends Application{
                 Dialogue d = dialogues.get(messageIndex);
         	    //誰が話しているかの情報取得
         	    String speaker = d.speaker;
+        	    //あにきの画像差し替え
+        	    if (messageIndex >= 2 && messageIndex <= 10) {
+        	        // 差し替え画像
+        	        anikiView.setImage(new Image(
+        	            getClass().getResourceAsStream("/picture/hayakawa2.png")
+        	        ));
+        	        // サイズ変更
+        	        anikiView.fitWidthProperty().bind(scene.widthProperty().multiply(0.5));
+        	        anikiView.fitHeightProperty().bind(scene.heightProperty().multiply(0.9));
+        	    } else {
+        	        // 元の画像に戻す
+        	        anikiView.setImage(anikiImage);
+        	    }
         	    //設定した音をならす
         	    if (d.sound != null && d.sound != jumpSound) {
         	        d.sound.stop();

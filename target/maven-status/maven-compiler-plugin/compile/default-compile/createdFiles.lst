@@ -8,14 +8,79 @@ Characters\Character.class
 test1\controller\GameController$1.class
 Characters\Direction$1.class
 test\Sengoku.class
+<<<<<<< HEAD
+=======
 test2\model\MapData.class
 sample\controller\SampleController.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 Items\Chii.class
 sample\stageclear2.class
 sample\practice$1.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+test\view\SampleView.class
+character\GameMap.class
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 Characters\Sengoku.class
 test3\model\MapData.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+character\Character.class
+=======
+<<<<<<< HEAD
+character\Character.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 sample\stageclear3.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+start.class
+character\Direction.class
+=======
+<<<<<<< HEAD
+start.class
+character\Direction.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test3\controller\GameController$1.class
 story\Stageclear1.class
 test3\Main.class
@@ -24,24 +89,128 @@ story\Story3.class
 sample\story1.class
 sample\controller\SampleController$1.class
 test\Character.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 sample\view\SampleView.class
+<<<<<<< HEAD
+=======
+test2\Main.class
+sample\model\SampleModel.class
+=======
+<<<<<<< HEAD
+character\Sengoku.class
+=======
+<<<<<<< HEAD
+character\Sengoku.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+sample\view\SampleView.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\test2\MapData.class
 test2\Main.class
 sample\model\SampleModel.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 story\Stageclear2.class
+<<<<<<< HEAD
 META-INF\maven\sample\Game\pom.xml
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Item\Chii.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+META-INF\maven\sample\Game\pom.xml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Item\Chii.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 sample\start.class
 sample\practice.class
 test\Direction.class
 story\Practice.class
 test\test2\TestMainapp.class
 sample\stageclear1.class
-test\test2\GameController.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 test\PacmanSample.class
+=======
+practice.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+test\test2\GameController.class
+<<<<<<< HEAD
+=======
+test\PacmanSample.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+Item\Point.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+test\PacmanSample.class
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+character\Direction$1.class
+=======
+test\PacmanSample.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 story\Dialogue.class
 story\StoryUtils.class
+Character\Direction$1.class
 sample\start$1.class
+<<<<<<< HEAD
 META-INF\MANIFEST.MF
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+start$1.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+META-INF\MANIFEST.MF
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+start$1.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\Enemy.class
 Characters\EnemyState.class
 story\Gameover.class
@@ -53,18 +222,105 @@ test\test2\GameController$1.class
 story\Practice$1.class
 test\RedEnemy.class
 test1\model\MapData.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Item\Item.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 start\Start.class
 test2\controller\GameController.class
 sample\gameover.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+practice$1.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\SampleMainApp.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+test\controller\SampleController.class
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test2\controller\GameController$1.class
 test3\view\MapView.class
 META-INF\maven\sample\Game\pom.properties
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+Item\Item.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+start\Start.class
+test2\controller\GameController.class
+sample\gameover.class
+practice$1.class
+test\SampleMainApp.class
+<<<<<<< HEAD
+test\controller\SampleController.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+test2\controller\GameController$1.class
+test3\view\MapView.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\SamplepracticeApp.class
 Items\Point.class
 test\Direction$1.class
+<<<<<<< HEAD
+=======
 test1\controller\GameController.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 start\Bgm.class
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+test$1.class
+gameover.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+start\Bgm.class
+<<<<<<< HEAD
+=======
+test.class
+=======
+<<<<<<< HEAD
+test$1.class
+gameover.class
+start\Bgm.class
+test.class
+=======
+start\Bgm.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 Items\Item.class
 test1\view\MapView.class
 test2\view\MapView.class
