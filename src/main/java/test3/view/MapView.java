@@ -1,9 +1,9 @@
-package test2.view;
+package test3.view;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
-import test2.model.MapData;
+import test3.model.MapData;
 
 public class MapView {
 

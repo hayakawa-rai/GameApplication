@@ -12,8 +12,8 @@ public class Sengoku extends Character {
 	private static final int CELL_SIZE = 24; //1マスの大きさ(px)
  
 	// コンストラクタ
-	public Sengoku(double x, double y, int speed) {
-		super(x, y, speed); // Character の位置情報を初期化
+	public Sengoku(double x, double y, double speed) {
+		super((int)x, (int)y, (int)speed); // Character の位置情報を初期化
 	}
  
 	//入力方向を保存
@@ -29,9 +29,9 @@ public class Sengoku extends Character {
 		double centerY = this.getY() + CELL_SIZE / 2.0;
  
 		//現在マスの中心からのズレ
-		int currentMeshX = (int) centerX % CELL_SIZE;
-		int currentMeshY = (int) centerY % CELL_SIZE;
-		int centerOffset = CELL_SIZE / 2;
+		double currentMeshX = (int) centerX % CELL_SIZE;
+		double currentMeshY = (int) centerY % CELL_SIZE;
+		double centerOffset = CELL_SIZE / 2;
  
 		//方向転換(マスの中心に来たら先行入力の方向に曲がる)
 		if (Math.abs(currentMeshX - centerOffset) < this.speed && Math.abs(currentMeshY - centerOffset) < this.speed) {
@@ -41,8 +41,8 @@ public class Sengoku extends Character {
 			}
 			//次の方向に進めるならその方向へ変更
 			if (canmove(nextdirection, map)) {
-				int col = (int) (centerX / CELL_SIZE);
-				int row = (int) (centerY / CELL_SIZE);
+				double col = (int) (centerX / CELL_SIZE);
+				double row = (int) (centerY / CELL_SIZE);
 				// マスの中心に位置を揃える（ズレ防止）
 				this.x = col * CELL_SIZE;
 				this.y = row * CELL_SIZE;

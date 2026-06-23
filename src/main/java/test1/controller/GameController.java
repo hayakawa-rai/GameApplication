@@ -1,12 +1,12 @@
-package test2.controller;
+package test1.controller;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
-import test2.model.MapData;
-import test2.view.MapView;
+import test1.model.MapData;
+import test1.view.MapView;
 
 public class GameController {
 
@@ -27,8 +27,8 @@ public class GameController {
 		//キーボードの入力を登録
 		attachInput(scene);
 
-		// ★ 起動時にステージ2の見た目をCanvasに適用する
-		changeStage(2);
+		// ★ 起動時にステージ1（ポップ）の見た目をCanvasに適用する
+		changeStage(1);
 
 		//メインゲームループ(AnimationTimer)の開始
 		startLoop();
