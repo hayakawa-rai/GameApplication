@@ -16,7 +16,7 @@ public abstract class Enemy extends Character {
 	//Sengokuをフィールドとして保持
 	protected Sengoku player;
 
-	//[4つのモード]初期状態の「縄張りモード」からスタートする
+	//[4つのモード]初期状態の「縄張りモード」からスタートするよ
 	protected EnemyState currentState = EnemyState.SCATTER;
 
 	//状態ごとの画像(こんな感じで書く(多分))
