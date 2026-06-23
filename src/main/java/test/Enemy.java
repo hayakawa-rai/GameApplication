@@ -125,7 +125,7 @@ public abstract class Enemy extends Character {
             
             if (currentCol == 9 && currentRow == 9) {
                 System.out.println("もうこれで終わってもいい・・・！");
-                this.setCurrentState(EnemyState.SCATTER); // 縄張りモードで復活するよ
+                this.setCurrentState(EnemyState.SCATTER); // 縄張りモードで復活する
             }
         }
 
