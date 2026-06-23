@@ -1,6 +1,5 @@
 // RedEnemy と連携してはさみうちにする BlueEnemy(青) 
 package Characters;
-//(mieteru-?)(doudesuka)
 /*
 
 public class BlueEnemy extends Enemy {
