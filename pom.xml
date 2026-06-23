@@ -42,10 +42,17 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
+<<<<<<< HEAD
                 <configuration>
                 
   
                     <mainClass>start.Start</mainClass>
+=======
+                <configuration>
+
+                    <mainClass>test1.Main</mainClass>
+
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
                 </configuration>
             </plugin>
         </plugins>
