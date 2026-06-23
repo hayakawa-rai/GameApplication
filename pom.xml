@@ -43,13 +43,9 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-<<<<<<< HEAD
 
                     <mainClass>test1.Main</mainClass>
 
-=======
-                    <mainClass>start.Start</mainClass>
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
                 </configuration>
             </plugin>
         </plugins>
