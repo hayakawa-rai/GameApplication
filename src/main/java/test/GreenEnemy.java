@@ -1,10 +1,10 @@
 // 遠くにいるときは追跡、近づくと縄張りへ戻る敵（緑）
-package Characters;
-/*
+package test;
+
 import java.util.List;
 
 import javafx.scene.image.Image;
-import test.test2.MapData;　(後で変更)
+import test.test2.MapData;
 
 public class GreenEnemy extends Enemy {
 
@@ -79,7 +79,7 @@ public class GreenEnemy extends Enemy {
 	}
 
 	// 遠い → 追跡 
-	// 近い → 左下の縄張りへ戻る
+	//　近い → 左下の縄張りへ戻る
 	@Override
 	protected Direction decideNextDirection(List<Direction> validDirections, int[][] map, MapData mapData) {
 
@@ -91,23 +91,22 @@ public class GreenEnemy extends Enemy {
 		double pacX = mapData.getPacX();
 		double pacY = mapData.getPacY();
 
-		int playerCol = (int) (pacX / MapData.TILE_SIZE);
-		int playerRow = (int) (pacY / MapData.TILE_SIZE);
+		int targetCol = (int) (pacX / MapData.TILE_SIZE);
+		int targetRow = (int) (pacY / MapData.TILE_SIZE);
 
 		// 自分の位置
 		int myCol = (int) (this.x / MapData.TILE_SIZE);
 		int myRow = (int) (this.y / MapData.TILE_SIZE);
 
 		// プレイヤーとの距離（マス単位）
-		double distance = Math.sqrt(Math.pow(myCol - playerCol, 2) + Math.pow(myRow - playerRow, 2));
+		double distance = Math.sqrt(Math.pow(myCol - targetCol, 2) + Math.pow(myRow - targetRow, 2));
 
 		// 遠いなら追跡
 		if (distance >= BORDER) {
-			return getClosestDirection(validDirections, playerCol, playerRow);
+			return getClosestDirection(validDirections, targetCol, targetRow);
 		}
 
 		// 近いなら縄張りへ戻る
 		return getClosestDirection(validDirections, TERRITORY_COL, TERRITORY_ROW);
 	}
 }
-*/

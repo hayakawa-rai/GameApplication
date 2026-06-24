@@ -13,7 +13,6 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import start.Start;
 
 public class Stageclear2 extends Application{
 	//ウィンドウを保存してどのクラスでも共通のウィンドウを使用するため
@@ -110,9 +109,9 @@ public class Stageclear2 extends Application{
 
         // 待った後に画面遷移
         pause.setOnFinished(ev -> {
-            Story3 story3 = new Story3();
             try {
-                story3.start(stage);
+            	// 画面遷移
+    	        test.test2.GameController.switchStory3(stage);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -136,9 +135,9 @@ public class Stageclear2 extends Application{
 
         // 待った後に画面遷移
         pause.setOnFinished(ev -> {
-        Start titleScreen = new Start();
         try {
-            titleScreen.start(stage);
+        	// 画面遷移
+	        test.test2.GameController.switchStart(stage);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -151,6 +150,9 @@ public class Stageclear2 extends Application{
     
     //buttonBoxを中身とした1000×800のウィンドウを作成
     Scene scene = new Scene(buttonBox, 1000, 800);
+    //ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
+    stage.setMinWidth(800);
+    stage.setMinHeight(600);
     //ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
     stage.setMinWidth(800);
     stage.setMinHeight(600);

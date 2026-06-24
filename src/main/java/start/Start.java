@@ -15,8 +15,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import story.Practice;
-import story.Story1;
 
 public class Start extends Application {
 	
@@ -111,7 +109,8 @@ public class Start extends Application {
 		    			new KeyFrame(Duration.millis(500), ev -> {
 		    				timer.stop();
 		    				Bgm.stopBGM();
-		    	            new Story1().start(stage);
+		    				//画面遷移
+		    				test.test2.GameController.startToStory(stage);
 		    	})
 		    );
 		    delay.play();
@@ -136,7 +135,7 @@ public class Start extends Application {
 		    				// 背景停止
 		    		        timer.stop();
 		    				// 画面遷移
-		    				new Practice().start(stage);
+		    		        test.test2.GameController.startToPractice(stage);
 		    	})	    
 		    );
 		    delay.play();	
