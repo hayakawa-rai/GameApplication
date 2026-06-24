@@ -1,4 +1,4 @@
-package Characters;
+/*package Characters;
 
 import java.util.List;
 
@@ -52,4 +52,4 @@ public class YellowEnemy extends Enemy {
         // 最も近づく方向を返す（Enemy の共通メソッド）
         return getClosestDirection(validDirections, targetCol, targetRow);
     }
-}
+}*/
