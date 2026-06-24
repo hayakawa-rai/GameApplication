@@ -134,8 +134,8 @@ public class MapData {
 		if (paused || !sengoku.isAlive())
 			return;
 
-		int tileX = (int) (sengoku.getX() / TILE_SIZE);
-		int tileY = (int) (sengoku.getY() / TILE_SIZE);
+		int tileX = (int) ((sengoku.getX() + TILE_SIZE / 2.0) / TILE_SIZE);
+		int tileY = (int) ((sengoku.getY() + TILE_SIZE / 2.0) / TILE_SIZE);
 
 		// --- ワープ抑止ロジック ---
 		boolean skipWarp = false;
@@ -230,8 +230,8 @@ public class MapData {
 
 		// ⭕ ループ処理でリスト内のどの敵に捕まったかを一斉に判定
 		for (Enemy e : enemies) {
-			double dx = pacCenterX - (e.getX() + TILE_SIZE / 2.0);
-			double dy = pacCenterY - (e.getY() + TILE_SIZE / 2.0);
+			double dx = pacCenterX - e.getX();
+			double dy = pacCenterY - e.getY();
 			if (Math.sqrt(dx * dx + dy * dy) < collisionThreshold) {
 				String enemyName = (e instanceof RedEnemy) ? "赤敵" : "緑敵";
 				System.out.println("💥 " + enemyName + "に捕まった！ゲームオーバー！");
