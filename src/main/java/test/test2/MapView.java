@@ -32,7 +32,7 @@ public class MapView {
 		double scaleY = canvasHeight / stageHeight;
 
 		// 2. 画面にぴったり収まる拡大率に「0.9」を掛けて、全体を90%の大きさに縮小する
-		double bufferRatio = 0.9; // ★ここを変えることでサイズを自由に調整できます（0.8なら80%）
+		double bufferRatio = 0.7; // ★ここを変えることでサイズを自由に調整できます（0.8なら80%）
 		double scale = Math.min(scaleX, scaleY) * bufferRatio;
 
 		// 3. 小さくなった分も含めて、改めて中央に配置するための余白（オフセット）を計算
