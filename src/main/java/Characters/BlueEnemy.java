@@ -44,7 +44,7 @@ public class BlueEnemy extends Enemy {
 
 		// 画像の読み込み処理
 		try {
-			java.io.InputStream is = getClass().getResourceAsStream("/picture/■■.png");
+			java.io.InputStream is = getClass().getResourceAsStream("/picture/wadataku.png");
 			if (is == null) {
 				System.err.println("❌【エラー】画像が見つかりません");
 			} else {
@@ -78,14 +78,14 @@ public class BlueEnemy extends Enemy {
 		}
 		
 		// FEVER 時はランダム移動
-        if (this.currentState == EnemyState.FEVER) {
-            return getRandomDirection(validDirections);
-        }
+        //if (this.currentState == EnemyState.FEVER) {
+        //   return getRandomDirection(validDirections);
+        //}
         
         // DEAD 時はハウスへ帰還
-        if (this.currentState == EnemyState.DEAD) {
-            return getClosestDirection(validDirections, START_COL, START_ROW);
-        }
+        //if (this.currentState == EnemyState.DEAD) {
+        //    return getClosestDirection(validDirections, START_COL, START_ROW);
+        //}
 
 		// プレイヤーのタイル座標
     		int pacCol = (int)(mapData.getPacX() / MapData.TILE_SIZE);
