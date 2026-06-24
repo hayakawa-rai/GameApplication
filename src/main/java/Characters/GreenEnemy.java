@@ -1,15 +1,14 @@
 // 遠くにいるときは追跡、近づくと縄張りへ戻る敵（緑）
 package Characters;
 /*
-
 import java.util.List;
 import javafx.scene.image.ImageView;
 
 public class GreenEnemy extends Enemy {
 
     // マップ中心 エネミーハウス内（仮座標）
-    private static final int START_COL = 15;
-    private static final int START_ROW = 15;
+    private static final int START_COL = 16;
+    private static final int START_ROW = 17;
 
     // この距離以上ならプレイヤーを追いかける（8マス）
     private static final double BORDER = 8 * CELL_SIZE;
@@ -21,7 +20,7 @@ public class GreenEnemy extends Enemy {
     // 出撃待機用
     private long startTime;
 
-    // 巣から出たかどうか
+    // 巣から出たか
     private boolean released = false;
 
     public GreenEnemy(ImageView imageView) {
