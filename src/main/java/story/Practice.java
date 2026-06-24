@@ -90,7 +90,7 @@ public class Practice extends Application {
 				}
 
 				//STAGE1のゲーム画面へ遷移
-				stage.setScene(test1.Main1.createScene(stage));
+	//			stage.setScene(test1.Main1.createScene(stage));
 			});
 
 			//タイマー開始
@@ -116,7 +116,7 @@ public class Practice extends Application {
 				}
 
 				//STAGE2のゲーム画面へ遷移
-				stage.setScene(test1.Main1.createScene(stage));
+	//			stage.setScene(test1.Main1.createScene(stage));
 			});
 
 			//タイマー開始
@@ -142,7 +142,7 @@ public class Practice extends Application {
 				}
 
 				//STAGE3のゲーム画面へ遷移
-				stage.setScene(test1.Main1.createScene(stage));
+//				stage.setScene(test1.Main1.createScene(stage));
 			});
 
 			//タイマー開始

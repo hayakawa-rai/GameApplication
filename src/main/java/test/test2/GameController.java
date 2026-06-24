@@ -6,6 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
+import story.Practice;
+import test1.Main1;
+import test2.Main2;
+import test3.Main3;
 
 public class GameController {
 
@@ -94,8 +98,6 @@ public class GameController {
 				if (model.isPaused()) return;
 
 				// ゲーム状態の更新
-				//model.updatePacman();  // 位置・衝突・ワープ処理
-				//model.updateMouth();   // 口のアニメーション
 				model.update();
 				
 				// 画面描写（ステージ背景とパックマンの描画を分離して実行）
@@ -116,5 +118,45 @@ public class GameController {
 	public void stop() {
 		if (timer != null)
 			timer.stop();
+	}
+	
+	//画面変更Main1へ
+	public static void switchToGame1(javafx.stage.Stage stage) {
+		try { 
+			Main1 App = new Main1();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	//画面変更Mani2へ
+	public static void switchToGame2(javafx.stage.Stage stage) {
+		try { 
+			Main2 App = new Main2();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Main3へ
+	public static void switchToGame3(javafx.stage.Stage stage) {
+		try { 
+			Main3 App = new Main3();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更start→practice
+	public static void switchToGame4(javafx.stage.Stage stage) {
+		try { 
+			Practice App = new Practice();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
