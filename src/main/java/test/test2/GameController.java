@@ -6,6 +6,14 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
+import start.Start;
+import story.Practice;
+import story.Story1;
+import story.Story2;
+import story.Story3;
+import test1.Main1;
+import test2.Main2;
+import test3.Main3;
 
 public class GameController {
 
@@ -114,5 +122,95 @@ public class GameController {
 	public void stop() {
 		if (timer != null)
 			timer.stop();
+	}
+	
+	//画面変更Main1へ
+	public static void switchToGame1(javafx.stage.Stage stage) {
+		try { 
+			Main1 App = new Main1();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	//画面変更Mani2へ
+	public static void switchToGame2(javafx.stage.Stage stage) {
+		try { 
+			Main2 App = new Main2();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Main3へ
+	public static void switchToGame3(javafx.stage.Stage stage) {
+		try { 
+			Main3 App = new Main3();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更start→practice
+	public static void startToPractice(javafx.stage.Stage stage) {
+		try { 
+			Practice App = new Practice();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更start→story
+	public static void startToStory(javafx.stage.Stage stage) {
+		try { 
+			Story1 App = new Story1();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更start
+	public static void switchStart(javafx.stage.Stage stage) {
+		try { 
+			Start App = new Start();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Story2
+	public static void switchStory2(javafx.stage.Stage stage) {
+		try { 
+			Story2 App = new Story2();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Story3
+	public static void switchStory3(javafx.stage.Stage stage) {
+		try { 
+			Story3 App = new Story3();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Story3
+	public static void switchStory4(javafx.stage.Stage stage) {
+		try { 
+			Story3 App = new Story3();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -403,7 +403,7 @@ public class Story1 extends Application{
         	        Bgm.stopBGM();
 
         	        //次の画面へ
-        	        test1.controller.GameController.switchToGame(stage);
+        	        test.test2.GameController.switchToGame1(stage);
         	    });
 
         	    fade.play();
