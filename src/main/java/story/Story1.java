@@ -39,6 +39,10 @@ public class Story1 extends Application{
         stage.setTitle("story1");
         stage.show();
     }
+    private Timeline blink;
+    private Timeline arrowMove;
+    private AudioClip jumpSound;
+
     //ストーリー終了処理を1回だけにする用
     private boolean isEndingStarted = false;
     //今どのメッセージを表示しているかのカウント用
@@ -66,6 +70,54 @@ public class Story1 extends Application{
         timeline.playFromStart();
     }
     
+    private void cleanup(Scene scene) {
+
+        // 文字タイピング
+        if (timeline != null) {
+            timeline.stop();
+            timeline = null;
+        }
+
+        // ジャンプ
+        if (jumpAniki != null) {
+            jumpAniki.stop();
+            jumpAniki = null;
+        }
+        if (jumpSengoku != null) {
+            jumpSengoku.stop();
+            jumpSengoku = null;
+        }
+        if (jumpNarinari != null) {
+            jumpNarinari.stop();
+            jumpNarinari = null;
+        }
+
+        // ▼アニメーション
+        if (blink != null) {
+            blink.stop();
+            blink = null;
+        }
+        if (arrowMove != null) {
+            arrowMove.stop();
+            arrowMove = null;
+        }
+
+        // 効果音
+        if (jumpSound != null) {
+            jumpSound.stop();
+            jumpSound = null;
+        }
+
+        // BGM停止
+        Bgm.stopBGM();
+
+        // クリックイベント解除
+        if (scene != null) {
+            scene.setOnMouseClicked(null);   // 念のため
+            scene.removeEventFilter(MouseEvent.MOUSE_CLICKED, null);
+        }
+    }
+    
     public Scene story() {
     	
     	//BGMの再生
@@ -73,7 +125,7 @@ public class Story1 extends Application{
     	Bgm.playBGM("/music/storybgm.mp3");
     
     	 //ジャンプ音の読み込み
-        AudioClip jumpSound = new AudioClip(
+        jumpSound = new AudioClip(
         	    getClass().getResource("/music/jump06.mp3").toExternalForm()
         	);
         //音量調整
@@ -129,8 +181,8 @@ public class Story1 extends Application{
         //下に下げる
         nextMark.setTranslateY(40);
         //▼のアニメーション設定
-        Timeline blink = StoryUtils.createBlink(nextMark);
-        Timeline arrowMove = StoryUtils.createArrowMove(nextMark);
+        blink = StoryUtils.createBlink(nextMark);
+        arrowMove = StoryUtils.createArrowMove(nextMark);
         
         //会話している人の名前表示用
         Text nameText = new Text();
@@ -253,7 +305,7 @@ public class Story1 extends Application{
         //フォントサイズも変化
         text.styleProperty().bind(
         		Bindings.format(
-        				"-fx-font-size: %.0fpx; -fx-fill: white; -fx-font-family: monospace;",
+        				"-fx-font-size: %.0fpx; -fx-font-family: monospace;",
         				scene.widthProperty().multiply(0.03)
         		)
         );
@@ -399,9 +451,8 @@ public class Story1 extends Application{
         	    fadeRect.heightProperty().bind(scene.heightProperty());
         	    
         	    fade.setOnFinished(ev -> {
-        	        //BGM停止
-        	        Bgm.stopBGM();
-
+        	    	cleanup(scene); 
+        	    	base.getChildren().clear();
         	        //次の画面へ
         	        test.test2.GameController.switchToGame1(stage);
         	    });
