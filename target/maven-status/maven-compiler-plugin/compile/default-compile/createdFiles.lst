@@ -21,6 +21,38 @@ test\GreenEnemy.class
 Items\Chii.class
 sample\stageclear2.class
 sample\practice$1.class
+<<<<<<< HEAD
+=======
+Characters\Sengoku.class
+test3\model\MapData.class
+sample\stageclear3.class
+test3\controller\GameController$1.class
+story\Stageclear1.class
+start\Start$1.class
+story\Story3.class
+test2\Main2.class
+sample\story1.class
+sample\controller\SampleController$1.class
+test\Character.class
+sample\view\SampleView.class
+test\test2\MapData.class
+sample\model\SampleModel.class
+story\Stageclear2.class
+test3\Main3.class
+sample\start.class
+sample\practice.class
+test\Direction.class
+story\Practice.class
+test\test2\TestMainapp.class
+test\YellowEnemy$1.class
+sample\stageclear1.class
+test\test2\GameController.class
+test\PacmanSample.class
+story\Dialogue.class
+story\StoryUtils.class
+sample\start$1.class
+test\Enemy.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 Characters\EnemyState.class
 story\Gameover.class
 Characters\Sengoku.class
@@ -38,9 +70,14 @@ sample\story1.class
 sample\gameover.class
 sample\controller\SampleController$1.class
 test\SampleMainApp.class
+<<<<<<< HEAD
 test\Character.class
 sample\view\SampleView.class
 sample\model\SampleModel.class
+=======
+test2\controller\GameController$1.class
+test3\view\MapView.class
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\SamplepracticeApp.class
 Items\Point.class
 story\Stageclear2.class
