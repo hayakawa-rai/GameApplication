@@ -80,7 +80,7 @@ public class Story2 extends Application{
         	    getClass().getResource("/music/jump06.mp3").toExternalForm()
         	);
         //音量調整
-        jumpSound.setVolume(0.3); 
+        jumpSound.setVolume(0.2); 
         //足音の読み込み
         AudioClip cuteSound = new AudioClip(
         	    getClass().getResource("/music/footsteps.mp3").toExternalForm()
@@ -216,7 +216,7 @@ public class Story2 extends Application{
         
         //背景画像を読み込み
         Image bgImage = new Image(
-        		getClass().getResourceAsStream("/picture/emd-nottori.jpg")
+        		getClass().getResourceAsStream("/picture/companyroom.jpg")
         );
         //背景画像の表示
         ImageView bgView = new ImageView(bgImage);
@@ -519,21 +519,21 @@ public class Story2 extends Application{
 
         	    nextMark.setVisible(false);
 
-        	    // ✅ 黒いフェード用
+        	    //黒いフェード用
         	    Rectangle fadeRect = new Rectangle(1000, 800, Color.BLACK);
         	    fadeRect.setOpacity(0);
         	    base.getChildren().add(fadeRect);
 
-        	    // ✅ フェードアウト
+        	    //フェードアウト
         	    FadeTransition fade = new FadeTransition(Duration.seconds(1.5), fadeRect);
         	    fade.setFromValue(0);
         	    fade.setToValue(1);
 
         	    fade.setOnFinished(ev -> {
-        	        // ✅ BGM停止
+        	        //BGM停止
         	        Bgm.stopBGM();
 
-        	        // ✅ 次の画面へ
+        	        //次の画面へ
         	        test.test2.GameController.switchToGame(stage);
         	    });
 

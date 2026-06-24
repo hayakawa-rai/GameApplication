@@ -80,7 +80,7 @@ public class Story3 extends Application{
         	    getClass().getResource("/music/jump06.mp3").toExternalForm()
         	);
         //音量調整
-        jumpSound.setVolume(0.3); 
+        jumpSound.setVolume(0.2); 
         //倒される時の音の読み込み
         AudioClip downSound = new AudioClip(
         	    getClass().getResource("/music/down.mp3").toExternalForm()
@@ -92,13 +92,13 @@ public class Story3 extends Application{
         	    getClass().getResource("/music/feel.mp3").toExternalForm()
         	);
         //音量調整
-        feelSound.setVolume(0.3);  //起こった時の音の読み込み
+        feelSound.setVolume(0.5);  //起こった時の音の読み込み
         //最後の戦いの音楽の読み込み
         AudioClip endSound = new AudioClip(
         	    getClass().getResource("/music/end.mp3").toExternalForm()
         	);
         //音量調整
-        endSound.setVolume(0.3);
+        endSound.setVolume(0.4);
     	//会話内容を設定
     	List<Dialogue> dialogues = Arrays.asList( 
         		new Dialogue("わだたく", "……あれ……？もう、あそべない……？",downSound,Color.RED),
@@ -181,7 +181,7 @@ public class Story3 extends Application{
         
         //背景画像を読み込み
         Image bgImage = new Image(
-        		getClass().getResourceAsStream("/picture/emd-nottori.jpg")
+        		getClass().getResourceAsStream("/picture/shatyoroom.jpg")
         );
         //背景画像の表示
         ImageView bgView = new ImageView(bgImage);
@@ -420,8 +420,7 @@ public class Story3 extends Application{
         	    		
         	    }
 
-        	    
-        	    //差し込み絵の処理
+        	  
         	    //タイピングを再スタート
         	    startTyping();
         	    //▼を消す
@@ -463,21 +462,21 @@ public class Story3 extends Application{
 
         	    nextMark.setVisible(false);
 
-        	    // ✅ 黒いフェード用
+        	    //黒いフェード用
         	    Rectangle fadeRect = new Rectangle(1000, 800, Color.BLACK);
         	    fadeRect.setOpacity(0);
         	    base.getChildren().add(fadeRect);
 
-        	    // ✅ フェードアウト
+        	    //フェードアウト
         	    FadeTransition fade = new FadeTransition(Duration.seconds(1.5), fadeRect);
         	    fade.setFromValue(0);
         	    fade.setToValue(1);
 
         	    fade.setOnFinished(ev -> {
-        	        // ✅ BGM停止
+        	        //BGM停止
         	        Bgm.stopBGM();
 
-        	        // ✅ 次の画面へ
+        	        //次の画面へ
         	        test.test2.GameController.switchToGame(stage);
         	    });
 
