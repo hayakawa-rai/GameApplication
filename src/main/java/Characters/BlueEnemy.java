@@ -1,7 +1,7 @@
 // RedEnemy と連携してはさみうちにする BlueEnemy(青) 
-/*
-package Characters;
 
+package Characters;
+/*
 import java.util.List;
 
 import javafx.scene.image.Image;
@@ -11,12 +11,18 @@ import test.test2.MapData;
 
 public class BlueEnemy extends Enemy {
 
+	// スタート位置(マップ中心 エネミーハウス上)
+	private static final int START_COL = 16;
+	private static final int START_ROW = 16;
+
+	// 縄張りエリアの中心（右下）（仮座標）
+	private static final int TERRITORY_COL = 24;
+	private static final int TERRITORY_ROW = 26;
+
+	// プレイヤーの進行方向の2マス先を狙う
 	private static final int PREDICT_TILES = 2;
 	// 出発遅延（2秒後に動き始める)
 	private static final long DELAY = 2000;
-	// エネミーハウスの初期位置（マス単位）
-	private static final int START_COL = 13;
-	private static final int START_ROW = 11;
 
 	// 出発時間の記録
 	private long startTime;
@@ -70,40 +76,50 @@ public class BlueEnemy extends Enemy {
 		if (mapData == null || red == null || validDirections.isEmpty()) {
 			return Direction.NONE;
 		}
+		
+		// FEVER 時はランダム移動
+        if (this.currentState == EnemyState.FEVER) {
+            return getRandomDirection(validDirections);
+        }
+        
+        // DEAD 時はハウスへ帰還
+        if (this.currentState == EnemyState.DEAD) {
+            return getClosestDirection(validDirections, START_COL, START_ROW);
+        }
 
-		// プレイヤーの中心座標
-		double pacX = mapData.getPacX();
-		double pacY = mapData.getPacY();
+		// プレイヤーのタイル座標
+    		int pacCol = (int)(mapData.getPacX() / MapData.TILE_SIZE);
+    		int pacRow = (int)(mapData.getPacY() / MapData.TILE_SIZE);
 
 		// プレイヤーの向きの2マス先
 		switch (mapData.getSengoku().getDirection()) {
 		case UP:
-			pacY -= PREDICT_TILES * MapData.TILE_SIZE;
+			pacRow -= PREDICT_TILES * MapData.TILE_SIZE;
 			break;
 		case DOWN:
-			pacY += PREDICT_TILES * MapData.TILE_SIZE;
+			pacRow += PREDICT_TILES * MapData.TILE_SIZE;
 			break;
 		case LEFT:
-			pacX -= PREDICT_TILES * MapData.TILE_SIZE;
+			pacCol -= PREDICT_TILES * MapData.TILE_SIZE;
 			break;
 		case RIGHT:
-			pacX += PREDICT_TILES * MapData.TILE_SIZE;
+			pacCol += PREDICT_TILES * MapData.TILE_SIZE;
 			break;
 		default:
 			break;
 		}
 
 		// RedEnemy の位置
-		double rx = red.getX();
-		double ry = red.getY();
+		int redCol = (int)(red.getX() / MapData.TILE_SIZE);
+    		int redRow = (int)(red.getY() / MapData.TILE_SIZE);
 
 		// ベクトル計算
-		double vx = pacX - rx;
-		double vy = pacY - ry;
+        int vx = pacCol - redCol;
+        int vy = pacRow - redRow;
 
-		// 2倍した先をターゲットにする
-		double tx = pacX + vx;
-		double ty = pacY + vy;
+        // 2倍した先がターゲット
+        int targetCol = pacCol + vx;
+        int targetRow = pacRow + vy;
 
 		// ピクセル → マス変換
 		int targetCol = (int) (tx / MapData.TILE_SIZE);
