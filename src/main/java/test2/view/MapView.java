@@ -108,7 +108,7 @@ public class MapView {
 		gc.translate(offsetX, offsetY);
 		gc.scale(scale, scale);
 
-		// 背景色で画面全体を塗りつぶし（ここが暗いネオンカラーのベースになります）
+		// 背景色で画面全体を塗りつぶし
 		Color bgColor = getColorFromCSS(gc, "game-bg", Color.BLACK);
 		gc.setFill(bgColor);
 		gc.fillRect(0, 0, mapW, mapH);

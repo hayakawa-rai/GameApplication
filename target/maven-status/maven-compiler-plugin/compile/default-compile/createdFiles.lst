@@ -29,16 +29,6 @@ test\test2\MapData.class
 test2\Main.class
 sample\model\SampleModel.class
 story\Stageclear2.class
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
-META-INF\maven\sample\Game\pom.xml
-<<<<<<< HEAD
-=======
-=======
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 sample\start.class
 sample\practice.class
 test\Direction.class
@@ -51,16 +41,6 @@ test\PacmanSample.class
 story\Dialogue.class
 story\StoryUtils.class
 sample\start$1.class
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
-META-INF\MANIFEST.MF
-<<<<<<< HEAD
-=======
-=======
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\Enemy.class
 Characters\EnemyState.class
 story\Gameover.class
@@ -78,13 +58,6 @@ sample\gameover.class
 test\SampleMainApp.class
 test2\controller\GameController$1.class
 test3\view\MapView.class
-<<<<<<< HEAD
-META-INF\maven\sample\Game\pom.properties
-<<<<<<< HEAD
-=======
-=======
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\SamplepracticeApp.class
 Items\Point.class
 test\Direction$1.class

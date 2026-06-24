@@ -14,7 +14,7 @@ public class MapView {
 		this.model = model;
 	}
 
-	// ★ CSSの背景色からColorオブジェクトを安全に引っ張り出す正しい処理
+	// CSSの背景色からColorオブジェクトを安全に引っ張り出す正しい処理
 	private Color getColorFromCSS(GraphicsContext gc, String styleClass, Color fallbackColor) {
 		try {
 			javafx.scene.Scene scene = gc.getCanvas().getScene();
@@ -53,7 +53,7 @@ public class MapView {
 		Color wallColor = getColorFromCSS(gc, "game-wall", Color.BLUE);
 		gc.setFill(wallColor);
 
-		// ★ 枠線（Stroke）は一切使わず、塗りつぶし（Fill）だけで描画します
+		// 枠線（Stroke）は一切使わず、塗りつぶし（Fill）だけで描画します
 		for (int y = 0; y < map.length; y++) {
 			for (int x = 0; x < map[0].length; x++) {
 				if (map[y][x] == 1) {

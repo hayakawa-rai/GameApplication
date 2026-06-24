@@ -41,6 +41,12 @@ public class Main extends Application {
 
 		//画面レイアウト作成
 		BorderPane root = new BorderPane();
+
+		//余白部分に画像貼り付け
+		String bgUrl = getClass().getResource("/picture/shatyoroom.jpg").toExternalForm();
+		root.setStyle("-fx-background-image: url('" + bgUrl
+				+ "'); -fx-background-size: cover; -fx-background-position: center;");
+
 		root.setTop(topHud); //上段
 		root.setCenter(gameCanvas); //中央(ゲーム画面配置)
 		root.setBottom(bottomHud); //下段
