@@ -7,8 +7,8 @@ import javafx.scene.image.ImageView;
 public class GreenEnemy extends Enemy {
 
     // マップ中心 エネミーハウス内（仮座標）
-    private static final int START_COL = 15;
-    private static final int START_ROW = 15;
+    private static final int START_COL = 16;
+    private static final int START_ROW = 17;
 
     // この距離以上ならプレイヤーを追いかける（8マス）
     private static final double BORDER = 8 * CELL_SIZE;
