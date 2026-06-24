@@ -1,7 +1,6 @@
 // 遠くにいるときは追跡、近づくと縄張りへ戻る敵（緑）
 package Characters;
 /*
-
 import java.util.List;
 import javafx.scene.image.ImageView;
 
@@ -21,7 +20,7 @@ public class GreenEnemy extends Enemy {
     // 出撃待機用
     private long startTime;
 
-    // 巣から出たかどうか
+    // 巣から出たか
     private boolean released = false;
 
     public GreenEnemy(ImageView imageView) {
