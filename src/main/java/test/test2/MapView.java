@@ -11,6 +11,7 @@ import javafx.scene.text.FontWeight;
 import test.Enemy;
 import test.GreenEnemy;
 import test.RedEnemy;
+import test.YellowEnemy;
 
 public class MapView {
 
@@ -36,7 +37,7 @@ public class MapView {
 		double scaleY = canvasHeight / stageHeight;
 
 		// 2. 画面にぴったり収まる拡大率に「0.9」を掛けて、全体を90%の大きさに縮小する
-		double bufferRatio = 0.7; // ★ここを変えることでサイズを自由に調整できます（0.8なら80%）
+		double bufferRatio = 0.8; // ★ここを変えることでサイズを自由に調整できます（0.8なら80%）
 		double scale = Math.min(scaleX, scaleY) * bufferRatio;
 
 		// 3. 小さくなった分も含めて、改めて中央に配置するための余白（オフセット）を計算
@@ -185,6 +186,9 @@ public class MapView {
 			img = ((RedEnemy) enemy).getEnemyImage();
 		} else if (enemy instanceof GreenEnemy) {
 			img = ((GreenEnemy) enemy).getEnemyImage();
+		}else if (enemy instanceof YellowEnemy) {
+			// ⭕ 黄色の画像を取得
+			img = ((YellowEnemy) enemy).getEnemyImage();
 		}
 		
 		// マスの中心座標(X, Y)から半マス引いて、画像の左上基準座標を計算（70%縮小でも絶対にズレない魔法の補正）

@@ -25,7 +25,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import start.Bgm;
-import start.Start;
 
 public class Story4 extends Application{
 
@@ -464,9 +463,8 @@ public class Story4 extends Application{
         	        //BGM停止
         	        Bgm.stopBGM();
 
-        	        //スタート画面へ遷移
-        	        Start start = new Start();
-        	        start.start(stage);
+        	        // 画面遷移
+        	        test.test2.GameController.switchStart(stage);
         	    });
 
         	    fade.play();
