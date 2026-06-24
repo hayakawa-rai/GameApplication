@@ -32,6 +32,7 @@ sample\practice.class
 test\Direction.class
 story\Practice.class
 test\test2\TestMainapp.class
+test\YellowEnemy$1.class
 sample\stageclear1.class
 test\test2\GameController.class
 test\PacmanSample.class
