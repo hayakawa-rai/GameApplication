@@ -13,7 +13,6 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import start.Start;
 
 public class Stageclear3 extends Application{
 	//ウィンドウを保存してどのクラスでも共通のウィンドウを使用するため
@@ -110,9 +109,9 @@ public class Stageclear3 extends Application{
 
         // 待った後に画面遷移
         pause.setOnFinished(ev -> {
-            Story4 story4 = new Story4();
             try {
-                story4.start(stage);
+            	// 画面遷移
+    	        test.test2.GameController.switchStory4(stage);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -136,9 +135,9 @@ public class Stageclear3 extends Application{
 
         // 待った後に画面遷移
         pause.setOnFinished(ev -> {
-        Start titleScreen = new Start();
         try {
-            titleScreen.start(stage);
+        	// 画面遷移
+	        test.test2.GameController.switchStart(stage);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

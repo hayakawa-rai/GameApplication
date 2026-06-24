@@ -18,7 +18,6 @@ import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import start.Bgm;
-import start.Start;
 
 public class Practice extends Application {
 
@@ -114,11 +113,11 @@ public class Practice extends Application {
 
 	        // 待った後に画面遷移
 	        pause.setOnFinished(ev -> {
-	        Start titleScreen = new Start();
 	        // 背景停止
 	        timer.stop();
 	        try {
-	            titleScreen.start(stage);
+	        	// 画面遷移
+		        test.test2.GameController.switchStart(stage);
 	        } catch (Exception ex) {
 	            ex.printStackTrace();
 	        }
