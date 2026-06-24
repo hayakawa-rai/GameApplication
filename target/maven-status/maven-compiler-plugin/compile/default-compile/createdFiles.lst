@@ -30,7 +30,10 @@ story\Stageclear2.class
 sample\start.class
 sample\practice.class
 test\Direction.class
+<<<<<<< HEAD
 Map.class
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 story\Practice.class
 test\test2\TestMainapp.class
 sample\stageclear1.class
