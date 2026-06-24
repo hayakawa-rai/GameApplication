@@ -11,6 +11,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import test.BlueEnemy;
 import test.Enemy;
 import test.GreenEnemy;
 import test.RedEnemy;
@@ -65,8 +66,11 @@ public class MapView {
 		double scaleX = canvasWidth / stageWidth;
 		double scaleY = canvasHeight / stageHeight;
 
-		// 2. 全体を70%の大きさに縮小する
+		// 2. 全体を90%の大きさに縮小する
 		double bufferRatio = 0.9; 
+		// 2. 画面にぴったり収まる拡大率に「0.9」を掛けて、全体を90%の大きさに縮小する
+		double bufferRatio = 0.8; // ★ここを変えることでサイズを自由に調整できます（0.8なら80%）
+
 		double scale = Math.min(scaleX, scaleY) * bufferRatio;
 
 		// 3. 中央に配置するための余白（オフセット）を計算
@@ -210,6 +214,9 @@ public class MapView {
 			img = ((GreenEnemy) enemy).getEnemyImage();
 		} else if (enemy instanceof YellowEnemy) {
 			img = ((YellowEnemy) enemy).getEnemyImage();
+		} else if (enemy instanceof BlueEnemy) {
+			// ⭕ 青の画像を取得
+			img = ((BlueEnemy) enemy).getEnemyImage();
 		}
 		
 		double enemyLeftX = enemy.getX() - MapData.TILE_SIZE / 2.0;
