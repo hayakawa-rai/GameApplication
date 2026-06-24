@@ -6,7 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
+import start.Start;
 import story.Practice;
+import story.Story1;
+import story.Story2;
+import story.Story3;
+import story.Story4;
 import test1.Main1;
 import test2.Main2;
 import test3.Main3;
@@ -110,7 +115,7 @@ public class GameController {
 			}
 		};
 
-		// タイマーを始動し、パックマンの世界を動かす
+		// タイマーを始動
 		timer.start();
 	}
 
@@ -151,9 +156,59 @@ public class GameController {
 	}
 	
 	//画面変更start→practice
-	public static void switchToGame4(javafx.stage.Stage stage) {
+	public static void startToPractice(javafx.stage.Stage stage) {
 		try { 
 			Practice App = new Practice();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更start→story
+	public static void startToStory(javafx.stage.Stage stage) {
+		try { 
+			Story1 App = new Story1();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更start
+	public static void switchStart(javafx.stage.Stage stage) {
+		try { 
+			Start App = new Start();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Story2
+	public static void switchStory2(javafx.stage.Stage stage) {
+		try { 
+			Story2 App = new Story2();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Story3
+	public static void switchStory3(javafx.stage.Stage stage) {
+		try { 
+			Story3 App = new Story3();
+			App.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//画面変更Story4
+	public static void switchStory4(javafx.stage.Stage stage) {
+		try { 
+			Story4 App = new Story4();
 			App.start(stage);
 		} catch (Exception e) {
 			e.printStackTrace();
