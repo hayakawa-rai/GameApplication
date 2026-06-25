@@ -65,17 +65,15 @@ public class MapData {
 
 	private Item[][] itemMap;
 	private Sengoku sengoku;
+	
 	// 敵のリスト管理
-
+	private final List<Enemy> enemies = new ArrayList<>();
+	private boolean paused = false;
+	
 	// 初期アイテム配置（エサ復活用）
 	private Item[][] initialItemMap;
 	// エサ復活を有効にするか？
 	private boolean enableRespawn; 
-	//敵のリスト管理
-	
-	private final List<Enemy> enemies = new ArrayList<>();
-
-	private boolean paused = false;
 	
 	// 現在のステージ番号を書く(1 = ステージ1, 2 = ステージ2, 3 = ステージ3）
 	private int stageNumber = 1; 

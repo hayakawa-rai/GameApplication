@@ -51,6 +51,7 @@ public class YellowEnemy extends Enemy {
 				break;
 			}
 		}
+		
 		// 生成時刻を記録
 		this.startTime = System.currentTimeMillis();
 

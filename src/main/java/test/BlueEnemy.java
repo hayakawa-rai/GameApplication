@@ -21,6 +21,7 @@ public class BlueEnemy extends Enemy {
 
 	// 出発時間の記録
 	private long startTime;
+	
 	// 巣から出たか
 	private boolean released = false;
 

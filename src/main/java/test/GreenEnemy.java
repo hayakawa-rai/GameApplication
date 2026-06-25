@@ -89,7 +89,6 @@ public class GreenEnemy extends Enemy {
 			if (elapsed < 20000) {
 				return;
 			}
-
 			// 出撃
 			released = true;
 		}
