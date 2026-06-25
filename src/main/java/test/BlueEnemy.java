@@ -9,8 +9,8 @@ import test.test2.MapData;
 public class BlueEnemy extends Enemy {
 
 	// スタート位置(マップ中心 エネミーハウス上)
-	private static final int START_COL = 12;
-	private static final int START_ROW = 12;
+	private static final int START_COL = 13;
+	private static final int START_ROW = 11;
 
 	// プレイヤーの進行方向の2マス先を狙う
 	private static final int PREDICT_TILES = 2;

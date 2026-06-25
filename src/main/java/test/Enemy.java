@@ -110,7 +110,7 @@ public abstract class Enemy extends Character {
 			return getFarthestDirection(validDirections, targetCol, targetRow);
 		}
 
-		return null;
+		return null;	
 	}
 
 	// 三平方の定理を使って目的地に一番近い方向を選ぶ共通処理
