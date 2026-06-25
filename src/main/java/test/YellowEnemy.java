@@ -33,8 +33,7 @@ public class YellowEnemy extends Enemy {
 
 		this.mapData = mapData;
 
-		// FEVER画像をステージごとに読み込む
-		loadFeverImage();
+
 
 		// 現在のステージ番号によって、読み込む画像を切り替える
 		String imagePath = "/picture/narita_EnemyYellow.png"; // デフォルト（ステージ1用）
@@ -71,6 +70,18 @@ public class YellowEnemy extends Enemy {
 			e.printStackTrace();
 		}
 	}
+
+	// 画像の読み込み処理
+	public Image getEnemyImage() {
+		if (this.currentState == Characters.EnemyState.DEAD) {
+			return deadImage;
+		}
+		if (this.currentState == Characters.EnemyState.FEVER) {
+			return feverImage;
+		}
+		return normalImage;
+	}
+ 
 
 	// 10秒経過後に出撃
 	@Override

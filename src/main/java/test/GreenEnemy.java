@@ -31,26 +31,23 @@ public class GreenEnemy extends Enemy {
 				START_ROW * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0, 1);
 
 		this.mapData = mapData;
-
-		// FEVER画像をステージごとに読み込む
-		loadFeverImage();
-
+		
 		// 現在のステージ番号によって、読み込む画像を切り替える
 		String imagePath = "/picture/narita_EnemyGreen.png"; // デフォルト（ステージ1用）
-
+		
 		if (this.mapData != null) {
 			switch (this.mapData.getStageNumber()) {
-			case 1:
-				imagePath = "/picture/narita_EnemyGreen.png"; // ステージ1の画像
-				break;
-			case 2:
-				imagePath = "/picture/wada_EnemyGreen.png"; // ステージ2の画像
-				break;
-			case 3:
-				imagePath = "/picture/hayakawa_EnemyGreen.png"; // ステージ3の画像
-				break;
-			default:
-				break;
+				case 1:
+					imagePath = "/picture/narita_EnemyGreen.png"; // ステージ1の画像
+					break;
+				case 2:
+					imagePath = "/picture/wada_EnemyGreen.png";        // ステージ2の画像
+					break;
+				case 3:
+					imagePath = "/picture/hayakawa_EnemyGreen.png";         // ステージ3の画像
+					break;
+				default:
+					break;
 			}
 		}
 
