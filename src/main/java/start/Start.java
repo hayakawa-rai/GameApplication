@@ -14,6 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -42,6 +43,16 @@ public class Start extends Application {
 	//javafxのApplicationにもともとあるstartを上書き
 	@Override
 	public void start(Stage stage) {
+
+		// ★2. 画面を作る前にレトロフォントファイルを読み込む
+		// 他のリソース（pictureやmusic）と同じ並びの「font」フォルダに置くのがオススメです
+		try {
+			Font.loadFont(getClass().getResourceAsStream("/font/PixelMplus12-Regular.ttf"), 20);
+		} catch (Exception e) {
+			System.err.println("フォントの読み込みに失敗しました: " + e.getMessage());
+		}
+
+
 		//背景用の画像を読み込み
 		Image bgImage = new Image(
 				getClass().getResource("/picture/background.png").toExternalForm());
