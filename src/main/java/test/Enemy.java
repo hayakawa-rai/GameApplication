@@ -295,7 +295,7 @@ public abstract class Enemy extends Character {
 
 		if (this.currentState != Characters.EnemyState.DEAD) {
 
-			if (nextRow >= 13 && nextRow <= 15 && nextCol >= 12 && nextCol <= 15) {
+			if (nextRow >= 11 && nextRow <= 15 && nextCol >= 12 && nextCol <= 15) {
 
 				return false;
 
