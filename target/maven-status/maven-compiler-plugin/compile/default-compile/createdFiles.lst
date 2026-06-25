@@ -30,7 +30,6 @@ test\test2\MapData.class
 sample\model\SampleModel.class
 story\Stageclear2.class
 test3\Main3.class
-META-INF\maven\sample\Game\pom.xml
 sample\start.class
 sample\practice.class
 test\Direction.class
@@ -43,7 +42,6 @@ test\PacmanSample.class
 story\Dialogue.class
 story\StoryUtils.class
 sample\start$1.class
-META-INF\MANIFEST.MF
 test\Enemy.class
 Characters\EnemyState.class
 story\Gameover.class
@@ -62,8 +60,11 @@ test\SampleMainApp.class
 test2\controller\GameController$1.class
 test3\view\MapView.class
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 META-INF\maven\sample\Game\pom.properties
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+=======
 >>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 test\SamplepracticeApp.class
 Items\Point.class
