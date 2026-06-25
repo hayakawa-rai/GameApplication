@@ -93,6 +93,7 @@ public class MapData {
 				double pixelX = col * TILE_SIZE + TILE_SIZE / 2.0;
 				double pixelY = row * TILE_SIZE + TILE_SIZE / 2.0;
 
+				
 				if (map[row][col] == 0) {
 					itemMap[row][col] = new Point(pixelX, pixelY);
 					remainingItems++; // ドットを配置したらカウントアップ
