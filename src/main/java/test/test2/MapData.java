@@ -18,75 +18,7 @@ public class MapData {
  
 	public static final int TILE_SIZE = 30;
  
-	// 0: 道, 1: 壁, 2: パワーエサ, 9: ワープ
-<<<<<<< HEAD
-
-	private final int[][] map = {
- 
-			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-
-			{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-
-			{ 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
-
-			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 2, 0, 0, 0, 1 },
-
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 },
-
-			{ 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0 },
-
-			{ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
-
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 },
-
-			{ 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1 },
-
-			{ 9, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 9 },
-
-			{ 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1 },
-
-			{ 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 },
-
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 },
-
-			{ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
-
-			{ 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0 },
-
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 },
-
-			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
-
-			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
-
-			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
-
-			{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-
-			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
- 
- 
-=======
+	// 0: 道, 1: 壁, 2: パワーエサ, 9: ワープ 
 		private final int[][] map = {
 
 				{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}, 			//■■■■■■■■■■■■　　　　■■■■■■■■■■■■
@@ -125,7 +57,6 @@ public class MapData {
 
 
 
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 	private Item[][] itemMap;
 
 	private Sengoku sengoku;
@@ -163,15 +94,12 @@ public class MapData {
 	private int lastWarpX = -1;
 
 	private int lastWarpY = -1;
-<<<<<<< HEAD
- 
-=======
+
 	
 	// 残りアイテム数をカウントする変数
     private int remainingItems = 0;
     private boolean gameOver = false;
 
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 	// FEVER終了時刻
 
 	private long feverEndTime = 0;
@@ -263,28 +191,17 @@ public class MapData {
 				double pixelX = col * TILE_SIZE + TILE_SIZE / 2.0;
 
 				double pixelY = row * TILE_SIZE + TILE_SIZE / 2.0;
-<<<<<<< HEAD
- 
-=======
 
-				
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 				if (map[row][col] == 0) {
 
 					itemMap[row][col] = new Point(pixelX, pixelY);
-<<<<<<< HEAD
 
-=======
 					remainingItems++; // ドットを配置したらカウントアップ
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 				} else if (map[row][col] == 2) {
 
 					itemMap[row][col] = new Chii(pixelX, pixelY);
-<<<<<<< HEAD
 
-=======
 					remainingItems++;// パワーエサもクリア条件に含めるならカウントアップ
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 				}
 
 			}
@@ -382,13 +299,10 @@ public class MapData {
 		// パックマンと敵の当たり判定を毎フレーム確認
 
 		checkCollision();
-<<<<<<< HEAD
-=======
 		
 	}
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
-	}
+	
  
 	public void updatePacman() {
 
@@ -527,13 +441,10 @@ public class MapData {
 				}
 
 				itemMap[currentTileY][currentTileX] = null;
-<<<<<<< HEAD
 
-=======
 				
 				remainingItems--; // ★1個食べたのでカウントを減らす
                 System.out.println("残りのドット数: " + remainingItems); // デバッグ用ログ
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 			}
 
 		}
@@ -635,7 +546,6 @@ public class MapData {
 			double dy = pacCenterY - e.getY();
  
 			if (Math.sqrt(dx * dx + dy * dy) < collisionThreshold) {
-<<<<<<< HEAD
  
 				// FEVER中の敵は食べられる
 
@@ -659,7 +569,6 @@ public class MapData {
 
 				paused = true;
 
-=======
 				String enemyName = (e instanceof RedEnemy) ? "赤敵" : "緑敵";
 				System.out.println("💥 " + enemyName + "に捕まった！ゲームオーバー！");
 				
@@ -667,7 +576,6 @@ public class MapData {
 				this.gameOver = true;
 				
 				this.paused = true;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 				return;
 
 			}
@@ -759,8 +667,7 @@ public class MapData {
 	}
  
 	// ⭕ ステージが切り替わったときに外から数値を変更できるようにする
-<<<<<<< HEAD
-=======
+
 	public void setStageNumber(int stageNum) {
 		this.stageNumber = stageNum;
 	}
@@ -772,13 +679,7 @@ public class MapData {
 	public boolean isGameOver() {
 		return gameOver;
 	}
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
-	public void setStageNumber(int stageNum) {
-
-		this.stageNumber = stageNum;
-
-	}
  
 }
 

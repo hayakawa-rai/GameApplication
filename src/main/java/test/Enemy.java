@@ -306,9 +306,7 @@ public abstract class Enemy extends Character {
 		return map[nextRow][nextCol] != 1; // 1は壁
 
 	}
-<<<<<<< HEAD
- 
-=======
+
 
 	// FEVER状態で使用する画像をステージごとに読み込む
 	protected void loadFeverImage() {
@@ -414,7 +412,6 @@ public abstract class Enemy extends Character {
 		return normalImage;
 	}
 
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 	public Characters.EnemyState getCurrentState() {
 
 		return currentState;

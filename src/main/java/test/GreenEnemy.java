@@ -31,9 +31,6 @@ public class GreenEnemy extends Enemy {
 				START_ROW * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0, 1);
 
 		this.mapData = mapData;
-<<<<<<< HEAD
-		
-=======
 
 		// FEVER画像をステージごとに読み込む
 		loadFeverImage();
@@ -41,7 +38,6 @@ public class GreenEnemy extends Enemy {
 		// DEAD画像を読み込む
 		loadDeadImage();
 
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 		// 現在のステージ番号によって、読み込む画像を切り替える
 		String imagePath = "/picture/narita_EnemyGreen.png"; // デフォルト（ステージ1用）
 		
