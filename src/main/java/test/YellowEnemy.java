@@ -32,18 +32,41 @@ public class YellowEnemy extends Enemy {
 				START_ROW * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0, 1);
 
 		this.mapData = mapData;
+<<<<<<< HEAD
 
+=======
+		
+		//現在のステージ番号によって、読み込む画像を切り替える
+		String imagePath = "/picture/narita_EnemyYellow.png"; // デフォルト（ステージ1用）
+		
+		if (this.mapData != null) {
+			switch (this.mapData.getStageNumber()) {
+				case 1:
+					imagePath = "/picture/narita_EnemyYellow.png"; // ステージ1の画像
+					break;
+				case 2:
+					imagePath = "/picture/wada_EnemyYellow.png";        // ステージ2の画像
+					break;
+				case 3:
+					imagePath = "/picture/hayakawa_EnemyYellow.png";         // ステージ3の画像
+					break;
+				default:
+					break;
+			}
+		}
+		
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 		// 生成時刻を記録
 		this.startTime = System.currentTimeMillis();
 
 		// 画像の読み込み
 		try {
-			java.io.InputStream is = getClass().getResourceAsStream("/picture/hayakawa2.png");
+			java.io.InputStream is = getClass().getResourceAsStream(imagePath);
 			if (is == null) {
-				System.err.println("❌【エラー】画像が見つかりません");
+				System.err.println("❌【エラー】画像が見つかりません: " + imagePath);
 			} else {
 				this.normalImage = new Image(is);
-				System.out.println("⭕【成功】hayakawa2の画像を読み込みました！");
+				System.out.println("⭕【成功】ステージ" + this.mapData.getStageNumber() + "用の画像を読み込みました！");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
