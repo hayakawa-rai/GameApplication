@@ -353,8 +353,6 @@ public class MapView {
 
 			img = ((GreenEnemy) enemy).getEnemyImage();
 
-		} else if (enemy instanceof YellowEnemy) {
-
 			// ⭕ 黄色の画像を取得
 
 		} else if (enemy instanceof YellowEnemy) {

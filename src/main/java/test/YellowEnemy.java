@@ -33,7 +33,7 @@ public class YellowEnemy extends Enemy {
 
 		this.mapData = mapData;
 
-
+		loadFeverImage();
 
 		// DEAD画像を読み込む
 		loadDeadImage();
@@ -73,18 +73,6 @@ public class YellowEnemy extends Enemy {
 			e.printStackTrace();
 		}
 	}
-
-	// 画像の読み込み処理
-	public Image getEnemyImage() {
-		if (this.currentState == Characters.EnemyState.DEAD) {
-			return deadImage;
-		}
-		if (this.currentState == Characters.EnemyState.FEVER) {
-			return feverImage;
-		}
-		return normalImage;
-	}
- 
 
 	// 10秒経過後に出撃
 	@Override
