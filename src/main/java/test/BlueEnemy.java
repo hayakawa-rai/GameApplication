@@ -35,7 +35,7 @@ public class BlueEnemy extends Enemy {
 
 		this.mapData = mapData;
 
-
+		loadFeverImage();
 
 		// DEAD画像を読み込む
 		loadDeadImage();

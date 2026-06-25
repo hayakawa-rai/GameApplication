@@ -11,9 +11,9 @@ public class RedEnemy extends Enemy {
 
 	// スタート位置（エネミーハウス付近上）
 
-	private static final int START_COL = 13;
+	private static final int START_COL = 11;
 
-	private static final int START_ROW = 12;
+	private static final int START_ROW = 11;
 
 	// 縄張りエリアの中心（右上）(仮)
 
@@ -94,21 +94,6 @@ public class RedEnemy extends Enemy {
 
 	}
 
-	// MapView から現在の画像を取り出すためのゲッター
-
-	public Image getEnemyImage() {
-
-		if (this.currentState == Characters.EnemyState.DEAD)
-
-			return deadImage;
-
-		if (this.currentState == Characters.EnemyState.FEVER)
-
-			return feverImage;
-
-		return normalImage;
-
-	}
 
 	@Override
 
