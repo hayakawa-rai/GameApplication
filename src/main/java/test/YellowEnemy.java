@@ -33,7 +33,6 @@ public class YellowEnemy extends Enemy {
 
 		this.mapData = mapData;
 
-		// FEVER画像をステージごとに読み込む
 		loadFeverImage();
 
 		// DEAD画像を読み込む
