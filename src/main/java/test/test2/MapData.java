@@ -61,6 +61,9 @@ public class MapData {
 	private final List<Enemy> enemies = new ArrayList<>();
 
 	private boolean paused = false;
+	
+	// 現在のステージ番号を書く(1 = ステージ1, 2 = ステージ2, 3 = ステージ3）
+	private int stageNumber = 1; 
 
 	// 口パク
 	private double mouthAngle = 45;
@@ -71,6 +74,10 @@ public class MapData {
 	private boolean justWarped = false;
 	private int lastWarpX = -1;
 	private int lastWarpY = -1;
+	
+	// 残りアイテム数をカウントする変数
+    private int remainingItems = 0;
+    private boolean gameOver = false;
 
 	//booleanを受け取る新しいコンストラクターを追加
 	public MapData(boolean paused) {
@@ -88,8 +95,10 @@ public class MapData {
 
 				if (map[row][col] == 0) {
 					itemMap[row][col] = new Point(pixelX, pixelY);
+					remainingItems++; // ドットを配置したらカウントアップ
 				} else if (map[row][col] == 2) {
 					itemMap[row][col] = new Chii(pixelX, pixelY);
+					remainingItems++;// パワーエサもクリア条件に含めるならカウントアップ
 				}
 			}
 		}
@@ -136,6 +145,7 @@ public class MapData {
 
 		//パックマンと敵の当たり判定を毎フレーム確認
 		checkCollision();
+		
 	}
 
 	public void updatePacman() {
@@ -207,6 +217,9 @@ public class MapData {
 			if (item != null) {
 				item.onEaten(sengoku);
 				itemMap[currentTileY][currentTileX] = null;
+				
+				remainingItems--; // ★1個食べたのでカウントを減らす
+                System.out.println("残りのドット数: " + remainingItems); // デバッグ用ログ
 			}
 		}
 	}
@@ -243,6 +256,10 @@ public class MapData {
 			if (Math.sqrt(dx * dx + dy * dy) < collisionThreshold) {
 				String enemyName = (e instanceof RedEnemy) ? "赤敵" : "緑敵";
 				System.out.println("💥 " + enemyName + "に捕まった！ゲームオーバー！");
+				
+				//ゲームオーバーフラグをtrueにする
+				this.gameOver = true;
+				
 				this.paused = true;
 				return;
 			}
@@ -286,6 +303,24 @@ public class MapData {
 
 	public double getPacY() {
 		return sengoku != null ? sengoku.getY() : 0;
+	}
+	
+	// ⭕ 敵クラスから現在のステージ番号を確認できるようにする
+	public int getStageNumber() {
+		return stageNumber;
+	}
+
+	// ⭕ ステージが切り替わったときに外から数値を変更できるようにする
+	public void setStageNumber(int stageNum) {
+		this.stageNumber = stageNum;
+	}
+	
+	public boolean isCleared() {
+        return remainingItems <= 0;
+    }
+	
+	public boolean isGameOver() {
+		return gameOver;
 	}
 
 }

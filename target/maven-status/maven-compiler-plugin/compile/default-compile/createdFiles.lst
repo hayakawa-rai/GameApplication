@@ -1,11 +1,9 @@
 story\Story1.class
 Characters\GameMap.class
-story\Story4.class
 story\Stageclear3.class
 Characters\Character.class
 test1\controller\GameController$1.class
 Characters\Direction$1.class
-test\Sengoku.class
 test1\Main1.class
 test2\model\MapData.class
 sample\controller\SampleController.class
@@ -19,7 +17,6 @@ sample\stageclear3.class
 test3\controller\GameController$1.class
 story\Stageclear1.class
 start\Start$1.class
-story\Story3.class
 test2\Main2.class
 sample\story1.class
 sample\controller\SampleController$1.class
@@ -44,7 +41,6 @@ Characters\EnemyState.class
 story\Gameover.class
 test3\controller\GameController.class
 Characters\Direction.class
-story\Story2.class
 Characters\SengokuState.class
 story\Practice$1.class
 test\RedEnemy.class
@@ -61,6 +57,5 @@ test\BlueEnemy.class
 start\Bgm.class
 test\BlueEnemy$1.class
 Items\Item.class
-test\YellowEnemy.class
 test1\view\MapView.class
 test2\view\MapView.class
