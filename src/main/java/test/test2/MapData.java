@@ -60,23 +60,22 @@ public class MapData {
 			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
 			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
 			{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
-	};
+			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
 	private Item[][] itemMap;
 	private Sengoku sengoku;
-	
+
 	// 敵のリスト管理
 	private final List<Enemy> enemies = new ArrayList<>();
 	private boolean paused = false;
-	
+
 	// 初期アイテム配置（エサ復活用）
 	private Item[][] initialItemMap;
 	// エサ復活を有効にするか？
-	private boolean enableRespawn; 
-	
+	private boolean enableRespawn;
+
 	// 現在のステージ番号を書く(1 = ステージ1, 2 = ステージ2, 3 = ステージ3）
-	private int stageNumber = 1; 
+	private int stageNumber = 1;
 
 	// 口パク
 	private double mouthAngle = 45;
@@ -96,7 +95,7 @@ public class MapData {
 		this(); // 上にある引数なしのコンストラクターを呼び出して初期化を行う
 		this.paused = paused; // 受け取った値をpausedフィールドにセットする
 	}
-	
+
 	public void SampleModel(boolean enableRespawn) {
 		this.enableRespawn = enableRespawn; // これで練習/ストーリーを切り替えられる（エサ復活用）
 		this.sengoku = new Sengoku(10 * TILE_SIZE, 14 * TILE_SIZE, 2);
@@ -113,14 +112,14 @@ public class MapData {
 				}
 			}
 		}
-	    // エサ復活が有効なときだけ初期状態を保存（エサ復活用）
-	    if (enableRespawn) {
-	        this.initialItemMap = copyItemMap(itemMap);
-	    } else {
-	        this.initialItemMap = null;
-	    }
+		// エサ復活が有効なときだけ初期状態を保存（エサ復活用）
+		if (enableRespawn) {
+			this.initialItemMap = copyItemMap(itemMap);
+		} else {
+			this.initialItemMap = null;
+		}
 	}
-	
+
 	// --- itemMap をコピーする ---（エサ復活用）
 	private Item[][] copyItemMap(Item[][] src) {
 		Item[][] dst = new Item[src.length][src[0].length];
@@ -148,9 +147,9 @@ public class MapData {
 			}
 		}
 		initEnemy(null);
-		
-	    this.enableRespawn = true; 
-	    this.initialItemMap = copyItemMap(itemMap);
+
+		this.enableRespawn = true;
+		this.initialItemMap = copyItemMap(itemMap);
 	}
 
 	// コード追加 成田
@@ -303,29 +302,30 @@ public class MapData {
 		// 全部食べたかチェック（エサ復活用）
 		checkAllEaten();
 	}
-	
+
 	// --- 全部食べたかチェック ---（エサ復活用）
-			private void checkAllEaten() {
-				if (!enableRespawn) return;  // ← ストーリーでは復活しない
-				
-				for (int r = 0; r < itemMap.length; r++) {
-					for (int c = 0; c < itemMap[0].length; c++) {
-						if (itemMap[r][c] != null)
-							return; // まだ残っている
-					}
-				}
-				// 全部食べた → 復活（エサ復活用）
-				resetItems();
-			}
+	private void checkAllEaten() {
+		if (!enableRespawn)
+			return; // ← ストーリーでは復活しない
 
-			// --- エサ復活 ---（エサ復活用）
-			private void resetItems() {
-				if (!enableRespawn || initialItemMap == null) return;
-				
-				this.itemMap = copyItemMap(this.initialItemMap);
-				System.out.println("ステージクリア！エサが復活しました！");
+		for (int r = 0; r < itemMap.length; r++) {
+			for (int c = 0; c < itemMap[0].length; c++) {
+				if (itemMap[r][c] != null)
+					return; // まだ残っている
 			}
+		}
+		// 全部食べた → 復活（エサ復活用）
+		resetItems();
+	}
 
+	// --- エサ復活 ---（エサ復活用）
+	private void resetItems() {
+		if (!enableRespawn || initialItemMap == null)
+			return;
+
+		this.itemMap = copyItemMap(this.initialItemMap);
+		System.out.println("ステージクリア！エサが復活しました！");
+	}
 
 	public void updateMouth() {
 		if (paused || !sengoku.isAlive() || sengoku.getDirection() == Direction.NONE)
@@ -368,7 +368,7 @@ public class MapData {
 
 				// FEVER中の敵は食べられる
 				if (e.getCurrentState() == Characters.EnemyState.FEVER) {
-					
+
 					e.setCurrentState(Characters.EnemyState.DEAD);
 					continue;
 				}
@@ -431,7 +431,7 @@ public class MapData {
 	public double getPacY() {
 		return sengoku != null ? sengoku.getY() : 0;
 	}
-	
+
 	// ⭕ 敵クラスから現在のステージ番号を確認できるようにする
 	public int getStageNumber() {
 		return stageNumber;
