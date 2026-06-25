@@ -35,6 +35,9 @@ public class YellowEnemy extends Enemy {
 
 
 
+		// DEAD画像を読み込む
+		loadDeadImage();
+
 		// 現在のステージ番号によって、読み込む画像を切り替える
 		String imagePath = "/picture/narita_EnemyYellow.png"; // デフォルト（ステージ1用）
 

@@ -12,8 +12,10 @@ import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
@@ -375,7 +377,94 @@ public class Story2 extends Application{
         base.getChildren().addAll(bgView,sengokuView,anikiView,narinariView, wadatakuView,root,insertView);
         //rootを中身とした1000×800のウィンドウを作成
         Scene scene = new Scene(base,1000,800);
+        scene.setOnMouseClicked(e -> scene.getRoot().requestFocus());
         
+        
+        //メニューボタン作成
+
+        Image menuImg = new Image(
+        	getClass().getResourceAsStream("/picture/menu.png")
+        );
+
+        ImageView menuView = new ImageView(menuImg);
+        menuView.setFitWidth(40);
+        menuView.setFitHeight(40);
+
+        Button menuBtn = new Button("");
+
+
+        menuBtn.setGraphic(menuView);
+        menuBtn.setStyle("-fx-background-color: transparent;");
+
+
+        // 右上に配置
+        StackPane.setAlignment(menuBtn, Pos.TOP_LEFT);
+        StackPane.setMargin(menuBtn, new Insets(30));
+        
+        //メニュー画面追加
+        StackPane menuOverlay = new StackPane();
+
+        // 背景（うっすら暗く）
+        menuOverlay.setStyle("-fx-background-color: rgba(0,0,0,0.3);");
+     	menuOverlay.setVisible(false);
+     	menuOverlay.setPickOnBounds(true); 
+     	// 中央のかわいいパネル
+     	VBox menuBox = new VBox(20);
+     	menuBox.setAlignment(Pos.CENTER);
+
+     	// サイズを小さめにする
+     	menuBox.setMaxWidth(300);
+     	menuBox.setMaxHeight(250);
+
+     	//かわいい見た目
+     	menuBox.setStyle(
+    		"-fx-background-color: rgba(40,40,50,0.95);" +  // 少し透明
+        	"-fx-background-radius: 20;" +                  // 角丸
+         	"-fx-padding: 25;" +
+         	"-fx-border-radius: 20;" +
+         	"-fx-border-color: white;" +
+         	"-fx-border-width: 2;"
+    	);
+
+     	// ボタン
+     	Button resume = new Button("再開");
+     	Button titleBtn = new Button("タイトルへ");
+     	
+     	// ボタンをかわいく
+     	resume.getStyleClass().add("game-button2");
+     	titleBtn.getStyleClass().add("game-button2");
+
+     	// サイズ
+     	resume.setPrefWidth(180);
+     	titleBtn.setPrefWidth(180);
+
+
+     	// ボタン処理
+     	resume.setOnAction(e -> {
+         	menuOverlay.setVisible(false);
+
+         	if (timeline != null) timeline.play();
+         	if (blink != null) blink.play();
+         	if (arrowMove != null) arrowMove.play();
+     	});
+
+     	titleBtn.setOnAction(e -> {
+         	cleanup(scene);
+
+         	//スタート画面へ
+	        test.test2.GameController.switchStart(stage);
+     	});
+
+
+     	// 追加
+     	menuBox.getChildren().addAll(resume, titleBtn);
+     	menuOverlay.getChildren().add(menuBox);
+
+     	//最前面に追加
+     	base.getChildren().add(menuBtn);
+     	base.getChildren().add(menuOverlay);
+     	
+     	
         
         // 背景画像をウィンドウサイズに合わせる
         bgView.fitWidthProperty().bind(scene.widthProperty());
@@ -431,9 +520,31 @@ public class Story2 extends Application{
         //ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
         stage.setMinWidth(800);
         stage.setMinHeight(600);
-       
         
-      //文字表示用のタイマーを作成、50ミリ秒ごとに処理
+       //メニュー表示処理
+        scene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) {
+
+                // メニュー表示
+                menuOverlay.setVisible(true);
+
+                // ストーリー停止
+                if (timeline != null) timeline.pause();
+                if (blink != null) blink.pause();
+                if (arrowMove != null) arrowMove.pause();
+            }
+        });
+        menuBtn.setOnAction(e -> {
+            menuOverlay.setVisible(true);
+
+            // ストーリー停止（ESCと同じ処理）
+            if (timeline != null) timeline.pause();
+            if (blink != null) blink.pause();
+            if (arrowMove != null) arrowMove.pause();
+        });
+        
+        
+        //文字表示用のタイマーを作成、50ミリ秒ごとに処理
         timeline = new Timeline(
         	new KeyFrame(Duration.millis(50),e->{
         		//今再生されている会話テキストのリスト番号を取得
@@ -494,7 +605,11 @@ public class Story2 extends Application{
         
         //クリックされたときの処理
         scene.addEventFilter(MouseEvent.MOUSE_CLICKED, e->{
-        	
+        	if (menuOverlay.isVisible()) {
+        		if (e.getTarget() == menuBtn) return;
+        		e.consume();
+        		return;
+        	}
         	//文字表示中ならスキップして全文表示する処理
         	if(isTyping) {
         		//タイピング停止
@@ -548,7 +663,8 @@ public class Story2 extends Application{
         	            new KeyFrame(Duration.millis(300), e2 -> {
         	                sengokuView.setOpacity(1.0);
         	                // bind戻す
-        	                sengokuView.translateXProperty().bind(scene.widthProperty().multiply(-0.25));
+        	                sengokuView.setTranslateX(-250);
+        	    
         	            })
         	        );
         	        recover.play();
@@ -626,6 +742,11 @@ public class Story2 extends Application{
         	d.sound.stop();
         	d.sound.play();
         }
+        
+        //CSSを接続
+        scene.getStylesheets().add(
+            getClass().getResource("/css/style.css").toExternalForm()
+        );
 
         //最初の文章を表示(部品のすべての処理を終えてから文字を表示するため最後に記述)
         startTyping();

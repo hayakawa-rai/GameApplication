@@ -32,7 +32,17 @@ public class RedEnemy extends Enemy {
 				START_ROW * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0, 1); // スピードは 2
  
 		this.mapData = sampleModel; // 親クラスのフィールドに代入して保持
+<<<<<<< HEAD
  
+=======
+
+		// FEVER画像をステージごとに読み込む
+		loadFeverImage();
+
+		// DEAD画像を読み込む
+		loadDeadImage();
+
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 		// 現在のステージ番号によって、読み込む画像を切り替える
 
 		String imagePath = "/picture/narita_EnemyRed.png"; // デフォルト（ステージ1用）
@@ -40,6 +50,7 @@ public class RedEnemy extends Enemy {
 		if (this.mapData != null) {
 
 			switch (this.mapData.getStageNumber()) {
+<<<<<<< HEAD
 
 				case 1:
 
@@ -63,6 +74,19 @@ public class RedEnemy extends Enemy {
 
 					break;
 
+=======
+			case 1:
+				imagePath = "/picture/narita_EnemyRed.png"; // ステージ1の画像
+				break;
+			case 2:
+				imagePath = "/picture/wada_EnemyRed.png"; // ステージ2の画像
+				break;
+			case 3:
+				imagePath = "/picture/hayakawa_EnemyRed.png"; // ステージ3の画像
+				break;
+			default:
+				break;
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 			}
 
 		}
