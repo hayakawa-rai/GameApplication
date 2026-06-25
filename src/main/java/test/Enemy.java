@@ -157,20 +157,11 @@ public abstract class Enemy extends Character {
 
 		if (currentState == Characters.EnemyState.FEVER) {
 
-<<<<<<< HEAD
+
 			return getFarthestDirection(validDirections, targetCol, targetRow);
 		}
 		return null;	
-=======
-			return getFarthestDirection(validDirections, targetCol, targetRow);	
-	
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 	}
-<<<<<<< HEAD
-=======
-		
-		return null;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
  
 	// 三平方の定理を使って目的地に一番近い方向を選ぶ共通処理
