@@ -24,6 +24,9 @@ public class RedEnemy extends Enemy {
 
 		this.mapData = sampleModel; // 親クラスのフィールドに代入して保持
 
+		// FEVER画像をステージごとに読み込む
+		loadFeverImage();
+
 		// 現在のステージ番号によって、読み込む画像を切り替える
 		String imagePath = "/picture/narita_EnemyRed.png"; // デフォルト（ステージ1用）
 		
@@ -55,15 +58,6 @@ public class RedEnemy extends Enemy {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	// MapView から現在の画像を取り出すためのゲッター
-	public Image getEnemyImage() {
-		if (this.currentState == Characters.EnemyState.DEAD)
-			return deadImage;
-		if (this.currentState == Characters.EnemyState.FEVER)
-			return feverImage;
-		return normalImage;
 	}
 
 	@Override
