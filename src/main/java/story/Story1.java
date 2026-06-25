@@ -113,8 +113,7 @@ public class Story1 extends Application{
 
         // クリックイベント解除
         if (scene != null) {
-            scene.setOnMouseClicked(null);   // 念のため
-            scene.removeEventFilter(MouseEvent.MOUSE_CLICKED, null);
+            scene.setOnMouseClicked(null);   
         }
     }
     
@@ -452,7 +451,7 @@ public class Story1 extends Application{
         	    
         	    fade.setOnFinished(ev -> {
         	    	cleanup(scene); 
-        	        
+        	    	base.getChildren().clear();
         	        //次の画面へ
         	        test.test2.GameController.switchToGame1(stage);
         	    });
