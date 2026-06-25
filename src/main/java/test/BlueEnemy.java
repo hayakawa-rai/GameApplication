@@ -21,7 +21,7 @@ public class BlueEnemy extends Enemy {
 
 	// 出発時間の記録
 	private long startTime;
-	
+
 	// 巣から出たか
 	private boolean released = false;
 
@@ -34,23 +34,26 @@ public class BlueEnemy extends Enemy {
 				START_ROW * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0, 1);
 
 		this.mapData = mapData;
-		
+
+		// FEVER画像をステージごとに読み込む
+		loadFeverImage();
+
 		// 現在のステージ番号によって、読み込む画像を切り替える
 		String imagePath = "/picture/narita_EnemyBlue.png"; // デフォルト（ステージ1用）
-		
+
 		if (this.mapData != null) {
 			switch (this.mapData.getStageNumber()) {
-				case 1:
-					imagePath = "/picture/narita_EnemyBlue.png"; // ステージ1の画像
-					break;
-				case 2:
-					imagePath = "/picture/wada_EnemyBlue.png";        // ステージ2の画像
-					break;
-				case 3:
-					imagePath = "/picture/hayakawa_EnemyBlue.png";         // ステージ3の画像
-					break;
-				default:
-					break;
+			case 1:
+				imagePath = "/picture/narita_EnemyBlue.png"; // ステージ1の画像
+				break;
+			case 2:
+				imagePath = "/picture/wada_EnemyBlue.png"; // ステージ2の画像
+				break;
+			case 3:
+				imagePath = "/picture/hayakawa_EnemyBlue.png"; // ステージ3の画像
+				break;
+			default:
+				break;
 			}
 		}
 
@@ -77,17 +80,6 @@ public class BlueEnemy extends Enemy {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	// 画像の読み込み処理
-	public Image getEnemyImage() {
-		if (this.currentState == Characters.EnemyState.DEAD) {
-			return deadImage;
-		}
-		if (this.currentState == Characters.EnemyState.FEVER) {
-			return feverImage;
-		}
-		return normalImage;
 	}
 
 	// 2秒経過後に出撃
