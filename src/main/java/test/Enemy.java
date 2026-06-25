@@ -211,7 +211,7 @@ public abstract class Enemy extends Character {
 	// FEVER状態で使用する画像をステージごとに読み込む
 	protected void loadFeverImage() {
 
-		// デフォルトはステージ1
+		// デフォルト画像（ステージ1）
 		String feverPath = "/picture/narita_EnemyFever.png";
 
 		// 現在のステージ番号に応じて画像を切り替える
@@ -234,11 +234,64 @@ public abstract class Enemy extends Character {
 		}
 
 		try {
-
+			// 指定したパスから画像を取得
 			java.io.InputStream is = getClass().getResourceAsStream(feverPath);
 
+			// 読み込み成功時
 			if (is != null) {
 				feverImage = new javafx.scene.image.Image(is);
+				System.out.println("⭕ FEVER画像読込成功: " + feverPath);
+			}
+			// 読み込み失敗時
+			else {
+
+				System.err.println("❌ FEVER画像が見つかりません: " + feverPath);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	// DEAD状態で使用する画像をステージごとに読み込む
+	protected void loadDeadImage() {
+
+		// デフォルトはステージ1
+		String deadPath = "/picture/narita_EnemyDead.png";
+
+		// 現在のステージ番号に応じて画像を切り替える
+		if (mapData != null) {
+
+			switch (mapData.getStageNumber()) {
+
+			case 1:
+				deadPath = "/picture/narita_EnemyDead.png";
+				break;
+
+			case 2:
+				deadPath = "/picture/wada_EnemyyDead.png";
+				break;
+
+			case 3:
+				deadPath = "/picture/hayakawa_EnemyyDead.png";
+				break;
+			}
+		}
+
+		try {
+
+			// リソースからDEAD画像を読み込む
+			java.io.InputStream is = getClass().getResourceAsStream(deadPath);
+
+			if (is != null) {
+
+				deadImage = new javafx.scene.image.Image(is);
+
+				System.out.println("⭕ DEAD画像読込成功: " + deadPath);
+
+			} else {
+
+				System.err.println("❌ DEAD画像が見つかりません: " + deadPath);
 			}
 
 		} catch (Exception e) {
