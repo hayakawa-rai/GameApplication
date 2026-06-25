@@ -9,8 +9,8 @@ import test.test2.MapData;
 public class GreenEnemy extends Enemy {
 
 	// スタート位置 (マップ中心 エネミーハウス内)
-	private static final int START_COL = 12;
-	private static final int START_ROW = 12;
+	private static final int START_COL = 14;
+	private static final int START_ROW = 11;
 
 	// 8 マス以上離れていたら追跡
 	private static final double BORDER = 8;

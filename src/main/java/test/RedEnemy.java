@@ -10,9 +10,13 @@ import test.test2.MapData;
 public class RedEnemy extends Enemy {
 
 	// スタート位置（エネミーハウス付近上）
+<<<<<<< HEAD
+	private static final int START_COL = 15;
+=======
 
 	private static final int START_COL = 11;
 
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 	private static final int START_ROW = 11;
 
 	// 縄張りエリアの中心（右上）(仮)

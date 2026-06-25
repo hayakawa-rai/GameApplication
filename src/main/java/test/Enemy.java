@@ -159,9 +159,14 @@ public abstract class Enemy extends Character {
 
 			return getFarthestDirection(validDirections, targetCol, targetRow);
 
+<<<<<<< HEAD
+		return null;	
+	}
+=======
 		}
  
 		return null;
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
 	}
  
