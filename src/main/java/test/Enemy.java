@@ -157,16 +157,11 @@ public abstract class Enemy extends Character {
 
 		if (currentState == Characters.EnemyState.FEVER) {
 
-			return getFarthestDirection(validDirections, targetCol, targetRow);
-
-<<<<<<< HEAD
-		return null;	
+			return getFarthestDirection(validDirections, targetCol, targetRow);	
+	
 	}
-=======
-		}
- 
+		
 		return null;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
 	}
  
