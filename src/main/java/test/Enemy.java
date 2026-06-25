@@ -37,8 +37,24 @@ public abstract class Enemy extends Character {
 		double cx = tileX * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0;
 		double cy = tileY * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0;
 
+		if (currentState == Characters.EnemyState.DEAD) {
+
+			int col = (int) (x / MapData.TILE_SIZE);
+			int row = (int) (y / MapData.TILE_SIZE);
+
+			// 巣に到着
+			if (col == 14 && row == 14) {
+
+				currentState = Characters.EnemyState.SCATTER;
+
+				System.out.println(getClass().getSimpleName() + "復活");
+			}
+
+		}
+
 		// 現在のスピードの計算
 		double currentSpeed = this.getSpeed();
+
 		// FEVER時は半速
 		if (this.currentState == Characters.EnemyState.FEVER) {
 			currentSpeed = this.getSpeed() * 0.5;
@@ -79,6 +95,22 @@ public abstract class Enemy extends Character {
 				this.x += (cx - this.x) * 0.2;
 			}
 		}
+	}
+
+	// DEAD・FEVERの共通処理
+	protected Direction handleSpecialState(List<Direction> validDirections, int targetCol, int targetRow) {
+
+		// DEADなら巣へ帰る
+		if (currentState == Characters.EnemyState.DEAD) {
+			return getClosestDirection(validDirections, 14, 14);
+		}
+
+		// FEVERなら仙石さんから逃げる
+		if (currentState == Characters.EnemyState.FEVER) {
+			return getFarthestDirection(validDirections, targetCol, targetRow);
+		}
+
+		return null;
 	}
 
 	// 三平方の定理を使って目的地に一番近い方向を選ぶ共通処理
@@ -140,9 +172,11 @@ public abstract class Enemy extends Character {
 			if (dir == Direction.NONE)
 				continue;
 
-			if (this.currentState != Characters.EnemyState.DEAD && isOppositeDirection(dir, this.direction)) {
-				continue; // 原則Uターン禁止
+			// 常にUターン禁止
+			if (isOppositeDirection(dir, this.direction)) {
+				continue;
 			}
+
 			if (canmove(dir, map)) {
 				list.add(dir);
 			}

@@ -70,7 +70,7 @@ public class BlueEnemy extends Enemy {
 		return normalImage;
 	}
 
-	//2秒経過後に出撃
+	// 2秒経過後に出撃
 	@Override
 	public void move(int[][] map) {
 		if (!released) {
@@ -90,15 +90,9 @@ public class BlueEnemy extends Enemy {
 	@Override
 	protected Direction decideNextDirection(List<Direction> validDirections, int[][] map, MapData mapData) {
 
-		// FEVER 時はランダム移動
-		//if (this.currentState == EnemyState.FEVER) {
-		//   return getRandomDirection(validDirections);
-		//}
-
-		// DEAD 時はハウスへ帰還
-		//if (this.currentState == EnemyState.DEAD) {
-		//    return getClosestDirection(validDirections, START_COL, START_ROW);
-		//}
+		if (mapData == null || validDirections.isEmpty()) {
+			return Direction.NONE;
+		}
 
 		// プレイヤーのタイル座標
 		int pacCol = (int) (mapData.getPacX() / MapData.TILE_SIZE);
@@ -133,6 +127,13 @@ public class BlueEnemy extends Enemy {
 		// 2倍した先がターゲット
 		int targetCol = pacCol + vx;
 		int targetRow = pacRow + vy;
+
+		// 共通処理
+		Direction special = handleSpecialState(validDirections, pacCol, pacRow);
+
+		if (special != null) {
+			return special;
+		}
 
 		// 親クラスの最短ルート計算メソッドにターゲットマスを渡して、最短ルートで次の一歩を決める
 		return getClosestDirection(validDirections, targetCol, targetRow);
