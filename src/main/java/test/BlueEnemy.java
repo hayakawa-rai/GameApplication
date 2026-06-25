@@ -35,8 +35,7 @@ public class BlueEnemy extends Enemy {
 
 		this.mapData = mapData;
 
-		// FEVER画像をステージごとに読み込む
-		loadFeverImage();
+
 
 		// DEAD画像を読み込む
 		loadDeadImage();
@@ -84,6 +83,19 @@ public class BlueEnemy extends Enemy {
 			e.printStackTrace();
 		}
 	}
+	
+	// 画像の読み込み処理
+	public Image getEnemyImage() {
+		if (this.currentState == Characters.EnemyState.DEAD) {
+			return deadImage;
+		}
+		if (this.currentState == Characters.EnemyState.FEVER) {
+			return feverImage;
+		}
+		return normalImage;
+	}
+ 
+
 
 	// 2秒経過後に出撃
 	@Override
@@ -153,4 +165,5 @@ public class BlueEnemy extends Enemy {
 		// 親クラスの最短ルート計算メソッドにターゲットマスを渡して、最短ルートで次の一歩を決める
 		return getClosestDirection(validDirections, targetCol, targetRow);
 	}
+
 }
