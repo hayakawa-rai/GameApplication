@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\EMD-571\git\GameApplication\src\main\java\Characters\BlueEnemy.java
 C:\Users\EMD-571\git\GameApplication\src\main\java\Characters\Character.java
 C:\Users\EMD-571\git\GameApplication\src\main\java\Characters\Direction.java
@@ -70,6 +71,8 @@ C:\Users\EMD-571\git\GameApplication\src\main\java\test\test2\TestMainapp.java
 C:\Users\EMD-571\git\GameApplication\src\main\java\test\YellowEnemy.java
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 C:\Users\EMD-569\git\GameApplication\src\main\java\Characters\BlueEnemy.java
 C:\Users\EMD-569\git\GameApplication\src\main\java\Characters\Character.java
 C:\Users\EMD-569\git\GameApplication\src\main\java\Characters\Direction.java
@@ -139,6 +142,7 @@ C:\Users\EMD-569\git\GameApplication\src\main\java\test\test2\MapData.java
 C:\Users\EMD-569\git\GameApplication\src\main\java\test\test2\MapView.java
 C:\Users\EMD-569\git\GameApplication\src\main\java\test\test2\TestMainapp.java
 C:\Users\EMD-569\git\GameApplication\src\main\java\test\YellowEnemy.java
+<<<<<<< HEAD
 =======
 C:\Users\EMD-576\git\GameApplication\src\main\java\Characters\BlueEnemy.java
 C:\Users\EMD-576\git\GameApplication\src\main\java\Characters\Character.java
@@ -210,4 +214,6 @@ C:\Users\EMD-576\git\GameApplication\src\main\java\test\test2\MapView.java
 C:\Users\EMD-576\git\GameApplication\src\main\java\test\test2\TestMainapp.java
 C:\Users\EMD-576\git\GameApplication\src\main\java\test\YellowEnemy.java
 >>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+=======
 >>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
