@@ -30,6 +30,8 @@ public class RedEnemy extends Enemy {
 		super(START_COL * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0,
 
 				START_ROW * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0, 1); // スピードは 2
+		
+		this.mapData = sampleModel;
 
 		// FEVER画像をステージごとに読み込む
 		loadFeverImage();
