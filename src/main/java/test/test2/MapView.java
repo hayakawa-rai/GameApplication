@@ -21,11 +21,10 @@ public class MapView {
 
 	private final MapData model;
 
-	
 	// CSSの色を吸い取るための「見えないダミー部品」
 	private final Region wallDummy = new Region();
 	private final Region pacmanDummy = new Region();
-    
+
 	// 口の向きを記憶しておく。（初期は右向き）
 
 	private double lastBaseAngle = 0;
@@ -40,7 +39,7 @@ public class MapView {
 	// 新しいコンストラクタ（引数2つ用）
 	public MapView(MapData model, Pane root) {
 		this.model = model;
-		
+
 		// ダミー部品にCSSのクラス名をセット
 		wallDummy.getStyleClass().add("game-wall");
 		pacmanDummy.getStyleClass().add("game-pacman");
@@ -60,11 +59,11 @@ public class MapView {
 	public void draw(GraphicsContext gc, double canvasWidth, double canvasHeight) {
 
 		// 1. まずはCanvasを一度綺麗に消す（透明にする）
-		gc.clearRect(0, 0, canvasWidth, canvasHeight); 
-        
-		Color wallColor = getColorFromCSS(wallDummy, Color.BLUE);       
-		Color pacmanColor = getColorFromCSS(pacmanDummy, Color.YELLOW); 
-		
+		gc.clearRect(0, 0, canvasWidth, canvasHeight);
+
+		Color wallColor = getColorFromCSS(wallDummy, Color.BLUE);
+		Color pacmanColor = getColorFromCSS(pacmanDummy, Color.YELLOW);
+
 		// 1. ステージ本来のサイズを計算
 
 		int cols = model.getMap()[0].length;
@@ -80,13 +79,12 @@ public class MapView {
 		double scaleY = canvasHeight / stageHeight;
 
 		// 2. 全体を90%の大きさに縮小する
-		
-		double bufferRatio = 0.9; 
+
+		double bufferRatio = 0.9;
 
 		double scale = Math.min(scaleX, scaleY) * bufferRatio;
 
 		// 3. 小さくなった分も含めて、改めて中央に配置するための余白（オフセット）を計算
-
 
 		// 3. 中央に配置するための余白（オフセット）を計算
 		double offsetX = (canvasWidth - (stageWidth * scale)) / 2.0;
@@ -119,27 +117,25 @@ public class MapView {
 
 		// 7. 実際の描画処理を呼び出す
 
-		drawStageContent(gc, cols, rows, stageWidth, stageHeight,wallColor);
+		drawStageContent(gc, cols, rows, stageWidth, stageHeight, wallColor);
 
-		drawPacman(gc,pacmanColor);
+		drawPacman(gc, pacmanColor);
 
 		//敵の描画メソッド　追加しました　成田
 
 		// ⭕【ここを追加！】リスト内（Red, Green）のすべての敵をループで一斉に描画する
 
-
 		drawStageContent(gc, cols, rows, stageWidth, stageHeight, wallColor);
 		drawPacman(gc, pacmanColor);
-		
+
 		// 敵の描画メソッド
 		if (model.getEnemies() != null) {
 
 			for (Enemy enemy : model.getEnemies()) {
 
-
 				drawEnemyInstance(gc, enemy); // ※前々回追加した共通描画メソッド
 
-				drawEnemyInstance(gc, enemy); 
+				drawEnemyInstance(gc, enemy);
 			}
 
 		}
@@ -153,7 +149,8 @@ public class MapView {
 
 	// drawStage から背景クリアとパックマン呼び出しを分離・整理した内部メソッド
 
-	private void drawStageContent(GraphicsContext gc, int cols, int rows, double stageWidth, double stageHeight, Color wallColor) {
+	private void drawStageContent(GraphicsContext gc, int cols, int rows, double stageWidth, double stageHeight,
+			Color wallColor) {
 		Item[][] itemMap = model.getItemMap();
 
 		for (int row = 0; row < rows; row++) {
@@ -174,7 +171,7 @@ public class MapView {
 
 					gc.setFill(Color.BLUE);
 
-					gc.setFill(wallColor); 
+					gc.setFill(wallColor);
 					gc.fillRect(x + 2, y + 2, MapData.TILE_SIZE - 4, MapData.TILE_SIZE - 4);
 
 				}
@@ -225,8 +222,8 @@ public class MapView {
 
 		gc.setFill(Color.YELLOW);
 
-		gc.setFill(pacmanColor); 
-		
+		gc.setFill(pacmanColor);
+
 		double pacX = sengoku.getX() + MapData.TILE_SIZE / 2.0;
 
 		double pacY = sengoku.getY() + MapData.TILE_SIZE / 2.0;
@@ -249,10 +246,14 @@ public class MapView {
 			if (currentDir.getDY() == 1)
 				lastBaseAngle = 270; // 下
 
-			if (currentDir.getDX() == 1)  lastBaseAngle = 0;   
-			if (currentDir.getDX() == -1) lastBaseAngle = 180; 
-			if (currentDir.getDY() == -1) lastBaseAngle = 90;  
-			if (currentDir.getDY() == 1)  lastBaseAngle = 270; 
+			if (currentDir.getDX() == 1)
+				lastBaseAngle = 0;
+			if (currentDir.getDX() == -1)
+				lastBaseAngle = 180;
+			if (currentDir.getDY() == -1)
+				lastBaseAngle = 90;
+			if (currentDir.getDY() == 1)
+				lastBaseAngle = 270;
 		}
 
 		double finalStartAngle = lastBaseAngle + mouthAngle;
@@ -320,7 +321,6 @@ public class MapView {
 
 				// 中心点が視覚的にわかりやすいように小さな黒い点を打つ
 
- 
 				gc.setFill(Color.BLACK);
 
 				gc.fillOval(red.getX() + MapData.TILE_SIZE / 2.0 - 2,
@@ -335,7 +335,6 @@ public class MapView {
 
 	// ⭕ 空っぽだった自動生成メソッドの中身を、中心ズレ補正版の正しい描画ロジックに修正！
 
-	
 	private void drawEnemyInstance(GraphicsContext gc, Enemy enemy) {
 
 		if (enemy == null)
@@ -368,7 +367,6 @@ public class MapView {
 
 		// マスの中心座標(X, Y)から半マス引いて、画像の左上基準座標を計算
 
-		
 		double enemyLeftX = enemy.getX() - MapData.TILE_SIZE / 2.0;
 
 		double enemyTopY = enemy.getY() - MapData.TILE_SIZE / 2.0;
@@ -398,7 +396,6 @@ public class MapView {
 
 			// 中心点が視覚的にわかりやすいように小さな黒い点を打つ
 
-
 			gc.setFill(javafx.scene.paint.Color.BLACK);
 
 			gc.fillOval(enemy.getX() - 2, enemy.getY() - 2, 4, 4);
@@ -407,22 +404,21 @@ public class MapView {
 
 	}
 
-	
 	private Color getColorFromCSS(Region node, Color defaultColor) {
 		if (node.getStyleClass().isEmpty()) {
 			return defaultColor;
 		}
 		try {
-			node.applyCss(); 
+			node.applyCss();
 			Background bg = node.getBackground();
 			if (bg != null && !bg.getFills().isEmpty()) {
 				var fill = bg.getFills().get(0).getFill();
 				if (fill instanceof Color) {
-					return (Color) fill; 
+					return (Color) fill;
 				}
 			}
 		} catch (Exception e) {
 		}
-		return defaultColor; 
+		return defaultColor;
 	}
 }
