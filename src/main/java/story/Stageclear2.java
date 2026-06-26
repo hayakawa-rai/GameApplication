@@ -15,6 +15,15 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class Stageclear2 extends Application{
+	
+	// ★スコアを保持する変数
+    private int finalScore = 0;
+
+    // ★GameControllerからスコアを受け取るためのメソッド
+    public void setScore(int score) {
+        this.finalScore = score;
+    }
+    
 	//ウィンドウを保存してどのクラスでも共通のウィンドウを使用するため
     private Stage stage;
   //javafxではstartを呼び出さないと起動しないため、親クラスのstartを上書きすることで子クラスを起動
@@ -87,6 +96,12 @@ public class Stageclear2 extends Application{
     Text title = new Text("STAGE2    CLEAR!");
     //フォントサイズとカラーを指定
     title.setStyle("-fx-font-size: 80px; -fx-fill: rgb(180,180,180);");
+   
+ // ★★★ 【追加】獲得スコアを表示するテキスト ★★★
+ 		Text scoreText = new Text("SCORE: " + finalScore);
+ 		// スコアを目立たせるために黄色（金色風）に設定
+ 		scoreText.setStyle("-fx-font-size: 32px; -fx-fill: #ffcc00; -fx-font-weight: bold;");
+    
     //獲得したアイテムを表示
     Text text = new Text("契約書を獲得しました！！");
     //フォントサイズとカラーを指定
@@ -186,16 +201,14 @@ public class Stageclear2 extends Application{
         pause.play();
     });
     //titleと画像とtextをまとめたもの、ボタン2つを箱に入れる。
-    buttonBox.getChildren().addAll(title,textAndImage,next, backButton);//ボタンを配置
+    buttonBox.getChildren().addAll(title, scoreText, textAndImage, next, backButton);
     
     //buttonBoxを中身とした1000×800のウィンドウを作成
     Scene scene = new Scene(buttonBox, 1000, 800);
     //ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
     stage.setMinWidth(800);
     stage.setMinHeight(600);
-    //ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
-    stage.setMinWidth(800);
-    stage.setMinHeight(600);
+  
     //CSSを接続
     scene.getStylesheets().add(
         getClass().getResource("/css/style.css").toExternalForm()
