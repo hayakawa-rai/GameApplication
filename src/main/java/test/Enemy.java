@@ -124,35 +124,44 @@ public abstract class Enemy extends Character {
 	}
 
 	// DEAD・FEVERの共通処理
+		protected Direction handleSpecialState(List<Direction> validDirections, int targetCol, int targetRow) {
+			// ⭕ DEAD状態なら、自動的にマップ内の「7（扉）」の中から【一番近い場所】を探してそこへ帰る
+			if (currentState == Characters.EnemyState.DEAD) {
+				int[][] currentMap = mapData.getMap();
+				
+				// デフォルトのバックアップ座標
+				int bestGateCol = 14; 
+				int bestGateRow = 13;
+				double minDistanceSq = Double.MAX_VALUE;
 
-	protected Direction handleSpecialState(List<Direction> validDirections, int targetCol, int targetRow) {
-		// ⭕ DEAD状態なら、自動的にマップ内の「7（扉）」を探してそこへ帰る
-		if (currentState == Characters.EnemyState.DEAD) {
-			int[][] currentMap = mapData.getMap();
-			//扉（7）がなかった時のバグ防止。この地点にいきます。
-			int gateCol = 14; 
-			int gateRow = 13;
+				// 今の自分の位置（マス単位）
+				int myCol = (int) (this.x / MapData.TILE_SIZE);
+				int myRow = (int) (this.y / MapData.TILE_SIZE);
 
-			//outerLoop	下記の二つのfor文を一気にbreakできるようにしている。
-			outerLoop:
-			for (int r = 0; r < currentMap.length; r++) {
-				for (int c = 0; c < currentMap[r].length; c++) {
-					if (currentMap[r][c] == 7) {
-						gateRow = r;
-						gateCol = c;
-						break outerLoop;
+				// マップ全体からすべての「7」を探し、一番近いものを選択する（outerLoopとbreakは削除）
+				for (int r = 0; r < currentMap.length; r++) {
+					for (int c = 0; c < currentMap[r].length; c++) {
+						if (currentMap[r][c] == 7) {
+							// 自分の現在地からの距離を計算（三平方の定理）
+							double distSq = Math.pow(c - myCol, 2) + Math.pow(r - myRow, 2);
+							if (distSq < minDistanceSq) {
+								minDistanceSq = distSq;
+								bestGateCol = c;
+								bestGateRow = r;
+							}
+						}
 					}
 				}
+				
+				// 最も近い扉（右半分にいるときは右側の7、左半分にいるときは左側の7）に向かわせる
+				return getClosestDirection(validDirections, bestGateCol, bestGateRow);
 			}
-					return getClosestDirection(validDirections, gateCol, gateRow);
-		}
 
-		if (currentState == Characters.EnemyState.FEVER) {
-			return getFarthestDirection(validDirections, targetCol, targetRow);
+			if (currentState == Characters.EnemyState.FEVER) {
+				return getFarthestDirection(validDirections, targetCol, targetRow);
+			}
+			return null;
 		}
-				return null;
-	}
-
 
 	// 三平方の定理を使って目的地に一番近い方向を選ぶ共通処理
 
