@@ -145,11 +145,8 @@ public class SampleModel {
 				int warpX = tileX;
 				int warpY = tileY;
 
-<<<<<<< HEAD
-				Direction currentDir = sengoku.getDirection();
-=======
 				Characters.Direction currentDir = sengoku.getDirection();
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
+
 				// 横方向のワープ
 				if (currentDir != Direction.NONE) {
 					if (currentDir.getDX() != 0) {
