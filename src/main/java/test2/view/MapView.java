@@ -1,6 +1,7 @@
 package test2.view;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import test2.model.MapData;
@@ -13,6 +14,17 @@ public class MapView {
 	public MapView(MapData model) {
 		this.model = model;
 	}
+	
+	// 新しいコンストラクタ（引数2つ用）
+			public MapView(MapData model, Pane root) {
+				this.model = model;
+			
+				root.sceneProperty().addListener((observable, oldScene, newScene) -> {
+					if (newScene != null) {
+						test.test2.GameController.applyMobileControls(newScene, this.model);
+					}
+				});
+			}
 
 	// ★ CSSの背景色からColorオブジェクトを安全に引っ張り出す正しい処理
 	private Color getColorFromCSS(GraphicsContext gc, String styleClass, Color fallbackColor) {
@@ -91,6 +103,24 @@ public class MapView {
 				360 - model.getMouthAngle() * 2,
 				ArcType.ROUND);
 	}
+	
+	private void drawItems(GraphicsContext gc) {
+	    for (int y = 0; y < model.getMap().length; y++) {
+	        for (int x = 0; x < model.getMap()[0].length; x++) {
+
+	            var item = model.getItem(x, y);
+	            if (item != null) {
+	                item.draw(
+	                    gc,
+	                    x * MapData.TILE_SIZE,   // ← 左上座標を渡す
+	                    y * MapData.TILE_SIZE,   // ← 左上座標を渡す
+	                    MapData.TILE_SIZE
+	                );
+	            }
+	        }
+	    }
+	}
+
 
 	//全体描画
 	public void draw(GraphicsContext gc) {
@@ -115,6 +145,9 @@ public class MapView {
 
 		//壁の描画
 		drawStage(gc);
+		
+		// アイテム
+		drawItems(gc);
 
 		//パックマンの描画
 		drawPacman(gc);
