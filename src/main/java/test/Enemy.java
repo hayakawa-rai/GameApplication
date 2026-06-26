@@ -104,7 +104,7 @@ public abstract class Enemy extends Character {
 				int currentCol = (int) (this.x / MapData.TILE_SIZE);
 
 				// 巣の中にいる間は、ターゲットを強制的に巣のすぐ外（例: 行10、列13）にする
-				if (currentState != Characters.EnemyState.DEAD &&currentRow >= 11 && currentRow <= 15 && currentCol >= 12 && currentCol <= 15) {
+				if (currentState != Characters.EnemyState.DEAD &&currentRow >= 12 && currentRow <= 15 && currentCol >= 12 && currentCol <= 15) {
 					this.y = cy;
 					this.x = cx;
 					this.direction = Direction.UP;
