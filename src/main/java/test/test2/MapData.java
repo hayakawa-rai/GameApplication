@@ -3,12 +3,12 @@ package test.test2;
 import java.util.ArrayList;
 import java.util.List;
 
+import Characters.Direction;
 import Characters.Sengoku;
 import Items.Chii;
 import Items.Item;
 import Items.Point;
 import test.BlueEnemy;
-import test.Direction;
 import test.Enemy;
 import test.GreenEnemy;
 import test.RedEnemy;

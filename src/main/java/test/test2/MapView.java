@@ -153,7 +153,7 @@ public class MapView {
 
 				Item item = itemMap[row][col];
 				
-				// 壁の描画
+				// 壁の描画 (壁の見た目変更のためコメントアウト中)
 
 				//if (tile == 1) {
 
@@ -171,7 +171,7 @@ public class MapView {
 			}
 		}
 
-		// WallOutline で壁を描画　(古田変更問題なかったら()消してね)
+		// WallOutline で壁を描画 (古田変更 問題なかったら()消してね)
 		WallOutline outline = new WallOutline(model.getMap(), MapData.TILE_SIZE);
 		gc.setStroke(wallColor);
 		gc.setLineWidth(2);
@@ -228,7 +228,7 @@ public class MapView {
 
 		double mouthAngle = model.getMouthAngle();
 
-		test.Direction currentDir = sengoku.getDirection();
+		Characters.Direction currentDir = sengoku.getDirection();
 
 		if (currentDir != null) {
 
