@@ -1,6 +1,5 @@
 package test.test2;
 
-import Characters.Direction;
 import Characters.Sengoku;
 import Items.Item;
 import javafx.scene.canvas.GraphicsContext;
@@ -223,7 +222,7 @@ public class MapView {
 
 		double mouthAngle = model.getMouthAngle();
 
-		Direction currentDir = sengoku.getDirection();
+		test.Direction currentDir = sengoku.getDirection();
 
 		if (currentDir != null) {
 
