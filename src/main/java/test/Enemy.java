@@ -1,42 +1,42 @@
 //エネミークラス
 
 package test;
- 
+
 import java.util.ArrayList;
 import java.util.List;
 
 import test.test2.MapData;
- 
+
 public abstract class Enemy extends Character {
- 
+
 	protected javafx.scene.image.ImageView imageView;
- 
+
 	protected MapData mapData;
- 
+
 	protected Characters.EnemyState currentState = Characters.EnemyState.SCATTER;
- 
+
 	protected javafx.scene.image.Image normalImage;
 
 	protected javafx.scene.image.Image feverImage;
 
 	protected javafx.scene.image.Image deadImage;
- 
+
 	public Enemy(double startX, double startY, int speed) {
 
 		super(startX, startY, speed);
 
 	}
- 
+
 	protected abstract Direction decideNextDirection(List<Direction> validDirections, int[][] map, MapData mapData);
- 
+
 	@Override
 
 	public void move(int[][] map) {
- 
+
 		int tileX = (int) (this.x / MapData.TILE_SIZE);
 
 		int tileY = (int) (this.y / MapData.TILE_SIZE);
- 
+
 		// 範囲外防止
 
 		if (tileY < 0 || tileY >= map.length || tileX < 0 || tileX >= map[0].length) {
@@ -44,33 +44,33 @@ public abstract class Enemy extends Character {
 			return;
 
 		}
- 
+
 		double cx = tileX * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0;
 
 		double cy = tileY * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0;
- 
+
 		if (currentState == Characters.EnemyState.DEAD) {
- 
+
 			int col = (int) (x / MapData.TILE_SIZE);
 
 			int row = (int) (y / MapData.TILE_SIZE);
- 
+
 			// 巣に到着
 
 			if (col == 14 && row == 14) {
- 
+
 				currentState = Characters.EnemyState.SCATTER;
- 
+
 				System.out.println(getClass().getSimpleName() + "復活");
 
 			}
- 
+
 		}
- 
+
 		// 現在のスピードの計算
 
 		double currentSpeed = this.getSpeed();
- 
+
 		// FEVER時は半速
 
 		if (this.currentState == Characters.EnemyState.FEVER) {
@@ -86,37 +86,47 @@ public abstract class Enemy extends Character {
 			currentSpeed = this.getSpeed() * 2;
 
 		}
- 
+
 		// タイルの中心に近づいたか判定
 
 		boolean atCenter = Math.abs(this.x - cx) < currentSpeed && Math.abs(this.y - cy) < currentSpeed;
- 
+
 		// 完全に停止している(NONE)か、マスの中心に到達したら方向転換
 
 		if (this.direction == Direction.NONE || atCenter) {
 
 			List<Direction> validDirections = getValidDirections(map);
- 
+
 			if (!validDirections.isEmpty()) {
 
-				Direction chosenDirection = decideNextDirection(validDirections, map, this.mapData);
- 
-				// 中心にぴったり位置補正（軸ズレによるスタック防止）
+				// 現在のタイル座標を一時的に取得（条件判定用）
+				int currentRow = (int) (this.y / MapData.TILE_SIZE);
+				int currentCol = (int) (this.x / MapData.TILE_SIZE);
 
-				this.x = cx;
+				// 巣の中にいる間は、ターゲットを強制的に巣のすぐ外（例: 行10、列13）にする
+				if (currentState != Characters.EnemyState.DEAD &&currentRow >= 11 && currentRow <= 15 && currentCol >= 12 && currentCol <= 15) {
+					this.y = cy;
+					this.x = cx;
+					this.direction = Direction.UP;
+				} else {
 
-				this.y = cy;
+					// 巣の外にいる時だけ、ターゲットを追いかける通常のAI処理を行う
+					Direction chosenDirection = decideNextDirection(validDirections, map, this.mapData);
 
-				this.direction = chosenDirection;
+					// 中心にぴったり位置補正（軸ズレによるスタック防止）
+					this.x = cx;
+					this.y = cy;
+					this.direction = chosenDirection;
+
+				}
 
 			} else {
 
 				this.direction = Direction.NONE;
 
 			}
-
 		}
- 
+
 		// 決定した方向に実際に移動する処理
 
 		if (this.direction != Direction.NONE) {
@@ -124,7 +134,7 @@ public abstract class Enemy extends Character {
 			this.x += this.direction.getDX() * currentSpeed;
 
 			this.y += this.direction.getDY() * currentSpeed;
- 
+
 			if (this.direction.getDX() != 0) {
 
 				this.y += (cy - this.y) * 0.2;
@@ -140,11 +150,11 @@ public abstract class Enemy extends Character {
 		}
 
 	}
- 
+
 	// DEAD・FEVERの共通処理
 
 	protected Direction handleSpecialState(List<Direction> validDirections, int targetCol, int targetRow) {
- 
+
 		// DEADなら巣へ帰る
 
 		if (currentState == Characters.EnemyState.DEAD) {
@@ -152,39 +162,39 @@ public abstract class Enemy extends Character {
 			return getClosestDirection(validDirections, 14, 14);
 
 		}
- 
+
 		// FEVERなら仙石さんから逃げる
 
 		if (currentState == Characters.EnemyState.FEVER) {
 
-			return getFarthestDirection(validDirections, targetCol, targetRow);	
-	
-	}
-		
+			return getFarthestDirection(validDirections, targetCol, targetRow);
+
+		}
+
 		return null;
 
 	}
- 
+
 	// 三平方の定理を使って目的地に一番近い方向を選ぶ共通処理
 
 	protected Direction getClosestDirection(List<Direction> validDirections, int targetCol, int targetRow) {
- 
+
 		Direction bestDirection = Direction.NONE;
 
 		double minDistance = Double.MAX_VALUE;
- 
+
 		int currentCol = (int) (this.x / MapData.TILE_SIZE);
 
 		int currentRow = (int) (this.y / MapData.TILE_SIZE);
- 
+
 		for (Direction dir : validDirections) {
 
 			int nextCol = currentCol + (int) dir.getDX();
 
 			int nextRow = currentRow + (int) dir.getDY();
- 
+
 			double distanceSq = Math.pow(nextCol - targetCol, 2) + Math.pow(nextRow - targetRow, 2);
- 
+
 			if (distanceSq < minDistance) {
 
 				minDistance = distanceSq;
@@ -198,25 +208,25 @@ public abstract class Enemy extends Character {
 		return bestDirection != Direction.NONE ? bestDirection : validDirections.get(0);
 
 	}
- 
+
 	protected Direction getFarthestDirection(List<Direction> validDirections, int targetCol, int targetRow) {
- 
+
 		Direction bestDirection = Direction.NONE;
 
 		double maxDistance = -1;
- 
+
 		int currentCol = (int) (this.x / MapData.TILE_SIZE);
 
 		int currentRow = (int) (this.y / MapData.TILE_SIZE);
- 
+
 		for (Direction dir : validDirections) {
- 
+
 			int nextCol = currentCol + (int) dir.getDX();
 
 			int nextRow = currentRow + (int) dir.getDY();
- 
+
 			double distanceSq = Math.pow(nextCol - targetCol, 2) + Math.pow(nextRow - targetRow, 2);
- 
+
 			if (distanceSq > maxDistance) {
 
 				maxDistance = distanceSq;
@@ -226,11 +236,11 @@ public abstract class Enemy extends Character {
 			}
 
 		}
- 
+
 		return bestDirection != Direction.NONE ? bestDirection : validDirections.get(0);
 
 	}
- 
+
 	private boolean isOppositeDirection(Direction dir1, Direction dir2) {
 
 		if (dir1 == Direction.NONE || dir2 == Direction.NONE)
@@ -240,7 +250,7 @@ public abstract class Enemy extends Character {
 		return (dir1.getDX() + dir2.getDX() == 0) && (dir1.getDY() + dir2.getDY() == 0);
 
 	}
- 
+
 	private List<Direction> getValidDirections(int[][] map) {
 
 		List<Direction> list = new ArrayList<>();
@@ -250,7 +260,7 @@ public abstract class Enemy extends Character {
 			if (dir == Direction.NONE)
 
 				continue;
- 
+
 			// 常にUターン禁止
 
 			if (isOppositeDirection(dir, this.direction)) {
@@ -258,7 +268,7 @@ public abstract class Enemy extends Character {
 				continue;
 
 			}
- 
+
 			if (canmove(dir, map)) {
 
 				list.add(dir);
@@ -270,43 +280,50 @@ public abstract class Enemy extends Character {
 		return list;
 
 	}
- 
+
 	private boolean canmove(Direction direction, int[][] map) {
 
 		if (direction == Direction.NONE)
 
 			return false;
- 
+
 		int currentCol = (int) (this.x / MapData.TILE_SIZE);
 
 		int currentRow = (int) (this.y / MapData.TILE_SIZE);
- 
+
 		int nextCol = currentCol + (int) direction.getDX();
 
 		int nextRow = currentRow + (int) direction.getDY();
- 
+
 		if (nextRow < 0 || nextRow >= map.length || nextCol < 0 || nextCol >= map[0].length) {
 
 			return false;
 
 		}
- 
-		// ゴーストの巣への通常侵入禁止ルール
+
+		// ゴーストの巣への通常侵入禁止ルール(改良版)
 
 		if (this.currentState != Characters.EnemyState.DEAD) {
 
-			if (nextRow >= 11 && nextRow <= 15 && nextCol >= 12 && nextCol <= 15) {
+			//次の移動先が「巣の内部」であるか判定
+			boolean isNextInsideNest = (nextRow >= 11 && nextRow <= 15 && nextCol >= 12 && nextCol <= 15);
+
+			//現在地が「巣の外部」であるか判定
+			boolean isCurrentOutsideNest = !(currentRow >= 11 && currentRow <= 15 && currentCol >= 12
+					&& currentCol <= 15);
+
+			//「外から中に入ろうとしたときだけ」侵入を禁止する
+			if (isCurrentOutsideNest && isNextInsideNest) {
 
 				return false;
 
 			}
 
 		}
- 
+
 		return map[nextRow][nextCol] != 1; // 1は壁
 
 	}
-
 
 	// FEVER状態で使用する画像をステージごとに読み込む
 	protected void loadFeverImage() {
@@ -417,19 +434,19 @@ public abstract class Enemy extends Character {
 		return currentState;
 
 	}
- 
+
 	public void setCurrentState(Characters.EnemyState state) {
 
 		this.currentState = state;
 
 	}
- 
+
 	public double getX() {
 
 		return x;
 
 	}
- 
+
 	public double getY() {
 
 		return y;
@@ -437,4 +454,3 @@ public abstract class Enemy extends Character {
 	}
 
 }
- 
