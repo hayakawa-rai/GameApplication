@@ -239,6 +239,7 @@ public class GameController {
 	
 	// Stageclear2画面へ変更するためのメソッド（引数に score を追加）
 		public static void switchToStageclear2(javafx.stage.Stage stage, int score) {
+
 			try {
 				Stageclear2 App = new Stageclear2();
 				App.setScore(score); // 受け取った score を確実に引き渡す
