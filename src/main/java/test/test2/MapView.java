@@ -228,7 +228,7 @@ public class MapView {
 
 		double mouthAngle = model.getMouthAngle();
 
-		test.Direction currentDir = sengoku.getDirection();
+		Characters.Direction currentDir = sengoku.getDirection();
 
 		if (currentDir != null) {
 
