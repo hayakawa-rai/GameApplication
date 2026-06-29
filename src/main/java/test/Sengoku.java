@@ -37,10 +37,11 @@ public class Sengoku extends Character {
 				+ " aligned=" + isAligned()
 				+ " canMoveNext=" + canmove(nextdirection, map)
 				+ " canMoveCur=" + canmove(this.direction, map));
-		
+
 		// 死亡アニメーション中、または死亡時は移動しない
-		if (isDyingAnimation || !isAlive()) return;
-		
+		if (isDyingAnimation || !isAlive())
+			return;
+
 		// 新しい方向に曲がれるか（マス境界付近のみ許可）
 		if (isAligned() && canmove(nextdirection, map)) {
 			this.direction = nextdirection;
@@ -60,7 +61,7 @@ public class Sengoku extends Character {
 			this.y += this.direction.getDY() * this.speed;
 		}
 	}
-	
+
 	//外部から状態をチェックするためのゲッタ-
 	public boolean isDyingAnimation() {
 		return isDyingAnimation;
@@ -105,7 +106,7 @@ public class Sengoku extends Character {
 		return map[checkRow][checkCol] != 1;
 	}
 
-	protected void setPosition(double x, double y) {
+	public void setPosition(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -134,7 +135,7 @@ public class Sengoku extends Character {
 			return true;
 		}
 	}
-	
+
 	//初期位置に戻すリセットメソッド
 	public void resetToStartPosition() {
 		this.x = this.startX;
@@ -144,7 +145,7 @@ public class Sengoku extends Character {
 		this.isDyingAnimation = false;
 		this.dyingTimer = 0;
 	}
-	
+
 	//残機を1つ減らすメソッド
 	public void decreaseHp() {
 		if (this.hp > 0) {

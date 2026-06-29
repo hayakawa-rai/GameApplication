@@ -5,12 +5,13 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 
-import test.test2.MapData;
+import common.GameConfig;
+import common.GameMap;
 
 public abstract class Enemy extends Character {
 
 	protected javafx.scene.image.ImageView imageView;
-	protected MapData mapData;
+	protected GameMap mapData;
 	protected Characters.EnemyState currentState = Characters.EnemyState.SCATTER;
 
 	protected javafx.scene.image.Image normalImage;
@@ -27,20 +28,20 @@ public abstract class Enemy extends Character {
 		this.startY = startY;
 	}
 
-	protected abstract Direction decideNextDirection(List<Direction> validDirections, int[][] map, MapData mapData);
+	protected abstract Direction decideNextDirection(List<Direction> validDirections, int[][] map, GameMap mapData);
 
 	@Override
 	public void move(int[][] map) {
-		int tileX = (int) (this.x / MapData.TILE_SIZE);
-		int tileY = (int) (this.y / MapData.TILE_SIZE);
+		int tileX = (int) (this.x / GameConfig.TILE_SIZE);
+		int tileY = (int) (this.y / GameConfig.TILE_SIZE);
 
 		// 範囲外防止
 		if (tileY < 0 || tileY >= map.length || tileX < 0 || tileX >= map[0].length) {
 			return;
 		}
 
-		double cx = tileX * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0;
-		double cy = tileY * MapData.TILE_SIZE + MapData.TILE_SIZE / 2.0;
+		double cx = tileX * GameConfig.TILE_SIZE + GameConfig.TILE_SIZE / 2.0;
+		double cy = tileY * GameConfig.TILE_SIZE + GameConfig.TILE_SIZE / 2.0;
 
 		int currentTileType = map[tileY][tileX]; // 今いるマスの種類を取得
 
@@ -57,12 +58,12 @@ public abstract class Enemy extends Character {
 
 		// FEVER時は半速
 		if (this.currentState == Characters.EnemyState.FEVER) {
-			currentSpeed = this.getSpeed() * 0.5;
+			currentSpeed = this.getSpeed() * 1;
 		}
 
 		// DEAD時は高速帰還
 		if (this.currentState == Characters.EnemyState.DEAD) {
-			currentSpeed = this.getSpeed() * 2;
+			currentSpeed = this.getSpeed() * 3;
 		}
 
 		// タイルの中心に近づいたか判定
@@ -73,8 +74,8 @@ public abstract class Enemy extends Character {
 			List<Direction> validDirections = getValidDirections(map);
 			if (!validDirections.isEmpty()) {
 				// 現在のタイル座標を一時的に取得（条件判定用）
-				int currentRow = (int) (this.y / MapData.TILE_SIZE);
-				int currentCol = (int) (this.x / MapData.TILE_SIZE);
+				int currentRow = (int) (this.y / GameConfig.TILE_SIZE);
+				int currentCol = (int) (this.x / GameConfig.TILE_SIZE);
 				// 巣の中にいる間は、ターゲットを強制的に巣のすぐ外（例: 行10、列13）にする
 				if (currentState != Characters.EnemyState.DEAD && currentRow >= 12 && currentRow <= 15
 						&& currentCol >= 12 && currentCol <= 15) {
@@ -125,10 +126,10 @@ public abstract class Enemy extends Character {
 	}
 
 	// DEAD・FEVERの共通処理
-	protected Direction handleSpecialState(List<Direction> validDirections, int targetCol, int targetRow) {
+	protected Direction handleSpecialState(List<Direction> validDirections, int targetCol, int targetRow, int[][] map) {
 		// ⭕ DEAD状態なら、自動的にマップ内の「7（扉）」の中から【一番近い場所】を探してそこへ帰る
 		if (currentState == Characters.EnemyState.DEAD) {
-			int[][] currentMap = mapData.getMap();
+			int[][] currentMap = map;
 
 			// デフォルトのバックアップ座標
 			int bestGateCol = 14;
@@ -136,8 +137,8 @@ public abstract class Enemy extends Character {
 			double minDistanceSq = Double.MAX_VALUE;
 
 			// 今の自分の位置（マス単位）
-			int myCol = (int) (this.x / MapData.TILE_SIZE);
-			int myRow = (int) (this.y / MapData.TILE_SIZE);
+			int myCol = (int) (this.x / GameConfig.TILE_SIZE);
+			int myRow = (int) (this.y / GameConfig.TILE_SIZE);
 
 			// マップ全体からすべての「7」を探し、一番近いものを選択する（outerLoopとbreakは削除）
 			for (int r = 0; r < currentMap.length; r++) {
@@ -169,8 +170,8 @@ public abstract class Enemy extends Character {
 	protected Direction getClosestDirection(List<Direction> validDirections, int targetCol, int targetRow) {
 		Direction bestDirection = Direction.NONE;
 		double minDistance = Double.MAX_VALUE;
-		int currentCol = (int) (this.x / MapData.TILE_SIZE);
-		int currentRow = (int) (this.y / MapData.TILE_SIZE);
+		int currentCol = (int) (this.x / GameConfig.TILE_SIZE);
+		int currentRow = (int) (this.y / GameConfig.TILE_SIZE);
 
 		for (Direction dir : validDirections) {
 			int nextCol = currentCol + (int) dir.getDX();
@@ -188,8 +189,8 @@ public abstract class Enemy extends Character {
 	protected Direction getFarthestDirection(List<Direction> validDirections, int targetCol, int targetRow) {
 		Direction bestDirection = Direction.NONE;
 		double maxDistance = -1;
-		int currentCol = (int) (this.x / MapData.TILE_SIZE);
-		int currentRow = (int) (this.y / MapData.TILE_SIZE);
+		int currentCol = (int) (this.x / GameConfig.TILE_SIZE);
+		int currentRow = (int) (this.y / GameConfig.TILE_SIZE);
 
 		for (Direction dir : validDirections) {
 			int nextCol = currentCol + (int) dir.getDX();
@@ -232,8 +233,8 @@ public abstract class Enemy extends Character {
 		if (direction == Direction.NONE)
 			return false;
 
-		int currentCol = (int) (this.x / MapData.TILE_SIZE);
-		int currentRow = (int) (this.y / MapData.TILE_SIZE);
+		int currentCol = (int) (this.x / GameConfig.TILE_SIZE);
+		int currentRow = (int) (this.y / GameConfig.TILE_SIZE);
 		int nextCol = currentCol + (int) direction.getDX();
 		int nextRow = currentRow + (int) direction.getDY();
 
