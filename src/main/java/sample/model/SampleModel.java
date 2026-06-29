@@ -1,12 +1,11 @@
 package sample.model;
-
-import Characters.Direction;
-import Characters.Sengoku;
+/*
+import Characters.Enemy;
 import Items.Chii;
 import Items.Item;
 import Items.Point;
-import test.Enemy;
-import test.RedEnemy;
+import sample.Direction;
+import sample.Sengoku;
 
 public class SampleModel {
 
@@ -92,7 +91,7 @@ public class SampleModel {
 	}
 
 	public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
-		this.enemy = new RedEnemy(enemyImageView, this.sengoku);
+		
 	}
 
 	public void togglePause() {
@@ -146,7 +145,8 @@ public class SampleModel {
 				int warpX = tileX;
 				int warpY = tileY;
 
-				Direction currentDir = sengoku.getDirection();
+				sample.Direction currentDir = sengoku.getDirection();
+
 				// 横方向のワープ
 				if (currentDir != Direction.NONE) {
 					if (currentDir.getDX() != 0) {
@@ -284,4 +284,4 @@ public class SampleModel {
 	public Enemy getEnemy() {
 		return enemy;
 	}
-}
+}*/

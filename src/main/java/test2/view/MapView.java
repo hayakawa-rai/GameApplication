@@ -1,8 +1,10 @@
 package test2.view;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
+import test1.view.WallOutline;
 import test2.model.MapData;
 
 public class MapView {
@@ -13,6 +15,17 @@ public class MapView {
 	public MapView(MapData model) {
 		this.model = model;
 	}
+	
+	// 新しいコンストラクタ（引数2つ用）
+			public MapView(MapData model, Pane root) {
+				this.model = model;
+			
+				root.sceneProperty().addListener((observable, oldScene, newScene) -> {
+					if (newScene != null) {
+						test.test2.GameController.applyMobileControls(newScene, this.model);
+					}
+				});
+			}
 
 	// ★ CSSの背景色からColorオブジェクトを安全に引っ張り出す正しい処理
 	private Color getColorFromCSS(GraphicsContext gc, String styleClass, Color fallbackColor) {
@@ -53,21 +66,11 @@ public class MapView {
 		Color wallColor = getColorFromCSS(gc, "game-wall", Color.BLUE);
 		gc.setFill(wallColor);
 
-		// ★ 枠線（Stroke）は一切使わず、塗りつぶし（Fill）だけで描画します
-		for (int y = 0; y < map.length; y++) {
-			for (int x = 0; x < map[0].length; x++) {
-				if (map[y][x] == 1) {
-					// 縦横のサイズを「TILE_SIZEぴったり」にします。
-					// これにより、隣り合うブロック同士が完全に1本のぶっとい壁に同化します！
-					gc.fillRect(
-							x * MapData.TILE_SIZE,
-							y * MapData.TILE_SIZE,
-							MapData.TILE_SIZE,
-							MapData.TILE_SIZE
-					);
-				}
-			}
-		}
+		// WallOutline で壁を描画
+	    WallOutline outline = new WallOutline(model.getMap(), MapData.TILE_SIZE);
+	    gc.setStroke(wallColor);
+	    gc.setLineWidth(2);
+	    outline.drawOutline(gc);
 	}
 
 	//パックマン描画
@@ -91,6 +94,24 @@ public class MapView {
 				360 - model.getMouthAngle() * 2,
 				ArcType.ROUND);
 	}
+	
+	private void drawItems(GraphicsContext gc) {
+	    for (int y = 0; y < model.getMap().length; y++) {
+	        for (int x = 0; x < model.getMap()[0].length; x++) {
+
+	            var item = model.getItem(x, y);
+	            if (item != null) {
+	                item.draw(
+	                    gc,
+	                    x * MapData.TILE_SIZE,   // ← 左上座標を渡す
+	                    y * MapData.TILE_SIZE,   // ← 左上座標を渡す
+	                    MapData.TILE_SIZE
+	                );
+	            }
+	        }
+	    }
+	}
+
 
 	//全体描画
 	public void draw(GraphicsContext gc) {
@@ -108,13 +129,16 @@ public class MapView {
 		gc.translate(offsetX, offsetY);
 		gc.scale(scale, scale);
 
-		// 背景色で画面全体を塗りつぶし（ここが暗いネオンカラーのベースになります）
+		// 背景色で画面全体を塗りつぶし
 		Color bgColor = getColorFromCSS(gc, "game-bg", Color.BLACK);
 		gc.setFill(bgColor);
 		gc.fillRect(0, 0, mapW, mapH);
 
 		//壁の描画
 		drawStage(gc);
+		
+		// アイテム
+		drawItems(gc);
 
 		//パックマンの描画
 		drawPacman(gc);
