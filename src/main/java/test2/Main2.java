@@ -20,9 +20,6 @@ public class Main2 extends Application {
 
 	@Override
 	public void start(Stage stage) {
-
-		starts(stage);
-
 		starts(stage);
 
 		// ModelとViewの作成
