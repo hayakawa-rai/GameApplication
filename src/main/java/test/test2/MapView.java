@@ -120,7 +120,7 @@ public class MapView {
 		}
 	}
 	
-	// ★ MapView のフィールドに Pac-Man 画像を追加
+	/*// ★ MapView のフィールドに Pac-Man 画像を追加
 	private final javafx.scene.image.Image pacmanImage =
 	        new javafx.scene.image.Image(getClass().getResource("/images/pacman.png").toExternalForm());
 
@@ -160,10 +160,10 @@ public class MapView {
 	    );
 
 	    gc.restore();
-	}
+	}*/
 
 
-	/*public void drawPacman(GraphicsContext gc, Color pacmanColor) {
+	public void drawPacman(GraphicsContext gc, Color pacmanColor) {
 		Sengoku sengoku = model.getSengoku();
 		if (sengoku == null || !sengoku.isAlive()) return;
 
@@ -195,7 +195,7 @@ public class MapView {
 				360 - mouthAngle * 2,
 				javafx.scene.shape.ArcType.ROUND
 		);
-	}*/
+	}
 
 	public void setupEnemyView(javafx.scene.image.ImageView enemyImageView) {
 		enemyImageView.setFitWidth(MapData.TILE_SIZE);
