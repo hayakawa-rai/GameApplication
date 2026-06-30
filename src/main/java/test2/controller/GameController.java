@@ -1,6 +1,10 @@
 package test2.controller;
 
 import Characters.Direction;
+<<<<<<< HEAD
+=======
+import Characters.Sengoku;
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -210,7 +214,7 @@ public class GameController {
 					// ★現在の最終スコアを取得する
 				    int finalScore = 0;
 				    if (model.getSengoku() != null) {
-				        finalScore = model.getSengoku().getScore();
+				        finalScore = ((Sengoku) model.getSengoku()).getScore();
 				    }
 				    
 					// クリア画面（Stageclear1）に遷移させる
@@ -229,7 +233,7 @@ public class GameController {
 				double currentHeight = canvas.getHeight();
 				
 				// 新しく統合した draw メソッドを呼び出す
-				view.draw(gc, currentWidth, currentHeight);
+				view.draw(gc);
 			}
 		};
 

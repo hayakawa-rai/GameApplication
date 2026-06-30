@@ -284,9 +284,9 @@ public class MapData implements GameMap {
 
 				// ワープ直後は、プレイヤーの入力を上書きして強制直進（先行入力を固定）
 				if (lastWarpX == 27) {
-					sengoku.setNextDirection(Direction.LEFT);
+					sengoku.setNextDirection(Characters.Direction.LEFT);
 				} else if (lastWarpX == 0) {
-					sengoku.setNextDirection(Direction.RIGHT);
+					sengoku.setNextDirection(Characters.Direction.RIGHT);
 				}
 			} else {
 				justWarped = false;
@@ -301,9 +301,9 @@ public class MapData implements GameMap {
 			if (map[tileY][tileX] == 9) {
 				int warpX = tileX;
 				int warpY = tileY;
-				Direction currentDir = sengoku.getDirection();
+				Characters.Direction currentDir = sengoku.getDirection();
 
-				if (currentDir != Direction.NONE) {
+				if (currentDir != Characters.Direction.NONE) {
 					if (currentDir.getDX() != 0) {
 						for (int x = 0; x < map[0].length; x++) {
 							if (map[tileY][x] == 9 && x != tileX) {
@@ -414,7 +414,7 @@ public class MapData implements GameMap {
 	}
 
 	public void updateMouth() {
-		if (paused || !sengoku.isAlive() || sengoku.getDirection() == Direction.NONE)
+		if (paused || !sengoku.isAlive() || sengoku.getDirection() == Characters.Direction.NONE)
 			return;
 
 		mouthAngle += mouthOpening * 2;
@@ -424,9 +424,13 @@ public class MapData implements GameMap {
 			mouthOpening = -1;
 	}
 
-	public void setNextDirection(Direction dir) {
+	public void setNextDirection(Characters.Direction dir) {
 
-		sengoku.setNextDirection(dir);
+		//sengoku.setNextDirection(dir);
+		if (sengoku != null) {
+			// 古い sample.Direction への変換をやめ、そのまま dir を渡します
+			sengoku.setNextDirection(dir); 
+		}
 
 		// 初回入力でゲーム開始
 		if (waitingStart) {
