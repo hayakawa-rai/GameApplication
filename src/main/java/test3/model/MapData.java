@@ -10,8 +10,11 @@ import Characters.GreenEnemy;
 import Characters.RedEnemy;
 import Characters.Sengoku;
 import Characters.YellowEnemy;
+<<<<<<< HEAD
 
 import Characters.Sengoku;
+=======
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 import Items.Chii;
 import Items.Item;
 import Items.Point;

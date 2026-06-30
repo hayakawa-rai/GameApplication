@@ -1,6 +1,5 @@
 package test2.model;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,17 +10,10 @@ import Characters.GreenEnemy;
 import Characters.RedEnemy;
 import Characters.Sengoku;
 import Characters.YellowEnemy;
-=======
-import Characters.Direction;
-import Characters.Sengoku;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 import Items.Chii;
 import Items.Item;
 import Items.Point;
-<<<<<<< HEAD
 import common.GameMap;
-=======
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
 public class MapData implements GameMap {
 
@@ -434,7 +426,6 @@ public class MapData implements GameMap {
 			mouthOpening = -1;
 	}
 
-<<<<<<< HEAD
 	public void setNextDirection(Direction dir) {
 
 		sengoku.setNextDirection(dir);
@@ -599,30 +590,6 @@ public class MapData implements GameMap {
 		return gameOver;
 	}
 
-=======
-	public void setNextDirection(Direction down) {
-		// TODO 自動生成されたメソッド・スタブ
-		
-	}
 
-	public void update() {
-		// TODO 自動生成されたメソッド・スタブ
-		
-	}
 
-	public boolean isGameOver() {
-		// TODO 自動生成されたメソッド・スタブ
-		return false;
-	}
-
-	public Sengoku getSengoku() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
-
-	public boolean isCleared() {
-		// TODO 自動生成されたメソッド・スタブ
-		return false;
-	}
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 }

@@ -240,7 +240,7 @@ public class GameController {
 				double currentHeight = canvas.getHeight();
 
 				// 新しく統合した draw メソッドを呼び出す
-				view.draw(gc);
+				view.draw(gc, currentHeight, currentHeight);
 			}
 		};
 

@@ -1,11 +1,14 @@
 package test2;
 
 import javafx.application.Application;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import test2.controller.GameController;
 import test2.model.MapData;
@@ -17,6 +20,10 @@ public class Main2 extends Application {
 
 	@Override
 	public void start(Stage stage) {
+<<<<<<< HEAD
+=======
+		starts(stage);
+>>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
 		starts(stage);
 
