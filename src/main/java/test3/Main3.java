@@ -29,7 +29,6 @@ public class Main3 extends Application {
 		MapData model = new MapData();
 		Pane root = new Pane();
 
-
 		MapView view = new MapView(model, root);
 
 		int viewWidth = model.getMap()[0].length * MapData.TILE_SIZE;

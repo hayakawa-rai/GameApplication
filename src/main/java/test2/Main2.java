@@ -19,7 +19,7 @@ public class Main2 extends Application {
 	public void start(Stage stage) {
 		starts(stage);
 	}
-
+	
 	public void starts(Stage stage) {
 		// 多重起動を確実に防止
 		if (this.controller != null) {
@@ -35,7 +35,8 @@ public class Main2 extends Application {
 		int viewHeight = model.getMap().length * MapData.TILE_SIZE;
 
 		Scene scene = new Scene(root, viewWidth, viewHeight);
-		scene.getStylesheets().add(getClass().getResource("/css/test.css").toExternalForm());
+		scene.getStylesheets().add(
+				getClass().getResource("/css/test.css").toExternalForm());
 
 		root.getStyleClass().add("stage2");
 
@@ -69,17 +70,20 @@ public class Main2 extends Application {
 		root.getChildren().addAll(bg, canvas);
 
 		model.initEnemy(null);
-		/*
-		 * コメントで隠してるのが前の描写方法 // 先に空の ImageView を用意 javafx.scene.image.ImageView
-		 * redImageView = new javafx.scene.image.ImageView();
-		 * 
-		 * // モデル側で敵を生成し、内部で画像（Image）を確実にセットさせる model.initEnemy(redImageView);
-		 * 
-		 * // 画像が入った「後」に、ビューを通してサイズを30x30にフィットさせる view.setupEnemyView(redImageView);
-		 * 
-		 * // 敵の ImageView を画面に登録 root.getChildren().add(redImageView);
-		 */
-		// 敵描画呼び出し 成田
+		/*コメントで隠してるのが前の描写方法  
+		// 先に空の ImageView を用意
+		javafx.scene.image.ImageView redImageView = new javafx.scene.image.ImageView();
+		
+		// モデル側で敵を生成し、内部で画像（Image）を確実にセットさせる
+		model.initEnemy(redImageView);
+		
+		//  画像が入った「後」に、ビューを通してサイズを30x30にフィットさせる
+		view.setupEnemyView(redImageView);
+		
+		//  敵の ImageView を画面に登録
+		root.getChildren().add(redImageView);
+		*/
+		//敵描画呼び出し　成田
 		model.initEnemy(new javafx.scene.image.ImageView());
 
 		// 完璧に準備ができた【最後】にコントローラーを1回だけ生成（重複は削除！）

@@ -173,7 +173,7 @@ public class MapData implements GameMap {
 		}
 		//敵の初期位置
 		initEnemy(null);
-		
+
 		//アイテムが完全に配置し終わった後で、バックアップを取り、復活を有効にする
 		this.initialItemMap = copyItemMap(itemMap);
 		this.enableRespawn = true;
@@ -329,7 +329,7 @@ public class MapData implements GameMap {
 
 				sengoku.setX(newPacX);
 				sengoku.setY(newPacY);
-				
+
 				justWarped = true;
 				lastWarpX = warpX;
 				lastWarpY = warpY;
@@ -428,7 +428,11 @@ public class MapData implements GameMap {
 
 	public void setNextDirection(Direction dir) {
 
-		sengoku.setNextDirection(dir);
+		//★★sengoku.setNextDirection(dir);
+		if (sengoku != null) {
+				// 古い sample.Direction への変換をやめ、そのまま dir を渡します★★
+			sengoku.setNextDirection(dir);
+		}
 
 		// 初回入力でゲーム開始
 		if (waitingStart) {
@@ -512,7 +516,7 @@ public class MapData implements GameMap {
 	public boolean isPaused() {
 		return paused;
 	}
-	
+
 	@Override
 	public int[][] getMap() {
 		return map;
@@ -589,4 +593,5 @@ public class MapData implements GameMap {
 	public boolean isGameOver() {
 		return gameOver;
 	}
+	
 }

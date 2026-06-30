@@ -24,7 +24,6 @@ public class MapData implements GameMap {
 	// 0：道 1：壁 2：パワーエサ 7:扉 8:巣 9: ワープ
 	private final int[][] map = {
 
-
 			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, //■■■■■■■■■■■■　　　　■■■■■■■■■■■■
 			{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 }, //■　　　　　　　　　　■　　　　■　　　　　　　　　　■
 			{ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 }, //■　■■■■■■■■　■　　　　■　■■■■■■■■　■
@@ -429,7 +428,11 @@ public class MapData implements GameMap {
 
 	public void setNextDirection(Direction dir) {
 
-		sengoku.setNextDirection(dir);
+		//★★sengoku.setNextDirection(dir);
+		if (sengoku != null) {
+				// 古い sample.Direction への変換をやめ、そのまま dir を渡します★★
+			sengoku.setNextDirection(dir);
+		}
 
 		// 初回入力でゲーム開始
 		if (waitingStart) {

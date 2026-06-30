@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Characters.BlueEnemy;
-import Characters.Direction;
 import Characters.Enemy;
 import Characters.GreenEnemy;
 import Characters.RedEnemy;
@@ -17,6 +16,9 @@ import common.GameMap;
 
 public class MapData implements GameMap {
 
+	
+	//マップ定義(28×31マス)
+	//1マスのサイズ(30×30ピクセル)
 	public static final int TILE_SIZE = 30;
 
 	// 0：道   1：壁    2：パワーエサ   7:扉   8:巣   9: ワープ 
