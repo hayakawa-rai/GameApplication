@@ -1,5 +1,6 @@
 package test2;
 
+import control.GameController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -7,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import test2.controller.GameController;
 import test2.model.MapData;
 import test2.view.MapView;
 
@@ -29,15 +29,13 @@ public class Main2 extends Application {
 		MapData model = new MapData();
 		Pane root = new Pane();
 
-
 		MapView view = new MapView(model, root);
 
 		int viewWidth = model.getMap()[0].length * MapData.TILE_SIZE;
 		int viewHeight = model.getMap().length * MapData.TILE_SIZE;
 
 		Scene scene = new Scene(root, viewWidth, viewHeight);
-		scene.getStylesheets().add(
-				getClass().getResource("/css/test.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("/css/test.css").toExternalForm());
 
 		root.getStyleClass().add("stage2");
 
@@ -54,8 +52,8 @@ public class Main2 extends Application {
 
 			// 画像のサイズも、ウィンドウ（root）のサイズに完全に連動（バインド）させる
 			backgroundView.fitWidthProperty().bind(root.widthProperty());
-            backgroundView.fitHeightProperty().bind(root.heightProperty());
-            backgroundView.setPreserveRatio(false);
+			backgroundView.fitHeightProperty().bind(root.heightProperty());
+			backgroundView.setPreserveRatio(false);
 
 			// 背景用Paneに画像を追加
 			bg.getChildren().add(backgroundView);
@@ -65,30 +63,27 @@ public class Main2 extends Application {
 
 		// ★ゲーム描画Canvas
 		Canvas canvas = new Canvas();
-        canvas.widthProperty().bind(root.widthProperty());
-        canvas.heightProperty().bind(root.heightProperty());
+		canvas.widthProperty().bind(root.widthProperty());
+		canvas.heightProperty().bind(root.heightProperty());
 
 		root.getChildren().addAll(bg, canvas);
 
 		model.initEnemy(null);
-		/*コメントで隠してるのが前の描写方法  
-		// 先に空の ImageView を用意
-		javafx.scene.image.ImageView redImageView = new javafx.scene.image.ImageView();
-		
-		// モデル側で敵を生成し、内部で画像（Image）を確実にセットさせる
-		model.initEnemy(redImageView);
-		
-		//  画像が入った「後」に、ビューを通してサイズを30x30にフィットさせる
-		view.setupEnemyView(redImageView);
-		
-		//  敵の ImageView を画面に登録
-		root.getChildren().add(redImageView);
-		*/
-		//敵描画呼び出し　成田
+		/*
+		 * コメントで隠してるのが前の描写方法 // 先に空の ImageView を用意 javafx.scene.image.ImageView
+		 * redImageView = new javafx.scene.image.ImageView();
+		 * 
+		 * // モデル側で敵を生成し、内部で画像（Image）を確実にセットさせる model.initEnemy(redImageView);
+		 * 
+		 * // 画像が入った「後」に、ビューを通してサイズを30x30にフィットさせる view.setupEnemyView(redImageView);
+		 * 
+		 * // 敵の ImageView を画面に登録 root.getChildren().add(redImageView);
+		 */
+		// 敵描画呼び出し 成田
 		model.initEnemy(new javafx.scene.image.ImageView());
 
-		//  完璧に準備ができた【最後】にコントローラーを1回だけ生成（重複は削除！）
-		this.controller = new GameController(model, view, canvas, scene, stage);
+		// 完璧に準備ができた【最後】にコントローラーを1回だけ生成（重複は削除！）
+		this.controller = new GameController(model, view, canvas, scene, stage, 2);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);

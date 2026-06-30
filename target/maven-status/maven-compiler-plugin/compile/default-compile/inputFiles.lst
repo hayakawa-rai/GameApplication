@@ -10,6 +10,7 @@ C:\Users\EMD-574\git\GameApplication\src\main\java\Characters\SengokuState.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\Characters\YellowEnemy.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\common\GameConfig.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\common\GameMap.java
+C:\Users\EMD-574\git\GameApplication\src\main\java\control\GameController.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\Items\Chii.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\Items\GameController.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\Items\Item.java
@@ -50,19 +51,16 @@ C:\Users\EMD-574\git\GameApplication\src\main\java\story\Story2.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\story\Story3.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\story\Story4.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\story\StoryUtils.java
-C:\Users\EMD-574\git\GameApplication\src\main\java\test1\controller\GameController.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test1\Main1.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test1\model\MapData.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test1\PracticeMain1.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test1\view\MapView.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test1\view\WallOutline.java
-C:\Users\EMD-574\git\GameApplication\src\main\java\test2\controller\GameController.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test2\Main2.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test2\model\MapData.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test2\PracticeMain2.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test2\view\MapView.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test2\view\WallOutline.java
-C:\Users\EMD-574\git\GameApplication\src\main\java\test3\controller\GameController.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test3\Main3.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test3\model\MapData.java
 C:\Users\EMD-574\git\GameApplication\src\main\java\test3\PracticeMain3.java
