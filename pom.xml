@@ -45,7 +45,7 @@
 				<configuration>
 
 
-					<mainClass>story.Story</mainClass>
+					<mainClass>test2.Main2</mainClass>
 
 
 				</configuration>

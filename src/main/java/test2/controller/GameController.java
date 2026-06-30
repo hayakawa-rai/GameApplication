@@ -1,10 +1,7 @@
 package test2.controller;
 
 import Characters.Direction;
-<<<<<<< HEAD
-=======
 import Characters.Sengoku;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -233,7 +230,7 @@ public class GameController {
 				double currentHeight = canvas.getHeight();
 				
 				// 新しく統合した draw メソッドを呼び出す
-				view.draw(gc);
+				view.draw(gc, currentWidth, currentHeight);
 			}
 		};
 

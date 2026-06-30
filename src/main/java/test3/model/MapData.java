@@ -1,6 +1,5 @@
 package test3.model;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,16 +10,10 @@ import Characters.GreenEnemy;
 import Characters.RedEnemy;
 import Characters.Sengoku;
 import Characters.YellowEnemy;
-=======
-import Characters.Sengoku;
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 import Items.Chii;
 import Items.Item;
 import Items.Point;
-<<<<<<< HEAD
 import common.GameMap;
-=======
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
 public class MapData implements GameMap {
 
