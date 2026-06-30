@@ -50,8 +50,8 @@ public class Gameover extends Application {
 		} catch (Exception e) {
 			System.out.println("⚠️ 画像の読み込みに失敗しました。");
 		}
-		icon.setFitWidth(200);
-		icon.setFitHeight(200);
+		icon.setFitWidth(300);
+		icon.setFitHeight(400);
 
 		
 		//練習画面へ戻る
