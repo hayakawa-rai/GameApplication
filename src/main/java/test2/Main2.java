@@ -20,10 +20,8 @@ public class Main2 extends Application {
 
 	@Override
 	public void start(Stage stage) {
-<<<<<<< HEAD
-=======
+
 		starts(stage);
->>>>>>> branch 'master' of https://github.com/hayakawa-rai/GameApplication.git
 
 		starts(stage);
 
