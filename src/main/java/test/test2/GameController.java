@@ -210,7 +210,7 @@ public class GameController {
 				}
 
 				// すべてのドットを食べ終えたかチェック
-				if (model.isCleared()) {
+				if (model.isCleared() && !model.isPracticeMode()) {
 					timer.stop(); // ゲームループ（タイマー）を止める
 					System.out.println("ステージクリア！次の画面へ遷移します。");
 
