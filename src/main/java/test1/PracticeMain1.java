@@ -19,7 +19,7 @@ public class PracticeMain1 extends Application {
 
 		// 1. ModelとViewの作成
 		MapData model = new MapData(); 
-		model.SampleModel(true);
+		//model.SampleModel(true);
 
 		// MapData model = new MapData(true); // trueなら練習用
 
@@ -63,7 +63,7 @@ public class PracticeMain1 extends Application {
 		stage.setMaximized(true);
 
 		// 7. Controller生成とゲーム開始
-		new GameController(model, view, gameCanvas, scene);
+		new GameController(model, view, gameCanvas, scene, stage);
 
 		// 8. ウィンドウ表示
 		stage.show();
