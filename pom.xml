@@ -45,7 +45,7 @@
 				<configuration>
 
 
-					<mainClass>story.Story</mainClass>
+					<mainClass>start.Start</mainClass>
 
 
 				</configuration>
