@@ -121,7 +121,7 @@ public class GameController {
 	public static void switchToStart(javafx.stage.Stage stage) {
 		try {
 			// startクラスのインスタンスを作る
-				sample.start titleScreen = new sample.start();
+				start.Start titleScreen = new start.Start();
 			// ウィンドウの権利(stage)を渡して、タイトル画面を起動・上書きする！
 				titleScreen.start(stage);
 		} catch (Exception e) {
@@ -132,7 +132,7 @@ public class GameController {
 	public void switchTopractice(javafx.stage.Stage stage) {
 		try {
 			// practiceクラスのインスタンスを作る
-			sample.practice practiceScreen = new sample.practice();
+			story.Practice practiceScreen = new story.Practice();
 			// ウィンドウの権利(stage)を渡して、練習モード画面を起動・上書きする！
 			practiceScreen.start(stage);
 		} catch (Exception e) {
