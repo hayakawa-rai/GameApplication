@@ -1,0 +1,448 @@
+2026-07-01 15:20:59,504 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro.activity - Starting the serverAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,504 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ -  *** Starting JPro: https://www.jpro.one/ ***AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,504 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - OS: Windows 11AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,519 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JPro: 2024.1.0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,520 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Java version: 17.0.18AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,520 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JVM: 17.0.18 Eclipse AdoptiumAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,523 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jarAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:20:59,529 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,160 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX version: 21.0.2.4-jpro+0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,168 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] a.e.s.Slf4jLogger - Slf4jLogger startedAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,192 [INFO] in JavaFX Application Thread - ZGC CyclesJavaFX Application Thread
+2026-07-01 15:21:00,193 [INFO] in JavaFX Application Thread - ZGC PausesJavaFX Application Thread
+2026-07-01 15:21:00,213 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - finished init!AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,217 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - [JPro] -> Server started: {start_time: 1782886859497, os_name: Windows 11, jpro_version: 2024.1.0}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,562 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] play.api.Play - Application started (Prod) (no global state)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,887 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Enabling HTTP/2 on Akka HTTP server...AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:00,888 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,482 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,490 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,493 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,496 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,496 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,651 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 832432863, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,756 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[1;31mERROR[0;39m] c.j.i.c.InstanceImpl - Error while starting application: AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2026-03\java\17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin/server;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\EMD-572\AppData\Local\Microsoft\WindowsApps;;C:\pleiades\2026-03\eclipse;;.AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2434)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.System.loadLibrary(System.java:2006)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.glass.utils.NativeLibLoader.loadLibraryInternal(NativeLibLoader.java:170)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.glass.utils.NativeLibLoader.loadLibrary(NativeLibLoader.java:58)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.lambda$new$0(NativeMediaManager.java:111)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.<init>(NativeMediaManager.java:108)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,837 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager$NativeMediaManagerInitializer.<clinit>(NativeMediaManager.java:78)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,838 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.getDefaultInstance(NativeMediaManager.java:90)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:01,838 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[31mWARN [0;39m] c.j.i.c.InstanceImpl - Application didn't show the stage. JPro is now calling show()AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:21:02,599 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.m.s.Util$ - WORKAROUND! setting XY for Window because current XY is NaNAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,444 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro.activity - Starting the serverAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,444 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ -  *** Starting JPro: https://www.jpro.one/ ***AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,444 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - OS: Windows 11AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,454 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JPro: 2024.1.0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,455 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Java version: 17.0.18AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,455 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JVM: 17.0.18 Eclipse AdoptiumAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,457 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jarAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:09,461 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,073 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX version: 21.0.2.4-jpro+0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,103 [INFO] in JavaFX Application Thread - ZGC CyclesJavaFX Application Thread
+2026-07-01 15:24:10,103 [INFO] in JavaFX Application Thread - ZGC PausesJavaFX Application Thread
+2026-07-01 15:24:10,120 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] a.e.s.Slf4jLogger - Slf4jLogger startedAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,130 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - finished init!AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,134 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - [JPro] -> Server started: {start_time: 1782887049436, os_name: Windows 11, jpro_version: 2024.1.0}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,522 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] play.api.Play - Application started (Prod) (no global state)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,864 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Enabling HTTP/2 on Akka HTTP server...AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:10,865 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,337 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,343 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,345 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,345 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,346 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,490 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 1797591777, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,576 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[1;31mERROR[0;39m] c.j.i.c.InstanceImpl - Error while starting application: AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2026-03\java\17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin/server;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\EMD-572\AppData\Local\Microsoft\WindowsApps;;C:\pleiades\2026-03\eclipse;;.AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2434)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.System.loadLibrary(System.java:2006)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.glass.utils.NativeLibLoader.loadLibraryInternal(NativeLibLoader.java:170)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.glass.utils.NativeLibLoader.loadLibrary(NativeLibLoader.java:58)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.lambda$new$0(NativeMediaManager.java:111)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.<init>(NativeMediaManager.java:108)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager$NativeMediaManagerInitializer.<clinit>(NativeMediaManager.java:78)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.getDefaultInstance(NativeMediaManager.java:90)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:11,672 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[31mWARN [0;39m] c.j.i.c.InstanceImpl - Application didn't show the stage. JPro is now calling show()AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:24:12,451 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.m.s.Util$ - WORKAROUND! setting XY for Window because current XY is NaNAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,578 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro.activity - Starting the serverAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,579 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ -  *** Starting JPro: https://www.jpro.one/ ***AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,579 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - OS: Windows 11AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,591 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JPro: 2024.1.0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,591 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Java version: 17.0.18AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,591 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JVM: 17.0.18 Eclipse AdoptiumAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,593 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jarAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:03,601 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,246 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] a.e.s.Slf4jLogger - Slf4jLogger startedAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,280 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX version: 21.0.2.4-jpro+0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,329 [INFO] in JavaFX Application Thread - ZGC CyclesJavaFX Application Thread
+2026-07-01 15:26:04,329 [INFO] in JavaFX Application Thread - ZGC PausesJavaFX Application Thread
+2026-07-01 15:26:04,341 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - finished init!AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,343 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - [JPro] -> Server started: {start_time: 1782887163573, os_name: Windows 11, jpro_version: 2024.1.0}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,671 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] play.api.Play - Application started (Prod) (no global state)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,994 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Enabling HTTP/2 on Akka HTTP server...AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:04,994 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,391 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,395 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,396 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,397 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,397 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,542 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 132794878, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,628 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 15:26:05,703 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[1;31mERROR[0;39m] c.j.i.c.InstanceImpl - Error while starting application: AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,703 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2026-03\java\17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin/server;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\EMD-572\AppData\Local\Microsoft\WindowsApps;;C:\pleiades\2026-03\eclipse;;.AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,703 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2434)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.lang.System.loadLibrary(System.java:2006)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.glass.utils.NativeLibLoader.loadLibraryInternal(NativeLibLoader.java:170)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.glass.utils.NativeLibLoader.loadLibrary(NativeLibLoader.java:58)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.lambda$new$0(NativeMediaManager.java:111)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.<init>(NativeMediaManager.java:108)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager$NativeMediaManagerInitializer.<clinit>(NativeMediaManager.java:78)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.getDefaultInstance(NativeMediaManager.java:90)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:05,704 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[31mWARN [0;39m] c.j.i.c.InstanceImpl - Application didn't show the stage. JPro is now calling show()AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:26:06,502 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.m.s.Util$ - WORKAROUND! setting XY for Window because current XY is NaNAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,293 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro.activity - Starting the serverAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,294 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ -  *** Starting JPro: https://www.jpro.one/ ***AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,294 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - OS: Windows 11AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,308 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JPro: 2024.1.0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,309 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Java version: 17.0.18AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,309 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JVM: 17.0.18 Eclipse AdoptiumAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,310 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jarAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,313 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,917 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX version: 21.0.2.4-jpro+0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,942 [INFO] in JavaFX Application Thread - ZGC CyclesJavaFX Application Thread
+2026-07-01 15:32:53,942 [INFO] in JavaFX Application Thread - ZGC PausesJavaFX Application Thread
+2026-07-01 15:32:53,951 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] a.e.s.Slf4jLogger - Slf4jLogger startedAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,953 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - finished init!AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:53,954 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - [JPro] -> Server started: {start_time: 1782887573289, os_name: Windows 11, jpro_version: 2024.1.0}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:54,368 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] play.api.Play - Application started (Prod) (no global state)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:54,694 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Enabling HTTP/2 on Akka HTTP server...AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:54,695 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,174 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,179 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,181 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,182 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,182 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,370 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 1460431296, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:32:55,458 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 15:32:55,650 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 1460431296, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:06,226 [ERROR] in JavaFX Application Thread - Exception in thread "JavaFX Application Thread" java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2026-03\java\17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin/server;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\EMD-572\AppData\Local\Microsoft\WindowsApps;;C:\pleiades\2026-03\eclipse;;.JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2434)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.System.loadLibrary(System.java:2006)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.utils.NativeLibLoader.loadLibraryInternal(NativeLibLoader.java:170)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.utils.NativeLibLoader.loadLibrary(NativeLibLoader.java:58)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.lambda$new$0(NativeMediaManager.java:111)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.<init>(NativeMediaManager.java:108)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager$NativeMediaManagerInitializer.<clinit>(NativeMediaManager.java:78)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.getDefaultInstance(NativeMediaManager.java:90)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.MediaManager.canPlayProtocol(MediaManager.java:78)JavaFX Application Thread
+2026-07-01 15:33:06,227 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.locator.Locator.<init>(Locator.java:240)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaAudioClip.<init>(NativeMediaAudioClip.java:53)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaAudioClip.load(NativeMediaAudioClip.java:63)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.AudioClipProvider.load(AudioClipProvider.java:66)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.AudioClip.load(AudioClip.java:135)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at javafx.scene.media.AudioClip.<init>(AudioClip.java:83)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at story.Story1.story(Story1.java:131)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at story.Story1.start(Story1.java:40)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at test.test2.GameController.startToStory(GameController.java:318)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at start.Start.lambda$start$0(Start.java:157)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.TimelineClipCore.visitKeyFrame(TimelineClipCore.java:239)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.TimelineClipCore.playTo(TimelineClipCore.java:180)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Timeline.doPlayTo(Timeline.java:172)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at javafx.animation.AnimationAccessorImpl.playTo(AnimationAccessorImpl.java:39)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.SingleLoopClipEnvelope.timePulse(SingleLoopClipEnvelope.java:103)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation.doTimePulse(Animation.java:1189)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation$1.lambda$timePulse$0(Animation.java:207)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation$1.timePulse(Animation.java:206)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:343)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:598)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:582)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:575)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$12(QuantumToolkit.java:358)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)JavaFX Application Thread
+2026-07-01 15:33:06,228 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Thread.run(Thread.java:840)JavaFX Application Thread
+2026-07-01 15:33:08,980 [ERROR] in JavaFX Application Thread - Exception in thread "JavaFX Application Thread" java.lang.NullPointerException: Cannot invoke "javafx.animation.AnimationTimer.stop()" because "this.timer" is nullJavaFX Application Thread
+2026-07-01 15:33:08,981 [ERROR] in JavaFX Application Thread - 	at start.Start.lambda$start$2(Start.java:178)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.TimelineClipCore.visitKeyFrame(TimelineClipCore.java:239)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.TimelineClipCore.playTo(TimelineClipCore.java:180)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Timeline.doPlayTo(Timeline.java:172)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at javafx.animation.AnimationAccessorImpl.playTo(AnimationAccessorImpl.java:39)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.SingleLoopClipEnvelope.timePulse(SingleLoopClipEnvelope.java:103)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation.doTimePulse(Animation.java:1189)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation$1.lambda$timePulse$0(Animation.java:207)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation$1.timePulse(Animation.java:206)JavaFX Application Thread
+2026-07-01 15:33:08,982 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:343)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:598)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:582)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:575)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$12(QuantumToolkit.java:358)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)JavaFX Application Thread
+2026-07-01 15:33:08,983 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Thread.run(Thread.java:840)JavaFX Application Thread
+2026-07-01 15:33:10,465 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 1460431296, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,467 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,467 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - Application closed:AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,477 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - startTime      : Wed Jul 01 15:33:10 JST 2026      AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,477 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.001 AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,477 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,478 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,479 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,479 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - raw            : 429772AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,479 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - zipped         : 127724AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,479 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,484 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,484 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,484 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,484 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,484 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,498 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 2138793388, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:10,511 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 15:33:10,553 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 2138793388, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 15:33:11,462 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 1460431296, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,569 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,570 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,576 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 114.172.95.146AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,576 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          task-ignition-retrain.ngrok-free.devAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,576 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,697 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 505683310, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:20,723 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:33:20,770 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 505683310, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 505683310, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - Application closed:AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - startTime      : Wed Jul 01 16:33:29 JST 2026      AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.023 AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.001  AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,437 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,438 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - raw            : 332475AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,438 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - zipped         : 66687AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:29,438 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,120 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 2138793388, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - Application closed:AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - startTime      : Wed Jul 01 16:33:30 JST 2026      AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.000 AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - raw            : 116080189AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - zipped         : 35503681AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,122 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,136 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,137 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,137 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,137 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,137 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,144 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 1246932084, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,164 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:33:30,207 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 1246932084, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,432 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 505683310, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: close-tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,876 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 1246932084, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,877 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,877 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - Application closed:AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - startTime      : Wed Jul 01 16:33:30 JST 2026      AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.000 AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - raw            : 44078AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - zipped         : 9629AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,878 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,891 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,891 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,891 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,891 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,891 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,901 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 1151575928, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:30,918 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:33:30,959 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 1151575928, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:31,117 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 2138793388, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:31,872 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 1246932084, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,757 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,757 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,758 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 240a:61:5c44:25d4:6523:c760:56a0:f168AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,759 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          task-ignition-retrain.ngrok-free.devAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,759 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,868 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1170403734, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:6523:c760:56a0:f168}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:33:56,885 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:33:56,922 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1170403734, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:6523:c760:56a0:f168}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:16,977 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:16,977 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:16,977 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 114.172.95.146AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:16,977 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          task-ignition-retrain.ngrok-free.devAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:16,977 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:17,068 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1995149969, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:17,094 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:34:17,135 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1995149969, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - Exception in thread "JavaFX Application Thread" java.lang.NoClassDefFoundError: Could not initialize class com.sun.media.jfxmediaimpl.NativeMediaManager$NativeMediaManagerInitializerJavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.getDefaultInstance(NativeMediaManager.java:90)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.MediaManager.canPlayProtocol(MediaManager.java:78)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.locator.Locator.<init>(Locator.java:240)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaAudioClip.<init>(NativeMediaAudioClip.java:53)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaAudioClip.load(NativeMediaAudioClip.java:63)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.AudioClipProvider.load(AudioClipProvider.java:66)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.AudioClip.load(AudioClip.java:135)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.scene.media.AudioClip.<init>(AudioClip.java:83)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at story.Practice.createScene(Practice.java:100)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at story.Practice.start(Practice.java:34)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at control.GameController.switchToPractice(GameController.java:276)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at start.Start.lambda$start$2(Start.java:179)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.TimelineClipCore.visitKeyFrame(TimelineClipCore.java:239)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.TimelineClipCore.playTo(TimelineClipCore.java:180)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Timeline.doPlayTo(Timeline.java:172)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.animation.AnimationAccessorImpl.playTo(AnimationAccessorImpl.java:39)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.shared.SingleLoopClipEnvelope.timePulse(SingleLoopClipEnvelope.java:103)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation.doTimePulse(Animation.java:1189)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation$1.lambda$timePulse$0(Animation.java:207)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.animation.Animation$1.timePulse(Animation.java:206)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:343)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:598)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:582)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:575)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$12(QuantumToolkit.java:358)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Thread.run(Thread.java:840)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2026-03\java\17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin/server;C:/pleiades/2026-03/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\EMD-572\AppData\Local\Microsoft\WindowsApps;;C:\pleiades\2026-03\eclipse;;. [in thread "JavaFX Application Thread"]JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2434)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.System.loadLibrary(System.java:2006)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.utils.NativeLibLoader.loadLibraryInternal(NativeLibLoader.java:170)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.utils.NativeLibLoader.loadLibrary(NativeLibLoader.java:58)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.lambda$new$0(NativeMediaManager.java:111)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.<init>(NativeMediaManager.java:108)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager$NativeMediaManagerInitializer.<clinit>(NativeMediaManager.java:78)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaManager.getDefaultInstance(NativeMediaManager.java:90)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.MediaManager.canPlayProtocol(MediaManager.java:78)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.locator.Locator.<init>(Locator.java:240)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaAudioClip.<init>(NativeMediaAudioClip.java:53)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.NativeMediaAudioClip.load(NativeMediaAudioClip.java:63)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmediaimpl.AudioClipProvider.load(AudioClipProvider.java:66)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at com.sun.media.jfxmedia.AudioClip.load(AudioClip.java:135)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at javafx.scene.media.AudioClip.<init>(AudioClip.java:83)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at story.Story1.story(Story1.java:131)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at story.Story1.start(Story1.java:40)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at test.test2.GameController.startToStory(GameController.java:318)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	at start.Start.lambda$start$0(Start.java:157)JavaFX Application Thread
+2026-07-01 16:34:21,349 [ERROR] in JavaFX Application Thread - 	... 18 moreJavaFX Application Thread
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1170403734, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:6523:c760:56a0:f168, reason: tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - Application closed:AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - startTime      : Wed Jul 01 16:34:25 JST 2026      AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.132 AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.002  AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - raw            : 942141AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - zipped         : 224863AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,595 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,806 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1995149969, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - Application closed:AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - startTime      : Wed Jul 01 16:34:25 JST 2026      AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageLatency : -00:00:00.067 AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.006  AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - raw            : 174175AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - zipped         : 43738AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:25,807 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,590 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1170403734, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:6523:c760:56a0:f168, reason: close-tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,798 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1995149969, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: close-tab-closed}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,934 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: 1995149969!defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,935 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: 1995149969!defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,935 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 114.172.95.146AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,935 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          task-ignition-retrain.ngrok-free.devAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:26,935 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/1995149969!defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:27,077 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 699768855, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:27,093 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:34:27,129 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 699768855, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - Exception in thread "JavaFX Application Thread" java.lang.IllegalStateException: Not on FX application thread; currentThread = JavaFX Application ThreadJavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.checkFxUserThread(Toolkit.java:294)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.checkFxUserThread(QuantumToolkit.java:481)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at javafx.scene.Scene$ScenePulseListener.synchronizeSceneNodes(Scene.java:2507)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at javafx.scene.Scene.synchronizeSceneNodesWithLock(Scene.java:1338)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at javafx.scene.Scene.lambda$new$1(Scene.java:765)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.lambda$runPulse$2(Toolkit.java:406)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.runPulse(Toolkit.java:405)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.firePulse(Toolkit.java:446)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:602)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:582)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:575)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$12(QuantumToolkit.java:358)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)JavaFX Application Thread
+2026-07-01 16:34:29,983 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Thread.run(Thread.java:840)JavaFX Application Thread
+2026-07-01 16:38:04,516 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro.activity - Starting the serverAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,517 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ -  *** Starting JPro: https://www.jpro.one/ ***AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,517 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - OS: Windows 11AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,529 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JPro: 2024.1.0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,529 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Java version: 17.0.18AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,529 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JVM: 17.0.18 Eclipse AdoptiumAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,531 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jarAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:04,533 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,169 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - JavaFX version: 21.0.2.4-jpro+0AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,180 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] a.e.s.Slf4jLogger - Slf4jLogger startedAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,201 [INFO] in JavaFX Application Thread - ZGC CyclesJavaFX Application Thread
+2026-07-01 16:38:05,201 [INFO] in JavaFX Application Thread - ZGC PausesJavaFX Application Thread
+2026-07-01 16:38:05,257 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - finished init!AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,260 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.JProInitializer$ - [JPro] -> Server started: {start_time: 1782891484510, os_name: Windows 11, jpro_version: 2024.1.0}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,611 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] play.api.Play - Application started (Prod) (no global state)AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,932 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Enabling HTTP/2 on Akka HTTP server...AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:05,933 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] p.c.s.AkkaHttpServer - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,441 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,447 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,450 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 0:0:0:0:0:0:0:1AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,451 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          localhost:8080AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,451 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,606 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 756278220, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:06,694 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:38:06,875 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 756278220, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,688 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - application requested: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,689 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - Creating Application: defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,692 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - remoteAddress 114.172.95.146AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,692 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - host          task-ignition-retrain.ngrok-free.devAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,692 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.jpro - uri           /app/ws/defaultAsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,780 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.s.ViewInfo$ - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1519371731, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:15,797 [INFO] in JavaFX Application Thread - 【成功】フォントを読み込みました。名前: PixelMplus12 RegularJavaFX Application Thread
+2026-07-01 16:38:15,841 [INFO] in AsyncAppender-Worker-ASYNCSTDOUT - [[34mINFO [0;39m] c.j.i.c.InstanceImpl - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1519371731, browser: Google Chrome 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}AsyncAppender-Worker-ASYNCSTDOUT
+2026-07-01 16:38:20,686 [ERROR] in JavaFX Application Thread - Exception in thread "JavaFX Application Thread" java.lang.IllegalStateException: Not on FX application thread; currentThread = JavaFX Application ThreadJavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.checkFxUserThread(Toolkit.java:294)JavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.checkFxUserThread(QuantumToolkit.java:481)JavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at javafx.scene.Scene$ScenePulseListener.synchronizeSceneNodes(Scene.java:2507)JavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at javafx.scene.Scene.synchronizeSceneNodesWithLock(Scene.java:1338)JavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at javafx.scene.Scene.lambda$new$1(Scene.java:765)JavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.lambda$runPulse$2(Toolkit.java:406)JavaFX Application Thread
+2026-07-01 16:38:20,687 [ERROR] in JavaFX Application Thread - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.runPulse(Toolkit.java:405)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.Toolkit.firePulse(Toolkit.java:446)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:602)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:582)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:575)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$12(QuantumToolkit.java:358)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)JavaFX Application Thread
+2026-07-01 16:38:20,688 [ERROR] in JavaFX Application Thread - 	at java.base/java.lang.Thread.run(Thread.java:840)JavaFX Application Thread

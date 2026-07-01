@@ -8,22 +8,22 @@ public class Bgm   {
     private static MediaPlayer bgmPlayer;
 
     public static void playBGM(String path) {
-        if (bgmPlayer != null) return; // すでに再生中なら何もしない
-
-        Media bgm = new Media(
-            Bgm.class.getResource(path).toExternalForm()
-        );
-
-        bgmPlayer = new MediaPlayer(bgm);
-        bgmPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-        bgmPlayer.setVolume(0.2);
-        bgmPlayer.play();
+//        if (bgmPlayer != null) return; // すでに再生中なら何もしない
+//
+//        Media bgm = new Media(
+//            Bgm.class.getResource(path).toExternalForm()
+//        );
+//
+//        bgmPlayer = new MediaPlayer(bgm);
+//        bgmPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+//        bgmPlayer.setVolume(0.2);
+//        bgmPlayer.play();
     }
 
     public static void stopBGM() {
-        if (bgmPlayer != null) {
-            bgmPlayer.stop();
-            bgmPlayer = null;
-        }
+//        if (bgmPlayer != null) {
+//            bgmPlayer.stop();
+//            bgmPlayer = null;
+//        }
     }
 }

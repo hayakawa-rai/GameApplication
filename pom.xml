@@ -1,6 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://apache.org"
+	xmlns:xsi="http://w3.org"
+	xsi:schemaLocation="http://apache.org https://apache.org">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -12,9 +12,26 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<javafx.version>17</javafx.version>
+		<jpro.version>2024.1.0</jpro.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+
+	<!-- JProプラグインおよび依存ライブラリをダウンロードする専用保管庫 -->
+	<repositories>
+		<repository>
+			<id>jpro-sandec-repository-main</id>
+			<url>https://sandec.jfrog.io/artifactory/repo</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jpro-sandec-repository</id>
+			<name>jpro - sandec repository</name>
+			<url>https://sandec.jfrog.io/artifactory/repo</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
 		<dependency>
@@ -27,34 +44,36 @@
 			<artifactId>javafx-fxml</artifactId>
 			<version>${javafx.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-media</artifactId>
 			<version>${javafx.version}</version>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
+			<!-- 通常のJavaFX起動用プラグイン -->
 			<plugin>
 				<groupId>org.openjfx</groupId>
 				<artifactId>javafx-maven-plugin</artifactId>
-				
-					
 				<version>0.0.8</version>
 				<configuration>
-
-
 					<mainClass>start.Start</mainClass>
-
-
-
 				</configuration>
+			</plugin>
 
-
+			<!-- Web（スマホ）配信用JProプラグイン -->
+			<plugin>
+				<groupId>one.jpro</groupId>
+				<artifactId>jpro-maven-plugin</artifactId>
+				<version>${jpro.version}</version>
+				<configuration>
+					<mainClassName>start.Start</mainClassName>
+					<port>8080</port> <!-- ngrokと合わせるポート -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
