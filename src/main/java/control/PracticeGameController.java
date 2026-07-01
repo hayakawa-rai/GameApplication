@@ -38,7 +38,7 @@ public class PracticeGameController {
 		// キーボードの入力を登録
 		attachInput(scene);
 
-		// ⭐ 追加：スマホ用の十字キーコントローラーを画面に適用
+		// スマホ用の十字キーコントローラーを画面に適用
 		applyMobileControls(scene, model);
 
 		// メインゲームループ(AnimationTimer)の開始
@@ -50,7 +50,7 @@ public class PracticeGameController {
 		if (model == null)
 			return;
 
-		// 画面のルートコンテナを取得し、StackPaneで包み込む
+		// 画面のルートコンテナを取得し、StackPaneで包む
 		javafx.scene.Parent root = gameScene.getRoot();
 		javafx.scene.layout.StackPane baseHolder;
 		if (root instanceof javafx.scene.layout.StackPane) {
@@ -93,7 +93,7 @@ public class PracticeGameController {
 		dPad.add(btnRight, 2, 1);
 		dPad.add(btnDown, 1, 2);
 
-		//リフレクションを使って、どのパッケージの MapData からでも安全にメソッドを呼び出す共通処理
+		//メソッドを呼び出す共通処理
 		java.util.function.Consumer<Characters.Direction> sendDirection = (dir) -> {
 			try {
 				// 一時停止中かチェック (isPaused メソッドを実行)
@@ -122,7 +122,7 @@ public class PracticeGameController {
 	}
 
 
-	// キーボード入力処理（🌟リフレクション化により、どのステージのModelでも動作可能）
+	// キーボード入力処理
 	private void attachInput(Scene scene) {
 		scene.setOnKeyPressed(e -> {
 			try {
