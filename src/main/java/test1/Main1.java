@@ -13,7 +13,7 @@ import test1.view.MapView;
 
 public class Main1 extends Application {
 
-	private GameController controller;
+	private static GameController activeController;
 
 	@Override
 	public void start(Stage stage) {
@@ -27,8 +27,9 @@ public class Main1 extends Application {
 
 	public void starts(Stage stage) {
 		// 多重起動を確実に防止
-		if (this.controller != null) {
-			this.controller.stop();
+		if (activeController != null) {
+			activeController.stop();
+			activeController = null;
 		}
 
 		MapData model = new MapData();
@@ -74,6 +75,8 @@ public class Main1 extends Application {
 
 		// ★ゲーム描画Canvas
 		Canvas canvas = new Canvas();
+		canvas.setMouseTransparent(true);
+
 		canvas.widthProperty().bind(root.widthProperty());
 		canvas.heightProperty().bind(root.heightProperty());
 
@@ -96,18 +99,19 @@ public class Main1 extends Application {
 		//敵描画呼び出し　成田
 		model.initEnemy(new javafx.scene.image.ImageView());
 
-		//  完璧に準備ができた【最後】にコントローラーを1回だけ生成（重複は削除！）
-		this.controller = new GameController(model, view, canvas, scene, stage, 1, false);
+		//新しいコントローラーを生成し、activeController に退避させておく
+		GameController controller = new GameController(model, view, canvas, scene, stage, 1, false);
+		activeController = controller;
+
+		view.setController(controller);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
 		// ★追加
 		stage.show();
-		// ★ 一度falseにしてから再度trueにすることで、強制的に再レイアウトさせる
-		stage.setMaximized(false);
-		javafx.application.Platform.runLater(() -> {
-		    stage.setMaximized(true);
-		});
+
+		view.bringButtonToFront();
+
 		canvas.requestFocus();
 	}
 
