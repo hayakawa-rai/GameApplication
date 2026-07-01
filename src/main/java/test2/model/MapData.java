@@ -559,6 +559,8 @@ public class MapData implements GameMap {
 			if (Math.sqrt(dx * dx + dy * dy) < collisionThreshold) {
 				// FEVER中の敵は食べられる
 				if (e.getCurrentState() == Characters.EnemyState.FEVER) {
+					// 💡 敵を倒したのでスコアを加算（例: 200点）
+					sengoku.addScore(200); 
 					e.setCurrentState(Characters.EnemyState.DEAD);
 					continue;
 				}
