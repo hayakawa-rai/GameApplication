@@ -45,7 +45,9 @@
 				<configuration>
 
 
-					<mainClass>story.Story3</mainClass>
+
+					<mainClass>start.Start</mainClass>
+
 
 
 
