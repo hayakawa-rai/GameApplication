@@ -143,6 +143,36 @@ public class MapView {
 			gc.setStroke(Color.DARKGRAY);
 			gc.strokeLine(0, INFO_HEIGHT, canvasWidth, INFO_HEIGHT);
 		}
+
+		// モデルが一時停止中（paused）だったら、画面中央にテキストを描画する
+		if (model.isPaused() && !model.isGameOver() && !model.isCleared()) {
+
+			// 1. 画面全体を少し暗くする（半透明の黒いフィルターを重ねる）
+			gc.setFill(Color.rgb(0, 0, 0, 0.6)); // 最後の0.6が不透明度（60%）
+			gc.fillRect(0, 0, canvasWidth, canvasHeight);
+
+			// 2. 「PAUSE」の文字を設定
+			gc.setFont(Font.font("Arial", FontWeight.BOLD, 48)); // 大きめのフォント
+			gc.setFill(Color.YELLOW); // 目立つ黄色
+
+			// 3. 文字が中央にぴったり配置されるように、文字の基準点を「中央」にする
+			gc.setTextAlign(javafx.scene.text.TextAlignment.CENTER);
+			gc.setTextBaseline(javafx.geometry.VPos.CENTER);
+
+			// 4. キャンバスの真ん中（横幅 / 2, 高さ / 2）に描画
+			gc.fillText("PAUSE", canvasWidth / 2.0, canvasHeight / 2.0);
+
+			// ★★★ ここから日本語サブテキストの描画 ★★★
+			gc.setFont(Font.font("Meiryo", FontWeight.BOLD, 16)); // メイリオで少し太めに
+			gc.setFill(Color.WHITE); // 白文字
+
+			// PAUSEの文字から、縦に「45ピクセル」下にずらした位置に描画
+			gc.fillText("もう一度 Pキー を押すと再開します", canvasWidth / 2.0, (canvasHeight / 2.0) + 45);
+
+			//後続の描画（スコアなど）が崩れないように、基準点をデフォルト（左、トップ）に戻しておく
+			gc.setTextAlign(javafx.scene.text.TextAlignment.LEFT);
+			gc.setTextBaseline(javafx.geometry.VPos.TOP);
+		}
 	}
 
 	// drawStage から背景クリアとパックマン呼び出しを分離・整理した内部メソッド

@@ -20,13 +20,13 @@ public class Gameover extends Application {
 
 	@Override
 	public void start(Stage stage) {
-		stage.setScene(create(stage));
+		stage.setScene(create(stage, null));
 		stage.setTitle("ゲーム");
 		stage.setMaximized(true);
 		stage.show();
 	}
 
-	public static Scene create(Stage stage) {
+	public static Scene create(Stage stage, Runnable retryAction) {
 
 		//GAME OVER
 		Label gameOverLabel = new Label("GAME OVER");
@@ -56,19 +56,19 @@ public class Gameover extends Application {
 		icon.setFitHeight(400);
 
 		
-		//練習画面へ戻る
-		Button retryBtn = new Button("練習モードへ");
-		retryBtn.setPrefSize(300, 70);
-		retryBtn.getStyleClass().add("gameover-button");
-		retryBtn.setOnAction(e -> {
-			Practice practiceScreen = new Practice();
-			try {
-				practiceScreen.start(stage);
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-		});
-
+		 //直前のステージをやり直す
+	    Button retryBtn = new Button("リトライする");
+	    retryBtn.setPrefSize(300, 70);
+	    retryBtn.getStyleClass().add("gameover-button");
+	    retryBtn.setOnAction(e -> {
+	        if (retryAction != null) {
+	            // 渡された各ステージの createAndStart(stage) が実行される
+	            retryAction.run();
+	        } else {
+	            System.out.println("⚠️ リトライ処理が登録されていません。");
+	        }
+	    });
+	    
 		//タイトル画面へ戻る
 		Button titleBtn = new Button("タイトルへ");
 		titleBtn.setPrefSize(300, 70);
@@ -126,15 +126,10 @@ public class Gameover extends Application {
 		root.getChildren().addAll(bg, whiteOverlay, ui);
 		
 		// 現在のStage（window）から実際のサイズを取得する
-        double currentWidth = stage.getWidth();
-        double currentHeight = stage.getHeight();
-
-        // 取得したサイズで新しいSceneを作成
-        Scene scene = new Scene(root, currentWidth, currentHeight);
-        stage.setScene(scene);
+		Scene scene = new Scene(root, 1000,800);
 		//ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
-        stage.setMinWidth(800);
-        stage.setMinHeight(600);
+        stage.setMinWidth(1000);
+        stage.setMinHeight(800);
 		scene.getStylesheets().add(Gameover.class.getResource("/css/gameover.css").toExternalForm());
 
 		return scene;

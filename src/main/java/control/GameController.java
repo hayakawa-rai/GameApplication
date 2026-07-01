@@ -7,7 +7,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
 import start.Start;
-import story.Gameover;
 import story.Stageclear1;
 import story.Stageclear2;
 import story.Stageclear3;
@@ -182,54 +181,57 @@ public class GameController {
 					java.lang.reflect.Method isClearedMethod = model.getClass().getMethod("isCleared");
 					java.lang.reflect.Method getSengokuMethod = model.getClass().getMethod("getSengoku");
 
-					if ((boolean) isPausedMethod.invoke(model))
-						return;
+					// 💡 一時停止フラグをここで変数に保存
+					boolean isPaused = (boolean) isPausedMethod.invoke(model);
 
-					// ゲーム状態の更新
-					updateMethod.invoke(model);
+					// 一時停止中でない（通常プレイ中）のときだけ、移動やゲームクリア判定を行う
+					if (!isPaused) {
+						// ゲーム状態の更新
+						updateMethod.invoke(model);
+						
+						// 敵に捕まった（ゲームオーバー）かチェック
+						if ((boolean) isGameOverMethod.invoke(model)) {
+							stop();
+							System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
+							switchToGameover(stage, stageNumber);
+							return;
 
-					// 敵に捕まった（ゲームオーバー）かチェック
-					if ((boolean) isGameOverMethod.invoke(model)) {
-						stop();
-						System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
-						switchToGameover(stage);
-						return;
-					}
-
-					// すべてのドットを食べ終えたかチェック
-					if ((boolean) isClearedMethod.invoke(model)) {
-						stop();
-						System.out.println("ステージクリア！次の画面へ遷移します。");
-
-						int finalScore = 0;
-						Object sengoku = getSengokuMethod.invoke(model);
-						if (sengoku != null) {
-							java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-							finalScore = (int) getScoreMethod.invoke(sengoku);
 						}
 
-						// 🌟 ステージ番号（1〜3）に応じて、遷移するクリア画面を完璧に切り替える！
-						switch (stageNumber) {
-						case 1:
-							switchToStageclear1(stage, finalScore);
-							break;
-						case 2:
-							switchToStageclear2(stage, finalScore);
-							break;
-						case 3:
-							switchToStageclear3(stage, finalScore);
-							break;
-						default:
-							switchToStageclear1(stage, finalScore);
-							break;
+						// すべてのドットを食べ終えたかチェック
+						if ((boolean) isClearedMethod.invoke(model)) {
+							stop();
+							System.out.println("ステージクリア！次の画面へ遷移します。");
+
+							int finalScore = 0;
+							Object sengoku = getSengokuMethod.invoke(model);
+							if (sengoku != null) {
+								java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
+								finalScore = (int) getScoreMethod.invoke(sengoku);
+							}
+
+							switch (stageNumber) {
+							case 1:
+								switchToStageclear1(stage, finalScore);
+								break;
+							case 2:
+								switchToStageclear2(stage, finalScore);
+								break;
+							case 3:
+								switchToStageclear3(stage, finalScore);
+								break;
+							default:
+								switchToStageclear1(stage, finalScore);
+								break;
+							}
+							return;
 						}
-						return;
 					}
 
+					// 💡 描画処理（draw）は if (!isPaused) の外側に置くことで、一時停止中も常に実行される！
 					double currentWidth = canvas.getWidth();
 					double currentHeight = canvas.getHeight();
 
-					// 🌟 どのパッケージの MapView からでも引数3つの draw メソッドを安全に呼び出す
 					java.lang.reflect.Method drawMethod = view.getClass().getMethod("draw", GraphicsContext.class,
 							double.class, double.class);
 					drawMethod.invoke(view, gc, currentWidth, currentHeight);
@@ -320,13 +322,37 @@ public class GameController {
 	}
 
 	// Gameover画面へ変更するためのメソッド
-	public static void switchToGameover(javafx.stage.Stage stage) {
-		try {
-			Gameover App = new Gameover();
-			App.start(stage);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public static void switchToGameover(javafx.stage.Stage stage, int stageNum) {
+	    try {
+	        Runnable retryAction;
+
+	        // ステージ番号に応じて、リトライ時に実行する処理（関数）を切り替える
+	        switch (stageNum) {
+	            case 1:
+	                retryAction = () -> test1.Main1.createAndStart(stage);
+	                break;
+	            case 2:
+	                // ※もしステージ2のクラス名が PracticeMain2 なら以下のように指定
+	                retryAction = () ->test2.Main2.createAndStart(stage);
+	                break;
+	            case 3:
+	                // ※もしステージ3のクラス名が PracticeMain3 なら以下のように指定
+	                retryAction = () -> test3.Main3.createAndStart(stage);
+	                break;
+	            default:
+	                // 予期しない値の場合は、安全のためステージ1に戻す
+	                retryAction = () -> test1.Main1.createAndStart(stage);
+	                break;
+	        }
+
+	        // GameoverクラスのScene生成メソッドに、stageとリトライ処理を渡す
+	        //（Gameoverクラスのstartメソッドではなく、安全なsetSceneに切り替えます）
+	        stage.setScene(story.Gameover.create(stage, retryAction));
+	        stage.show();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	//画面変更Main1へ

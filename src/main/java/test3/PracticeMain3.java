@@ -20,6 +20,12 @@ public class PracticeMain3 extends Application {
 	public void start(Stage stage) {
 		starts(stage);
 	}
+	
+	public static void createAndStart(Stage stage) {
+		Main3 app = new Main3();
+		app.starts(stage);
+	}
+
 
 	public void starts(Stage stage) {
 		// 多重起動を確実に防止
@@ -77,7 +83,7 @@ public class PracticeMain3 extends Application {
 		model.initEnemy(new javafx.scene.image.ImageView());
 
 		//  準備ができたコントローラーを生成
-		this.controller = new GameController(model, view, canvas, scene, stage, 1);
+		this.controller = new GameController(model, view, canvas, scene, stage, 3);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
