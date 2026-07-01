@@ -55,7 +55,7 @@ public class GameController {
 		startLoop();
 	}
 
-	//ステージ画面に十字キーを追加する	スマホ用のメソッド
+	// ステージ画面に十字キーを追加する スマホ用のメソッド
 	public static void applyMobileControls(javafx.scene.Scene gameScene, Object model) {
 		if (model == null)
 			return;
@@ -197,16 +197,16 @@ public class GameController {
 	private void startLoop() {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 
-	    if (canvas.getScene() != null) {
-	        // すでに存在しているかもしれない古いバインドを念のため解除
-	        canvas.widthProperty().unbind();
-	        canvas.heightProperty().unbind();
+		if (canvas.getScene() != null) {
+			// すでに存在しているかもしれない古いバインドを念のため解除
+			canvas.widthProperty().unbind();
+			canvas.heightProperty().unbind();
 
-	        // 💡 ウィンドウ（Scene）の幅・高さとCanvasの幅・高さを完全にバインド（同期）させる
-	        canvas.widthProperty().bind(canvas.getScene().widthProperty());
-	        canvas.heightProperty().bind(canvas.getScene().heightProperty());
-	    }
-		
+			// 💡 ウィンドウ（Scene）の幅・高さとCanvasの幅・高さを完全にバインド（同期）させる
+			canvas.widthProperty().bind(canvas.getScene().widthProperty());
+			canvas.heightProperty().bind(canvas.getScene().heightProperty());
+		}
+
 		timer = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
@@ -232,9 +232,22 @@ public class GameController {
 						if ((boolean) isGameOverMethod.invoke(model)) {
 							stop();
 							System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
-							switchToGameover(stage, stageNumber, isPractice);
-							return;
 
+							// スコアを安全に取得する処理
+							int finalScore = 0;
+							try {
+								Object sengoku = getSengokuMethod.invoke(model);
+								if (sengoku != null) {
+									java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
+									finalScore = (int) getScoreMethod.invoke(sengoku);
+								}
+							} catch (Exception e) {
+								// メソッドがない場合は0のまま進む
+							}
+
+							// 綺麗に一本化したゲームオーバー遷移を呼び出す（スコアも引き渡す）
+							switchToGameover(stage, stageNumber, isPractice, finalScore);
+							return;
 						}
 
 						// すべてのドットを食べ終えたかチェック
@@ -333,7 +346,6 @@ public class GameController {
 
 	// Stageclear1画面へ変更するためのメソッド（引数に score を追加）
 	public static void switchToStageclear1(javafx.stage.Stage stage, int score) {
-
 		try {
 			Stageclear1 App = new Stageclear1();
 			App.setScore(score); // 受け取った score を確実に引き渡す
@@ -345,7 +357,6 @@ public class GameController {
 
 	// Stageclear2画面へ変更するためのメソッド（引数に score を追加）
 	public static void switchToStageclear2(javafx.stage.Stage stage, int score) {
-
 		try {
 			Stageclear2 App = new Stageclear2();
 			App.setScore(score); // 受け取った score を確実に引き渡す
@@ -366,9 +377,8 @@ public class GameController {
 		}
 	}
 
-	// Gameover画面へ変更するためのメソッド
-	// Gameover画面へ変更するためのメソッド（isPractice を受け取れるように引数を3つに修正！）
-	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice) {
+	// Gameover画面へ変更するためのメソッド（引数4つ版に綺麗に統一！）
+	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice, int score) {
 		try {
 			Runnable retryAction;
 
@@ -400,8 +410,8 @@ public class GameController {
 				break;
 			}
 
-			// Gameoverクラスに、stageと組み立てた適切なリトライ処理を渡す
-			stage.setScene(story.Gameover.create(stage, retryAction, 0));
+			// Gameoverクラスに、stageと組み立てた適切なリトライ処理、そしてスコアを渡す！
+			stage.setScene(story.Gameover.create(stage, retryAction, score));
 			stage.show();
 
 		} catch (Exception e) {
@@ -409,21 +419,21 @@ public class GameController {
 		}
 	}
 
-	//画面変更Main1へ
+	// 画面変更Main1へ
 	public static void switchToGame1(javafx.stage.Stage stage) {
 		try {
 			Main1 App = new Main1();
 			App.start(stage);
-			
-	        //ウィンドウを「最大化」する
+
+			// ウィンドウを「最大化」する
 			stage.setMaximized(true);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	//画面変更Mani2へ
+	// 画面変更Mani2へ
 	public static void switchToGame2(javafx.stage.Stage stage) {
 		try {
 			Main2 App = new Main2();
@@ -433,7 +443,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更Main3へ
+	// 画面変更Main3へ
 	public static void switchToGame3(javafx.stage.Stage stage) {
 		try {
 			Main3 App = new Main3();
@@ -443,7 +453,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更start→story
+	// 画面変更start→story
 	public static void startToStory(javafx.stage.Stage stage) {
 		try {
 			Story1 App = new Story1();
@@ -453,7 +463,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更start
+	// 画面変更start
 	public static void switchStart(javafx.stage.Stage stage) {
 		try {
 			Start App = new Start();
@@ -463,7 +473,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更Story2
+	// 画面変更Story2
 	public static void switchStory2(javafx.stage.Stage stage) {
 		try {
 			Story2 App = new Story2();
@@ -473,7 +483,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更Story3
+	// 画面変更Story3
 	public static void switchStory3(javafx.stage.Stage stage) {
 		try {
 			Story3 App = new Story3();
@@ -483,7 +493,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更Story4
+	// 画面変更Story4
 	public static void switchStory4(javafx.stage.Stage stage) {
 		try {
 			Story4 App = new Story4();
@@ -493,7 +503,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更PracticeMain1へ
+	// 画面変更PracticeMain1へ
 	public static void switchToPracticeGame1(javafx.stage.Stage stage) {
 		try {
 			PracticeMain1 App = new PracticeMain1();
@@ -503,7 +513,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更PracticeMani2へ
+	// 画面変更PracticeMani2へ
 	public static void switchToPracticeGame2(javafx.stage.Stage stage) {
 		try {
 			PracticeMain2 App = new PracticeMain2();
@@ -513,7 +523,7 @@ public class GameController {
 		}
 	}
 
-	//画面変更PracticeMain3へ
+	// 画面変更PracticeMain3へ
 	public static void switchToPracticeGame3(javafx.stage.Stage stage) {
 		try {
 			PracticeMain3 App = new PracticeMain3();
@@ -538,8 +548,6 @@ public class GameController {
 			e.printStackTrace();
 		}
 	}
-
-	// --- GameController.java の中に追加 ---
 
 	/**
 	 * 画面内の「タイトルへ戻る」ボタンを、確実に最前面レイヤー(baseHolder)へ引っ越しさせるメソッド
