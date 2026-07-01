@@ -21,6 +21,10 @@ public class PracticeMain1 extends Application {
 		starts(stage);
 	}
 	
+	public static void createAndStart(Stage stage) {
+		Main1 app = new Main1();
+		app.starts(stage);
+	}
 
 	public void starts(Stage stage) {
 		// 多重起動を確実に防止
