@@ -53,12 +53,7 @@ public class MapView {
 		});
 	}
 
-	/**
-	 * 
-	 * ステージ全体を画面サイズに合わせて拡大縮小・中央配置して描画するメインメソッド
-	 * 
-	 */
-
+	// ステージ全体を画面サイズに合わせて拡大縮小・中央配置して描画するメインメソッド
 	public void draw(GraphicsContext gc, double canvasWidth, double canvasHeight) {
 
 		// 1. まずはCanvasを一度綺麗に消す（透明にする）
@@ -118,9 +113,7 @@ public class MapView {
 
 		// 敵の描画メソッド
 		if (model.getEnemies() != null) {
-
 			for (Enemy enemy : model.getEnemies()) {
-
 				drawEnemyInstance(gc, enemy);
 			}
 		}
@@ -130,7 +123,6 @@ public class MapView {
 		Sengoku sengoku = model.getSengoku();
 
 		if (sengoku != null) {
-
 			gc.setFont(Font.font("Arial", FontWeight.BOLD, 18));
 
 			// スコア
@@ -148,7 +140,6 @@ public class MapView {
 	}
 
 	// drawStage から背景クリアとパックマン呼び出しを分離・整理した内部メソッド
-
 	private void drawStageContent(GraphicsContext gc, int cols, int rows, double stageWidth, double stageHeight,
 			Color wallColor) {
 		Item[][] itemMap = model.getItemMap();
@@ -159,14 +150,13 @@ public class MapView {
 		gc.setLineWidth(2);
 		outline.drawOutline(gc);
 
+		// ★ アイテムを描画
 		for (int row = 0; row < rows; row++) {
-
 			for (int col = 0; col < cols; col++) {
 
 				// int tile = model.getMap()[row][col];
 
 				int x = col * MapData.TILE_SIZE;
-
 				int y = row * MapData.TILE_SIZE;
 
 				Item item = itemMap[row][col];
@@ -193,50 +183,10 @@ public class MapView {
 	// MapView のフィールドに Pac-Man 画像を追加
 	private final javafx.scene.image.Image pacmanImage = new javafx.scene.image.Image(
 			getClass().getResource("/picture/sengoku.png").toExternalForm());
+	private final javafx.scene.image.Image pacmanFeverImage = new javafx.scene.image.Image(
+			getClass().getResource("/picture/sengoku_Fever.png").toExternalForm());
 
-	public void drawPacman(GraphicsContext gc) {
-
-	    Sengoku sengoku = model.getSengoku();
-	    if (sengoku == null || !sengoku.isAlive()) return;
-
-	    if (pacmanImage == null) {
-	        // 画像が無い場合の代替描画
-	        gc.setFill(Color.YELLOW);
-	        gc.fillOval(
-	                sengoku.getX(),
-	                sengoku.getY(),
-	                MapData.TILE_SIZE,
-	                MapData.TILE_SIZE
-	        );
-	        return;
-	    }
-
-	    double pacX = sengoku.getX()+ MapData.TILE_SIZE / 2.0;
-	    double pacY = sengoku.getY()+ MapData.TILE_SIZE / 2.0;
-
-	    Characters.Direction dir = sengoku.getDirection();
-	    double angle = 0;
-	    
-	    gc.save();
-
-	    gc.translate(pacX, pacY);
-	    gc.rotate(angle);
-
-	    gc.drawImage(
-	            pacmanImage,
-	            -MapData.TILE_SIZE / 2.0,
-	            -MapData.TILE_SIZE / 2.0,
-	            MapData.TILE_SIZE,
-	            MapData.TILE_SIZE
-	    );
-
-	    gc.restore();
-	}
-
-
-	// 内部の座標計算
-
-	/*public void drawPacman(GraphicsContext gc, Color pacmanColor) {
+	void drawPacman(GraphicsContext gc) {
 
 		Sengoku sengoku = model.getSengoku();
 		if (sengoku == null || !sengoku.isAlive())
@@ -255,12 +205,30 @@ public class MapView {
 		Characters.Direction dir = sengoku.getDirection();
 		double angle = 0;
 
-		gc.save();
+		// FEVER終了3秒前は点滅
+		if (sengoku.isFever()) {
 
+			long remain = model.getFeverRemainingTime();
+
+			if (remain <= 3000) {
+
+				if ((System.currentTimeMillis() / 150) % 2 == 0) {
+					return;
+				}
+			}
+		}
+
+		gc.save();
 		gc.translate(pacX, pacY);
 		gc.rotate(angle);
 
-		gc.drawImage(pacmanImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
+		Image currentImage = pacmanImage;
+
+		if (sengoku.isFever()) {
+			currentImage = pacmanFeverImage;
+		}
+
+		gc.drawImage(currentImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
 				MapData.TILE_SIZE);
 
 		gc.restore();
@@ -269,7 +237,32 @@ public class MapView {
 	// 内部の座標計算
 
 	/*
-	 * public void drawPacman(GraphicsContext gc, Color pacmanColor) { Sengoku
+	 * public void drawPacman(GraphicsContext gc, Color pacmanColor) {
+	 * 
+	 * Sengoku sengoku = model.getSengoku(); if (sengoku == null ||
+	 * !sengoku.isAlive()) return;
+	 * 
+	 * if (pacmanImage == null) { // 画像が無い場合の代替描画 gc.setFill(Color.YELLOW);
+	 * gc.fillOval(sengoku.getX(), sengoku.getY(), MapData.TILE_SIZE,
+	 * MapData.TILE_SIZE); return; }
+	 * 
+	 * double pacX = sengoku.getX() + MapData.TILE_SIZE / 2.0; double pacY =
+	 * sengoku.getY() + MapData.TILE_SIZE / 2.0;
+	 * 
+	 * Characters.Direction dir = sengoku.getDirection(); double angle = 0;
+	 * 
+	 * gc.save();
+	 * 
+	 * gc.translate(pacX, pacY); gc.rotate(angle);
+	 * 
+	 * gc.drawImage(pacmanImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0,
+	 * MapData.TILE_SIZE, MapData.TILE_SIZE);
+	 * 
+	 * gc.restore(); }
+	 * 
+	 * // 内部の座標計算
+	 * 
+	 * /* public void drawPacman(GraphicsContext gc, Color pacmanColor) { Sengoku
 	 * sengoku = model.getSengoku();
 	 * 
 	 * if (sengoku == null || !sengoku.isAlive()) return;
@@ -322,9 +315,7 @@ public class MapView {
 	public void setupEnemyView(javafx.scene.image.ImageView enemyImageView) {
 
 		enemyImageView.setFitWidth(MapData.TILE_SIZE);
-
 		enemyImageView.setFitHeight(MapData.TILE_SIZE);
-
 		enemyImageView.setPreserveRatio(true);
 
 	}
@@ -345,7 +336,6 @@ public class MapView {
 			Image img = red.getEnemyImage();
 
 			double enemyLeftX = red.getX() - MapData.TILE_SIZE / 2.0;
-
 			double enemyTopY = red.getY() - MapData.TILE_SIZE / 2.0;
 
 			if (img != null) {
@@ -357,18 +347,12 @@ public class MapView {
 			} else {
 
 				// ⚠️ 画像読み込みに失敗している場合は「赤い円」で身代わり描画
-
 				gc.setFill(Color.RED);
-
 				gc.fillOval(red.getX(), red.getY(), MapData.TILE_SIZE, MapData.TILE_SIZE);
 
 				// 中心点が視覚的にわかりやすいように小さな黒い点を打つ
-
 				gc.setFill(Color.BLACK);
-
-				gc.fillOval(red.getX() + MapData.TILE_SIZE / 2.0 - 2,
-
-						red.getY() + MapData.TILE_SIZE / 2.0 - 2, 4, 4);
+				gc.fillOval(red.getX() + MapData.TILE_SIZE / 2.0 - 2, red.getY() + MapData.TILE_SIZE / 2.0 - 2, 4, 4);
 
 			}
 
@@ -411,7 +395,6 @@ public class MapView {
 		// マスの中心座標(X, Y)から半マス引いて、画像の左上基準座標を計算
 
 		double enemyLeftX = enemy.getX() - MapData.TILE_SIZE / 2.0;
-
 		double enemyTopY = enemy.getY() - MapData.TILE_SIZE / 2.0;
 
 		if (img != null) {
@@ -440,11 +423,8 @@ public class MapView {
 			// 中心点が視覚的にわかりやすいように小さな黒い点を打つ
 
 			gc.setFill(javafx.scene.paint.Color.BLACK);
-
 			gc.fillOval(enemy.getX() - 2, enemy.getY() - 2, 4, 4);
-
 		}
-
 	}
 
 	private Color getColorFromCSS(Region node, Color defaultColor) {
