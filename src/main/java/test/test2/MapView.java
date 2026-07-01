@@ -23,6 +23,8 @@ public class MapView {
 	private final Region pacmanDummy = new Region();
 
 	private double lastBaseAngle = 0;
+	// ヘッダー
+	private static final double INFO_HEIGHT = 40;
 
 	public MapView(MapData model) {
 		this.model = model;
@@ -48,6 +50,8 @@ public class MapView {
 	public void draw(GraphicsContext gc, double canvasWidth, double canvasHeight) {
 
 		gc.clearRect(0, 0, canvasWidth, canvasHeight);
+		gc.setFill(Color.BLACK);
+		gc.fillRect(0, 0, canvasWidth, INFO_HEIGHT);
 
 		Color wallColor = getColorFromCSS(wallDummy, Color.BLUE);
 		Color pacmanColor = getColorFromCSS(pacmanDummy, Color.YELLOW);
@@ -63,7 +67,7 @@ public class MapView {
 		double scale = Math.min(scaleX, scaleY) * bufferRatio;
 
 		double offsetX = (canvasWidth - (stageWidth * scale)) / 2.0;
-		double offsetY = (canvasHeight - (stageHeight * scale)) / 2.0;
+		double offsetY = ((canvasHeight - INFO_HEIGHT) - (stageHeight * scale)) / 2.0 + INFO_HEIGHT;
 
 		gc.save();
 
@@ -82,8 +86,25 @@ public class MapView {
 				drawEnemyInstance(gc, enemy);
 			}
 		}
-
 		gc.restore();
+		Sengoku sengoku = model.getSengoku();
+
+		if (sengoku != null) {
+
+			gc.setFont(Font.font("Arial", FontWeight.BOLD, 18));
+
+			// スコア
+			gc.setFill(Color.WHITE);
+			gc.fillText("SCORE : " + sengoku.getScore(), 20, 28);
+
+			// ライフ
+			gc.setFill(Color.RED);
+			gc.fillText("❤".repeat(sengoku.getHp()), canvasWidth - 100, 28);
+
+			// 区切り線
+			gc.setStroke(Color.DARKGRAY);
+			gc.strokeLine(0, INFO_HEIGHT, canvasWidth, INFO_HEIGHT);
+		}
 	}
 
 	private void drawStageContent(GraphicsContext gc, int cols, int rows, double stageWidth, double stageHeight,
@@ -107,31 +128,15 @@ public class MapView {
 				}
 			}
 		}
-
-		// グラフィックスの状態を元に戻す
-		gc.restore();
-
-		// スコアを表示させるためのコード
-		Sengoku sengoku = model.getSengoku();
-
-		if (sengoku != null) {
-
-			gc.setFont(Font.font("Arial", FontWeight.BOLD, 20));
-
-			// スコア
-			gc.setFill(Color.WHITE);
-			gc.fillText("SCORE : " + sengoku.getScore(), 15, 25);
-
-			// 残機
-			gc.setFill(Color.RED);
-			gc.fillText("❤".repeat(sengoku.getHp()), 15, 50);
-		}
-
 	}
 
 	// MapView のフィールドに Pac-Man 画像を追加
 	private final javafx.scene.image.Image pacmanImage = new javafx.scene.image.Image(
 			getClass().getResource("/picture/sengoku.png").toExternalForm());
+
+	private final javafx.scene.image.Image pacmanFeverImage = new javafx.scene.image.Image(
+			getClass().getResource("/picture/sengoku_Fever.png").toExternalForm());
+	
 
 	public void drawPacman(GraphicsContext gc) {
 		Sengoku sengoku = model.getSengoku();
@@ -156,7 +161,28 @@ public class MapView {
 		gc.translate(pacX, pacY);
 		gc.rotate(angle);
 
-		gc.drawImage(pacmanImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
+		// FEVER終了3秒前なら点滅
+		if (sengoku.isFever()) {
+
+			long remain = model.getFeverRemainingTime();
+
+			if (remain <= 3000) {
+
+				if ((System.currentTimeMillis() / 150) % 2 == 0) {
+					gc.restore();
+					return;
+				}
+			}
+		}
+
+		// 使用する画像選択
+		javafx.scene.image.Image currentImage = pacmanImage;
+
+		if (sengoku.isFever()) {
+			currentImage = pacmanFeverImage;
+		}
+
+		gc.drawImage(currentImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
 				MapData.TILE_SIZE);
 
 		gc.restore();

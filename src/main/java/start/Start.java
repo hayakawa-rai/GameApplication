@@ -187,7 +187,7 @@ public class Start extends Application {
 							// 背景停止
 							timer.stop();
 							// 画面遷移
-							test.test2.GameController.startToPractice(stage);
+							control.GameController.switchToPractice(stage);
 						}));
 				delay.play();
 			} catch (Exception ex) {
@@ -244,6 +244,8 @@ public class Start extends Application {
 		stage.setTitle("スタート画面");
 		//ウィンドウの中身を設定・表示
 		stage.setScene(scene);
+		// ★追加
+		stage.setMaximized(true);
 		stage.show();
 	}
 

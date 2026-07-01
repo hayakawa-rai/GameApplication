@@ -20,6 +20,11 @@ public class Main2 extends Application {
 		starts(stage);
 	}
 	
+	public static void createAndStart(Stage stage) {
+		Main2 app = new Main2();
+		app.starts(stage);
+	}
+	
 	public void starts(Stage stage) {
 		// 多重起動を確実に防止
 		if (this.controller != null) {
@@ -87,10 +92,12 @@ public class Main2 extends Application {
 		model.initEnemy(new javafx.scene.image.ImageView());
 
 		// 完璧に準備ができた【最後】にコントローラーを1回だけ生成（重複は削除！）
-		this.controller = new GameController(model, view, canvas, scene, stage, 2);
+		this.controller = new GameController(model, view, canvas, scene, stage, 2, false);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
+		// ★追加
+		stage.setMaximized(true);
 		stage.show();
 
 		canvas.requestFocus();
