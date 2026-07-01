@@ -181,54 +181,57 @@ public class GameController {
 					java.lang.reflect.Method isClearedMethod = model.getClass().getMethod("isCleared");
 					java.lang.reflect.Method getSengokuMethod = model.getClass().getMethod("getSengoku");
 
-					if ((boolean) isPausedMethod.invoke(model))
-						return;
+					// 💡 一時停止フラグをここで変数に保存
+					boolean isPaused = (boolean) isPausedMethod.invoke(model);
 
-					// ゲーム状態の更新
-					updateMethod.invoke(model);
+					// 一時停止中でない（通常プレイ中）のときだけ、移動やゲームクリア判定を行う
+					if (!isPaused) {
+						// ゲーム状態の更新
+						updateMethod.invoke(model);
+						
+						// 敵に捕まった（ゲームオーバー）かチェック
+						if ((boolean) isGameOverMethod.invoke(model)) {
+							stop();
+							System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
+							switchToGameover(stage, stageNumber);
+							return;
 
-					// 敵に捕まった（ゲームオーバー）かチェック
-					if ((boolean) isGameOverMethod.invoke(model)) {
-						stop();
-						System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
-						switchToGameover(stage,stageNumber);
-						return;
-					}
-
-					// すべてのドットを食べ終えたかチェック
-					if ((boolean) isClearedMethod.invoke(model)) {
-						stop();
-						System.out.println("ステージクリア！次の画面へ遷移します。");
-
-						int finalScore = 0;
-						Object sengoku = getSengokuMethod.invoke(model);
-						if (sengoku != null) {
-							java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-							finalScore = (int) getScoreMethod.invoke(sengoku);
 						}
 
-						// 🌟 ステージ番号（1〜3）に応じて、遷移するクリア画面を完璧に切り替える！
-						switch (stageNumber) {
-						case 1:
-							switchToStageclear1(stage, finalScore);
-							break;
-						case 2:
-							switchToStageclear2(stage, finalScore);
-							break;
-						case 3:
-							switchToStageclear3(stage, finalScore);
-							break;
-						default:
-							switchToStageclear1(stage, finalScore);
-							break;
+						// すべてのドットを食べ終えたかチェック
+						if ((boolean) isClearedMethod.invoke(model)) {
+							stop();
+							System.out.println("ステージクリア！次の画面へ遷移します。");
+
+							int finalScore = 0;
+							Object sengoku = getSengokuMethod.invoke(model);
+							if (sengoku != null) {
+								java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
+								finalScore = (int) getScoreMethod.invoke(sengoku);
+							}
+
+							switch (stageNumber) {
+							case 1:
+								switchToStageclear1(stage, finalScore);
+								break;
+							case 2:
+								switchToStageclear2(stage, finalScore);
+								break;
+							case 3:
+								switchToStageclear3(stage, finalScore);
+								break;
+							default:
+								switchToStageclear1(stage, finalScore);
+								break;
+							}
+							return;
 						}
-						return;
 					}
 
+					// 💡 描画処理（draw）は if (!isPaused) の外側に置くことで、一時停止中も常に実行される！
 					double currentWidth = canvas.getWidth();
 					double currentHeight = canvas.getHeight();
 
-					// 🌟 どのパッケージの MapView からでも引数3つの draw メソッドを安全に呼び出す
 					java.lang.reflect.Method drawMethod = view.getClass().getMethod("draw", GraphicsContext.class,
 							double.class, double.class);
 					drawMethod.invoke(view, gc, currentWidth, currentHeight);
