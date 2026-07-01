@@ -34,14 +34,16 @@ public class GameController {
 
 	// 現在のステージ番号（1〜3）を記憶する変数
 	private final int stageNumber;
+	private final boolean isPractice;
 
 	public GameController(Object model, Object view, Canvas canvas, Scene scene, javafx.stage.Stage stage,
-			int stageNumber) {
+			int stageNumber,boolean isPractice) {
 		this.model = model;
 		this.view = view;
 		this.canvas = canvas;
 		this.stage = stage;
 		this.stageNumber = stageNumber; // ⭐ ステージ番号を記憶
+		this.isPractice = isPractice;
 
 		// キーボードの入力を登録
 		attachInput(scene);
@@ -193,7 +195,7 @@ public class GameController {
 						if ((boolean) isGameOverMethod.invoke(model)) {
 							stop();
 							System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
-							switchToGameover(stage, stageNumber);
+							switchToGameover(stage, stageNumber,isPractice);
 							return;
 
 						}
@@ -322,31 +324,45 @@ public class GameController {
 	}
 
 	// Gameover画面へ変更するためのメソッド
-	public static void switchToGameover(javafx.stage.Stage stage, int stageNum) {
+	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice) {
 	    try {
 	        Runnable retryAction;
 
-	        // ステージ番号に応じて、リトライ時に実行する処理（関数）を切り替える
-	        switch (stageNum) {
-	            case 1:
-	                retryAction = () -> test1.Main1.createAndStart(stage);
-	                break;
-	            case 2:
-	                // ※もしステージ2のクラス名が PracticeMain2 なら以下のように指定
-	                retryAction = () ->test2.Main2.createAndStart(stage);
-	                break;
-	            case 3:
-	                // ※もしステージ3のクラス名が PracticeMain3 なら以下のように指定
-	                retryAction = () -> test3.Main3.createAndStart(stage);
-	                break;
-	            default:
-	                // 予期しない値の場合は、安全のためステージ1に戻す
-	                retryAction = () -> test1.Main1.createAndStart(stage);
-	                break;
+	        if (isPractice) {
+	            // 🟢 練習モードから来た場合のリトライ先（PracticeMain系）
+	            switch (stageNum) {
+	                case 1:
+	                    retryAction = () -> test1.PracticeMain1.createAndStart(stage);
+	                    break;
+	                case 2:
+	                    retryAction = () -> test2.PracticeMain2.createAndStart(stage);
+	                    break;
+	                case 3:
+	                    retryAction = () -> test3.PracticeMain3.createAndStart(stage);
+	                    break;
+	                default:
+	                    retryAction = () -> test1.PracticeMain1.createAndStart(stage);
+	                    break;
+	            }
+	        } else {
+	            // 🔴 本番モードから来た場合のリトライ先（Main系）
+	            switch (stageNum) {
+	                case 1:
+	                    retryAction = () -> test1.Main1.createAndStart(stage);
+	                    break;
+	                case 2:
+	                    retryAction = () -> test2.Main2.createAndStart(stage);
+	                    break;
+	                case 3:
+	                    retryAction = () -> test3.Main3.createAndStart(stage);
+	                    break;
+	                default:
+	                    retryAction = () -> test1.Main1.createAndStart(stage);
+	                    break;
+	            }
 	        }
 
-	        // GameoverクラスのScene生成メソッドに、stageとリトライ処理を渡す
-	        //（Gameoverクラスのstartメソッドではなく、安全なsetSceneに切り替えます）
+	        // Gameoverクラスへ、判別済みのリトライ処理を渡す
 	        stage.setScene(story.Gameover.create(stage, retryAction));
 	        stage.show();
 
@@ -354,6 +370,7 @@ public class GameController {
 	        e.printStackTrace();
 	    }
 	}
+
 
 	//画面変更Main1へ
 	public static void switchToGame1(javafx.stage.Stage stage) {
