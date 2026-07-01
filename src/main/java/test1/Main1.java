@@ -19,7 +19,7 @@ public class Main1 extends Application {
 	public void start(Stage stage) {
 		starts(stage);
 	}
-	
+
 	public static void createAndStart(Stage stage) {
 		Main1 app = new Main1();
 		app.starts(stage);
@@ -39,7 +39,8 @@ public class Main1 extends Application {
 		int viewWidth = model.getMap()[0].length * MapData.TILE_SIZE;
 		int viewHeight = model.getMap().length * MapData.TILE_SIZE;
 
-		Scene scene = new Scene(root, viewWidth, viewHeight);
+		//Scene scene = new Scene(root, viewWidth, viewHeight);
+		Scene scene = new Scene(root);
 		scene.getStylesheets().add(
 				getClass().getResource("/css/test.css").toExternalForm());
 
@@ -48,7 +49,11 @@ public class Main1 extends Application {
 		// ★背景用Pane（CSSを効かせる対象）
 		Pane bg = new Pane();
 		bg.getStyleClass().add("game-bg");
-		bg.setPrefSize(viewWidth, viewHeight);
+		//bg.setPrefSize(viewWidth, viewHeight);
+
+		bg.prefWidthProperty().bind(scene.widthProperty());
+		bg.prefHeightProperty().bind(scene.heightProperty());
+
 		bg.setMouseTransparent(true);
 
 		try {
@@ -58,8 +63,8 @@ public class Main1 extends Application {
 
 			// 画像のサイズも、ウィンドウ（root）のサイズに完全に連動（バインド）させる
 			backgroundView.fitWidthProperty().bind(root.widthProperty());
-            backgroundView.fitHeightProperty().bind(root.heightProperty());
-            backgroundView.setPreserveRatio(false);
+			backgroundView.fitHeightProperty().bind(root.heightProperty());
+			backgroundView.setPreserveRatio(false);
 
 			// 背景用Paneに画像を追加
 			bg.getChildren().add(backgroundView);
@@ -69,8 +74,8 @@ public class Main1 extends Application {
 
 		// ★ゲーム描画Canvas
 		Canvas canvas = new Canvas();
-        canvas.widthProperty().bind(root.widthProperty());
-        canvas.heightProperty().bind(root.heightProperty());
+		canvas.widthProperty().bind(root.widthProperty());
+		canvas.heightProperty().bind(root.heightProperty());
 
 		root.getChildren().addAll(bg, canvas);
 
@@ -96,8 +101,10 @@ public class Main1 extends Application {
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
-		// ★追加
-		stage.setMaximized(true);
+
+		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
+		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
+
 		stage.show();
 
 		canvas.requestFocus();
