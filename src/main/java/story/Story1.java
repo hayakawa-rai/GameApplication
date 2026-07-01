@@ -38,11 +38,15 @@ public class Story1 extends Application {
 		//受け取った変数Stageを自分のStageに保存
 		this.stage = stage;
 		//ウィンドウの中身を決定
+
 		stage.setScene(story());
 		stage.setTitle("story1");
-		// ★追加
-		stage.setMaximized(true);
+
+		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
+		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
+
 		stage.show();
+
 	}
 
 	private Timeline blink;
@@ -286,6 +290,7 @@ public class Story1 extends Application {
 		base.getChildren().addAll(bgView, sengokuView, anikiView, narinariView, root);
 		// 現在のStage（window）から実際のサイズを取得する
 		Scene scene = new Scene(base, 1000, 800);
+		//Scene scene = new Scene(base);
 		scene.setOnMouseClicked(e -> scene.getRoot().requestFocus());
 
 		StackPane menuOverlay = new StackPane();
@@ -556,6 +561,7 @@ public class Story1 extends Application {
 
 				fade.play();
 			}
+
 		});
 		//CSSを接続
 		scene.getStylesheets().add(
@@ -566,4 +572,5 @@ public class Story1 extends Application {
 		return scene;
 
 	}
+
 }
