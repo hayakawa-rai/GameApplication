@@ -117,9 +117,6 @@ public class MapData implements GameMap {
 	// ゲーム開始待ち
 	private boolean waitingStart = true;
 
-	// ポーズ
-	private long pauseStartTime = 0;
-
 	// FEVER終了時刻
 	private long feverEndTime = 0;
 
@@ -220,25 +217,7 @@ public class MapData implements GameMap {
 	}
 
 	public void togglePause() {
-
-		if (!paused) {
-
-			// ポーズ開始
-			paused = true;
-			pauseStartTime = System.currentTimeMillis();
-
-		} else {
-
-			// ポーズ解除
-			paused = false;
-
-			long pauseDuration = System.currentTimeMillis() - pauseStartTime;
-
-			// FEVERタイマーを停止した分だけ後ろへずらす
-			if (feverEndTime > 0) {
-				feverEndTime += pauseDuration;
-			}
-		}
+		paused = !paused;
 	}
 
 	// ゲーム全体の定期更新
@@ -633,9 +612,6 @@ public class MapData implements GameMap {
 	}
 
 	public long getFeverRemainingTime() {
-		if (paused && feverEndTime > 0) {
-			return Math.max(0, feverEndTime - pauseStartTime);
-		}
 		return Math.max(0, feverEndTime - System.currentTimeMillis());
 	}
 
