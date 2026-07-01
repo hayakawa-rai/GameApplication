@@ -16,48 +16,67 @@ import common.GameMap;
 
 public class MapData implements GameMap {
 
-	
-	//マップ定義(28×31マス)
-	//1マスのサイズ(30×30ピクセル)
+	// マップ定義(28×31マス)
+	// 1マスのサイズ(30×30ピクセル)
 	public static final int TILE_SIZE = 30;
 
-	// 0：道   1：壁    2：パワーエサ   7:扉   8:巣   9: ワープ 
+	// 0：道 1：壁 2：パワーエサ 7:扉 8:巣 9: ワープ
 	private final int[][] map = {
 
-			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},			 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-			{1,0,0,0,2,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,2,0,0,0,1},		     //■　　　　　　　　　　　　■■　　　　　　　　　　　　■
-			{1,0,1,1,1,1,1,0,1,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,1,1,0,1},			 //■　■■■■■　■■■■　■■　■■■■　■■■■■　■
-			{1,0,1,1,1,1,1,0,1,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,1,1,0,1},			 //■　■■■■■　■■■■　■■　■■■■　■■■■■　■
-			{1,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,1,1,1,1,0,0,0,0,0,0,0,1},			 //■　　　　　　　■■■■　■■　■■■■　　　　　　　■
-			{1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1},			 //■■■■　■■　　　　　　　　　　　　　　■■　■■■■
-			{1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1},			 //　　　■　■■　■■　■■■■■■　■■　■■　■　　　
-			{1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1},			 //　　　■　■■　■■　■■■■■■　■■　■■　■　　　
-			{1,1,1,1,0,1,1,0,1,1,0,0,0,1,1,0,0,0,1,1,0,1,1,0,1,1,1,1},			 //■■■■　■■　■■　　　■■　　　■■　■■　■■■■
-			{9,0,0,0,0,0,0,0,1,1,1,1,0,1,1,0,1,1,1,1,0,0,0,0,0,0,0,9},			 //　　　　　　　　■■■■　■■　■■■■　　　　　　　　
-			{1,1,1,1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,1,1},			 //■■■■　■■　■■■■　■■　■■■■　■■　■■■■
-			{1,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1},			 //　　　■　■■　　　　　　　　　　　　　　■■　■　　　
-			{1,1,1,1,0,1,1,1,1,0,1,1,1,7,7,1,1,1,0,1,1,1,1,0,1,1,1,1},			 //　　　■　■■■■　■■■　　■■■　■■■■　■　　　
-			{1,1,1,1,0,1,1,1,1,0,1,8,8,8,8,8,8,1,0,1,1,1,1,0,1,1,1,1},			 //　　　■　■■■■　■　　　　　　■　■■■■　■　　　
-			{1,1,1,1,0,0,0,2,0,0,1,8,8,8,8,8,8,1,0,0,2,0,0,0,1,1,1,1},			 //　　　■　　　　　　■　　　　　　■　　　　　　■　　　
-			{1,1,1,1,0,1,1,1,1,0,1,8,8,8,8,8,8,1,0,1,1,1,1,0,1,1,1,1},			 //　　　■　■■■■　■　　　　　　■　■■■■　■　　　
-			{1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1},			 //■■■■　■■■■　■■■■■■■■　■■■■　■■■■
-			{9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9},			 //　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-			{1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1},			 //■■■■　■■■■■■■　■■　■■■■■■■　■■■■
-			{1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1},			 //　　　■　■■■■■■■　■■　■■■■■■■　■　　　
-			{1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1},			 //　　　■　　　　　　　　　■■　　　　　　　　　■　　　
-			{1,1,1,1,0,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,0,1,1,0,1,1,1,1},			 //■■■■　■■　■■　■■■■■■　■■　■■　■■■■
-			{1,0,0,0,0,1,1,0,1,1,0,1,1,1,1,1,1,0,1,1,0,1,1,0,0,0,0,1},			 //■　　　　■■　■■　■■■■■■　■■　■■　　　　■
-			{1,0,1,1,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1,1,0,1,1,0,1,1,0,1},			 //■　■■　■■　■■　　　　　　　　■■　■■　■■　■
-			{1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,1,0,1,1,0,1,1,0,1,1,0,1},			 //■　■■　■■　■■　■■　■■■　■■　■■　■■　■
-			{1,0,1,1,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0,0,0,0,0,0,1,1,0,1},			 //■　■■　　　　　　　■■　■■■　　　　　　　■■　■
-			{1,0,1,1,1,0,1,1,1,1,0,1,1,0,0,1,1,0,1,1,1,1,0,1,1,1,0,1},			 //■　■■■　■■■■　■■　　■■　■■■■　■■■　■
-			{1,0,1,1,1,0,1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,0,1},			 //■　■■■　■　　■　■■■　■■　■　　■　■■■　■
-			{1,0,1,1,1,0,1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1,0,1},			 //■　■■■　■　　■　■■■　■■　■　　■　■■■　■
-			{1,0,0,2,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,0,0,2,0,0,1},			 //■　　　　　■　　■　　　　　　　　■　　■　　　　　■
-			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},			 //■■■■■■■　　■■■■■■■■■■　　■■■■■■■
+			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+			{ 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1 }, // ■ ■■ ■
+			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■ ■■■■■ ■■■■ ■■
+																									// ■■■■ ■■■■■ ■
+			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■ ■■■■■ ■■■■ ■■
+																									// ■■■■ ■■■■■ ■
+			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 }, // ■ ■■■■ ■■ ■■■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
+																									// ■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
+																									// ■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■ ■■
+																									// ■■ ■■■■
+			{ 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9 }, // ■■■■ ■■ ■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■■■ ■■
+																									// ■■■■ ■■ ■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 7, 7, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■■■ ■■■
+																									// ■■■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■ ■ ■■■■ ■
+			{ 1, 1, 1, 1, 0, 0, 0, 2, 0, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 0, 2, 0, 0, 0, 1, 1, 1, 1 }, // ■ ■ ■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■ ■ ■■■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■■■
+																									// ■■■■■■■■ ■■■■
+																									// ■■■■
+			{ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9 }, //
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■■■■■■ ■■
+																									// ■■■■■■■ ■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■■■■ ■■
+																									// ■■■■■■■ ■
+			{ 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 }, // ■ ■■ ■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■■■■■
+																									// ■■ ■■ ■■■■
+			{ 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
+																									// ■■ ■
+			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■ ■■ ■■
+																									// ■■ ■
+			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■ ■■ ■■■
+																									// ■■ ■■ ■■ ■
+			{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■■ ■■ ■
+			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■■■■ ■■ ■■
+																									// ■■■■ ■■■ ■
+			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■ ■ ■■■ ■■
+																									// ■ ■ ■■■ ■
+			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■ ■ ■■■ ■■
+																									// ■ ■ ■■■ ■
+			{ 1, 0, 0, 2, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 2, 0, 0, 1 }, // ■ ■ ■ ■ ■ ■
+			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■
+																									// ■■■■■■■■■■
+																									// ■■■■■■■
 
 	};
-	
+
 	private Item[][] itemMap;
 
 	private Sengoku sengoku;
@@ -70,6 +89,9 @@ public class MapData implements GameMap {
 
 	// 初期アイテム配置（エサ復活用）
 	private Item[][] initialItemMap;
+	
+	//クラスのフィールド（メンバ変数）に、最大数を記憶する変数を追加
+	private int totalItems; 
 
 	// エサ復活を有効にするか？
 	private boolean enableRespawn;
@@ -149,13 +171,13 @@ public class MapData implements GameMap {
 	}
 
 	public MapData() {
-		//初期設定
+		// 初期設定
 		this.enableRespawn = false;
 		this.sengoku = new Sengoku(14 * TILE_SIZE, 23 * TILE_SIZE, 2);
 		this.itemMap = new Item[map.length][map[0].length];
 		this.remainingItems = 0;
 
-		//アイテムの配置
+		// アイテムの配置
 		for (int row = 0; row < map.length; row++) {
 
 			for (int col = 0; col < map[0].length; col++) {
@@ -171,12 +193,15 @@ public class MapData implements GameMap {
 				}
 			}
 		}
-		//敵の初期位置
+		// 敵の初期位置
 		initEnemy(null);
-		
-		//アイテムが完全に配置し終わった後で、バックアップを取り、復活を有効にする
+
+		// アイテムが完全に配置し終わった後で、バックアップを取り、復活を有効にする
 		this.initialItemMap = copyItemMap(itemMap);
 		this.enableRespawn = true;
+		
+	    // 最初に配置し終わった時の総数を記憶しておく
+	    this.totalItems = this.remainingItems; 
 	}
 
 	public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
@@ -205,6 +230,35 @@ public class MapData implements GameMap {
 	public void update() {
 		if (paused)
 			return;
+		
+		//死んだときのアニメーション
+				if (sengoku.isDyingAnimation()) {
+
+				    if (sengoku.updateDyingAnimation()) {
+
+				        if (sengoku.isAlive()) {
+
+				            sengoku.resetToStartPosition();
+
+				            for (Enemy enemy : enemies) {
+				                enemy.resetToStartPosition();
+				                enemy.setCurrentState(
+				                    Characters.EnemyState.SCATTER);
+				            }
+
+				            modeStartTime = 0;
+				            chaseMode = false;
+				            waitingStart = true;
+
+				        } else {
+
+				            gameOver = true;
+				            paused = true;
+				        }
+				    }
+
+				    return;
+				}
 
 		// パックマンの移動処理
 		updatePacman();
@@ -212,6 +266,8 @@ public class MapData implements GameMap {
 		// FEVER終了判定
 		if (feverEndTime > 0 && System.currentTimeMillis() >= feverEndTime) {
 			feverEndTime = 0;
+			sengoku.setFever(false);
+
 			for (Enemy e : enemies) {
 				if (e.getCurrentState() == Characters.EnemyState.FEVER) {
 					e.setCurrentState(Characters.EnemyState.SCATTER);
@@ -232,8 +288,8 @@ public class MapData implements GameMap {
 
 				for (Enemy e : enemies) {
 
-					if (e.getCurrentState() != Characters.EnemyState.DEAD &&
-							e.getCurrentState() != Characters.EnemyState.FEVER) {
+					if (e.getCurrentState() != Characters.EnemyState.DEAD
+							&& e.getCurrentState() != Characters.EnemyState.FEVER) {
 
 						e.setCurrentState(Characters.EnemyState.SCATTER);
 					}
@@ -249,8 +305,8 @@ public class MapData implements GameMap {
 
 				for (Enemy e : enemies) {
 
-					if (e.getCurrentState() != Characters.EnemyState.DEAD &&
-							e.getCurrentState() != Characters.EnemyState.FEVER) {
+					if (e.getCurrentState() != Characters.EnemyState.DEAD
+							&& e.getCurrentState() != Characters.EnemyState.FEVER) {
 
 						e.setCurrentState(Characters.EnemyState.CHASE);
 					}
@@ -329,14 +385,14 @@ public class MapData implements GameMap {
 
 				sengoku.setX(newPacX);
 				sengoku.setY(newPacY);
-				
+
 				justWarped = true;
 				lastWarpX = warpX;
 				lastWarpY = warpY;
 				return;
 			}
 		}
-		//巣(8)と扉(7)を同様に壁扱いしている。
+		// 巣(8)と扉(7)を同様に壁扱いしている。
 		int[][] moveMap = new int[map.length][map[0].length];
 		for (int r = 0; r < map.length; r++) {
 			for (int c = 0; c < map[0].length; c++) {
@@ -361,8 +417,11 @@ public class MapData implements GameMap {
 
 				// パワーエサ(2)を食べたらFEVER
 				if (map[currentTileY][currentTileX] == 2) {
+					
 					System.out.println("FEVER開始！");
-					// ←毎回7秒にリセット
+					
+					sengoku.setFever(true);
+					// 毎回7秒にリセット
 					feverEndTime = System.currentTimeMillis() + 7000;
 
 					for (Enemy e : enemies) {
@@ -385,13 +444,13 @@ public class MapData implements GameMap {
 		}
 
 		// 全部食べたかチェック（エサ復活用）
-		checkAllEaten();
+		//checkAllEaten();
 
 	}
 
 	// --- 全部食べたかチェック ---（エサ復活用）
 
-	private void checkAllEaten() {
+	/*private void checkAllEaten() {
 		if (!enableRespawn)
 			return; // ← ストーリーでは復活しない
 
@@ -413,6 +472,18 @@ public class MapData implements GameMap {
 
 		this.itemMap = copyItemMap(this.initialItemMap);
 		System.out.println("ステージクリア！エサが復活しました！");
+	}*/
+	
+	public void respawnDots() {
+	    if (this.initialItemMap != null) {
+	        // 1. マップのアイテム配置を初期状態にコピー
+	        this.itemMap = copyItemMap(this.initialItemMap);
+	        
+	        // 2. 残りアイテム数を初期の総数にリセット（これで isCleared() が false に戻る）
+	        this.remainingItems = this.totalItems;
+	        
+	        System.out.println("【練習モード】エサが再配置され、残りカウントが " + this.remainingItems + " にリセットされました。");
+	    }
 	}
 
 	public void updateMouth() {
@@ -428,10 +499,10 @@ public class MapData implements GameMap {
 
 	public void setNextDirection(Characters.Direction dir) {
 
-		//sengoku.setNextDirection(dir);
+		// sengoku.setNextDirection(dir);
 		if (sengoku != null) {
 			// 古い sample.Direction への変換をやめ、そのまま dir を渡します
-			sengoku.setNextDirection(dir); 
+			sengoku.setNextDirection(dir);
 		}
 
 		// 初回入力でゲーム開始
@@ -468,6 +539,8 @@ public class MapData implements GameMap {
 			if (Math.sqrt(dx * dx + dy * dy) < collisionThreshold) {
 				// FEVER中の敵は食べられる
 				if (e.getCurrentState() == Characters.EnemyState.FEVER) {
+					// 💡 敵を倒したのでスコアを加算（例: 200点）
+					sengoku.addScore(200); 
 					e.setCurrentState(Characters.EnemyState.DEAD);
 					continue;
 				}
@@ -479,8 +552,9 @@ public class MapData implements GameMap {
 				System.out.println("💥敵に捕まった！");
 
 				sengoku.takeDamage();
+				sengoku.startDying();
 
-				if (sengoku.getHp() <= 0) {
+				/*if (sengoku.getHp() <= 0) {
 
 					this.gameOver = true;
 					this.paused = true;
@@ -506,7 +580,7 @@ public class MapData implements GameMap {
 					// 再入力待ち
 					waitingStart = true;
 
-				}
+				}*/
 
 				return;
 			}
@@ -516,7 +590,7 @@ public class MapData implements GameMap {
 	public boolean isPaused() {
 		return paused;
 	}
-	
+
 	@Override
 	public int[][] getMap() {
 		return map;
@@ -574,6 +648,8 @@ public class MapData implements GameMap {
 	public Sengoku getSengoku() {
 		return sengoku;
 	}
+	
+	
 
 	// ⭕ 既存の古いゲッターもエラー防止で残し、リストの先頭(赤)を返す
 	public Enemy getEnemy() {
@@ -588,6 +664,10 @@ public class MapData implements GameMap {
 
 	public boolean isCleared() {
 		return remainingItems <= 0;
+	}
+
+	public long getFeverRemainingTime() {
+		return Math.max(0, feverEndTime - System.currentTimeMillis());
 	}
 
 	public boolean isGameOver() {

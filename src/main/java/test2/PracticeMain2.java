@@ -20,6 +20,11 @@ public class PracticeMain2 extends Application {
 	public void start(Stage stage) {
 		starts(stage);
 	}
+	
+	public static void createAndStart(Stage stage) {
+		PracticeMain2 app = new PracticeMain2();
+		app.starts(stage);
+	}
 
 
 	public void starts(Stage stage) {
@@ -78,7 +83,7 @@ public class PracticeMain2 extends Application {
 		model.initEnemy(new javafx.scene.image.ImageView());
 
 		//  準備ができたコントローラーを生成
-		this.controller = new GameController(model, view, canvas, scene, stage, 2);
+		this.controller = new GameController(model, view, canvas, scene, stage, 2, false);
 		
 		view.setController(this.controller);
 

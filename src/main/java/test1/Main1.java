@@ -40,7 +40,8 @@ public class Main1 extends Application {
 		int viewWidth = model.getMap()[0].length * MapData.TILE_SIZE;
 		int viewHeight = model.getMap().length * MapData.TILE_SIZE;
 
-		Scene scene = new Scene(root, viewWidth, viewHeight);
+		//Scene scene = new Scene(root, viewWidth, viewHeight);
+		Scene scene = new Scene(root);
 		scene.getStylesheets().add(
 				getClass().getResource("/css/test.css").toExternalForm());
 
@@ -49,7 +50,11 @@ public class Main1 extends Application {
 		// ★背景用Pane（CSSを効かせる対象）
 		Pane bg = new Pane();
 		bg.getStyleClass().add("game-bg");
-		bg.setPrefSize(viewWidth, viewHeight);
+		//bg.setPrefSize(viewWidth, viewHeight);
+
+		bg.prefWidthProperty().bind(scene.widthProperty());
+		bg.prefHeightProperty().bind(scene.heightProperty());
+
 		bg.setMouseTransparent(true);
 
 		try {
@@ -71,6 +76,7 @@ public class Main1 extends Application {
 		// ★ゲーム描画Canvas
 		Canvas canvas = new Canvas();
 		canvas.setMouseTransparent(true);
+
 		canvas.widthProperty().bind(root.widthProperty());
 		canvas.heightProperty().bind(root.heightProperty());
 
@@ -94,13 +100,17 @@ public class Main1 extends Application {
 		model.initEnemy(new javafx.scene.image.ImageView());
 
 		//新しいコントローラーを生成し、activeController に退避させておく
-		GameController controller = new GameController(model, view, canvas, scene, stage, 1);
+		GameController controller = new GameController(model, view, canvas, scene, stage, 1, false);
 		activeController = controller;
 
 		view.setController(controller);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
+
+		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
+		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
+
 		stage.show();
 
 		view.bringButtonToFront();

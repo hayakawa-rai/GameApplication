@@ -92,12 +92,14 @@ public class Main3 extends Application {
 		model.initEnemy(new javafx.scene.image.ImageView());
 
 		//  完璧に準備ができた【最後】にコントローラーを1回だけ生成（重複は削除！）
-		this.controller = new GameController(model, view, canvas, scene, stage, 3);
+		this.controller = new GameController(model, view, canvas, scene, stage, 3, false);
 		
 		view.setController(controller);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
+		// ★追加
+		stage.setMaximized(true);
 		stage.show();
 
 		view.bringButtonToFront();

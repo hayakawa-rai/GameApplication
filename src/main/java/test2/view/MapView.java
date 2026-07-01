@@ -243,7 +243,7 @@ public class MapView {
 			// PAUSEの文字から、縦に「45ピクセル」下にずらした位置に描画
 			gc.fillText("もう一度 Pキー を押すと再開します", canvasWidth / 2.0, (canvasHeight / 2.0) + 45);
 
-			//後続の描画（スコアなど）が崩れないように、基準点をデフォルト（左、トップ）に戻しておく
+			// 後続の描画（スコアなど）が崩れないように、基準点をデフォルト（左、トップ）に戻しておく
 			gc.setTextAlign(javafx.scene.text.TextAlignment.LEFT);
 			gc.setTextBaseline(javafx.geometry.VPos.TOP);
 		} else {
@@ -300,9 +300,21 @@ public class MapView {
 	private final javafx.scene.image.Image pacmanImage = new javafx.scene.image.Image(
 			getClass().getResource("/picture/sengoku.png").toExternalForm());
 
+	private final javafx.scene.image.Image pacmanFeverImage = new javafx.scene.image.Image(
+			getClass().getResource("/picture/sengoku_Fever.png").toExternalForm());
+
 	public void drawPacman(GraphicsContext gc) {
 		Sengoku sengoku = model.getSengoku();
-		if (sengoku == null || !sengoku.isAlive())
+
+		if (sengoku == null)
+			return;
+
+		if (sengoku.isDyingAnimation()) {
+			drawDyingSengoku(gc, sengoku);
+			return;
+		}
+
+		if (!sengoku.isAlive())
 			return;
 
 		if (pacmanImage == null) {
@@ -323,7 +335,29 @@ public class MapView {
 		gc.translate(pacX, pacY);
 		gc.rotate(angle);
 
-		gc.drawImage(pacmanImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
+		// FEVER終了3秒前は点滅
+		if (sengoku.isFever()) {
+
+			long remain = model.getFeverRemainingTime();
+
+			if (remain <= 3000) {
+
+				if ((remain / 150) % 2 == 0) {
+					gc.restore();
+					return;
+
+				}
+			}
+		}
+
+		// 使用画像を決定
+		Image currentImage = pacmanImage;
+
+		if (sengoku.isFever()) {
+			currentImage = pacmanFeverImage;
+		}
+
+		gc.drawImage(currentImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
 				MapData.TILE_SIZE);
 
 		gc.restore();
@@ -384,9 +418,7 @@ public class MapView {
 	public void setupEnemyView(javafx.scene.image.ImageView enemyImageView) {
 
 		enemyImageView.setFitWidth(MapData.TILE_SIZE);
-
 		enemyImageView.setFitHeight(MapData.TILE_SIZE);
-
 		enemyImageView.setPreserveRatio(true);
 
 	}
@@ -394,7 +426,6 @@ public class MapView {
 	// 追加項目
 
 	private void drawEnemy(GraphicsContext gc) {
-
 		Enemy enemy = model.getEnemy();
 
 		if (enemy == null)
@@ -407,41 +438,29 @@ public class MapView {
 			Image img = red.getEnemyImage();
 
 			double enemyLeftX = red.getX() - MapData.TILE_SIZE / 2.0;
-
 			double enemyTopY = red.getY() - MapData.TILE_SIZE / 2.0;
 
 			if (img != null) {
 
 				// ⭕ 画像が正常にある場合は画像を描画
-
 				gc.drawImage(img, enemyLeftX, enemyTopY, MapData.TILE_SIZE, MapData.TILE_SIZE);
 
 			} else {
 
 				// ⚠️ 画像読み込みに失敗している場合は「赤い円」で身代わり描画
-
 				gc.setFill(Color.RED);
-
 				gc.fillOval(red.getX(), red.getY(), MapData.TILE_SIZE, MapData.TILE_SIZE);
 
 				// 中心点が視覚的にわかりやすいように小さな黒い点を打つ
-
 				gc.setFill(Color.BLACK);
-
-				gc.fillOval(red.getX() + MapData.TILE_SIZE / 2.0 - 2,
-
-						red.getY() + MapData.TILE_SIZE / 2.0 - 2, 4, 4);
-
+				gc.fillOval(red.getX() + MapData.TILE_SIZE / 2.0 - 2, red.getY() + MapData.TILE_SIZE / 2.0 - 2, 4, 4);
 			}
-
 		}
-
 	}
 
 	// ⭕ 空っぽだった自動生成メソッドの中身を、中心ズレ補正版の正しい描画ロジックに修正！
 
 	private void drawEnemyInstance(GraphicsContext gc, Enemy enemy) {
-
 		if (enemy == null)
 			return;
 
@@ -473,7 +492,6 @@ public class MapView {
 		// マスの中心座標(X, Y)から半マス引いて、画像の左上基準座標を計算
 
 		double enemyLeftX = enemy.getX() - MapData.TILE_SIZE / 2.0;
-
 		double enemyTopY = enemy.getY() - MapData.TILE_SIZE / 2.0;
 
 		if (img != null) {
@@ -507,6 +525,33 @@ public class MapView {
 
 		}
 
+	}
+
+	private void drawDyingSengoku(GraphicsContext gc, Sengoku sengoku) {
+
+		double progress = sengoku.getDyingProgress();
+
+		double centerX = sengoku.getX() + MapData.TILE_SIZE / 2.0;
+		double centerY = sengoku.getY() + MapData.TILE_SIZE / 2.0;
+
+		double scale = 1.0 - progress;
+
+		gc.save();
+
+		gc.translate(centerX, centerY);
+
+		gc.rotate(progress * 720);
+
+		gc.scale(scale, scale);
+
+		gc.setGlobalAlpha(1.0 - progress);
+
+		gc.drawImage(pacmanImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
+				MapData.TILE_SIZE);
+
+		gc.restore();
+
+		gc.setGlobalAlpha(1.0);
 	}
 
 	private Color getColorFromCSS(Region node, Color defaultColor) {

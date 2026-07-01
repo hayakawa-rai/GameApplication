@@ -34,14 +34,16 @@ public class GameController {
 
 	// 現在のステージ番号（1〜3）を記憶する変数
 	private final int stageNumber;
+	private final boolean isPractice;
 
 	public GameController(Object model, Object view, Canvas canvas, Scene scene, javafx.stage.Stage stage,
-			int stageNumber) {
+			int stageNumber, boolean isPractice) {
 		this.model = model;
 		this.view = view;
 		this.canvas = canvas;
 		this.stage = stage;
 		this.stageNumber = stageNumber; // ⭐ ステージ番号を記憶
+		this.isPractice = isPractice;
 
 		// キーボードの入力を登録
 		attachInput(scene);
@@ -205,6 +207,9 @@ public class GameController {
 					java.lang.reflect.Method isClearedMethod = model.getClass().getMethod("isCleared");
 					java.lang.reflect.Method getSengokuMethod = model.getClass().getMethod("getSengoku");
 
+					// 💡 練習モード用の復活メソッドを事前に取得
+					final java.lang.reflect.Method respawnDotsMethod = model.getClass().getMethod("respawnDots");
+
 					// 💡 一時停止フラグをここで変数に保存
 					boolean isPaused = (boolean) isPausedMethod.invoke(model);
 
@@ -217,38 +222,44 @@ public class GameController {
 						if ((boolean) isGameOverMethod.invoke(model)) {
 							stop();
 							System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
-							switchToGameover(stage, stageNumber);
+							switchToGameover(stage, stageNumber, isPractice);
 							return;
 
 						}
 
 						// すべてのドットを食べ終えたかチェック
 						if ((boolean) isClearedMethod.invoke(model)) {
-							stop();
-							System.out.println("ステージクリア！次の画面へ遷移します。");
+							if (isPractice) {
+								// 💡 練習モード：画面遷移せず、エサを復活させてループを継続
+								respawnDotsMethod.invoke(model);
+							} else {
+								// 💡 本番モード：タイマーを止めて各ステージのクリア画面へ遷移
+								stop();
+								System.out.println("🏁 本番モード：ステージクリア！次の画面へ。");
 
-							int finalScore = 0;
-							Object sengoku = getSengokuMethod.invoke(model);
-							if (sengoku != null) {
-								java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-								finalScore = (int) getScoreMethod.invoke(sengoku);
-							}
+								int finalScore = 0;
+								Object sengoku = getSengokuMethod.invoke(model);
+								if (sengoku != null) {
+									java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
+									finalScore = (int) getScoreMethod.invoke(sengoku);
+								}
 
-							switch (stageNumber) {
-							case 1:
-								switchToStageclear1(stage, finalScore);
-								break;
-							case 2:
-								switchToStageclear2(stage, finalScore);
-								break;
-							case 3:
-								switchToStageclear3(stage, finalScore);
-								break;
-							default:
-								switchToStageclear1(stage, finalScore);
-								break;
+								switch (stageNumber) {
+								case 1:
+									switchToStageclear1(stage, finalScore);
+									break;
+								case 2:
+									switchToStageclear2(stage, finalScore);
+									break;
+								case 3:
+									switchToStageclear3(stage, finalScore);
+									break;
+								default:
+									switchToStageclear1(stage, finalScore);
+									break;
+								}
+								return;
 							}
-							return;
 						}
 					}
 
@@ -346,31 +357,40 @@ public class GameController {
 	}
 
 	// Gameover画面へ変更するためのメソッド
-	public static void switchToGameover(javafx.stage.Stage stage, int stageNum) {
+	// Gameover画面へ変更するためのメソッド（isPractice を受け取れるように引数を3つに修正！）
+	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice) {
 		try {
 			Runnable retryAction;
 
-			// ステージ番号に応じて、リトライ時に実行する処理（関数）を切り替える
+			// ステージ番号 と 練習モードフラグ に応じて、リトライ時に起動するクラスを完全に切り替える
 			switch (stageNum) {
 			case 1:
-				retryAction = () -> test1.Main1.createAndStart(stage);
+				if (isPractice) {
+					retryAction = () -> test1.PracticeMain1.createAndStart(stage); // 練習モード1へ
+				} else {
+					retryAction = () -> test1.Main1.createAndStart(stage); // 本番モード1へ
+				}
 				break;
 			case 2:
-				// ※もしステージ2のクラス名が PracticeMain2 なら以下のように指定
-				retryAction = () -> test2.Main2.createAndStart(stage);
+				if (isPractice) {
+					retryAction = () -> test2.PracticeMain2.createAndStart(stage); // 練習モード2へ
+				} else {
+					retryAction = () -> test2.Main2.createAndStart(stage); // 本番モード2へ
+				}
 				break;
 			case 3:
-				// ※もしステージ3のクラス名が PracticeMain3 なら以下のように指定
-				retryAction = () -> test3.Main3.createAndStart(stage);
+				if (isPractice) {
+					retryAction = () -> test3.PracticeMain3.createAndStart(stage); // 練習モード3へ
+				} else {
+					retryAction = () -> test3.Main3.createAndStart(stage); // 本番モード3へ
+				}
 				break;
 			default:
-				// 予期しない値の場合は、安全のためステージ1に戻す
 				retryAction = () -> test1.Main1.createAndStart(stage);
 				break;
 			}
 
-			// GameoverクラスのScene生成メソッドに、stageとリトライ処理を渡す
-			//（Gameoverクラスのstartメソッドではなく、安全なsetSceneに切り替えます）
+			// Gameoverクラスに、stageと組み立てた適切なリトライ処理を渡す
 			stage.setScene(story.Gameover.create(stage, retryAction));
 			stage.show();
 
@@ -533,9 +553,9 @@ public class GameController {
 
 								// ボタンの重ね合わせの基準を中央（Pos.CENTER）にし、そこから下にずらします
 								javafx.scene.layout.StackPane.setAlignment(node, javafx.geometry.Pos.CENTER);
-								
+
 								node.setTranslateY(100);
-								
+
 								node.setTranslateX(150);
 							});
 							System.out.println("✨ タイトル戻るボタンを最前面レイヤーに引っ越しさせました！");

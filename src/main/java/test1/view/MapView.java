@@ -30,10 +30,15 @@ public class MapView {
 
 	// ボタン変数と口の向き用変数
 	private javafx.scene.control.Button toStartButton;
-	private double lastBaseAngle = 0;
 
 	// 💡 【超重要】自分を動かしているコントローラーのインスタンスを保持する変数
 	private control.GameController myController = null;
+
+	// MapView のフィールドに Pac-Man 画像を追加
+	private final javafx.scene.image.Image pacmanImage = new javafx.scene.image.Image(
+			getClass().getResource("/picture/sengoku.png").toExternalForm());
+	private final javafx.scene.image.Image pacmanFeverImage = new javafx.scene.image.Image(
+			getClass().getResource("/picture/sengoku_Fever.png").toExternalForm());
 
 	public void setController(control.GameController controller) {
 		this.myController = controller;
@@ -59,7 +64,7 @@ public class MapView {
 		pacmanDummy.setVisible(false);
 		root.getChildren().addAll(wallDummy, pacmanDummy);
 
-		//ボタンを初期化する（デザイン・中央揃えバインディング・遷移イベントを一発設定）
+		// ボタンを初期化する（デザイン・中央揃えバインディング・遷移イベントを一発設定）
 		initStartButton();
 
 		// 画面サイズが変わっても、ボタンの左端を常に「画面の真ん中」、高さは「真ん中+90px」に連動
@@ -79,7 +84,6 @@ public class MapView {
 				test.test2.GameController.applyMobileControls(newScene, this.model);
 			}
 		});
-
 	}
 
 	// 画面遷移中かどうかを判定するフラグ
@@ -103,7 +107,6 @@ public class MapView {
 
 			// ボタンが押されたときの処理
 			toStartButton.setOnAction(e -> {
-
 				System.out.println("タイトルへ戻るボタンがクリックされました！");
 
 				toStartButton.setVisible(false);
@@ -120,10 +123,10 @@ public class MapView {
 
 	/**
 	 * ステージ全体を画面サイズに合わせて拡大縮小・中央配置して描画するメインメソッド
-	 * */
+	 */
 	public void draw(GraphicsContext gc, double canvasWidth, double canvasHeight) {
 
-		//タイトル画面に戻る処理が走っていたら、以降の描画を一切行わずに終了する！
+		// タイトル画面に戻る処理が走っていたら、以降の描画を一切行わずに終了する！
 		if (isReturningToTitle) {
 			gc.clearRect(0, 0, canvasWidth, canvasHeight);
 			return;
@@ -135,7 +138,6 @@ public class MapView {
 		gc.fillRect(0, 0, canvasWidth, INFO_HEIGHT);
 
 		Color wallColor = getColorFromCSS(wallDummy, Color.BLUE);
-		Color pacmanColor = getColorFromCSS(pacmanDummy, Color.YELLOW);
 
 		// 1. ステージ本来のサイズを計算
 		int cols = model.getMap()[0].length;
@@ -232,11 +234,11 @@ public class MapView {
 			// PAUSEの文字から、縦に「45ピクセル」下にずらした位置に描画
 			gc.fillText("もう一度 Pキー を押すと再開します", canvasWidth / 2.0, (canvasHeight / 2.0) + 45);
 
-			//後続の描画（スコアなど）が崩れないように、基準点をデフォルト（左、トップ）に戻しておく
+			// 後続の描画（スコアなど）が崩れないように、基準点をデフォルト（左、トップ）に戻しておく
 			gc.setTextAlign(javafx.scene.text.TextAlignment.LEFT);
 			gc.setTextBaseline(javafx.geometry.VPos.TOP);
 		} else {
-			//一時停止中じゃない時はボタンを隠す
+			// 一時停止中じゃない時はボタンを隠す
 			if (toStartButton != null) {
 				toStartButton.setVisible(false);
 			}
@@ -254,6 +256,7 @@ public class MapView {
 		gc.setLineWidth(2);
 		outline.drawOutline(gc);
 
+		// ★ アイテムを描画
 		for (int row = 0; row < rows; row++) {
 			for (int col = 0; col < cols; col++) {
 				int x = col * MapData.TILE_SIZE;
@@ -268,13 +271,10 @@ public class MapView {
 		}
 	}
 
-	// MapView のフィールドに Pac-Man 画像を追加
-	private final javafx.scene.image.Image pacmanImage = new javafx.scene.image.Image(
-			getClass().getResource("/picture/sengoku.png").toExternalForm());
-
 	public void drawPacman(GraphicsContext gc) {
 		Sengoku sengoku = model.getSengoku();
-		if (sengoku == null || !sengoku.isAlive())
+
+		if (sengoku == null)
 			return;
 
 		if (pacmanImage == null) {
@@ -285,8 +285,8 @@ public class MapView {
 
 		double pacX = sengoku.getX() + MapData.TILE_SIZE / 2.0;
 		double pacY = sengoku.getY() + MapData.TILE_SIZE / 2.0;
-
 		gc.save();
+		
 		gc.translate(pacX, pacY);
 		gc.rotate(0);
 		gc.drawImage(pacmanImage, -MapData.TILE_SIZE / 2.0, -MapData.TILE_SIZE / 2.0, MapData.TILE_SIZE,
@@ -350,11 +350,38 @@ public class MapView {
 				gc.setFill(javafx.scene.paint.Color.GREEN);
 			} else if (enemy instanceof YellowEnemy) {
 				gc.setFill(javafx.scene.paint.Color.YELLOW);
+			} else if (enemy instanceof BlueEnemy) {
+				gc.setFill(javafx.scene.paint.Color.BLUE);
 			}
 			gc.fillOval(enemyLeftX, enemyTopY, MapData.TILE_SIZE, MapData.TILE_SIZE);
 			gc.setFill(javafx.scene.paint.Color.BLACK);
 			gc.fillOval(enemy.getX() - 2, enemy.getY() - 2, 4, 4);
 		}
+	}
+
+	private void drawDyingSengoku(GraphicsContext gc, Sengoku sengoku) {
+		double progress = sengoku.getDyingProgress();
+
+		double centerX = sengoku.getX() + MapData.TILE_SIZE / 2.0;
+		double centerY = sengoku.getY() + MapData.TILE_SIZE / 2.0;
+
+		double scale = 1.0 - progress;
+
+		gc.save();
+		gc.translate(centerX, centerY);
+		gc.rotate(progress * 720);
+		gc.scale(scale, scale);
+		gc.setGlobalAlpha(1.0 - progress);
+
+		gc.drawImage(
+				pacmanImage,
+				-MapData.TILE_SIZE / 2.0,
+				-MapData.TILE_SIZE / 2.0,
+				MapData.TILE_SIZE,
+				MapData.TILE_SIZE);
+
+		gc.restore();
+		gc.setGlobalAlpha(1.0);
 	}
 
 	private Color getColorFromCSS(Region node, Color defaultColor) {
@@ -381,7 +408,6 @@ public class MapView {
 	public void bringButtonToFront() {
 		if (toStartButton != null && toStartButton.getParent() instanceof Pane) {
 			Pane parent = (Pane) toStartButton.getParent();
-			// 一度親から外して再度追加することで、要素の重ね順を一番手前にする
 			parent.getChildren().remove(toStartButton);
 			parent.getChildren().add(toStartButton);
 		}
