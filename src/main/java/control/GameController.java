@@ -315,10 +315,8 @@ public class GameController {
 
 	public static void switchToStart(javafx.stage.Stage stage) {
 		try {
-			// startクラスのインスタンスを作る
-			start.Start titleScreen = new start.Start();
-			// ウィンドウの権利(stage)を渡して、タイトル画面を起動・上書きする！
-			titleScreen.start(stage);
+			Start App = new Start();
+			App.start(stage);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -472,15 +470,11 @@ public class GameController {
 	// 画面変更Main1へ
 	public static void switchToGame1(javafx.stage.Stage stage) {
 		try {
-			Main1 App = new Main1();
-			App.start(stage);
-
-			// ウィンドウを「最大化」する
-			stage.setMaximized(true);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	        Main1 App = new Main1();
+	        App.start(stage);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	// 画面変更Mani2へ
