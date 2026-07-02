@@ -26,50 +26,50 @@ public class MapData implements GameMap {
 			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 			{ 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1 }, // ■ ■■ ■
 			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■ ■■■■■ ■■■■ ■■
-																									// ■■■■ ■■■■■ ■
+			// ■■■■ ■■■■■ ■
 			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■ ■■■■■ ■■■■ ■■
-																									// ■■■■ ■■■■■ ■
+			// ■■■■ ■■■■■ ■
 			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 }, // ■ ■■■■ ■■ ■■■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■■■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
-																									// ■■ ■
+			// ■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
-																									// ■■ ■
+			// ■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■ ■■
-																									// ■■ ■■■■
+			// ■■ ■■■■
 			{ 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9 }, // ■■■■ ■■ ■■■■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■■■ ■■
-																									// ■■■■ ■■ ■■■■
+			// ■■■■ ■■ ■■■■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 7, 7, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■■■ ■■■
-																									// ■■■■ ■
+			// ■■■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■ ■ ■■■■ ■
 			{ 1, 1, 1, 1, 0, 0, 0, 2, 0, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 0, 2, 0, 0, 0, 1, 1, 1, 1 }, // ■ ■ ■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■ ■ ■■■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■■■
-																									// ■■■■■■■■ ■■■■
-																									// ■■■■
+			// ■■■■■■■■ ■■■■
+			// ■■■■
 			{ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9 }, //
 			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■■■■■■ ■■
-																									// ■■■■■■■ ■■■■
+			// ■■■■■■■ ■■■■
 			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■■■■ ■■
-																									// ■■■■■■■ ■
+			// ■■■■■■■ ■
 			{ 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 }, // ■ ■■ ■
 			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■■■■■
-																									// ■■ ■■ ■■■■
+			// ■■ ■■ ■■■■
 			{ 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
-																									// ■■ ■
+			// ■■ ■
 			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■ ■■ ■■
-																									// ■■ ■
+			// ■■ ■
 			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■ ■■ ■■■
-																									// ■■ ■■ ■■ ■
+			// ■■ ■■ ■■ ■
 			{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■■ ■■ ■
 			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■■■■ ■■ ■■
-																									// ■■■■ ■■■ ■
+			// ■■■■ ■■■ ■
 			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■ ■ ■■■ ■■
-																									// ■ ■ ■■■ ■
+			// ■ ■ ■■■ ■
 			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■ ■ ■■■ ■■
-																									// ■ ■ ■■■ ■
+			// ■ ■ ■■■ ■
 			{ 1, 0, 0, 2, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 2, 0, 0, 1 }, // ■ ■ ■ ■ ■ ■
 			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■
 																									// ■■■■■■■■■■
@@ -77,14 +77,16 @@ public class MapData implements GameMap {
 
 	};
 
+	// 各マス目に配置されたアイテム(ドット・パワーエサ)を保持する二次元配列
 	private Item[][] itemMap;
 
+	//プレイヤーのキャラクターオブジェクト
 	private Sengoku sengoku;
 
 	// 敵のリスト管理
-
 	private final List<Enemy> enemies = new ArrayList<>();
 
+	//ゲームが一時停止中かどうかの確認
 	private boolean paused = false;
 
 	// 初期アイテム配置（エサ復活用）
@@ -100,9 +102,9 @@ public class MapData implements GameMap {
 	private int stageNumber = 1;
 
 	// 口パク
-	private double mouthAngle = 45;
-	private int mouthOpening = -1;
-	private boolean isBlocked = false;
+	//private double mouthAngle = 45;
+	//private int mouthOpening = -1;
+	//private boolean isBlocked = false;
 
 	// ワープ抑止
 	private boolean justWarped = false;
@@ -130,6 +132,14 @@ public class MapData implements GameMap {
 		this.paused = paused; // 受け取った値をpausedフィールドにセットする
 	}
 
+	/**
+	 * 練習モード用の初期化メソッド。
+	 * プレイヤーの初期位置を通常とは別の座標に設定し、アイテム(ドット・パワーエサ)を
+	 * マップ全体に配置する。enableRespawn が true の場合は、エサ復活用に
+	 * 初期状態のitemMapのコピーを保存しておく。
+	 *
+	 * enableRespawn エサ（ドット）を食べ切ったあとに復活させるかどうか
+	 */
 	public void SampleModel(boolean enableRespawn) {
 		this.enableRespawn = enableRespawn; // これで練習/ストーリーを切り替えられる（エサ復活用）
 		this.sengoku = new Sengoku(10 * TILE_SIZE, 14 * TILE_SIZE, 2);
@@ -160,6 +170,10 @@ public class MapData implements GameMap {
 	}
 
 	// --- itemMap をコピーする ---（エサ復活用）
+	/**
+	 * itemMap（アイテム配置の二次元配列）のディープではない浅いコピーを作成する。
+	 * エサ復活機能で「初期状態のアイテム配置」を保存・復元するために使用する。
+	 */
 	private Item[][] copyItemMap(Item[][] src) {
 		Item[][] dst = new Item[src.length][src[0].length];
 		for (int r = 0; r < src.length; r++) {
@@ -170,6 +184,12 @@ public class MapData implements GameMap {
 		return dst;
 	}
 
+	/**
+	 * 本番モード（ストーリーモード）用のデフォルトコンストラクタ。
+	 * プレイヤーの初期位置を設定し、マップ上の道(0)とパワーエサ(2)の位置に
+	 * アイテムを配置、敵を初期化する。最後にエサ復活用の初期状態を保存し、
+	 * 総アイテム数(totalItems)を記録する。
+	 */
 	public MapData() {
 		// 初期設定
 		this.enableRespawn = false;
@@ -203,14 +223,19 @@ public class MapData implements GameMap {
 		// 最初に配置し終わった時の総数を記憶しておく
 		this.totalItems = this.remainingItems;
 	}
-
+	
+	/**
+	 * 敵キャラクター（赤・緑・黄・青）を初期化してenemiesリストに追加する。
+	 * 既存のリストを一度クリアしてから追加するため、複数回呼んでも敵が重複しない。
+	 * 追加後、全ての敵の状態をSCATTER（散開）にリセットする。	 
+	 */
 	public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
 
 		// ⭕ リストを一度クリアして、敵をどんどん追加する
 
 		enemies.clear();
-		enemies.add(new RedEnemy(this));
-		enemies.add(new GreenEnemy(this)); // 今後Map3Enemyなどもここに enemies.add(...) するだけで追加可能
+		enemies.add(new RedEnemy(this)); // 今後Map3Enemyなどもここに enemies.add(...) するだけで追加可能
+		enemies.add(new GreenEnemy(this));
 		enemies.add(new YellowEnemy(this));
 		enemies.add(new BlueEnemy(this));
 
@@ -224,6 +249,12 @@ public class MapData implements GameMap {
 
 	private long pauseStartTime = 0;
 
+	/**
+	 * ゲームの一時停止／再開を切り替える。
+	 * 一時停止に入るときは開始時刻を記録し、敵のタイマーを止める。
+	 * 再開するときは一時停止していた時間分だけ、FEVERタイマーやCHASE/SCATTERタイマーを
+	 * 後ろにずらして帳尻を合わせ、敵のタイマーを再開する。
+	 */
 	public void togglePause() {
 
 		if (!paused) {
@@ -257,6 +288,13 @@ public class MapData implements GameMap {
 	}
 
 	// ゲーム全体の定期更新
+	/**
+	 * 1. 一時停止中は何もしない
+	 * 2. プレイヤーが死亡アニメーション中なら、アニメーションの進行のみ行い、
+	 *    アニメーション終了時にHPが残っていればリスポーン、HPが0ならgameOverをtrueにする
+	 * 3. 死亡アニメーション中でなければ、プレイヤー移動・FEVER終了判定・
+	 *    CHASE/SCATTERモードの切り替え・敵の移動・口パク更新・当たり判定を順に行う
+	 */
 	public void update() {
 		if (paused)
 			return;
@@ -350,11 +388,17 @@ public class MapData implements GameMap {
 			}
 		}
 		// 口パクの更新
-		updateMouth();
+		//updateMouth();
 		// パックマンと敵の当たり判定を毎フレーム確認
 		checkCollision();
 	}
-
+	
+	/**
+	 * プレイヤーの移動処理を行う。
+	 * ワープマスの検出・ワープ処理・壁として扱う扉(7)/巣(8)の判定・実際の移動、
+	 * そして移動後にいるマスにアイテムがあれば取得（スコア加算・FEVER発動）を行う。
+	 * 一時停止中、またはプレイヤーが死亡している場合は何もしない。
+	 */
 	public void updatePacman() {
 		if (paused || !sengoku.isAlive())
 			return;
@@ -494,7 +538,12 @@ public class MapData implements GameMap {
 	 * this.itemMap = copyItemMap(this.initialItemMap);
 	 * System.out.println("ステージクリア！エサが復活しました！"); }
 	 */
-
+	
+	/**
+	 * 練習モード用：itemMapを初期状態に戻し、残りアイテム数を最大数にリセットする。
+	 * これにより isCleared() が再び false に戻り、ゲームを終わらせずに
+	 * エサを食べ続けられるようになる（練習モードのループ継続用）。
+	 */
 	public void respawnDots() {
 		if (this.initialItemMap != null) {
 			// 1. マップのアイテム配置を初期状態にコピー
@@ -507,7 +556,7 @@ public class MapData implements GameMap {
 		}
 	}
 
-	public void updateMouth() {
+	/*public void updateMouth() {
 		if (paused || !sengoku.isAlive() || sengoku.getDirection() == Characters.Direction.NONE)
 			return;
 
@@ -517,7 +566,15 @@ public class MapData implements GameMap {
 		if (mouthAngle >= 45)
 			mouthOpening = -1;
 	}
-
+	*/
+	
+	/**
+	 * キー入力などから呼ばれ、プレイヤーの次の移動方向をセットする。
+	 * ゲームがまだ開始待ち(waitingStart)の場合は、この最初の入力をトリガーとして
+	 * ゲームを開始状態にし、CHASE/SCATTERタイマーを開始する。
+	 *
+	 * dir→プレイヤーに設定する次の移動方向
+	 */
 	public void setNextDirection(Characters.Direction dir) {
 
 		// sengoku.setNextDirection(dir);
@@ -536,8 +593,16 @@ public class MapData implements GameMap {
 			System.out.println("ゲーム開始");
 		}
 	}
+	
 	// 敵との当たり判定
-
+	/**
+	 * プレイヤーと各敵との距離をチェックし、一定距離(collisionThreshold)以内なら
+	 * 「衝突」とみなす当たり判定処理。
+	 * 敵がFEVER状態の場合はプレイヤーが敵を倒したことになり、スコア加算＆敵をDEAD状態にする。
+	 * それ以外（通常状態の敵）に衝突した場合は、プレイヤーがダメージを受け(takeDamage)、
+	 * 死亡（ミス）アニメーションを開始する(startDying)。
+	 * すでにプレイヤーが死んでいる場合は何もしない。
+	 */
 	private void checkCollision() {
 
 		if (!sengoku.isAlive())
@@ -602,42 +667,47 @@ public class MapData implements GameMap {
 			}
 		}
 	}
-
+	//ゲームが一時停止中かどうか返す。
 	public boolean isPaused() {
 		return paused;
 	}
-
+	//マップデータ(壁・道・アイテム種別を表す二次元配列)を返す。
 	@Override
 	public int[][] getMap() {
 		return map;
 	}
-
+	//プレイヤーの現在のX座標(ピクセル)を返す。sengokuがnullの場合は0を返す。
 	@Override
 	public double getPacX() {
 		return sengoku != null ? sengoku.getX() : 0;
 	}
-
+	//プレイヤーの現在のY座標(ピクセル)を返す。sengokuがnullの場合は0を返す。
 	@Override
 	public double getPacY() {
 		return sengoku != null ? sengoku.getY() : 0;
 	}
-
+	//現在のステージ番号(1～3)を返す。
 	@Override
 	public int getStageNumber() {
 		return stageNumber;
 	}
-
+	//ゲームがまだプレイヤーの初回入力を待っている状態か銅貨を返す。
 	@Override
 	public boolean isWaitingStart() {
 		return waitingStart;
 	}
-
+	//敵キャラクターのリストを返す。
 	@Override
 	public List<Enemy> getEnemies() {
 		return enemies;
 	}
 
 	// ※ common.Direction と Characters.Direction の型が合わない場合はキャストや変換を行ってください
+	/**
+	 * プレイヤーの現在の移動方向を取得する。
+	 * sengoku、またはsengokuの方向がnullの場合はDirection.NONEを返す。
+	 * 名前ベースでCharacters.Directionへの変換を試み、失敗した場合もNONEを返す。
+	 */
 	@Override
 	public Characters.Direction getPlayerDirection() {
 		if (sengoku == null || sengoku.getDirection() == null) {
@@ -653,14 +723,16 @@ public class MapData implements GameMap {
 	}
 
 	// --- getters ---
+	//各マスに配置されているアイテムの二次元配列を返す。
 	public Item[][] getItemMap() {
 		return itemMap;
 	}
-
-	public double getMouthAngle() {
+	//口パクアニメーション用の現在の角度を返す。
+	/*public double getMouthAngle() {
 		return mouthAngle;
 	}
-
+	*/
+	//プレイヤーのキャラクターオブジェを返す。
 	public Sengoku getSengoku() {
 		return sengoku;
 	}
@@ -675,11 +747,15 @@ public class MapData implements GameMap {
 	public void setStageNumber(int stageNum) {
 		this.stageNumber = stageNum;
 	}
-
+	//残りアイテム数が0以下、つまり全てのドット・パワーエサを食べ終えたかどうかを返す。(ステージクリア判定)。
 	public boolean isCleared() {
 		return remainingItems <= 0;
 	}
-
+	/**
+	 * FEVER状態の残り時間（ミリ秒）を返す。
+	 * 一時停止中は、一時停止した時点での残り時間を固定して返す。
+	 * FEVERが発動していない、または既に終了している場合は0以上の値（実質0）を返す。
+	 */
 	public long getFeverRemainingTime() {
 
 		if (paused && feverEndTime > 0) {
@@ -688,7 +764,7 @@ public class MapData implements GameMap {
 
 		return Math.max(0, feverEndTime - System.currentTimeMillis());
 	}
-
+	//ゲームオーバーになったかどうかを返す(プレイヤーのHPが0になった後、死亡アニメーション終了時にtrueになる)。
 	public boolean isGameOver() {
 		return gameOver;
 	}
