@@ -29,11 +29,21 @@ public class MapView {
 	private static final double INFO_HEIGHT = 40;
 
 	// 互換コンストラクタ（引数1つ用）
+	/**
+	 * CSSからの色取得やモバイル操作の初期化は行わず、モデルの参照だけを保持する。
+	 * model 描画対象のゲームデータ
+	 */
 	public MapView(MapData model) {
 		this.model = model;
 	}
 
 	// 新しいコンストラクタ（引数2つ用）
+	/**
+	 * CSSの色をJavaFXの描画色として取り出すための「見えないダミー部品」をrootに追加し、
+	 * Sceneが設定されたタイミングでモバイル用の十字キーコントローラーを適用する。
+	 * model 描画対象のゲームデータ
+	 * root  ダミー部品を追加する親コンテナ
+	 */
 	public MapView(MapData model, Pane root) {
 		this.model = model;
 
@@ -55,6 +65,17 @@ public class MapView {
 
 	/**
 	 * ステージ全体を画面サイズに合わせて拡大縮小・中央配置して描画するメインメソッド
+	 * 
+	 * 1. キャンバスをクリアし、上部の情報バー(INFO_HEIGHT)を黒で塗りつぶす
+	 * 2. CSSから壁色・パックマン色を取得する
+	 * 3. ステージ全体が画面に収まるようスケール・オフセットを計算する
+	 * 4. 変換行列を適用してステージ本体（壁・アイテム・プレイヤー・敵）を描画する
+	 * 5. スコア・残りライフ・区切り線などのUIを描画する
+	 * 6. 一時停止中であれば、画面を暗くして「PAUSE」の文字を表示する
+	 *
+	 * gc           描画先のGraphicsContext
+	 * canvasWidth  キャンバスの現在の幅
+	 * canvasHeight キャンバスの現在の高さ
 	 */
 	public void draw(GraphicsContext gc, double canvasWidth, double canvasHeight) {
 
@@ -163,6 +184,17 @@ public class MapView {
 	}
 
 	// drawStage から背景クリアとパックマン呼び出しを分離・整理した内部メソッド
+	/**
+	 * ステージの中身（壁の輪郭とアイテム）を描画する内部メソッド。
+	 * drawメソッドから背景クリアやプレイヤー描画を分離して整理したもの。
+	 *
+	 * gc          描画先のGraphicsContext
+	 * cols        マップの列数
+	 * rows        マップの行数
+	 * stageWidth  ステージ全体の幅（ピクセル）
+	 * stageHeight ステージ全体の高さ（ピクセル）
+	 * wallColor   壁の輪郭を描画する色
+	 */
 	private void drawStageContent(GraphicsContext gc, int cols, int rows, double stageWidth, double stageHeight,
 			Color wallColor) {
 		Item[][] itemMap = model.getItemMap();
@@ -195,6 +227,15 @@ public class MapView {
 	private final javafx.scene.image.Image pacmanFeverImage = new javafx.scene.image.Image(
 			getClass().getResource("/picture/sengoku_Fever.png").toExternalForm());
 
+	/**
+	 * プレイヤー（戦国）を描画する。
+	 * 死亡アニメーション中は drawDyingSengoku に処理を委譲して回転・縮小・フェードアウト演出を行い、
+	 * 死亡している（isAlive()がfalse）場合は何も描画しない。
+	 * FEVER中は専用画像に切り替え、FEVER終了間際（残り3秒以内）は一定間隔で点滅させる。
+	 * 画像が読み込めていない場合は代わりに黄色い円を描画する。
+	 *
+	 * gc 描画先のGraphicsContext
+	 */
 	public void drawPacman(GraphicsContext gc) {
 		Sengoku sengoku = model.getSengoku();
 
@@ -254,12 +295,24 @@ public class MapView {
 		gc.restore();
 	}
 
+	/**
+	 * 敵用のImageViewの表示サイズをタイルサイズに合わせて設定する（アスペクト比は維持）。
+	 *
+	 * enemyImageView サイズ設定を行う敵の画像View
+	 */
 	public void setupEnemyView(javafx.scene.image.ImageView enemyImageView) {
 		enemyImageView.setFitWidth(MapData.TILE_SIZE);
 		enemyImageView.setFitHeight(MapData.TILE_SIZE);
 		enemyImageView.setPreserveRatio(true);
 	}
 
+	/**
+	 * 互換用：敵リストの先頭（赤い敵）のみを描画する旧メソッド。
+	 * 現在は drawEnemyInstance を使った全敵描画に置き換わっており未使用。
+	 * 画像が読み込めない場合は赤い円と黒い目を代わりに描画する。
+	 *
+	 * gc 描画先のGraphicsContext
+	 */
 	private void drawEnemy(GraphicsContext gc) {
 		Enemy enemy = model.getEnemy();
 		if (enemy == null)
@@ -282,6 +335,14 @@ public class MapView {
 		}
 	}
 
+	/**
+	 * 敵1体分を描画する。敵の種類（赤・緑・黄・青）に応じて対応する画像を取得し、
+	 * その位置に描画する。画像が取得できない場合は、敵の種類ごとの色で円と黒い目を
+	 * 描画する簡易表示にフォールバックする。
+	 *
+	 * gc    描画先のGraphicsContext
+	 * enemy 描画対象の敵（nullの場合は何もしない）
+	 */
 	private void drawEnemyInstance(GraphicsContext gc, Enemy enemy) {
 		if (enemy == null)
 			return;
@@ -319,6 +380,14 @@ public class MapView {
 		}
 	}
 
+	/**
+	 * プレイヤーの死亡（ミス）演出を描画する。
+	 * 死亡進行度(progress: 0.0〜1.0)に応じて、画像を720度回転させながら
+	 * 縮小・フェードアウトさせるアニメーションを行う。
+	 *
+	 * gc      描画先のGraphicsContext
+	 * sengoku 死亡アニメーション中のプレイヤー
+	 */
 	private void drawDyingSengoku(GraphicsContext gc, Sengoku sengoku) {
 		double progress = sengoku.getDyingProgress();
 
@@ -344,6 +413,15 @@ public class MapView {
 		gc.setGlobalAlpha(1.0);
 	}
 
+	/**
+	 * 非表示のダミー部品(Region)に適用されたCSSの背景色を取得する。
+	 * これにより、壁やパックマンの色をCanvas描画側でもCSSファイルから一元管理できる。
+	 * CSSクラスが設定されていない、または色の取得に失敗した場合はdefaultColorを返す。
+	 *
+	 * node         色を取得する対象のダミー部品
+	 * defaultColor 取得に失敗した場合に使うデフォルト色
+	 * @return CSSから取得した色、または defaultColor
+	 */
 	private Color getColorFromCSS(Region node, Color defaultColor) {
 		if (node.getStyleClass().isEmpty()) {
 			return defaultColor;
