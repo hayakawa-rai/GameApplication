@@ -377,6 +377,55 @@ public class GameController {
 		}
 	}
 
+	// Gameover画面へ変更するためのメソッド
+	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice) {
+	    try {
+	        Runnable retryAction;
+
+	        if (isPractice) {
+	            // 🟢 練習モードから来た場合のリトライ先（PracticeMain系）
+	            switch (stageNum) {
+	                case 1:
+	                    retryAction = () -> test1.PracticeMain1.createAndStart(stage);
+	                    break;
+	                case 2:
+	                    retryAction = () -> test2.PracticeMain2.createAndStart(stage);
+	                    break;
+	                case 3:
+	                    retryAction = () -> test3.PracticeMain3.createAndStart(stage);
+	                    break;
+	                default:
+	                    retryAction = () -> test1.PracticeMain1.createAndStart(stage);
+	                    break;
+	            }
+	        } else {
+	            // 🔴 本番モードから来た場合のリトライ先（Main系）
+	            switch (stageNum) {
+	                case 1:
+	                    retryAction = () -> test1.Main1.createAndStart(stage);
+	                    break;
+	                case 2:
+	                    retryAction = () -> test2.Main2.createAndStart(stage);
+	                    break;
+	                case 3:
+	                    retryAction = () -> test3.Main3.createAndStart(stage);
+	                    break;
+	                default:
+	                    retryAction = () -> test1.Main1.createAndStart(stage);
+	                    break;
+	            }
+	        }
+
+	        // Gameoverクラスへ、判別済みのリトライ処理を渡す
+	    //    stage.setScene(story.Gameover.create(stage, retryAction));
+	        stage.show();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+
+
 	// Gameover画面へ変更するためのメソッド（引数4つ版に綺麗に統一！）
 	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice, int score) {
 		try {
