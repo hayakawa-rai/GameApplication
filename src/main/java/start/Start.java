@@ -17,6 +17,7 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import util.WindowUtil;
 
 public class Start extends Application {
 	private AnimationTimer timer;
@@ -259,8 +260,19 @@ public class Start extends Application {
 
 		//ウィンドウの中身を設定・表示
 		stage.setScene(scene);
-		stage.setMaximized(true);
+		WindowUtil.fillScreen(stage);
 		stage.show();
+
+		// 💡 デバッグ用：スケール値を出力
+		javafx.application.Platform.runLater(() -> {
+		    System.out.println("=== Start画面 ===");
+		    System.out.println("outputScaleX=" + stage.getOutputScaleX());
+		    System.out.println("outputScaleY=" + stage.getOutputScaleY());
+		    System.out.println("renderScaleX=" + stage.getRenderScaleX());
+		    System.out.println("renderScaleY=" + stage.getRenderScaleY());
+		    System.out.println("width=" + stage.getWidth() + " height=" + stage.getHeight());
+		    System.out.println("x=" + stage.getX() + " y=" + stage.getY());
+		});
 	}
 
 	//launchをmainで呼び出すことでjavafxのアプリが起動

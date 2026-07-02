@@ -26,6 +26,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import start.Bgm;
+import util.WindowUtil;
 
 public class Story1 extends Application {
 
@@ -41,11 +42,16 @@ public class Story1 extends Application {
 
 		stage.setScene(story());
 		stage.setTitle("story1");
-
-		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
-		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
-
+		WindowUtil.fillScreen(stage);
 		stage.show();
+
+		javafx.application.Platform.runLater(() -> {
+		    System.out.println("outputScaleX=" + stage.getOutputScaleX());
+		    System.out.println("outputScaleY=" + stage.getOutputScaleY());
+		    System.out.println("renderScaleX=" + stage.getRenderScaleX());
+		    System.out.println("renderScaleY=" + stage.getRenderScaleY());
+		    System.out.println("width=" + stage.getWidth() + " height=" + stage.getHeight());
+		});
 
 	}
 
