@@ -1,7 +1,6 @@
 //エネミークラス
 
 package Characters;
-/*
 import java.util.ArrayList;
 import java.util.List;
 
@@ -455,4 +454,3 @@ public abstract class Enemy extends Character {
 	}
 
 }
-*/
