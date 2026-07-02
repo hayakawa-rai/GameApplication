@@ -1,4 +1,7 @@
-// RedEnemy と連携してはさみうちにする BlueEnemy(青) 
+//　BlueEnemy（青）
+//　RedEnemyと連携してプレイヤーをはさみうちにする敵
+//　プレイヤーの進行方向の先を予測し、RedEnemyとの位置関係から追跡地点を決定する
+
 package Characters;
 
 import java.util.List;
@@ -9,53 +12,62 @@ import javafx.scene.image.Image;
 
 public class BlueEnemy extends Enemy {
 
-	// スタート位置(マップ中心 エネミーハウス上)
+	// 初期位置（エネミーハウス中央付近）
 	private static final int START_COL = 14;
 	private static final int START_ROW = 13;
 
-	// プレイヤーの進行方向の2マス先を狙う
+	// プレイヤーの進行方向+2マス先を狙う
 	private static final int PREDICT_TILES = 2;
 
-	// 縄張りエリアの中心（右下）（仮座標）
+	// SCATTER状態時の縄張り座標（右下）
 	private static final int TERRITORY_COL = 24;
 	private static final int TERRITORY_ROW = 26;
 
-	// 出発時間の記録
+	// 出撃時間管理用
 	private long startTime;
 
-	//ゲーム開始した瞬間にタイマーをスタート
+	// 出撃タイマー開始フラグ
 	private boolean timerStarted = false;
-	// 巣から出たか
+
+	// 巣から出撃済みか判定
 	private boolean released = false;
 
 	// 赤の位置を参照
 	private RedEnemy red;
 
 	public BlueEnemy(GameMap mapData) {
+
 		// マスの中心座標を初期位置として Enemy に渡す
 		super(START_COL * GameConfig.TILE_SIZE + GameConfig.TILE_SIZE / 2.0,
 				START_ROW * GameConfig.TILE_SIZE + GameConfig.TILE_SIZE / 2.0, 2);
-
 		this.mapData = mapData;
 
+		// FEVER画像をステージごとに読み込む
 		loadFeverImage();
 
 		// DEAD画像を読み込む
 		loadDeadImage();
 
 		// 現在のステージ番号によって、読み込む画像を切り替える
-		String imagePath = "/picture/narita_EnemyBlue.png"; // デフォルト（ステージ1用）
+		// デフォルト（ステージ1用）
+		String imagePath = "/picture/nari_EnemyBlue.png";
 
 		if (this.mapData != null) {
 			switch (this.mapData.getStageNumber()) {
 			case 1:
-				imagePath = "/picture/narita_EnemyBlue.png"; // ステージ1の画像
+
+				// ステージ1の画像
+				imagePath = "/picture/nari_EnemyBlue.png";
 				break;
 			case 2:
-				imagePath = "/picture/wada_EnemyBlue.png"; // ステージ2の画像
+
+				// ステージ2の画像
+				imagePath = "/picture/taku_EnemyBlue.png";
 				break;
 			case 3:
-				imagePath = "/picture/hayakawa_EnemyBlue.png"; // ステージ3の画像
+
+				// ステージ3の画像
+				imagePath = "/picture/aniki_EnemyBlue.png";
 				break;
 			default:
 				break;
@@ -74,68 +86,62 @@ public class BlueEnemy extends Enemy {
 		try {
 			java.io.InputStream is = getClass().getResourceAsStream(imagePath);
 			if (is == null) {
-				System.err.println("❌【エラー】画像が見つかりません: " + imagePath);
+				System.err.println("【エラー】画像が見つかりません: " + imagePath);
 			} else {
 				this.normalImage = new Image(is);
-				System.out.println("⭕【成功】ステージ" + this.mapData.getStageNumber() + "用の画像を読み込みました！");
+				System.out.println("【成功】ステージ" + this.mapData.getStageNumber() + "用の画像を読み込みました！");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	// 画像の読み込み処理
-	public Image getEnemyImage() {
-		if (this.currentState == Characters.EnemyState.DEAD) {
-			return deadImage;
-		}
-		if (this.currentState == Characters.EnemyState.FEVER) {
-			return feverImage;
-		}
-		return normalImage;
-	}
-
-	// 2秒経過後に出撃
+	// ゲーム開始から2秒後に出撃させる
 	@Override
 	public void move(int[][] map) {
 
-	    if (mapData.isWaitingStart()) {
-	        return;
-	    }
+		// READY中は移動しない
+		if (mapData.isWaitingStart()) {
+			return;
+		}
 
-	    // 初回入力後に初めてタイマー開始
-	    if (!timerStarted) {
+		// 初回入力後に初めてタイマー開始
+		if (!timerStarted) {
+			startTime = System.currentTimeMillis();
+			timerStarted = true;
+		}
 
-	        startTime = System.currentTimeMillis();
-	        timerStarted = true;
-	    }
+		// 出撃待機中
+		if (!released) {
 
-	    if (!released) {
+			// 経過時間を計算
+			long elapsed = System.currentTimeMillis() - startTime;
 
-	        long elapsed = System.currentTimeMillis() - startTime;
-
+			// 2秒経過するまで待機
 			if (elapsed < 2000) {
 				return;
 			}
+			// 出撃許可
+			released = true;
+		}
 
-	        released = true;
-	    }
-
-	    super.move(map);
+		// Enemy共通の移動処理を実行
+		super.move(map);
 	}
 
 	@Override
 	protected Direction decideNextDirection(List<Direction> validDirections, int[][] map, GameMap mapData) {
 
+		// 移動可能な方向が存在しない場合
 		if (mapData == null || validDirections.isEmpty()) {
 			return Direction.NONE;
 		}
 
-		// プレイヤーのタイル座標
+		// プレイヤーの現在位置をタイル座標で取得
 		int pacCol = (int) (mapData.getPacX() / GameConfig.TILE_SIZE);
 		int pacRow = (int) (mapData.getPacY() / GameConfig.TILE_SIZE);
 
-		// プレイヤーの向きの2マス先
+		// プレイヤーの進行方向の2マス先を予測
 		switch (mapData.getPlayerDirection()) {
 		case UP:
 			pacRow -= PREDICT_TILES;
@@ -153,44 +159,61 @@ public class BlueEnemy extends Enemy {
 			break;
 		}
 
-		// RedEnemy の位置
+		// RedEnemyの現在位置を取得
 		int redCol = (int) (red.getX() / GameConfig.TILE_SIZE);
 		int redRow = (int) (red.getY() / GameConfig.TILE_SIZE);
 
-		// ベクトル計算
+		// RedEnemy→予測地点のベクトルを計算
 		int vx = pacCol - redCol;
 		int vy = pacRow - redRow;
 
-		// 2倍した先がターゲット
+		// ベクトルを2倍した地点をターゲットとする
 		int targetCol = pacCol + vx;
 		int targetRow = pacRow + vy;
 
-		// SCATTER
+		// 縄張りモード
 		if (currentState == Characters.EnemyState.SCATTER) {
-			return getClosestDirection(
-					validDirections,
-					TERRITORY_COL,
-					TERRITORY_ROW);
+			return getClosestDirection(validDirections, TERRITORY_COL, TERRITORY_ROW);
 		}
 
-		// 共通処理
+		// FEVER・DEAD状態の共通処理
 		Direction special = handleSpecialState(validDirections, pacCol, pacRow, map);
 
 		if (special != null) {
 			return special;
 		}
 
-		// 親クラスの最短ルート計算メソッドにターゲットマスを渡して、最短ルートで次の一歩を決める
+		// BlueEnemy固有AI
+		// RedEnemyと連携したターゲット地点へ向かう
 		return getClosestDirection(validDirections, targetCol, targetRow);
 	}
 
+	// プレイヤーが被弾時に元の場所、出撃時間をリセット
 	@Override
 	public void resetToStartPosition() {
 
+		// Enemy共通のリセット処理
 		super.resetToStartPosition();
 
+		// 出撃状態を初期化
 		released = false;
+
+		// 出撃タイマーを未開始状態へ戻す
 		timerStarted = false;
 	}
 
+	// ポーズ中の時間を出撃タイマーへ反映する
+	@Override
+	public void resumeTimer() {
+
+		// 出撃待機中のみ補正を行う
+		if (timerStarted && !released) {
+
+			// 出撃待機中のみ補正を行う
+			long pauseDuration = System.currentTimeMillis() - pauseStartTime;
+
+			// タイマーをその分だけ後ろへずらす
+			startTime += pauseDuration;
+		}
+	}
 }

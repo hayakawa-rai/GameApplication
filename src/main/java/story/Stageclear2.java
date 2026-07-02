@@ -13,7 +13,8 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import sample.Sengoku;
+import sample.Syujinkou;
+import util.WindowUtil;
 
 public class Stageclear2 extends Application {
 
@@ -24,7 +25,7 @@ public class Stageclear2 extends Application {
 	private Stage stage;
 
 	// キャラクター保持用の変数
-	private Sengoku sengoku;
+	private Syujinkou syujinkou;
 
 	// ★★★ GameController の new Stageclear2() でエラーを出さないためのコンストラクタ ★★★
 	public Stageclear2() {
@@ -32,10 +33,10 @@ public class Stageclear2 extends Application {
 	}
 
 	// 既存の引数ありコンストラクタ
-	public Stageclear2(Sengoku sengoku) {
-		this.sengoku = sengoku;
-		if (sengoku != null) {
-			this.finalScore = sengoku.getScore();
+	public Stageclear2(Syujinkou syujinkou) {
+		this.syujinkou = syujinkou;
+		if (syujinkou != null) {
+			this.finalScore = syujinkou.getScore();
 		}
 	}
 
@@ -83,11 +84,9 @@ public class Stageclear2 extends Application {
 		// ウィンドウの中身を決定
 		stage.setScene(clear());
 		stage.setTitle("stage2CLEAR");
-		
-		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
-		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
-		
-		stage.show();
+		//画面の強制再設定
+		WindowUtil.fillScreen(stage);
+
 	}
 
 	// クリア画面のシーン生成

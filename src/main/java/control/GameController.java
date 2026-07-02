@@ -215,7 +215,7 @@ public class GameController {
 					java.lang.reflect.Method updateMethod = model.getClass().getMethod("update");
 					java.lang.reflect.Method isGameOverMethod = model.getClass().getMethod("isGameOver");
 					java.lang.reflect.Method isClearedMethod = model.getClass().getMethod("isCleared");
-					java.lang.reflect.Method getSengokuMethod = model.getClass().getMethod("getSengoku");
+					java.lang.reflect.Method getsyujinkouMethod = model.getClass().getMethod("getsyujinkou");
 
 					// 💡 練習モード用の復活メソッドを事前に取得
 					final java.lang.reflect.Method respawnDotsMethod = model.getClass().getMethod("respawnDots");
@@ -236,17 +236,17 @@ public class GameController {
 							// スコアを安全に取得する処理
 							int finalScore = 0;
 							try {
-								Object sengoku = getSengokuMethod.invoke(model);
-								if (sengoku != null) {
-									java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-									finalScore = (int) getScoreMethod.invoke(sengoku);
+								Object syujinkou = getsyujinkouMethod.invoke(model);
+								if (syujinkou != null) {
+									java.lang.reflect.Method getScoreMethod = syujinkou.getClass().getMethod("getScore");
+									finalScore = (int) getScoreMethod.invoke(syujinkou);
 								}
 							} catch (Exception e) {
 								// メソッドがない場合は0のまま進む
 							}
 
 							// 綺麗に一本化したゲームオーバー遷移を呼び出す（スコアも引き渡す）
-							switchToGameover(stage, stageNumber, isPractice, finalScore);
+							switchToGameover(stage, stageNumber, isPractice,finalScore);
 							return;
 						}
 
@@ -261,10 +261,10 @@ public class GameController {
 								System.out.println("🏁 本番モード：ステージクリア！次の画面へ。");
 
 								int finalScore = 0;
-								Object sengoku = getSengokuMethod.invoke(model);
-								if (sengoku != null) {
-									java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-									finalScore = (int) getScoreMethod.invoke(sengoku);
+								Object syujinkou = getsyujinkouMethod.invoke(model);
+								if (syujinkou != null) {
+									java.lang.reflect.Method getScoreMethod = syujinkou.getClass().getMethod("getScore");
+									finalScore = (int) getScoreMethod.invoke(syujinkou);
 								}
 
 								switch (stageNumber) {
@@ -315,10 +315,8 @@ public class GameController {
 
 	public static void switchToStart(javafx.stage.Stage stage) {
 		try {
-			// startクラスのインスタンスを作る
-			start.Start titleScreen = new start.Start();
-			// ウィンドウの権利(stage)を渡して、タイトル画面を起動・上書きする！
-			titleScreen.start(stage);
+			Start App = new Start();
+			App.start(stage);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -426,6 +424,7 @@ public class GameController {
 	}
 
 
+
 	// Gameover画面へ変更するためのメソッド（引数4つ版に綺麗に統一！）
 	public static void switchToGameover(javafx.stage.Stage stage, int stageNum, boolean isPractice, int score) {
 		try {
@@ -471,15 +470,11 @@ public class GameController {
 	// 画面変更Main1へ
 	public static void switchToGame1(javafx.stage.Stage stage) {
 		try {
-			Main1 App = new Main1();
-			App.start(stage);
-
-			// ウィンドウを「最大化」する
-			stage.setMaximized(true);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	        Main1 App = new Main1();
+	        App.start(stage);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	// 画面変更Mani2へ

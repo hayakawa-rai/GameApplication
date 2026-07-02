@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import start.Start;
+import util.WindowUtil;
 
 public class Gameover extends Application {
 
@@ -28,8 +29,9 @@ public class Gameover extends Application {
 	public void start(Stage stage) {
 		stage.setScene(create(stage, null, score));
 		stage.setTitle("ゲーム");
-		stage.setMaximized(true);
-		stage.show();
+		//画面の強制再設定
+		WindowUtil.fillScreen(stage);
+
 	}
 
 	public static Scene create(Stage stage, Runnable retryAction, int score) {
@@ -50,12 +52,12 @@ public class Gameover extends Application {
 		ImageView icon = new ImageView();
 		try {
 
-			java.net.URL imgUrl = Gameover.class.getResource("/picture/gvsengoku.png");
+			java.net.URL imgUrl = Gameover.class.getResource("/picture/syujinkou(gameover).png");
 
 			if (imgUrl != null) {
 				icon.setImage(new Image(imgUrl.toExternalForm()));
 			} else {
-				System.out.println("⚠️ 警告: /sengoku(gameover).png が見つかりません。画像の表示をスキップします。");
+				System.out.println("⚠️ 警告: /syujinkou(gameover).png が見つかりません。画像の表示をスキップします。");
 			}
 		} catch (Exception e) {
 			System.out.println("⚠️ 画像の読み込みに失敗しました。");

@@ -10,10 +10,11 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import test1.model.MapData;
 import test1.view.MapView;
+import util.WindowUtil;
 
 public class Main1 extends Application {
 
-	private static GameController activeController;
+	private GameController controller;
 
 	@Override
 	public void start(Stage stage) {
@@ -27,9 +28,8 @@ public class Main1 extends Application {
 
 	public void starts(Stage stage) {
 		// 多重起動を確実に防止
-		if (activeController != null) {
-			activeController.stop();
-			activeController = null;
+		if (this.controller != null) {
+			this.controller.stop();
 		}
 
 		MapData model = new MapData();
@@ -75,10 +75,6 @@ public class Main1 extends Application {
 
 		// ★ゲーム描画Canvas
 		Canvas canvas = new Canvas();
-		canvas.setMouseTransparent(true);
-
-		canvas.widthProperty().bind(root.widthProperty());
-		canvas.heightProperty().bind(root.heightProperty());
 
 		root.getChildren().addAll(bg, canvas);
 
@@ -99,21 +95,17 @@ public class Main1 extends Application {
 		//敵描画呼び出し　成田
 		model.initEnemy(new javafx.scene.image.ImageView());
 
-		//新しいコントローラーを生成し、activeController に退避させておく
-		GameController controller = new GameController(model, view, canvas, scene, stage, 1, false);
-		activeController = controller;
-
-		view.setController(controller);
+		//完璧に準備ができた最後にコントローラーを1回だけ生成
+		this.controller  = new GameController(model, view, canvas, scene, stage, 1, false);
 
 		stage.setTitle("JavaFX Pacman Stage MVC");
 		stage.setScene(scene);
-		// ★追加
-		stage.show();
-
-		view.bringButtonToFront();
-
+		//画面の強制再設定
+		WindowUtil.fillScreen(stage);
 		canvas.requestFocus();
+
 	}
+		
 
 	public static void main(String[] args) {
 		launch(args);
