@@ -15,7 +15,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import test1.model.MapData;
+import test2.model.MapData;
 
 public class MapView {
 
@@ -111,15 +111,20 @@ public class MapView {
 		Sengoku sengoku = model.getSengoku();
 
 		if (sengoku != null) {
+			
+			// 後続の描画（スコアなど）が崩れないように、基準点をデフォルト（左、トップ）に戻しておく
+			gc.setTextAlign(javafx.scene.text.TextAlignment.LEFT);
+			gc.setTextBaseline(javafx.geometry.VPos.TOP);
+			
 			gc.setFont(Font.font("Arial", FontWeight.BOLD, 18));
 
 			// スコア
 			gc.setFill(Color.WHITE);
-			gc.fillText("SCORE : " + sengoku.getScore(), 20, 28);
+			gc.fillText("SCORE : " + sengoku.getScore(), 20, 12);
 
 			// ライフ
 			gc.setFill(Color.RED);
-			gc.fillText("❤".repeat(sengoku.getHp()), canvasWidth - 100, 28);
+			gc.fillText("❤".repeat(sengoku.getHp()), canvasWidth - 100, 12);
 
 			// 区切り線
 			gc.setStroke(Color.DARKGRAY);

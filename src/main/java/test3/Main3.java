@@ -8,8 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import test1.model.MapData;
-import test1.view.MapView;
+import test3.model.MapData;
+import test3.view.MapView;
 
 public class Main3 extends Application {
 

@@ -8,8 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import test1.model.MapData;
-import test1.view.MapView;
+import test2.model.MapData;
+import test2.view.MapView;
 
 // パックマン・練習用ステージの起動クラス
 public class PracticeMain2 extends Application {
@@ -36,7 +36,7 @@ public class PracticeMain2 extends Application {
         MapData model = new MapData(false);
         Pane root = new Pane();
 
-		MapView view = new MapView(model, root);
+		MapView view = new MapView(model,root);
 
 
 		int viewWidth = model.getMap()[0].length * MapData.TILE_SIZE;
