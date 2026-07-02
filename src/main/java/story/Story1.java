@@ -43,6 +43,8 @@ public class Story1 extends Application {
 		stage.setScene(story());
 		stage.setTitle("story1");
 		WindowUtil.fillScreen(stage);
+		// 💡 描画エンジンのスケールキャッシュをリセットするため、一度隠してから再表示する
+		stage.hide();
 		stage.show();
 
 		javafx.application.Platform.runLater(() -> {

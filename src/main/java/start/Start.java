@@ -261,6 +261,8 @@ public class Start extends Application {
 		//ウィンドウの中身を設定・表示
 		stage.setScene(scene);
 		WindowUtil.fillScreen(stage);
+		// 💡 描画エンジンのスケールキャッシュをリセットするため、一度隠してから再表示する
+		stage.hide();
 		stage.show();
 
 		// 💡 デバッグ用：スケール値を出力
