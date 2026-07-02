@@ -92,16 +92,6 @@ public class BlueEnemy extends Enemy {
 		}
 	}
 
-	// 画像の読み込み処理
-	public Image getEnemyImage() {
-		if (this.currentState == Characters.EnemyState.DEAD) {
-			return deadImage;
-		}
-		if (this.currentState == Characters.EnemyState.FEVER) {
-			return feverImage;
-		}
-		return normalImage;
-	}
 
 	// 2秒経過後に出撃
 	@Override
