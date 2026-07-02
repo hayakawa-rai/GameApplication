@@ -1,4 +1,5 @@
-// 最短距離でプレイヤーを追跡する敵（赤）
+//　RedEnemy(赤)
+// 最短距離でプレイヤーを追跡する敵
 
 package Characters;
 
@@ -10,7 +11,7 @@ import javafx.scene.image.Image;
 
 public class RedEnemy extends Enemy {
 
-	// スタート位置（エネミーハウス付近上）
+	// 初期位置（エネミーハウス中央付近）
 	private static final int START_COL = 13;
 	private static final int START_ROW = 13;
 
