@@ -5,7 +5,14 @@ import javafx.stage.Stage;
 //フルスクリーンver.(これは遷移するときにがくがくする)
 public class WindowUtil {
 
+    private static boolean alreadyFullScreen = false;
+	
     public static void fillScreen(Stage stage) {
+    		//既に全画面状態なら何もしない（再度呼ぶとOSレベルのアニメーションが再発生しガクつくため）
+        if (stage.isFullScreen()) {
+            return;
+        }
+        
         //通常のmaximizedモードは使わず、OSレベルの本当の全画面表示にする
         stage.setFullScreen(true);
 
@@ -14,6 +21,8 @@ public class WindowUtil {
 
         // ESCキーで全画面が解除されないようにする場合は以下を有効化
         // stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        alreadyFullScreen = true;
+    
     }
 }
 
