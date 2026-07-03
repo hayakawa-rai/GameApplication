@@ -18,6 +18,7 @@ import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import start.Bgm;
+import util.WindowUtil;
 
 public class Practice extends Application {
 
@@ -30,12 +31,11 @@ public class Practice extends Application {
 
 	@Override
 	public void start(Stage stage) {
-		this.stage = stage;
-		stage.setScene(createScene());
-		stage.setTitle("練習モード");
-		// ★追加
-		stage.setMaximized(true);
-		stage.show();
+	    this.stage = stage;
+	    stage.setTitle("練習モード");
+	    WindowUtil.fillScreen(stage);   // 先に最大化を確定
+	    stage.setScene(createScene());  // その後でSceneをセット
+
 	}
 
 	private void cleanup() {
@@ -227,9 +227,8 @@ public class Practice extends Application {
 
 		root.getChildren().addAll(bgPane, ui);
 
-		// 現在のStage（window）から実際のサイズを取得する
-		Scene scene = new Scene(root, 1000, 800);
-		stage.setScene(scene);
+		// 固定サイズを渡さない。StageのサイズにScene側が自動追従する。
+	    Scene scene = new Scene(root);
 		//ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
 		stage.setMinWidth(1000);
 		stage.setMinHeight(800);

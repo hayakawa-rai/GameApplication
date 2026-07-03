@@ -17,6 +17,7 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import util.WindowUtil;
 
 public class Start extends Application {
 	private AnimationTimer timer;
@@ -259,8 +260,11 @@ public class Start extends Application {
 
 		//ウィンドウの中身を設定・表示
 		stage.setScene(scene);
-		stage.setMaximized(true);
+		WindowUtil.fillScreen(stage);
+		//リセットするため、一度隠してから再表示する
+		stage.hide();
 		stage.show();
+
 	}
 
 	//launchをmainで呼び出すことでjavafxのアプリが起動

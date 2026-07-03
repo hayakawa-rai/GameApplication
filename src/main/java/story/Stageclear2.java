@@ -8,12 +8,14 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import sample.Sengoku;
+import sample.Syujinkou;
+import util.WindowUtil;
 
 public class Stageclear2 extends Application {
 
@@ -24,7 +26,7 @@ public class Stageclear2 extends Application {
 	private Stage stage;
 
 	// キャラクター保持用の変数
-	private Sengoku sengoku;
+	private Syujinkou syujinkou;
 
 	// ★★★ GameController の new Stageclear2() でエラーを出さないためのコンストラクタ ★★★
 	public Stageclear2() {
@@ -32,10 +34,10 @@ public class Stageclear2 extends Application {
 	}
 
 	// 既存の引数ありコンストラクタ
-	public Stageclear2(Sengoku sengoku) {
-		this.sengoku = sengoku;
-		if (sengoku != null) {
-			this.finalScore = sengoku.getScore();
+	public Stageclear2(Syujinkou syujinkou) {
+		this.syujinkou = syujinkou;
+		if (syujinkou != null) {
+			this.finalScore = syujinkou.getScore();
 		}
 	}
 
@@ -78,16 +80,11 @@ public class Stageclear2 extends Application {
 	// JavaFXのエントリーポイント
 	@Override
 	public void start(Stage stage) {
-		// 受け取った変数Stageを自分のStageに保存
 		this.stage = stage;
-		// ウィンドウの中身を決定
-		stage.setScene(clear());
 		stage.setTitle("stage2CLEAR");
-		
-		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
-		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
-		
-		stage.show();
+		WindowUtil.fillScreen(stage); // 先に最大化を確定
+		stage.setScene(clear()); // その後でSceneをセット
+
 	}
 
 	// クリア画面のシーン生成
@@ -194,9 +191,12 @@ public class Stageclear2 extends Application {
 
 		// 各パーツを縦並びの箱に入れる
 		buttonBox.getChildren().addAll(title, scoreText, textAndImage, next, backButton);
-
 		// 現在のStage（window）から実際のサイズを取得する
-		Scene scene = new Scene(buttonBox, 1000, 800);
+		StackPane root = new StackPane();
+		root.getChildren().add(buttonBox);
+		// 固定サイズを渡さない。StageのサイズにScene側が自動追従する。
+		Scene scene = new Scene(root);
+		// ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
 		stage.setMinWidth(1000);
 		stage.setMinHeight(800);
 

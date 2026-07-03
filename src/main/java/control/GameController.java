@@ -28,6 +28,7 @@ public class GameController {
 	private final Object view; // 描画処理
 	private final Canvas canvas; // 描画先キャンバス
 	private AnimationTimer timer; // ゲームループ(毎フレーム実行)
+	private javafx.scene.layout.VBox pauseLayer;
 
 	// 画面遷移のためにStageを保持する変数
 	private final javafx.stage.Stage stage;
@@ -45,6 +46,8 @@ public class GameController {
 		this.stageNumber = stageNumber; // ⭐ ステージ番号を記憶
 		this.isPractice = isPractice;
 
+		playStageBgm(stageNumber); // ★追加
+		
 		// キーボードの入力を登録
 		attachInput(scene);
 
@@ -171,6 +174,19 @@ public class GameController {
 				// Pキーでゲームを一時停止・再開
 				if (code == KeyCode.P) {
 					togglePauseMethod.invoke(model);
+					
+					if (pauseLayer != null) {
+						boolean isPaused = (boolean) isPausedMethod.invoke(model);
+						if (isPaused) {
+							pauseLayer.setMouseTransparent(false); // ★クリックできるようにする
+							pauseLayer.setVisible(true);           // 十字キーやスコアを完全に覆い隠して表示
+							pauseLayer.requestFocus();             // ボタンをクリック・選択可能にする
+						} else {
+							pauseLayer.setMouseTransparent(true);  // ★クリックを完全にスルーさせる（透明化）
+							pauseLayer.setVisible(false);          // ポーズ解除時はレイヤーを隠す
+							canvas.requestFocus();                 // 操作権をゲーム（Canvas）側に戻す
+						}
+					}
 					return;
 				}
 
@@ -215,7 +231,7 @@ public class GameController {
 					java.lang.reflect.Method updateMethod = model.getClass().getMethod("update");
 					java.lang.reflect.Method isGameOverMethod = model.getClass().getMethod("isGameOver");
 					java.lang.reflect.Method isClearedMethod = model.getClass().getMethod("isCleared");
-					java.lang.reflect.Method getSengokuMethod = model.getClass().getMethod("getSengoku");
+					java.lang.reflect.Method getsyujinkouMethod = model.getClass().getMethod("getsyujinkou");
 
 					// 💡 練習モード用の復活メソッドを事前に取得
 					final java.lang.reflect.Method respawnDotsMethod = model.getClass().getMethod("respawnDots");
@@ -231,15 +247,16 @@ public class GameController {
 						// 敵に捕まった（ゲームオーバー）かチェック
 						if ((boolean) isGameOverMethod.invoke(model)) {
 							stop();
+							start.Bgm.stopBGM(); // ★追加
 							System.out.println("💀 敵に捕まりました...ゲームオーバー画面へ遷移します。");
 
 							// スコアを安全に取得する処理
 							int finalScore = 0;
 							try {
-								Object sengoku = getSengokuMethod.invoke(model);
-								if (sengoku != null) {
-									java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-									finalScore = (int) getScoreMethod.invoke(sengoku);
+								Object syujinkou = getsyujinkouMethod.invoke(model);
+								if (syujinkou != null) {
+									java.lang.reflect.Method getScoreMethod = syujinkou.getClass().getMethod("getScore");
+									finalScore = (int) getScoreMethod.invoke(syujinkou);
 								}
 							} catch (Exception e) {
 								// メソッドがない場合は0のまま進む
@@ -258,13 +275,14 @@ public class GameController {
 							} else {
 								// 💡 本番モード：タイマーを止めて各ステージのクリア画面へ遷移
 								stop();
+								start.Bgm.stopBGM(); // ★追加
 								System.out.println("🏁 本番モード：ステージクリア！次の画面へ。");
 
 								int finalScore = 0;
-								Object sengoku = getSengokuMethod.invoke(model);
-								if (sengoku != null) {
-									java.lang.reflect.Method getScoreMethod = sengoku.getClass().getMethod("getScore");
-									finalScore = (int) getScoreMethod.invoke(sengoku);
+								Object syujinkou = getsyujinkouMethod.invoke(model);
+								if (syujinkou != null) {
+									java.lang.reflect.Method getScoreMethod = syujinkou.getClass().getMethod("getScore");
+									finalScore = (int) getScoreMethod.invoke(syujinkou);
 								}
 
 								switch (stageNumber) {
@@ -315,10 +333,8 @@ public class GameController {
 
 	public static void switchToStart(javafx.stage.Stage stage) {
 		try {
-			// startクラスのインスタンスを作る
-			start.Start titleScreen = new start.Start();
-			// ウィンドウの権利(stage)を渡して、タイトル画面を起動・上書きする！
-			titleScreen.start(stage);
+			Start App = new Start();
+			App.start(stage);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -472,15 +488,11 @@ public class GameController {
 	// 画面変更Main1へ
 	public static void switchToGame1(javafx.stage.Stage stage) {
 		try {
-			Main1 App = new Main1();
-			App.start(stage);
-
-			// ウィンドウを「最大化」する
-			stage.setMaximized(true);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	        Main1 App = new Main1();
+	        App.start(stage);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	// 画面変更Mani2へ
@@ -589,6 +601,7 @@ public class GameController {
 			System.out.println("① forceBackToTitle開始");
 
 			stop();
+			start.Bgm.stopBGM(); // ★追加
 			System.out.println("② timer停止");
 
 			switchStart(this.stage);
@@ -598,47 +611,34 @@ public class GameController {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * 画面内の「タイトルへ戻る」ボタンを、確実に最前面レイヤー(baseHolder)へ引っ越しさせるメソッド
-	 */
-	public void bringTitleButtonToFront() {
-		try {
-			javafx.scene.Parent root = this.stage.getScene().getRoot();
-			if (root instanceof javafx.scene.layout.StackPane) {
-				javafx.scene.layout.StackPane baseHolder = (javafx.scene.layout.StackPane) root;
-
-				// baseHolderの最初の要素（元のメイン画面）を取得
-				if (!baseHolder.getChildren().isEmpty()
-						&& baseHolder.getChildren().get(0) instanceof javafx.scene.layout.Pane) {
-					javafx.scene.layout.Pane rootPane = (javafx.scene.layout.Pane) baseHolder.getChildren().get(0);
-
-					// rootPaneからボタンを探す
-					for (javafx.scene.Node node : rootPane.getChildren()) {
-						if (node instanceof javafx.scene.control.Button
-								&& "タイトルへ戻る".equals(((javafx.scene.control.Button) node).getText())) {
-
-							// 最前面へ引っ越し
-							javafx.application.Platform.runLater(() -> {
-								rootPane.getChildren().remove(node);
-								baseHolder.getChildren().add(node);
-
-								// ボタンの重ね合わせの基準を中央（Pos.CENTER）にし、そこから下にずらします
-								javafx.scene.layout.StackPane.setAlignment(node, javafx.geometry.Pos.CENTER);
-
-								node.setTranslateY(100);
-
-								node.setTranslateX(150);
-							});
-							System.out.println("✨ タイトル戻るボタンを最前面レイヤーに引っ越しさせました！");
-							break;
-						}
-					}
-				}
-			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
+	//BGM処理
+	private void playStageBgm(int stageNumber) {
+	    start.Bgm.playStageBGM(stageNumber); // ★変更：Bgm側に処理を委譲
 	}
 
+	
+	public void setPauseLayer(javafx.scene.layout.VBox pauseLayer) {
+		this.pauseLayer = pauseLayer;
+		
+		if (pauseLayer != null && this.canvas != null && this.canvas.getScene() != null) {
+			javafx.scene.Parent root = this.canvas.getScene().getRoot();
+			
+			// 十字キー自動生成によって作られた、本物の最前面 StackPane を捕まえる
+			if (root instanceof javafx.scene.layout.StackPane) {
+				javafx.scene.layout.StackPane trueRoot = (javafx.scene.layout.StackPane) root;
+				
+				// いったん古い親（Main1のroot）からポーズ画面を引き剥がす
+				if (pauseLayer.getParent() instanceof javafx.scene.layout.Pane) {
+					((javafx.scene.layout.Pane) pauseLayer.getParent()).getChildren().remove(pauseLayer);
+				}
+				
+				// 十字キーよりもさらに上（本当の最前面）にポーズ画面を配置する！
+				javafx.application.Platform.runLater(() -> {
+					if (!trueRoot.getChildren().contains(pauseLayer)) {
+						trueRoot.getChildren().add(pauseLayer);
+					}
+				});
+			}
+		}
+	}
 }

@@ -5,8 +5,8 @@ C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\Enemy.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\EnemyState.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\GreenEnemy.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\RedEnemy.java
-C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\Sengoku.java
-C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\SengokuState.java
+C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\Syujinkou.java
+C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\SyujinkouState.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\Characters\YellowEnemy.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\common\GameConfig.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\common\GameMap.java
@@ -25,7 +25,6 @@ C:\pleiades\2026-03\workspace\Game\src\main\java\sample\GreenEnemy.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\model\SampleModel.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\practice.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\RedEnemy.java
-C:\pleiades\2026-03\workspace\Game\src\main\java\sample\Sengoku.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\stage2\controller\GameController.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\stage2\Main.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\stage2\model\MapData.java
@@ -35,9 +34,11 @@ C:\pleiades\2026-03\workspace\Game\src\main\java\sample\stageclear2.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\stageclear3.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\start.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\story1.java
+C:\pleiades\2026-03\workspace\Game\src\main\java\sample\Syujinkou.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\view\SampleView.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\sample\YellowEnemy.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\start\Bgm.java
+C:\pleiades\2026-03\workspace\Game\src\main\java\start\SoundManager.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\start\Start.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\story\Dialogue.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\story\Gameover.java
@@ -73,3 +74,4 @@ C:\pleiades\2026-03\workspace\Game\src\main\java\test\test2\MapData.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\test\test2\MapView.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\test\test2\TestMainapp.java
 C:\pleiades\2026-03\workspace\Game\src\main\java\test\test2\WallOutline.java
+C:\pleiades\2026-03\workspace\Game\src\main\java\util\WindowUtil.java

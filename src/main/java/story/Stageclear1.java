@@ -15,6 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import test.test2.GameController;
+import util.WindowUtil;
 
 public class Stageclear1 extends Application {
 
@@ -36,15 +37,10 @@ public class Stageclear1 extends Application {
 	// javafxではstartを呼び出さないと起動しないため、親クラスのstartを上書きすることで子クラスを起動
 	@Override
 	public void start(Stage stage) {
-		// 受け取った変数Stageを自分のStageに保存
-		this.stage = stage;
-		// ウィンドウの中身を決定
-		stage.setScene(clear());
-		stage.setTitle("stage1CLEAR");
-
-		stage.setMaximized(true);
-
-		stage.show();
+	    this.stage = stage;
+	    stage.setTitle("stage1CLEAR");
+	    WindowUtil.fillScreen(stage);   // 先に最大化を確定
+	    stage.setScene(clear());        // その後でSceneをセット
 	}
 
 	private AudioClip clearSound;
@@ -206,13 +202,13 @@ public class Stageclear1 extends Application {
 		// titleと画像とtextをまとめたもの、ボタン2つを箱に入れる。
 		buttonBox.getChildren().addAll(title, textAndImage, scoreLabel, next, backButton);
 		// 現在のStage（window）から実際のサイズを取得する
-		//Scene scene = new Scene(buttonBox, 1000, 800);
 		StackPane root = new StackPane();
 		root.getChildren().add(buttonBox);
-		Scene scene = new Scene(root);
+		// 固定サイズを渡さない。StageのサイズにScene側が自動追従する。
+	    Scene scene = new Scene(root);
 		// ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
-		//stage.setMinWidth(1000);
-		//stage.setMinHeight(800);
+		stage.setMinWidth(1000);
+		stage.setMinHeight(800);
 		// CSSを接続
 		scene.getStylesheets().add(
 				getClass().getResource("/css/style.css").toExternalForm());

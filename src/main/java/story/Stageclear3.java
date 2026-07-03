@@ -8,11 +8,13 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import util.WindowUtil;
 
 public class Stageclear3 extends Application {
 	//ウィンドウを保存してどのクラスでも共通のウィンドウを使用するため
@@ -21,16 +23,11 @@ public class Stageclear3 extends Application {
 	//javafxではstartを呼び出さないと起動しないため、親クラスのstartを上書きすることで子クラスを起動
 	@Override
 	public void start(Stage stage) {
-		//受け取った変数Stageを自分のStageに保存
 		this.stage = stage;
-		//ウィンドウの中身を決定
-		stage.setScene(clear());
 		stage.setTitle("stage3CLEAR");
-		
-		stage.setWidth(javafx.stage.Screen.getPrimary().getVisualBounds().getWidth());
-		stage.setHeight(javafx.stage.Screen.getPrimary().getVisualBounds().getHeight());
-		
-		stage.show();
+		WindowUtil.fillScreen(stage); // 先に最大化を確定
+		stage.setScene(clear()); // その後でSceneをセット
+
 	}
 
 	private AudioClip clearSound;
@@ -203,11 +200,14 @@ public class Stageclear3 extends Application {
 
 		// ⭐ 画面要素の追加（scoreLabelを含めた正しい並びを1回だけ実行）
 		buttonBox.getChildren().addAll(title, textAndImage, scoreLabel, next, backButton);
-		// 取得したサイズで新しいSceneを作成
-		Scene scene = new Scene(buttonBox, 1000, 800);
-		//ウィンドウの最小限のサイズを設定
-		stage.setMinWidth(800);
-		stage.setMinHeight(600);
+		// 現在のStage（window）から実際のサイズを取得する
+		StackPane root = new StackPane();
+		root.getChildren().add(buttonBox);
+		// 固定サイズを渡さない。StageのサイズにScene側が自動追従する。
+		Scene scene = new Scene(root);
+		// ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
+		stage.setMinWidth(1000);
+		stage.setMinHeight(800);
 		// CSSを接続
 		scene.getStylesheets().add(
 				getClass().getResource("/css/style.css").toExternalForm());
