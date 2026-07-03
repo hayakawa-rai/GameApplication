@@ -11,10 +11,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
+// import javafx.scene.media.AudioClip; // コメントアウト
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import util.WindowUtil;
 
 public class Stageclear3 extends Application {
@@ -34,9 +33,12 @@ public class Stageclear3 extends Application {
 
 	}
 
+	// 音声・タイマー変数のコメントアウト、または不要なタイマーの保持
+	/*
 	private AudioClip clearSound;
 	private AudioClip clickSound;
 	private AudioClip cancelSound;
+	*/
 	private PauseTransition delay;
 	private PauseTransition pause;
 
@@ -64,7 +66,8 @@ public class Stageclear3 extends Application {
 			pause = null;
 		}
 
-		// 音停止
+		// 音停止（コメントアウト）
+		/*
 		if (clearSound != null) {
 			clearSound.stop();
 			clearSound = null;
@@ -79,10 +82,12 @@ public class Stageclear3 extends Application {
 			cancelSound.stop();
 			cancelSound = null;
 		}
+		*/
 	}
 
 	public Scene clear() {
-		// クリア音
+		// クリア音とタイマー処理をコメントアウト
+		/*
 		clearSound = new AudioClip(
 				getClass().getResource("/music/yay.mp3").toExternalForm());
 		clearSound.setVolume(0.5);
@@ -97,9 +102,10 @@ public class Stageclear3 extends Application {
 
 		// タイマー開始
 		delay.play();
+		*/
 
 		//どこのステージをクリアしたか表示する
-		Text title = new Text("STAGE3    CLEAR!");
+		Text title = new Text("STAGE3   CLEAR!");
 		//フォントサイズとカラーを指定
 		title.setStyle("-fx-font-size: 80px; -fx-fill: rgb(180,180,180);");
 		//獲得したアイテムを表示
@@ -130,26 +136,26 @@ public class Stageclear3 extends Application {
 		buttonBox.setSpacing(20);
 		//中央に配置
 		buttonBox.setAlignment(Pos.CENTER);
-		//音声読み込み
+		
+		// 音声読み込み処理のコメントアウト
+		/*
 		clickSound = new AudioClip(
 				getClass().getResource("/music/select.mp3").toExternalForm());
-		// 音量調整
 		clickSound.setVolume(0.4);
 
-		//音声読み込み
 		cancelSound = new AudioClip(
 				getClass().getResource("/music/cancel.mp3").toExternalForm());
-		// 音量調整
 		cancelSound.setVolume(0.4);
+		*/
 
 		// 次に進むボタン
 		Button next = new Button("次へ");
 		//ボタンにcssに記述したgame-button2を付与、ボタンサイズを指定
 		next.getStyleClass().add("game-button2");
 		next.setPrefSize(250, 80);
-		//次の画面に遷移
+		//次の画面に遷移（効果音とタイマーを省き、即座に実行）
 		next.setOnAction(e -> {
-			// 音を再生
+			/*
 			clickSound.stop();
 			clickSound.play();
 
@@ -160,7 +166,6 @@ public class Stageclear3 extends Application {
 			pause.setOnFinished(ev -> {
 				try {
 					cleanup();
-					// 画面遷移
 					control.GameController.switchStory4(stage);
 				} catch (Exception ex) {
 					ex.printStackTrace();
@@ -169,6 +174,15 @@ public class Stageclear3 extends Application {
 
 			// タイマー開始
 			pause.play();
+			*/
+
+			try {
+				cleanup();
+				// 即座に画面遷移
+				control.GameController.switchStory4(stage);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
 		});
 
 		// ⭐ スコア表示（重複宣言を削除し、すっきり1つに統合）
@@ -180,8 +194,9 @@ public class Stageclear3 extends Application {
 		//ボタンにcssに記述したgame-button2を付与、ボタンサイズを指定
 		backButton.getStyleClass().add("game-button2");
 		backButton.setPrefSize(250, 80);
-		//スタート画面へ戻る
+		//スタート画面へ戻る（こちらも同様に即座に実行）
 		backButton.setOnAction(e -> {
+			/*
 			cancelSound.stop();
 			cancelSound.play();
 
@@ -192,7 +207,6 @@ public class Stageclear3 extends Application {
 			pause.setOnFinished(ev -> {
 				try {
 					cleanup();
-					// 画面遷移
 					control.GameController.switchStart(stage);
 				} catch (Exception ex) {
 					ex.printStackTrace();
@@ -200,6 +214,15 @@ public class Stageclear3 extends Application {
 			});
 			// タイマー開始
 			pause.play();
+			*/
+
+			try {
+				cleanup();
+				// 即座に画面遷移
+				control.GameController.switchStart(stage);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
 		});
 
 		// ⭐ 画面要素の追加（scoreLabelを含めた正しい並びを1回だけ実行）

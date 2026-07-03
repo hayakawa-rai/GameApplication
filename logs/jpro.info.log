@@ -899,3 +899,180 @@ java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2
 2026-07-03 13:38:48,449 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 1443801823, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
 2026-07-03 13:38:48,534 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 1443801823, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
 2026-07-03 13:38:49,418 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 1232301656, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}
+2026-07-03 14:36:28,209 [INFO] from com.jpro.activity in scala-execution-context-global-30 - Starting the server
+2026-07-03 14:36:28,210 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 -  *** Starting JPro: https://www.jpro.one/ ***
+2026-07-03 14:36:28,210 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - OS: Windows 11
+2026-07-03 14:36:28,227 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JPro: 2024.1.0
+2026-07-03 14:36:28,227 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Java version: 17.0.18
+2026-07-03 14:36:28,227 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JVM: 17.0.18 Eclipse Adoptium
+2026-07-03 14:36:28,230 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jar
+2026-07-03 14:36:28,231 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'
+2026-07-03 14:36:28,872 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2026-07-03 14:36:28,890 [INFO] from com.jpro.internal.server.JProInitializer$ in JavaFX Application Thread - JavaFX version: 21.0.2.4-jpro+0
+2026-07-03 14:36:28,959 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - finished init!
+2026-07-03 14:36:28,961 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - [JPro] -> Server started: {start_time: 1783056988208, os_name: Windows 11, jpro_version: 2024.1.0}
+2026-07-03 14:36:29,306 [INFO] from play.api.Play in Thread-0 - Application started (Prod) (no global state)
+2026-07-03 14:36:29,642 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Enabling HTTP/2 on Akka HTTP server...
+2026-07-03 14:36:29,642 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080
+2026-07-03 14:36:30,093 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - application requested: default
+2026-07-03 14:36:30,101 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - Creating Application: default
+2026-07-03 14:36:30,103 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-03 14:36:30,104 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - host          localhost:8080
+2026-07-03 14:36:30,104 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - uri           /app/ws/default
+2026-07-03 14:36:30,275 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 1670824185, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-03 14:36:30,578 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 1670824185, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-03 14:36:33,111 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 14:36:33,132 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@704252b
+2026-07-03 14:36:33,206 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@78aac2d6
+2026-07-03 14:36:33,261 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@412da414
+2026-07-03 14:36:33,342 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5f618745
+2026-07-03 14:36:33,731 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@74c7b40c
+2026-07-03 14:36:55,596 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 14:36:55,601 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4525623f
+2026-07-03 14:36:55,687 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@25c27390
+2026-07-03 14:36:55,718 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@ad80e20
+2026-07-03 14:36:55,750 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2f84e9ef
+2026-07-03 14:36:55,782 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3d4e4cc1
+2026-07-03 14:36:55,815 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5dce4303
+2026-07-03 14:36:55,845 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4a9e69c3
+2026-07-03 14:36:55,878 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@76b6c85c
+2026-07-03 14:36:55,896 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6debf32
+2026-07-03 14:36:55,914 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@507e2b46
+2026-07-03 14:36:55,933 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1af0d0f7
+2026-07-03 14:37:11,760 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@66067dcc
+2026-07-03 14:37:11,781 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@38d30cf8
+2026-07-03 14:37:11,802 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2322e935
+2026-07-03 14:37:11,821 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@a6a2c71
+2026-07-03 14:37:33,201 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@dceabce
+2026-07-03 14:38:05,105 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2e59ac50
+2026-07-03 14:38:49,859 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 14:38:49,869 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@53228a03
+2026-07-03 14:38:50,006 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@161584a5
+2026-07-03 14:38:50,038 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@10a9284
+2026-07-03 14:38:50,100 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@49858aca
+2026-07-03 14:38:50,464 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4103328e
+2026-07-03 14:38:50,849 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@587df1fb
+2026-07-03 14:38:50,888 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@321d2e8a
+2026-07-03 14:48:38,910 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 14:48:38,915 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@78e1a411
+2026-07-03 14:48:38,977 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5ba731b4
+2026-07-03 14:48:39,006 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@22e8478c
+2026-07-03 14:48:39,037 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@25310634
+2026-07-03 14:48:39,069 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5614e74
+2026-07-03 14:48:39,103 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@18549f92
+2026-07-03 14:48:39,132 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7961f461
+2026-07-03 14:48:39,163 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@41b58fd
+2026-07-03 14:48:39,184 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@13ad937b
+2026-07-03 14:48:39,204 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@702ec18
+2026-07-03 14:48:39,223 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3a665014
+2026-07-03 15:08:14,218 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3b9a9206
+2026-07-03 15:08:14,240 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1120cf26
+2026-07-03 15:08:14,261 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@280ee5f
+2026-07-03 15:08:14,285 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@8010557
+2026-07-03 15:09:19,863 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@52052d01
+2026-07-03 15:09:20,776 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2ba793db
+2026-07-03 15:09:23,447 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@28dffaa6
+2026-07-03 15:10:26,730 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:10:32,197 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:10:32,203 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@70c55525
+2026-07-03 15:10:32,257 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@174df31a
+2026-07-03 15:10:32,288 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5c9185b4
+2026-07-03 15:10:32,352 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@60642843
+2026-07-03 15:10:32,708 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@56dfd9e0
+2026-07-03 15:10:32,719 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:10:40,530 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:10:40,536 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@38ae74db
+2026-07-03 15:10:40,592 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:10:40,598 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@10f59732
+2026-07-03 15:10:40,626 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@46450886
+2026-07-03 15:10:40,657 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@53af72f6
+2026-07-03 15:10:40,686 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2890d385
+2026-07-03 15:10:40,717 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@69b345d7
+2026-07-03 15:10:40,746 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@16226fd8
+2026-07-03 15:10:40,775 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7f67a20f
+2026-07-03 15:10:40,797 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@68d4a923
+2026-07-03 15:10:40,814 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@124ec11b
+2026-07-03 15:10:40,836 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@acd524c
+2026-07-03 15:11:05,097 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1c0f8ed7
+2026-07-03 15:11:05,117 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@16829061
+2026-07-03 15:11:05,137 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5719bd9
+2026-07-03 15:11:05,157 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@463c678e
+2026-07-03 15:11:32,681 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@b90a718
+2026-07-03 15:11:58,697 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4c5e80c
+2026-07-03 15:12:43,728 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:12:43,734 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:12:47,529 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:12:47,534 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@25fd86e5
+2026-07-03 15:12:47,857 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@641a4554
+2026-07-03 15:12:47,929 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6005b957
+2026-07-03 15:12:48,014 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4df5ecdc
+2026-07-03 15:12:48,694 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@23a6e75e
+2026-07-03 15:12:49,392 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@737dfaa7
+2026-07-03 15:12:49,476 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6a259019
+2026-07-03 15:12:49,492 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:13:03,498 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:13:03,501 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@35ad364f
+2026-07-03 15:13:03,555 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-03 15:13:03,557 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@71d08198
+2026-07-03 15:13:03,585 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@16b0c14c
+2026-07-03 15:13:03,614 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@c61ae3a
+2026-07-03 15:13:03,646 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@c67a2d6
+2026-07-03 15:13:03,676 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7fa6f7ba
+2026-07-03 15:13:03,708 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2f0f93a3
+2026-07-03 15:13:03,738 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@79242d66
+2026-07-03 15:13:03,757 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@66f1f011
+2026-07-03 15:13:03,777 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5bb07da0
+2026-07-03 15:13:03,795 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@36443b12
+2026-07-03 15:13:21,675 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@b2a5c27
+2026-07-03 15:13:21,693 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5debbe53
+2026-07-03 15:13:21,712 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@633dae3f
+2026-07-03 15:13:21,750 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2be99ed2
+2026-07-03 15:13:52,105 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3e7d7504
+2026-07-03 15:14:11,546 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1b96a8e6
+2026-07-03 15:14:33,003 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1937aa74
+2026-07-03 15:15:15,932 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 1670824185, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}
+2026-07-03 15:15:15,942 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-03 15:15:15,942 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-03 15:15:15,975 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Fri Jul 03 15:15:15 JST 2026      
+2026-07-03 15:15:15,975 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.001 
+2026-07-03 15:15:15,975 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2026-07-03 15:15:15,976 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-03 15:15:15,976 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-03 15:15:15,976 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 1052168277
+2026-07-03 15:15:15,976 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 272846117
+2026-07-03 15:15:15,976 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-03 15:15:16,928 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 1670824185, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}
+2026-07-03 15:17:33,133 [INFO] from com.jpro.activity in scala-execution-context-global-30 - Starting the server
+2026-07-03 15:17:33,134 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 -  *** Starting JPro: https://www.jpro.one/ ***
+2026-07-03 15:17:33,134 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - OS: Windows 11
+2026-07-03 15:17:33,150 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JPro: 2024.1.0
+2026-07-03 15:17:33,150 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Java version: 17.0.18
+2026-07-03 15:17:33,151 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JVM: 17.0.18 Eclipse Adoptium
+2026-07-03 15:17:33,152 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jar
+2026-07-03 15:17:33,154 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'
+2026-07-03 15:17:33,888 [INFO] from com.jpro.internal.server.JProInitializer$ in JavaFX Application Thread - JavaFX version: 21.0.2.4-jpro+0
+2026-07-03 15:17:33,904 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2026-07-03 15:17:33,952 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - finished init!
+2026-07-03 15:17:33,958 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - [JPro] -> Server started: {start_time: 1783059453132, os_name: Windows 11, jpro_version: 2024.1.0}
+2026-07-03 15:17:34,363 [INFO] from play.api.Play in Thread-0 - Application started (Prod) (no global state)
+2026-07-03 15:17:34,784 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Enabling HTTP/2 on Akka HTTP server...
+2026-07-03 15:17:34,785 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080
+2026-07-03 15:17:35,292 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: default
+2026-07-03 15:17:35,298 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: default
+2026-07-03 15:17:35,300 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-03 15:17:35,301 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2026-07-03 15:17:35,301 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/ws/default
+2026-07-03 15:17:35,463 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 901830435, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-03 15:17:35,795 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 901830435, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-03 15:17:49,080 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 901830435, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}
+2026-07-03 15:17:49,081 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-03 15:17:49,081 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-03 15:17:49,091 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Fri Jul 03 15:17:49 JST 2026      
+2026-07-03 15:17:49,091 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.001 
+2026-07-03 15:17:49,091 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2026-07-03 15:17:49,093 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-03 15:17:49,094 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-03 15:17:49,094 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 442939
+2026-07-03 15:17:49,094 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 130359
+2026-07-03 15:17:49,094 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-03 15:17:50,091 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 901830435, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}

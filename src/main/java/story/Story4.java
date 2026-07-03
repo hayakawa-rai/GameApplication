@@ -21,13 +21,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
+// import javafx.scene.media.AudioClip; // コメントアウト
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import start.Bgm;
+// import start.Bgm; // コメントアウト
 import util.WindowUtil;
 
 public class Story4 extends Application {
@@ -50,8 +50,12 @@ public class Story4 extends Application {
 
 	private Timeline blink;
 	private Timeline arrowMove;
+	
+	// 効果音変数のコメントアウト
+	/*
 	private AudioClip jumpSound;
 	private AudioClip aSound;
+	*/
 
 	private TranslateTransition fall;
 	//ストーリー終了処理を1回だけにする用
@@ -125,7 +129,8 @@ public class Story4 extends Application {
 			fall = null;
 		}
 
-		// 効果音停止
+		// 効果音停止（コメントアウト）
+		/*
 		if (jumpSound != null)
 			jumpSound.stop();
 		if (aSound != null)
@@ -133,9 +138,10 @@ public class Story4 extends Application {
 
 		jumpSound = null;
 		aSound = null;
+		*/
 
-		// BGM停止
-		Bgm.stopBGM();
+		// BGM停止（コメントアウト）
+		// Bgm.stopBGM();
 
 		// イベント解除
 		if (scene != null) {
@@ -150,35 +156,33 @@ public class Story4 extends Application {
 
 	public Scene story4() {
 
-		//BGMの再生
+		//BGMと効果音の設定（すべてコメントアウト）
+		/*
 		Bgm.stopBGM();
 		Bgm.playBGM("/music/endhing.mp3");
-		//ジャンプ音の読み込み
 		jumpSound = new AudioClip(
 				getClass().getResource("/music/jump06.mp3").toExternalForm());
-		//音量調整
 		jumpSound.setVolume(0.2);
-		//ダメージ音の読み込み
 		aSound = new AudioClip(
 				getClass().getResource("/music/damage2.mp3").toExternalForm());
-		//音量調整
 		aSound.setVolume(0.4);
+		*/
 
-		//会話内容を設定
+		//会話内容を設定（効果音オブジェクトをすべて null に変更）
 		List<Dialogue> dialogues = Arrays.asList(
-				new Dialogue("あにき", "……!?。", aSound, Color.RED),
+				new Dialogue("あにき", "……!?。", null, Color.RED),
 				new Dialogue("仙石さん", "……終わりだな。", null, Color.WHITE),
 				new Dialogue("あにき", "……ああ、負けだ。", null, Color.RED),
-				new Dialogue("仙石さん", "やりすぎだ。会社まで巻き込んで。", jumpSound, Color.WHITE),
-				new Dialogue("あにき", "分かってる。もうやめる。", jumpSound, Color.RED),
+				new Dialogue("仙石さん", "やりすぎだ。会社まで巻き込んで。", null, Color.WHITE),
+				new Dialogue("あにき", "分かってる。もうやめる。", null, Color.RED),
 				new Dialogue("仙石さん", "ならいい。今ならまだ戻せる。", null, Color.WHITE),
-				new Dialogue("あにき", "……悪かった。全部返します。", jumpSound, Color.RED),
+				new Dialogue("あにき", "……悪かった。全部返します。", null, Color.RED),
 				new Dialogue("仙石さん", "……はぁ。やっとか。", null, Color.WHITE),
-				new Dialogue("仙石さん", "これで普通に働けるな。", jumpSound, Color.WHITE),
-				new Dialogue("あにき", "ああ。一社員としてしっかり働きます。", jumpSound, Color.RED),
+				new Dialogue("仙石さん", "これで普通に働けるな。", null, Color.WHITE),
+				new Dialogue("あにき", "ああ。一社員としてしっかり働きます。", null, Color.RED),
 				new Dialogue("仙石さん", "よし。しっかり反省してるみたいだな。", null, Color.WHITE),
-				new Dialogue("仙石さん", "戻るぞ。仕事が待ってる。", jumpSound, Color.WHITE),
-				new Dialogue("あにき", "はい。先輩！！", jumpSound, Color.RED));
+				new Dialogue("仙石さん", "戻るぞ。仕事が待ってる。", null, Color.WHITE),
+				new Dialogue("あにき", "はい。先輩！！", null, Color.RED));
 
 		//テキストクラスのインスタンスを作成
 		text = new Text("");
@@ -580,25 +584,30 @@ public class Story4 extends Application {
 					anikiView.fitHeightProperty().bind(scene.heightProperty().multiply(1.2));
 					anikiView.translateXProperty().bind(scene.widthProperty().multiply(0.25));
 				}
-				//設定した音をならす
+				
+				// 効果音再生処理のコメントアウト
+				/*
 				if (d.sound != null && d.sound != jumpSound) {
 					d.sound.stop();
 					d.sound.play();
 				}
-				if (d.sound == jumpSound) {
+				*/
+				
+				// 元のコードの「d.sound == jumpSound」の代わりに、ジャンプさせたい会話インデックスで判定
+				if (messageIndex == 3 || messageIndex == 4 || messageIndex == 6 || messageIndex == 8 || messageIndex == 9 || messageIndex == 11 || messageIndex == 12) {
 					if (speaker.equals("あにき")) {
-						jumpAniki = StoryUtils.createJumpAnimation(anikiView, d.sound);
+						jumpAniki = StoryUtils.createJumpAnimation(anikiView, null);
 						jumpAniki.playFromStart();
 
 					} else if (speaker.equals("仙石さん")) {
-						jumpsyujinkou = StoryUtils.createJumpAnimation(syujinkouView, d.sound);
+						jumpsyujinkou = StoryUtils.createJumpAnimation(syujinkouView, null);
 						jumpsyujinkou.playFromStart();
 
 					} else if (speaker.equals("なりなり")) {
-						jumpnari = StoryUtils.createJumpAnimation(nariView, d.sound);
+						jumpnari = StoryUtils.createJumpAnimation(nariView, null);
 						jumpnari.playFromStart();
 					} else if (speaker.equals("わだたく")) {
-						jumptaku = StoryUtils.createJumpAnimation(takuView, d.sound);
+						jumptaku = StoryUtils.createJumpAnimation(takuView, null);
 						jumptaku.playFromStart();
 					}
 				}
@@ -634,12 +643,14 @@ public class Story4 extends Application {
 			}
 		});
 
+		// 初回読み込み時の音再生処理（コメントアウト）
+		/*
 		Dialogue d = dialogues.get(messageIndex);
-		// jumpSound以外は普通に再生
 		if (d.sound != null && d.sound != jumpSound) {
 			d.sound.stop();
 			d.sound.play();
 		}
+		*/
 
 		//CSSを接続
 		scene.getStylesheets().add(
