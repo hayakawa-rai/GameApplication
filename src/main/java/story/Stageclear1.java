@@ -1,6 +1,5 @@
 package story;
 
-import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -10,10 +9,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import test.test2.GameController;
 import util.WindowUtil;
 
@@ -47,14 +44,18 @@ public class Stageclear1 extends Application {
 
 	}
 
+	// 音声とタイマー関連変数をコメントアウト
+	/*
 	private AudioClip clearSound;
 	private AudioClip clickSound;
 	private AudioClip cancelSound;
 	private PauseTransition delay;
 	private PauseTransition pause;
+	*/
 
 	private void cleanup() {
-		// 遅延処理
+		// 効果音や遅延処理のクリーンアップをすべてコメントアウト
+		/*
 		if (delay != null) {
 			delay.stop();
 			delay = null;
@@ -65,7 +66,6 @@ public class Stageclear1 extends Application {
 			pause = null;
 		}
 
-		// 効果音停止
 		if (clearSound != null) {
 			clearSound.stop();
 			clearSound = null;
@@ -80,27 +80,25 @@ public class Stageclear1 extends Application {
 			cancelSound.stop();
 			cancelSound = null;
 		}
+		*/
 	}
 
 	public Scene clear() {
-		// クリア音
+		// クリア音の処理（コメントアウト）
+		/*
 		clearSound = new AudioClip(
 				getClass().getResource("/music/yay.mp3").toExternalForm());
 		clearSound.setVolume(0.5);
 
-		// 0.5秒待つ
 		delay = new PauseTransition(Duration.seconds(0.5));
-
-		// 時間経過後に再生
 		delay.setOnFinished(e -> {
 			clearSound.play();
 		});
-
-		// タイマー開始
 		delay.play();
+		*/
 
 		// どこのステージをクリアしたか表示する
-		Text title = new Text("STAGE1    CLEAR!");
+		Text title = new Text("STAGE1   CLEAR!");
 		// フォントサイズとカラーを指定
 		title.setStyle("-fx-font-size: 80px; -fx-fill: rgb(180,180,180);");
 		// 獲得したアイテムを表示
@@ -131,48 +129,35 @@ public class Stageclear1 extends Application {
 		buttonBox.setSpacing(20);
 		// 中央に配置
 		buttonBox.setAlignment(Pos.CENTER);
-		// 音声読み込み
+
+		// 音声読み込み（コメントアウト）
+		/*
 		clickSound = new AudioClip(
 				getClass().getResource("/music/select.mp3").toExternalForm());
-		// 音量調整
 		clickSound.setVolume(0.4);
 
-		// 音声読み込み
 		cancelSound = new AudioClip(
 				getClass().getResource("/music/cancel.mp3").toExternalForm());
-		// 音量調整
 		cancelSound.setVolume(0.4);
+		*/
 
 		// 次に進むボタン
 		Button next = new Button("次のステージへ");
 		// ボタンにcssに記述したgame-button2を付与、ボタンサイズを指定
 		next.getStyleClass().add("game-button2");
 		next.setPrefSize(250, 80);
-		// 次の画面に遷移
+		// 次の画面に遷移（遅延をなくし、クリック時に即座に遷移させます）
 		next.setOnAction(e -> {
-			// 音を再生
-			clickSound.stop();
-			clickSound.play();
-
-			// 0.5秒待つ
-			pause = new PauseTransition(Duration.seconds(0.5));
-
-			// 待った後に画面遷移
-			pause.setOnFinished(ev -> {
-				try {
-					cleanup();
-					// 画面遷移
-					GameController.switchStory2(stage);
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-			});
-
-			// タイマー開始
-			pause.play();
+			try {
+				cleanup();
+				// 画面遷移
+				GameController.switchStory2(stage);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
 		});
 
-		// ⭐ スコア表示（重複宣言を削除し、すっきり1つに統合）
+		// ⭐ スコア表示
 		Text scoreLabel = new Text("SCORE: " + this.score);
 		scoreLabel.setStyle("-fx-font-size: 30px; -fx-fill:  gray;");
 
@@ -181,38 +166,24 @@ public class Stageclear1 extends Application {
 		// ボタンにcssに記述したgame-button2を付与、ボタンサイズを指定
 		backButton.getStyleClass().add("game-button2");
 		backButton.setPrefSize(250, 80);
-		// スタート画面へ戻る
+		// スタート画面へ戻る（こちらも遅延なしで即座に遷移します）
 		backButton.setOnAction(e -> {
-			cancelSound.stop();
-			cancelSound.play();
-
-			// 0.5秒待つ
-			pause = new PauseTransition(Duration.seconds(0.5));
-
-			// 待った後に画面遷移
-			pause.setOnFinished(ev -> {
-				try {
-					cleanup();
-					// 画面遷移
-					GameController.switchStart(stage);
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-			});
-			// タイマー開始
-			pause.play();
+			try {
+				cleanup();
+				// 画面遷移
+				GameController.switchStart(stage);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
 		});
 
 		// titleと画像とtextをまとめたもの、ボタン2つを箱に入れる。
 		buttonBox.getChildren().addAll(title, textAndImage, scoreLabel, next, backButton);
-		// 現在のStage（window）から実際のサイズを取得する
-		//Scene scene = new Scene(buttonBox, 1000, 800);
+		
 		StackPane root = new StackPane();
 		root.getChildren().add(buttonBox);
 		Scene scene = new Scene(root);
-		// ウィンドウの最小限のサイズを設定(吹き出しから全てが飛び出してしまうため)
-		//stage.setMinWidth(1000);
-		//stage.setMinHeight(800);
+
 		// CSSを接続
 		scene.getStylesheets().add(
 				getClass().getResource("/css/style.css").toExternalForm());

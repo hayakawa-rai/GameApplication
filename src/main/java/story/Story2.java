@@ -20,13 +20,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
+// import javafx.scene.media.AudioClip; // コメントアウト
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import start.Bgm;
+// import start.Bgm; // コメントアウト
 import util.WindowUtil;
 
 public class Story2 extends Application {
@@ -50,6 +50,8 @@ public class Story2 extends Application {
 	private Timeline blink;
 	private Timeline arrowMove;
 
+	// 効果音変数のコメントアウト
+	/*
 	private AudioClip jumpSound;
 	private AudioClip cuteSound;
 	private AudioClip appearSound;
@@ -58,6 +60,7 @@ public class Story2 extends Application {
 	private AudioClip damageSound;
 	private AudioClip aSound;
 	private AudioClip atacSound;
+	*/
 
 	//ストーリー終了処理を1回だけにする用
 	private boolean isEndingStarted = false;
@@ -124,7 +127,8 @@ public class Story2 extends Application {
 			arrowMove = null;
 		}
 
-		// 効果音（全部止める）
+		// 効果音停止処理（コメントアウト）
+		/*
 		if (jumpSound != null)
 			jumpSound.stop();
 		if (cuteSound != null)
@@ -150,9 +154,10 @@ public class Story2 extends Application {
 		damageSound = null;
 		aSound = null;
 		atacSound = null;
+		*/
 
-		// BGM停止
-		Bgm.stopBGM();
+		// BGM停止（コメントアウト）
+		// Bgm.stopBGM();
 
 		// イベント解除
 		if (scene != null) {
@@ -162,75 +167,62 @@ public class Story2 extends Application {
 
 	public Scene story2() {
 
-		//BGMの再生
+		//BGMと効果音の読み込み・設定（すべてコメントアウト）
+		/*
 		Bgm.stopBGM();
 		Bgm.playBGM("/music/naribgm.mp3");
-		//ジャンプ音の読み込み
 		jumpSound = new AudioClip(
 				getClass().getResource("/music/jump06.mp3").toExternalForm());
-		//音量調整
 		jumpSound.setVolume(0.2);
-		//足音の読み込み
 		cuteSound = new AudioClip(
 				getClass().getResource("/music/footsteps.mp3").toExternalForm());
-		//音量調整
 		cuteSound.setVolume(0.3);
-		//登場音の読み込み
 		appearSound = new AudioClip(
 				getClass().getResource("/music/appearance.mp3").toExternalForm());
-		//音量調整
 		appearSound.setVolume(0.3);
-		//まぬけな音の読み込み
 		mysteriousSound = new AudioClip(
 				getClass().getResource("/music/nari.mp3").toExternalForm());
-		//音量調整
 		mysteriousSound.setVolume(0.3);
-		//輝く音の読み込み
 		shineSound = new AudioClip(
 				getClass().getResource("/music/shine.mp3").toExternalForm());
-		//音量調整
 		shineSound.setVolume(0.3);
-		//ダメージ音の読み込み
 		damageSound = new AudioClip(
 				getClass().getResource("/music/damage.mp3").toExternalForm());
-		//音量調整
 		damageSound.setVolume(0.3);
-		//ダメージ音の読み込み
 		aSound = new AudioClip(
 				getClass().getResource("/music/damage2.mp3").toExternalForm());
-		//音量調整
 		aSound.setVolume(0.3);
-		//攻撃音の読み込み
 		atacSound = new AudioClip(
 				getClass().getResource("/music/atac.mp3").toExternalForm());
-		//音量調整
 		atacSound.setVolume(0.3);
-		//会話内容を設定
+		*/
+
+		// 会話内容を設定（効果音オブジェクトの指定をすべて null または ダミーの判定用文字列の代わりに null に変更）
 		List<Dialogue> dialogues = Arrays.asList(
-				new Dialogue("なりなり", "あ、あれっ…！？", mysteriousSound, Color.ORANGE), //0
-				new Dialogue("仙石さん", "弱いな！？", jumpSound, Color.WHITE), //1
+				new Dialogue("なりなり", "あ、あれっ…！？", null, Color.ORANGE), //0
+				new Dialogue("仙石さん", "弱いな！？", null, Color.WHITE), //1
 				new Dialogue("なりなり", "ま、まだだ…まだ終わってない…！", null, Color.ORANGE), //2
-				new Dialogue("仙石さん", "もう終わってる。", mysteriousSound, Color.WHITE), //3
-				new Dialogue("なりなり", "ぐああああああ！！", damageSound, Color.ORANGE), //4
+				new Dialogue("仙石さん", "もう終わってる。", null, Color.WHITE), //3
+				new Dialogue("なりなり", "ぐああああああ！！", null, Color.ORANGE), //4
 				new Dialogue("あにき", "クク…やはり雑魚か。", null, Color.RED), //5
-				new Dialogue("仙石さん", "おい、完全に遊ばれてるぞ。", jumpSound, Color.WHITE), //6
+				new Dialogue("仙石さん", "おい、完全に遊ばれてるぞ。", null, Color.WHITE), //6
 				new Dialogue("あにき", "まあいい。次は特別だ。", null, Color.RED), //7
-				new Dialogue("あにき", "来い、わだたく。", jumpSound, Color.RED), //8
-				new Dialogue("わだたく", "……とてとて…", cuteSound, Color.PINK), //9
-				new Dialogue("わだたく", "……ぴょこっ", appearSound, Color.PINK), //10
-				new Dialogue("仙石さん", "……ん？", mysteriousSound, Color.WHITE), //11
-				new Dialogue("仙石さん", "なんだこのかわいい生き物は。", jumpSound, Color.WHITE), //12
-				new Dialogue("わだたく", "わだ〜たく〜…♪", shineSound, Color.PINK), //13
-				new Dialogue("わだたく", "よろしくね♪", shineSound, Color.PINK), //14
-				new Dialogue("仙石さん", "……弱そうだな。", mysteriousSound, Color.WHITE), //15
+				new Dialogue("あにき", "来い、わだたく。", null, Color.RED), //8
+				new Dialogue("わだたく", "……とてとて…", null, Color.PINK), //9
+				new Dialogue("わだたく", "……ぴょこっ", null, Color.PINK), //10
+				new Dialogue("仙石さん", "……ん？", null, Color.WHITE), //11
+				new Dialogue("仙石さん", "なんだこのかわいい生き物は。", null, Color.WHITE), //12
+				new Dialogue("わだたく", "わだ〜たく〜…♪", null, Color.PINK), //13
+				new Dialogue("わだたく", "よろしくね♪", null, Color.PINK), //14
+				new Dialogue("仙石さん", "……弱そうだな。", null, Color.WHITE), //15
 				new Dialogue("あにき", "見た目で判断するな。", null, Color.RED), //16
-				new Dialogue("わだたく", "えいっ", atacSound, Color.PINK), //17
-				new Dialogue("仙石さん", "ぐっ！？", aSound, Color.WHITE), //18
+				new Dialogue("わだたく", "えいっ", null, Color.PINK), //17
+				new Dialogue("仙石さん", "ぐっ！？", null, Color.WHITE), //18
 				new Dialogue("仙石さん", "な、何だ今の一撃は…！", null, Color.WHITE), //19
-				new Dialogue("わだたく", "あそぼ？♪", shineSound, Color.RED), //20
-				new Dialogue("わだたく", "いっぱいあそぼ〜♪", shineSound, Color.RED), //21
+				new Dialogue("わだたく", "あそぼ？♪", null, Color.RED), //20
+				new Dialogue("わだたく", "いっぱいあそぼ〜♪", null, Color.RED), //21
 				new Dialogue("あにき", "そいつは俺のペットでな。", null, Color.RED), //22
-				new Dialogue("あにき", "強そうに見えないが、遊ばれたら最後だ。", jumpSound, Color.RED)//23
+				new Dialogue("あにき", "強そうに見えないが、遊ばれたら最後だ。", null, Color.RED)//23
 		);
 
 		//テキストクラスのインスタンスを作成
@@ -620,9 +612,9 @@ public class Story2 extends Application {
 
 				if (messageIndex == 5) {
 					insertView.setVisible(false);
-					//BGMの再生
-					Bgm.stopBGM();
-					Bgm.playBGM("/music/storybgm.mp3");
+					//BGMの再生（コメントアウト）
+					// Bgm.stopBGM();
+					// Bgm.playBGM("/music/storybgm.mp3");
 				}
 
 				//ダメージ受けたときの横揺れ
@@ -661,25 +653,29 @@ public class Story2 extends Application {
 				Dialogue d = dialogues.get(messageIndex);
 				//誰が話しているかの情報取得
 				String speaker = d.speaker;
-				//設定した音をならす
-
+				
+				//効果音再生処理のコメントアウト（ジャンプアニメーションのみ条件を変更して残す）
+				/*
 				if (d.sound != null && d.sound != jumpSound) {
 					d.sound.play();
 				}
-				if (d.sound == jumpSound) {
+				*/
+				// 元のコードの「d.sound == jumpSound」の判定を、特定の会話インデックスなどでジャンプさせたい場合はここを修正
+				// 今回は効果音が全無効（null）のため、ジャンプを発生させたいキャラクターの条件（インデックスや話者）でアニメーションを作動させます
+				if (messageIndex == 1 || messageIndex == 6 || messageIndex == 8 || messageIndex == 12 || messageIndex == 15 || messageIndex == 23) {
 					if (speaker.equals("あにき")) {
-						jumpAniki = StoryUtils.createJumpAnimation(anikiView, d.sound);
+						jumpAniki = StoryUtils.createJumpAnimation(anikiView, null);
 						jumpAniki.playFromStart();
 
 					} else if (speaker.equals("仙石さん")) {
-						jumpsyujinkou = StoryUtils.createJumpAnimation(syujinkouView, d.sound);
+						jumpsyujinkou = StoryUtils.createJumpAnimation(syujinkouView, null);
 						jumpsyujinkou.playFromStart();
 
 					} else if (speaker.equals("なりなり")) {
-						jumpnari = StoryUtils.createJumpAnimation(nariView, d.sound);
+						jumpnari = StoryUtils.createJumpAnimation(nariView, null);
 						jumpnari.playFromStart();
 					} else if (speaker.equals("わだたく")) {
-						jumptaku = StoryUtils.createJumpAnimation(takuView, d.sound);
+						jumptaku = StoryUtils.createJumpAnimation(takuView, null);
 						jumptaku.playFromStart();
 					}
 				}
@@ -716,12 +712,14 @@ public class Story2 extends Application {
 			}
 		});
 
+		// 初回読み込み時の音再生処理（コメントアウト）
+		/*
 		Dialogue d = dialogues.get(messageIndex);
-		// jumpSound以外は普通に再生
 		if (d.sound != null && d.sound != jumpSound) {
 			d.sound.stop();
 			d.sound.play();
 		}
+		*/
 
 		//CSSを接続
 		scene.getStylesheets().add(

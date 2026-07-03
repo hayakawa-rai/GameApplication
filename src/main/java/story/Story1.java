@@ -19,13 +19,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
+// import javafx.scene.media.AudioClip; // コメントアウト
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import start.Bgm;
+// import start.Bgm; // コメントアウト
 import util.WindowUtil;
 
 public class Story1 extends Application {
@@ -48,7 +48,7 @@ public class Story1 extends Application {
 
 	private Timeline blink;
 	private Timeline arrowMove;
-	private AudioClip jumpSound;
+	// private AudioClip jumpSound; // コメントアウト
 
 	//ストーリー終了処理を1回だけにする用
 	private boolean isEndingStarted = false;
@@ -110,14 +110,16 @@ public class Story1 extends Application {
 			arrowMove = null;
 		}
 
-		// 効果音
+		// 効果音（コメントアウト）
+		/*
 		if (jumpSound != null) {
 			jumpSound.stop();
 			jumpSound = null;
 		}
+		*/
 
-		// BGM停止
-		Bgm.stopBGM();
+		// BGM停止（コメントアウト）
+		// Bgm.stopBGM();
 
 		// クリックイベント解除
 		if (scene != null) {
@@ -128,30 +130,33 @@ public class Story1 extends Application {
 
 	public Scene story() {
 
-		//BGMの再生
-		Bgm.stopBGM();
-		Bgm.playBGM("/music/storybgm.mp3");
+		//BGMの再生（コメントアウト）
+		// Bgm.stopBGM();
+		// Bgm.playBGM("/music/storybgm.mp3");
 
-		//ジャンプ音の読み込み
+		//ジャンプ音の読み込み（コメントアウト）
+		/*
 		jumpSound = new AudioClip(
 				getClass().getResource("/music/jump06.mp3").toExternalForm());
-		//音量調整
-		jumpSound.setVolume(0.2);
+		*/
+		//音量調整（コメントアウト）
+		// jumpSound.setVolume(0.2);
 
+		// 効果音の引数を null に変更
 		List<Dialogue> dialogues = Arrays.asList(
-				new Dialogue("仙石さん", "おはよ～～！！", jumpSound, Color.WHITE),
-				new Dialogue("あにき", "先輩社員サン、ですか。", jumpSound, Color.RED),
-				new Dialogue("あにき", "今日からここの社長は俺だ。", jumpSound, Color.RED),
-				new Dialogue("あにき", "休憩時間以外は全て俺のものだ！！！", jumpSound, Color.RED),
-				new Dialogue("仙石さん", "ふざけるな。ここは俺たちの会社だ。", jumpSound, Color.WHITE),
-				new Dialogue("仙石さん", "取り戻してやる！！", jumpSound, Color.WHITE),
-				new Dialogue("あにき", "クク……熱いねえ", jumpSound, Color.RED),
-				new Dialogue("あにき", "だが、まずは順番ってものがある。", jumpSound, Color.RED),
-				new Dialogue("あにき", "新入社員を育てるのも、上司の務めだろう？", jumpSound, Color.RED),
-				new Dialogue("なりなり", "ここから先は通しませんよ、先輩。", jumpSound, Color.ORANGE),
-				new Dialogue("なりなり", "自分、もう\"研修\"は終わってるんで。", jumpSound, Color.ORANGE),
-				new Dialogue("仙石さん", "研修で覚えたのは、会社を乗っ取ることか？", jumpSound, Color.WHITE),
-				new Dialogue("仙石さん", "教育しなおしてやる！！", jumpSound, Color.WHITE));
+				new Dialogue("仙石さん", "おはよ～～！！", null, Color.WHITE),
+				new Dialogue("あにき", "先輩社員サン、ですか。", null, Color.RED),
+				new Dialogue("あにき", "今日からここの社長は俺だ。", null, Color.RED),
+				new Dialogue("あにき", "休憩時間以外は全て俺のものだ！！！", null, Color.RED),
+				new Dialogue("仙石さん", "ふざけるな。ここは俺たちの会社だ。", null, Color.WHITE),
+				new Dialogue("仙石さん", "取り戻してやる！！", null, Color.WHITE),
+				new Dialogue("あにき", "クク……熱いねえ", null, Color.RED),
+				new Dialogue("あにき", "だが、まずは順番ってものがある。", null, Color.RED),
+				new Dialogue("あにき", "新入社員を育てるのも、上司の務めだろう？", null, Color.RED),
+				new Dialogue("なりなり", "ここから先は通しませんよ、先輩。", null, Color.ORANGE),
+				new Dialogue("なりなり", "自分、もう\"研修\"は終わってるんで。", null, Color.ORANGE),
+				new Dialogue("仙石さん", "研修で覚えたのは、会社を乗っ取ることか？", null, Color.WHITE),
+				new Dialogue("仙石さん", "教育しなおしてやる！！", null, Color.WHITE));
 
 		//テキストクラスのインスタンスを作成
 		text = new Text("");

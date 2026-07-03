@@ -1,6 +1,5 @@
 package story;
 
-import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -9,10 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import sample.Syujinkou;
 import util.WindowUtil;
 
@@ -45,15 +42,17 @@ public class Stageclear2 extends Application {
 		this.finalScore = score;
 	}
 
-	private AudioClip clearSound;
-	private AudioClip clickSound;
-	private AudioClip cancelSound;
-
-	private PauseTransition delay;
-	private PauseTransition pause;
+	//	private AudioClip clearSound;
+	//	private AudioClip clickSound;
+	//	private AudioClip cancelSound;
+	//
+	//	private PauseTransition delay;
+	//	private PauseTransition pause;
 
 	// メディアやタイマーを安全に停止するクリーンアップ処理
 	private void cleanup() {
+		/* 効果音や遅延処理のクリーンアップをコメントアウト
+		 
 		if (delay != null) {
 			delay.stop();
 			delay = null;
@@ -74,6 +73,7 @@ public class Stageclear2 extends Application {
 			cancelSound.stop();
 			cancelSound = null;
 		}
+		*/
 	}
 
 	// JavaFXのエントリーポイント
@@ -91,7 +91,7 @@ public class Stageclear2 extends Application {
 
 	// クリア画面のシーン生成
 	public Scene clear() {
-		// クリア音
+		/* クリア音をコメントアウト
 		clearSound = new AudioClip(getClass().getResource("/music/yay.mp3").toExternalForm());
 		clearSound.setVolume(0.5);
 
@@ -105,6 +105,7 @@ public class Stageclear2 extends Application {
 
 		// タイマー開始
 		delay.play();
+		*/
 
 		// どこのステージをクリアしたか表示する
 		Text title = new Text("STAGE2    CLEAR!");
@@ -135,18 +136,21 @@ public class Stageclear2 extends Application {
 		buttonBox.setSpacing(20);
 		buttonBox.setAlignment(Pos.CENTER);
 
-		// 音声読み込み
+		/* 音声読み込みをコメントアウト
 		clickSound = new AudioClip(getClass().getResource("/music/select.mp3").toExternalForm());
 		clickSound.setVolume(0.4);
 
 		cancelSound = new AudioClip(getClass().getResource("/music/cancel.mp3").toExternalForm());
 		cancelSound.setVolume(0.4);
+		*/
 
 		// 次に進むボタン
 		Button next = new Button("次のステージへ");
 		next.getStyleClass().add("game-button2");
 		next.setPrefSize(250, 80);
+		// クリック時の処理の中にある効果音をコメントアウト
 		next.setOnAction(e -> {
+			/*
 			clickSound.stop();
 			clickSound.play();
 
@@ -163,15 +167,18 @@ public class Stageclear2 extends Application {
 				}
 			});
 
-			// タイマー開始
+			// タイマー開始 このタイマーは効果音がなってから次の画面に遷移するためにクリックしてから0.5秒画面遷移を待つように設定している
 			pause.play();
+			*/
 		});
 
 		// 戻るボタン
 		Button backButton = new Button("タイトルへ");
 		backButton.getStyleClass().add("game-button2");
 		backButton.setPrefSize(250, 80);
+		// 次に進むボタン同様処理の中にある効果音をコメントアウト
 		backButton.setOnAction(e -> {
+			/*
 			cancelSound.stop();
 			cancelSound.play();
 
@@ -187,8 +194,9 @@ public class Stageclear2 extends Application {
 					ex.printStackTrace();
 				}
 			});
-			// タイマー開始
+			// タイマー開始　上記同様の仕様、コメントアウトしている理由は効果音をコメントアウトしているため即座に画面遷移してもいいと判断したため
 			pause.play();
+			*/
 		});
 
 		// 各パーツを縦並びの箱に入れる
