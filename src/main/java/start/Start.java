@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.AudioClip;
+// import javafx.scene.media.AudioClip; // 【修正】使用しないため一旦コメントアウト
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -21,7 +21,7 @@ import util.WindowUtil;
 
 public class Start extends Application {
 	private AnimationTimer timer;
-	private AudioClip clickSound;
+	// private AudioClip clickSound; // 【修正】一時的に無効化
 
 	private void cleanup() {
 
@@ -32,13 +32,15 @@ public class Start extends Application {
 		}
 
 		// 効果音停止
+		/* 【修正】一時的に無効化
 		if (clickSound != null) {
 			clickSound.stop();
 			clickSound = null;
 		}
+		*/
 
 		// BGM停止
-		Bgm.stopBGM();
+		// Bgm.stopBGM(); // 【修正】一時的に無効化
 	}
 
 	//javafxのApplicationにもともとあるstartを上書き
@@ -88,7 +90,7 @@ public class Start extends Application {
 
 		// AnimationTimer:javafxでのループ処理(handle()のみを繰り返し呼び出す)
 		timer = new AnimationTimer() {
-			//Applicationにhandleというメソッドがあるため書き換え(AnimationTimerはhandl()しか呼び出せないためhandleを使用)
+			//Applicationにhandleというメソッドがあるため書き換え(AnimationTimerはhandl()しか呼び出せないためhandle使用)
 			@Override
 			public void handle(long now) {
 				//背景画像を1pxづつ左に動かしている
@@ -137,14 +139,16 @@ public class Start extends Application {
 		buttonBox.setSpacing(20);
 		// 中央に設定
 		buttonBox.setAlignment(Pos.CENTER);
-		// BGMの再生
-		Bgm.playBGM("/music/startbgm.mp3");
+		
+		// 【修正】BGMの再生を一時的に無効化
+		// Bgm.playBGM("/music/startbgm.mp3");
 
-		// 音声読み込み
+		// 【修正】音声読み込みと音量調整を一時的に無効化
+		/*
 		clickSound = new AudioClip(
 				getClass().getResource("/music/select.mp3").toExternalForm());
-		// 音量調整
 		clickSound.setVolume(0.4);
+		*/
 
 		// ストーリーモードへ飛ぶボタンを作成
 		Button btn1 = new Button("▶ストーリー");
@@ -155,11 +159,13 @@ public class Start extends Application {
 		btn1.setOnAction(e -> {
 			try {
 				
-				// 音を鳴らす
+				// 【修正】効果音の再生を一時的に無効化
+				/*
 				clickSound.stop();
 				clickSound.play();
+				*/
 				
-				// 0.15秒後に画面遷移
+				// 0.5秒後に画面遷移
 				Timeline delay = new Timeline(
 					new KeyFrame(Duration.millis(500), ev -> {
 
@@ -184,11 +190,13 @@ public class Start extends Application {
 		btn2.setOnAction(e -> {
 			try {
 
-				// 音を鳴らす
+				// 【修正】効果音の再生を一時的に無効化
+				/*
 				clickSound.stop();
 				clickSound.play();
+				*/
 
-				// 0.15秒後に画面遷移
+				// 0.5秒後に画面遷移
 				Timeline delay = new Timeline(
 					new KeyFrame(Duration.millis(500), ev -> {
 
@@ -218,9 +226,11 @@ public class Start extends Application {
 		btn3.setOnAction(e -> {
 			try {
 
-				// 効果音を鳴らす
+				// 【修正】効果音の再生を一時的に無効化
+				/*
 				clickSound.stop();
 				clickSound.play();
+				*/
 
 				// 他のボタンに合わせて0.5秒後にアプリを閉じる
 				Timeline delay = new Timeline(

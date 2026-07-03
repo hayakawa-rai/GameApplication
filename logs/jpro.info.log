@@ -432,3 +432,191 @@ java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2
 	at java.base/java.lang.Thread.run(Thread.java:840)
 2026-07-02 09:33:43,726 [WARN] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Application didn't show the stage. JPro is now calling show()
 2026-07-02 09:33:44,481 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - WORKAROUND! setting XY for Window because current XY is NaN
+2026-07-02 17:54:56,746 [INFO] from com.jpro.activity in scala-execution-context-global-30 - Starting the server
+2026-07-02 17:54:56,747 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 -  *** Starting JPro: https://www.jpro.one/ ***
+2026-07-02 17:54:56,748 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - OS: Windows 11
+2026-07-02 17:54:56,773 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JPro: 2024.1.0
+2026-07-02 17:54:56,773 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Java version: 17.0.18
+2026-07-02 17:54:56,774 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JVM: 17.0.18 Eclipse Adoptium
+2026-07-02 17:54:56,776 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jar
+2026-07-02 17:54:56,778 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'
+2026-07-02 17:54:57,577 [INFO] from com.jpro.internal.server.JProInitializer$ in JavaFX Application Thread - JavaFX version: 21.0.2.4-jpro+0
+2026-07-02 17:54:57,635 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - finished init!
+2026-07-02 17:54:57,636 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - [JPro] -> Server started: {start_time: 1782982496745, os_name: Windows 11, jpro_version: 2024.1.0}
+2026-07-02 17:54:57,669 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2026-07-02 17:54:58,234 [INFO] from play.api.Play in Thread-0 - Application started (Prod) (no global state)
+2026-07-02 17:54:58,762 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Enabling HTTP/2 on Akka HTTP server...
+2026-07-02 17:54:58,763 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080
+2026-07-02 17:54:59,353 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: default
+2026-07-02 17:54:59,364 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: default
+2026-07-02 17:54:59,367 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-02 17:54:59,369 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2026-07-02 17:54:59,369 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/ws/default
+2026-07-02 17:54:59,614 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 2023985549, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-02 17:54:59,984 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 2023985549, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-02 17:55:07,739 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:55:11,540 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:55:11,657 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4af37a74
+2026-07-02 17:55:11,905 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@37b1beee
+2026-07-02 17:55:12,096 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@d84887
+2026-07-02 17:55:12,175 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@733bfa6c
+2026-07-02 17:55:12,239 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5726c7c7
+2026-07-02 17:55:12,335 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@578b3627
+2026-07-02 17:55:12,431 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3b5e0cc7
+2026-07-02 17:55:12,542 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2d320dff
+2026-07-02 17:55:12,590 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@705feca9
+2026-07-02 17:55:12,638 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@15974c8d
+2026-07-02 17:55:12,717 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4f45a86f
+2026-07-02 17:55:30,475 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 2023985549, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}
+2026-07-02 17:55:30,480 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:55:30,480 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Jul 02 17:55:30 JST 2026      
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.001 
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 11939922
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 3086229
+2026-07-02 17:55:30,491 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:55:31,481 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 2023985549, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}
+2026-07-02 17:56:20,865 [INFO] from com.jpro.activity in scala-execution-context-global-30 - Starting the server
+2026-07-02 17:56:20,867 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 -  *** Starting JPro: https://www.jpro.one/ ***
+2026-07-02 17:56:20,867 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - OS: Windows 11
+2026-07-02 17:56:20,883 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JPro: 2024.1.0
+2026-07-02 17:56:20,883 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Java version: 17.0.18
+2026-07-02 17:56:20,883 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JVM: 17.0.18 Eclipse Adoptium
+2026-07-02 17:56:20,885 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - JavaFX jar: file:/C:/Users/EMD-572/.m2/repository/org/openjfx/javafx-graphics/21.0.2.4-jpro+0/javafx-graphics-21.0.2.4-jpro+0-win.jar
+2026-07-02 17:56:20,887 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - Configuring logging from url: 'jar:file:/C:/Users/EMD-572/.m2/repository/com/sandec/jpro/jpro-server_2.12/2024.1.0/jpro-server_2.12-2024.1.0.jar!/logback-jpro-default.xml'
+2026-07-02 17:56:21,504 [INFO] from com.jpro.internal.server.JProInitializer$ in JavaFX Application Thread - JavaFX version: 21.0.2.4-jpro+0
+2026-07-02 17:56:21,542 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2026-07-02 17:56:21,555 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - finished init!
+2026-07-02 17:56:21,557 [INFO] from com.jpro.internal.server.JProInitializer$ in scala-execution-context-global-30 - [JPro] -> Server started: {start_time: 1782982580864, os_name: Windows 11, jpro_version: 2024.1.0}
+2026-07-02 17:56:21,955 [INFO] from play.api.Play in Thread-0 - Application started (Prod) (no global state)
+2026-07-02 17:56:22,279 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Enabling HTTP/2 on Akka HTTP server...
+2026-07-02 17:56:22,279 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /[0:0:0:0:0:0:0:0]:8080
+2026-07-02 17:56:22,658 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - application requested: default
+2026-07-02 17:56:22,664 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - Creating Application: default
+2026-07-02 17:56:22,665 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-02 17:56:22,666 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - host          localhost:8080
+2026-07-02 17:56:22,666 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - uri           /app/ws/default
+2026-07-02 17:56:22,823 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: localhost:8080, instance_id: 894177000, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-02 17:56:23,115 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: localhost:8080, instance_id: 894177000, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1}
+2026-07-02 17:56:54,956 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-14 - application requested: default
+2026-07-02 17:56:54,957 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-14 - Creating Application: default
+2026-07-02 17:56:54,965 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-14 - remoteAddress 240a:61:5c44:25d4:51e9:76df:92ac:9de8
+2026-07-02 17:56:54,965 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-14 - host          task-ignition-retrain.ngrok-free.dev
+2026-07-02 17:56:54,965 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-14 - uri           /app/ws/default
+2026-07-02 17:56:55,113 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1811345089, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:51e9:76df:92ac:9de8}
+2026-07-02 17:56:55,182 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1811345089, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:51e9:76df:92ac:9de8}
+2026-07-02 17:57:13,228 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1811345089, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:51e9:76df:92ac:9de8, reason: tab-closed}
+2026-07-02 17:57:13,238 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:57:13,240 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Jul 02 17:57:13 JST 2026      
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.285 
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.002  
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 2707459
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 556088
+2026-07-02 17:57:13,243 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:57:14,204 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1811345089, browser: Safari 604.1, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 240a:61:5c44:25d4:51e9:76df:92ac:9de8, reason: close-tab-closed}
+2026-07-02 17:57:20,949 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - application requested: default
+2026-07-02 17:57:20,949 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - Creating Application: default
+2026-07-02 17:57:20,949 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - remoteAddress 114.172.95.146
+2026-07-02 17:57:20,949 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - host          task-ignition-retrain.ngrok-free.dev
+2026-07-02 17:57:20,949 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - uri           /app/ws/default
+2026-07-02 17:57:21,038 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1536559374, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}
+2026-07-02 17:57:21,167 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1536559374, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}
+2026-07-02 17:57:27,200 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1536559374, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: tab-closed}
+2026-07-02 17:57:27,215 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:57:27,216 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-02 17:57:27,216 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Jul 02 17:57:27 JST 2026      
+2026-07-02 17:57:27,216 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : -00:00:00.037 
+2026-07-02 17:57:27,216 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.004  
+2026-07-02 17:57:27,216 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-02 17:57:27,217 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-02 17:57:27,217 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 205343
+2026-07-02 17:57:27,217 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 47907
+2026-07-02 17:57:27,217 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:57:27,409 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-23 - application requested: default
+2026-07-02 17:57:27,409 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-23 - Creating Application: default
+2026-07-02 17:57:27,409 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-23 - remoteAddress 114.172.95.146
+2026-07-02 17:57:27,409 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-23 - host          task-ignition-retrain.ngrok-free.dev
+2026-07-02 17:57:27,409 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-23 - uri           /app/ws/default
+2026-07-02 17:57:27,500 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 417070364, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}
+2026-07-02 17:57:27,636 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 417070364, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}
+2026-07-02 17:57:28,220 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 1536559374, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: close-tab-closed}
+2026-07-02 17:57:34,236 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:57:47,362 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:57:52,835 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 417070364, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: tab-closed}
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Jul 02 17:57:52 JST 2026      
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : -00:00:00.044 
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.002  
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 1367768
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 344858
+2026-07-02 17:57:52,836 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:57:53,839 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 417070364, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: close-tab-closed}
+2026-07-02 17:57:59,360 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - application requested: default
+2026-07-02 17:57:59,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - Creating Application: default
+2026-07-02 17:57:59,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - remoteAddress 114.172.95.146
+2026-07-02 17:57:59,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - host          task-ignition-retrain.ngrok-free.dev
+2026-07-02 17:57:59,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - uri           /app/ws/default
+2026-07-02 17:57:59,465 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 951177219, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}
+2026-07-02 17:57:59,521 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance created: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 951177219, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146}
+2026-07-02 17:58:05,624 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:58:27,159 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:58:27,178 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@67076295
+2026-07-02 17:58:27,246 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@597b6df6
+2026-07-02 17:58:27,297 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@8100bdc
+2026-07-02 17:58:27,335 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@17efae12
+2026-07-02 17:58:27,365 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@367aee92
+2026-07-02 17:58:27,396 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2787b61b
+2026-07-02 17:58:27,427 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@179ef1ff
+2026-07-02 17:58:27,460 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@60f5eaa7
+2026-07-02 17:58:27,480 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@25730bd6
+2026-07-02 17:58:27,503 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@278d06c4
+2026-07-02 17:58:27,525 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@15ccdc3c
+2026-07-02 17:58:45,908 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:58:45,982 [ERROR] from com.jpro.JS in JavaFX Application Thread - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-02 17:58:49,471 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:58:49,477 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@d01672d
+2026-07-02 17:58:49,519 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@65ecd2c1
+2026-07-02 17:58:49,550 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1d1e9f84
+2026-07-02 17:58:49,585 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3e660ea0
+2026-07-02 17:58:49,620 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@60f75f5d
+2026-07-02 17:58:49,653 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@14879d6
+2026-07-02 17:58:49,687 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7225872f
+2026-07-02 17:58:49,720 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2f0b1c9c
+2026-07-02 17:58:49,743 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@40444679
+2026-07-02 17:58:49,764 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@231b0299
+2026-07-02 17:58:49,785 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@50019b5e
+2026-07-02 17:59:07,445 [ERROR] from com.jpro.JS in JavaFX Application Thread - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-02 17:59:15,849 [INFO] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - On disposing SceneInputListener: primaryScene.window was null. Skipped the forced release of the mouse.
+2026-07-02 17:59:18,779 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 951177219, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: tab-closed}
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Jul 02 17:59:18 JST 2026      
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : -00:00:00.042 
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.004  
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 23946947
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 6095330
+2026-07-02 17:59:18,782 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:59:19,775 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: task-ignition-retrain.ngrok-free.dev, instance_id: 951177219, browser: Microsoft Edge 149.0.0.0, browser_url: https://task-ignition-retrain.ngrok-free.dev/, client_ip: 114.172.95.146, reason: close-tab-closed}
+2026-07-02 17:59:32,912 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - [JPro] -> View closed: {app_name: default, host_name: localhost:8080, instance_id: 894177000, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: tab-closed}
+2026-07-02 17:59:32,914 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:59:32,914 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Jul 02 17:59:32 JST 2026      
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.000 
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 6138212
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 1725897
+2026-07-02 17:59:32,915 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2026-07-02 17:59:33,905 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - [JPro] -> Instance closed: {app_name: default, host_name: localhost:8080, instance_id: 894177000, browser: Google Chrome 149.0.0.0, browser_url: http://localhost:8080/, client_ip: 0:0:0:0:0:0:0:1, reason: close-tab-closed}

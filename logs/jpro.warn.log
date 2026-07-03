@@ -172,3 +172,5 @@ java.lang.UnsatisfiedLinkError: no glib-lite in java.library.path: C:\pleiades\2
 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 2026-07-02 09:33:43,726 [WARN] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Application didn't show the stage. JPro is now calling show()
+2026-07-02 17:58:45,982 [ERROR] from com.jpro.JS in JavaFX Application Thread - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-02 17:59:07,445 [ERROR] from com.jpro.JS in JavaFX Application Thread - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
