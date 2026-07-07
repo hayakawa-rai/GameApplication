@@ -12,28 +12,28 @@ public abstract class Enemy extends Character {
 
 	// 敵キャラクターの画像表示用
 	protected javafx.scene.image.ImageView imageView;
-
 	// 現在のステージ情報
 	protected GameMap mapData;
-
 	// 現在の敵の状態（通常・FEVER・DEAD）
 	protected Characters.EnemyState currentState = Characters.EnemyState.SCATTER;
-
 	// 通常時の画像
 	protected javafx.scene.image.Image normalImage;
-
 	// FEVER状態時の画像
 	protected javafx.scene.image.Image feverImage;
-
 	// DEAD状態時の画像
 	protected javafx.scene.image.Image deadImage;
-
 	// ポーズ時間
 	protected long pauseStartTime = 0;
-
 	// 敵の初期位置（リスポーン用）
 	protected final double startX;
 	protected final double startY;
+	// スコアポップアップ表示用
+	protected int lastDefeatScore = 0;
+	protected long scorePopupStartTime = 0;
+	protected boolean scorePopupActive = false;
+	protected static final long SCORE_POPUP_DURATION = 1000; // 表示時間(ms)
+	protected double defeatX = 0; // 倒された瞬間のX座標（固定）
+	protected double defeatY = 0; // 倒された瞬間のY座標（固定）
 
 	// 各エネミーの初期設定
 	public Enemy(double startX, double startY, int speed) {
@@ -49,12 +49,9 @@ public abstract class Enemy extends Character {
 		pauseStartTime = System.currentTimeMillis();
 	}
 
-	// ポーズ解除時の処理、必要に応じてタイマー補正を行
+	// ポーズ解除時の処理、必要に応じてタイマー補正を行う
 	public void resumeTimer() {
 	}
-
-	// 敵ごとのAIで次の進行方向を決定する
-	protected abstract Direction decideNextDirection(List<Direction> validDirections, int[][] map, GameMap mapData);
 
 	@Override
 	public void move(int[][] map) {
@@ -84,17 +81,14 @@ public abstract class Enemy extends Character {
 
 		// 現在のスピードの計算
 		double currentSpeed = this.getSpeed();
-
 		// FEVER時は減速
 		if (this.currentState == Characters.EnemyState.FEVER) {
 			currentSpeed = this.getSpeed() * 0.5;
 		}
-
 		// DEAD時は高速帰還
 		if (this.currentState == Characters.EnemyState.DEAD) {
 			currentSpeed = this.getSpeed() * 3;
 		}
-
 		// タイルの中心に近づいたか判定
 		boolean atCenter = Math.abs(this.x - cx) < currentSpeed && Math.abs(this.y - cy) < currentSpeed;
 
@@ -133,15 +127,12 @@ public abstract class Enemy extends Character {
 
 		// 決定した方向に実際に移動する処理
 		if (this.direction != Direction.NONE) {
-
 			this.x += this.direction.getDX() * currentSpeed;
 			this.y += this.direction.getDY() * currentSpeed;
-
 			// 横移動時はY座標を中心へ補正
 			if (this.direction.getDX() != 0) {
 				this.y += (cy - this.y) * 0.2;
 			}
-
 			// 縦移動時はX座標を中心へ補正
 			if (this.direction.getDY() != 0) {
 				this.x += (cx - this.x) * 0.2;
@@ -165,7 +156,7 @@ public abstract class Enemy extends Character {
 			int myCol = (int) (this.x / GameConfig.TILE_SIZE);
 			int myRow = (int) (this.y / GameConfig.TILE_SIZE);
 
-			// マップ全体からすべての「7」を探し、一番近いものを選択する（outerLoopとbreakは削除）
+			// マップ全体からすべての「7」を探し、一番近いものを選択する
 			for (int r = 0; r < currentMap.length; r++) {
 				for (int c = 0; c < currentMap[r].length; c++) {
 					if (currentMap[r][c] == 7) {
@@ -265,11 +256,13 @@ public abstract class Enemy extends Character {
 		// 全方向をチェック
 		for (Direction dir : Direction.values()) {
 			// NONE は判定対象外
-			if (dir == Direction.NONE)	continue;
-			
+			if (dir == Direction.NONE)
+				continue;
+
 			// 常にUターン禁止
-			if (isOppositeDirection(dir, this.direction))	continue;
-			
+			if (isOppositeDirection(dir, this.direction))
+				continue;
+
 			// 実際に移動可能なら候補に追加
 			if (canmove(dir, map)) {
 				list.add(dir);
@@ -283,8 +276,9 @@ public abstract class Enemy extends Character {
 	private boolean canmove(Direction direction, int[][] map) {
 
 		// 移動しない場合は不可
-		if (direction == Direction.NONE)	return false;
-		
+		if (direction == Direction.NONE)
+			return false;
+
 		// 現在位置のタイル座標を取得
 		int currentCol = (int) (this.x / GameConfig.TILE_SIZE);
 		int currentRow = (int) (this.y / GameConfig.TILE_SIZE);
@@ -308,7 +302,7 @@ public abstract class Enemy extends Character {
 
 		// 通常状態の敵の「巣（扉含む）」への侵入制限
 		if (this.currentState != Characters.EnemyState.DEAD) {
-			
+
 			// 外(8以外)から、扉(7)や床(8)に入ろうとしたら通行不可
 			if (currentTileType != 8 && (nextTileType == 7 || nextTileType == 8)) {
 				return false;
@@ -329,11 +323,9 @@ public abstract class Enemy extends Character {
 			case 1:
 				feverPath = "/picture/nari_EnemyFever.png";
 				break;
-
 			case 2:
 				feverPath = "/picture/taku_EnemyFever.png";
 				break;
-
 			case 3:
 				feverPath = "/picture/aniki_EnemyFever.png";
 				break;
@@ -370,11 +362,9 @@ public abstract class Enemy extends Character {
 			case 1:
 				deadPath = "/picture/nari_EnemyDead.png";
 				break;
-
 			case 2:
 				deadPath = "/picture/taku_EnemyDead.png";
 				break;
-
 			case 3:
 				deadPath = "/picture/aniki_EnemyDead.png";
 				break;
@@ -396,7 +386,7 @@ public abstract class Enemy extends Character {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// プレイヤーが被弾時に元の場所、出撃時間をリセット、状態を縄張りモード(SCATTER)へ戻す
 	public void resetToStartPosition() {
 		this.x = startX;
@@ -405,27 +395,52 @@ public abstract class Enemy extends Character {
 		this.currentState = Characters.EnemyState.SCATTER;
 	}
 
-	// ---getter---
+	// 敵をDEAD状態にし、撃破スコアの表示を開始する
+	public void onDefeated(int score) {
+		this.lastDefeatScore = score;
+		this.scorePopupStartTime = System.currentTimeMillis();
+		this.scorePopupActive = true;
+		this.defeatX = this.x; // 倒された瞬間の位置を固定
+		this.defeatY = this.y;
+		setCurrentState(Characters.EnemyState.DEAD);
+	}
 
-// 現在の状態に対応した画像を返す
+	// ポップアップをまだ表示すべきか判定する（時間経過で自動的にfalseになる）
+	public boolean isScorePopupActive() {
+		if (scorePopupActive && System.currentTimeMillis() - scorePopupStartTime > SCORE_POPUP_DURATION) {
+			scorePopupActive = false;
+		}
+		return scorePopupActive;
+	}
+	
+	// 敵ごとのAIで次の進行方向を決定する
+	protected abstract Direction decideNextDirection(List<Direction> validDirections, int[][] map, GameMap mapData);
+	
+	// ==================================================
+	// getter
+	// ==================================================
+	// 現在の状態に対応した画像を返す
 	public javafx.scene.image.Image getEnemyImage() {
-
 		// 撃破状態
 		if (currentState == Characters.EnemyState.DEAD) {
 			return deadImage;
 		}
-
 		// FEVER状態
 		if (currentState == Characters.EnemyState.FEVER) {
 			return feverImage;
 		}
-
 		// 通常状態
 		return normalImage;
 	}
 
+	// ポップアップの進行度を0.0(開始)〜1.0(終了)で返す
+	public double getScorePopupProgress() {
+		long elapsed = System.currentTimeMillis() - scorePopupStartTime;
+		return Math.min(1.0, Math.max(0.0, elapsed / (double) SCORE_POPUP_DURATION));
+	}
+	
 	// 現在の敵の状態を取得する
-	public Characters.EnemyState getCurrentState() {
+	public EnemyState getCurrentState() {
 		return currentState;
 	}
 
@@ -438,11 +453,27 @@ public abstract class Enemy extends Character {
 	public double getY() {
 		return y;
 	}
+	// 表示するスコア値を返す
+	public int getLastDefeatScore() {
+		return lastDefeatScore;
+	}
 
-	// ---setter---
+	// 倒された瞬間のX座標を返す（ポップアップ表示用、固定値）
+	public double getDefeatX() {
+		return defeatX;
+	}
+
+	// 倒された瞬間のY座標を返す（ポップアップ表示用、固定値）
+	public double getDefeatY() {
+		return defeatY;
+	}
+
+	// ==================================================
+	// setter
+	// ==================================================
 	//　敵の状態を変更する
-
 	public void setCurrentState(Characters.EnemyState state) {
 		this.currentState = state;
 	}
+		
 }

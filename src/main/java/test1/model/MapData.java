@@ -21,73 +21,52 @@ public class MapData implements GameMap {
 	// 1マスのサイズ(30×30ピクセル)
 	public static final int TILE_SIZE = 30;
 
-	// 0：道 1：壁 2：パワーエサ 7:扉 8:巣 9: ワープ
+	// 0：道 1：壁 2：パワーエサ 3:仙石さん 7:扉 8:巣 9: ワープ
 	private final int[][] map = {
 
 			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-			{ 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1 }, // ■ ■■ ■
-			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■ ■■■■■ ■■■■ ■■
-			// ■■■■ ■■■■■ ■
-			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■ ■■■■■ ■■■■ ■■
-			// ■■■■ ■■■■■ ■
-			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 }, // ■ ■■■■ ■■ ■■■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■■■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
-			// ■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
-			// ■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■ ■■
-			// ■■ ■■■■
-			{ 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9 }, // ■■■■ ■■ ■■■■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■■■ ■■
-			// ■■■■ ■■ ■■■■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■ ■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 7, 7, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■■■ ■■■
-			// ■■■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■ ■ ■■■■ ■
-			{ 1, 1, 1, 1, 0, 0, 0, 2, 0, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 0, 2, 0, 0, 0, 1, 1, 1, 1 }, // ■ ■ ■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■ ■ ■ ■■■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■■■
-			// ■■■■■■■■ ■■■■
-			// ■■■■
-			{ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9 }, //
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■■■■■■ ■■
-			// ■■■■■■■ ■■■■
-			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■ ■■■■■■■ ■■
-			// ■■■■■■■ ■
-			{ 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 }, // ■ ■■ ■
-			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■ ■■ ■■ ■■■■■■
-			// ■■ ■■ ■■■■
-			{ 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1 }, // ■ ■■ ■■ ■■■■■■ ■■
-			// ■■ ■
-			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■ ■■ ■■
-			// ■■ ■
-			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■ ■■ ■■■
-			// ■■ ■■ ■■ ■
-			{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 }, // ■ ■■ ■■ ■■■ ■■ ■
-			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■■■■ ■■ ■■
-			// ■■■■ ■■■ ■
-			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■ ■ ■■■ ■■
-			// ■ ■ ■■■ ■
-			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■ ■■■ ■ ■ ■■■ ■■
-			// ■ ■ ■■■ ■
-			{ 1, 0, 0, 2, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 2, 0, 0, 1 }, // ■ ■ ■ ■ ■ ■
-			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■
-																									// ■■■■■■■■■■
-																									// ■■■■■■■
-
+			{ 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1 }, // ■　　　餌　　　　　　　　■■　　　　　　　　餌　　　■
+			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■　■■■■■　■■■■　■■　■■■■　■■■■■　■
+			{ 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, // ■　■■■■■　■■■■　■■　■■■■　■■■■■　■
+			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 }, // ■　　　　　　　■■■■　■■　■■■■　　　　　　　■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　　　　　　　　　　　　　　■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　■■　■■■■■■　■■　■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　■■　■■■■■■　■■　■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　■■　　　■■　　　■■　■■　■■■■
+			{ 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9 }, // ワ　　　　　　　■■■■　■■　■■■■　　　　　　　ワ
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　■■■■　■■　■■■■　■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　　　　　　　　　　　　　　■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 7, 7, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■■■　■■■扉扉■■■　■■■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■■■　■巣巣巣巣巣巣■　■■■■　■■■■
+			{ 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 }, // ■■■■　　　　　　■巣巣巣巣巣巣■　　　　　　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 8, 8, 8, 8, 8, 8, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■■■　■巣巣巣巣巣巣■　■■■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■■■　■■■■■■■■　■■■■　■■■■
+			{ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9 }, // ワ　　　　　　　　　　　　　　　　　　　　　　　　　　ワ
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■■■■■■　■■　■■■■■■■　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■■■■■■　■■　■■■■■■■　■■■■
+			{ 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 }, // ■■■■　　　　　　　　　■■　　　　　　　　　■■■■
+			{ 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1 }, // ■■■■　■■　■■　■■■■■■　■■　■■　■■■■
+			{ 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1 }, // ■　　　　■■　■■　■■■■■■　■■　■■　　　　■
+			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■　■■　■■　■■　　　　仙　　　■■　■■　■■　■
+			{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1 }, // ■　■■　■■　■■　■■　■■■　■■　■■　■■　■
+			{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1 }, // ■　■■　　　　　　　■■　■■■　　　　　　　■■　■
+			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■　■■■　■■■■　■■　　■■　■■■■　■■■　■
+			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■　■■■　■■■■　■■■　■■　■■■■　■■■　■
+			{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 }, // ■　■■■　■■■■　■■■　■■　■■■■　■■■　■
+			{ 1, 0, 0, 2, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 2, 0, 0, 1 }, // ■　　餌　　■■■■　　　　　　　　■■■■　　餌　　■
+			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 	};
 
 	// 各マス目に配置されたアイテム(ドット・パワーエサ)を保持する二次元配列
 	private Item[][] itemMap;
 
-	//プレイヤーのキャラクターオブジェクト
+	// プレイヤーのキャラクターオブジェクト
 	private Syujinkou syujinkou;
 
 	// 敵のリスト管理
 	private final List<Enemy> enemies = new ArrayList<>();
 
-	//ゲームが一時停止中かどうかの確認
+	// ゲームが一時停止中かどうかの確認
 	private boolean paused = false;
 
 	// 初期アイテム配置（エサ復活用）
@@ -103,9 +82,9 @@ public class MapData implements GameMap {
 	private int stageNumber = 1;
 
 	// 口パク
-	//private double mouthAngle = 45;
-	//private int mouthOpening = -1;
-	//private boolean isBlocked = false;
+	// private double mouthAngle = 45;
+	// private int mouthOpening = -1;
+	// private boolean isBlocked = false;
 
 	// ワープ抑止
 	private boolean justWarped = false;
@@ -126,18 +105,33 @@ public class MapData implements GameMap {
 	// FEVER終了時刻
 	private long feverEndTime = 0;
 
-	// booleanを受け取る新しいコンストラクターを追加
+	// --- 追加フィールド ---
+	public static final int FRUIT_VALUE = 3;
+	private int fruitRow = -1;
+	private int fruitCol = -1; // map配列内でのフルーツを表す数値
 
+	private Items.Fruit currentFruit = null; // 現在出現中のフルーツ(nullなら未出現)
+	private long lastFruitSpawnTime = 0; // 最後にフルーツを出した時刻
+	private int lastFruitScore = 0; // 最後にフルーツを出した時点のスコア
+
+	private static final long FRUIT_TIME_INTERVAL = 15000; // 15秒ごとに出現チャンス
+	private static final int FRUIT_SCORE_INTERVAL = 1000; // 1000点ごとに出現チャンス
+
+	// フルーツスコアポップアップ用
+	private boolean fruitPopupActive = false;
+	private long fruitPopupStartTime = 0;
+	private int fruitPopupScore = 0;
+	private static final long FRUIT_POPUP_DURATION = 1000; // 表示時間(ms)
+
+	// booleanを受け取る新しいコンストラクターを追加
 	public MapData(boolean paused) {
 		this(); // 上にある引数なしのコンストラクターを呼び出して初期化を行う
 		this.paused = paused; // 受け取った値をpausedフィールドにセットする
 	}
 
 	/**
-	 * 練習モード用の初期化メソッド。
-	 * プレイヤーの初期位置を通常とは別の座標に設定し、アイテム(ドット・パワーエサ)を
-	 * マップ全体に配置する。enableRespawn が true の場合は、エサ復活用に
-	 * 初期状態のitemMapのコピーを保存しておく。
+	 * 練習モード用の初期化メソッド。 プレイヤーの初期位置を通常とは別の座標に設定し、アイテム(ドット・パワーエサ)を
+	 * マップ全体に配置する。enableRespawn が true の場合は、エサ復活用に 初期状態のitemMapのコピーを保存しておく。
 	 *
 	 * enableRespawn エサ（ドット）を食べ切ったあとに復活させるかどうか
 	 */
@@ -146,6 +140,8 @@ public class MapData implements GameMap {
 		this.syujinkou = new Syujinkou(10 * TILE_SIZE, 14 * TILE_SIZE, 2);
 		this.itemMap = new Item[map.length][map[0].length];
 		this.remainingItems = 0;
+		this.lastFruitSpawnTime = System.currentTimeMillis();
+		this.lastFruitScore = 0;
 
 		for (int row = 0; row < map.length; row++) {
 			for (int col = 0; col < map[0].length; col++) {
@@ -186,10 +182,8 @@ public class MapData implements GameMap {
 	}
 
 	/**
-	 * 本番モード（ストーリーモード）用のデフォルトコンストラクタ。
-	 * プレイヤーの初期位置を設定し、マップ上の道(0)とパワーエサ(2)の位置に
-	 * アイテムを配置、敵を初期化する。最後にエサ復活用の初期状態を保存し、
-	 * 総アイテム数(totalItems)を記録する。
+	 * 本番モード（ストーリーモード）用のデフォルトコンストラクタ。 プレイヤーの初期位置を設定し、マップ上の道(0)とパワーエサ(2)の位置に
+	 * アイテムを配置、敵を初期化する。最後にエサ復活用の初期状態を保存し、 総アイテム数(totalItems)を記録する。
 	 */
 	public MapData() {
 		// 初期設定
@@ -197,6 +191,8 @@ public class MapData implements GameMap {
 		this.syujinkou = new Syujinkou(14 * TILE_SIZE, 23 * TILE_SIZE, 2);
 		this.itemMap = new Item[map.length][map[0].length];
 		this.remainingItems = 0;
+		this.lastFruitSpawnTime = System.currentTimeMillis();
+		this.lastFruitScore = 0;
 
 		// アイテムの配置
 		for (int row = 0; row < map.length; row++) {
@@ -224,11 +220,10 @@ public class MapData implements GameMap {
 		// 最初に配置し終わった時の総数を記憶しておく
 		this.totalItems = this.remainingItems;
 	}
-	
+
 	/**
-	 * 敵キャラクター（赤・緑・黄・青）を初期化してenemiesリストに追加する。
-	 * 既存のリストを一度クリアしてから追加するため、複数回呼んでも敵が重複しない。
-	 * 追加後、全ての敵の状態をSCATTER（散開）にリセットする。	 
+	 * 敵キャラクター（赤・緑・黄・青）を初期化してenemiesリストに追加する。 既存のリストを一度クリアしてから追加するため、複数回呼んでも敵が重複しない。
+	 * 追加後、全ての敵の状態をSCATTER（散開）にリセットする。
 	 */
 	public void initEnemy(javafx.scene.image.ImageView enemyImageView) {
 
@@ -251,10 +246,8 @@ public class MapData implements GameMap {
 	private long pauseStartTime = 0;
 
 	/**
-	 * ゲームの一時停止／再開を切り替える。
-	 * 一時停止に入るときは開始時刻を記録し、敵のタイマーを止める。
-	 * 再開するときは一時停止していた時間分だけ、FEVERタイマーやCHASE/SCATTERタイマーを
-	 * 後ろにずらして帳尻を合わせ、敵のタイマーを再開する。
+	 * ゲームの一時停止／再開を切り替える。 一時停止に入るときは開始時刻を記録し、敵のタイマーを止める。
+	 * 再開するときは一時停止していた時間分だけ、FEVERタイマーやCHASE/SCATTERタイマーを 後ろにずらして帳尻を合わせ、敵のタイマーを再開する。
 	 */
 	public void togglePause() {
 
@@ -262,8 +255,7 @@ public class MapData implements GameMap {
 
 			paused = true;
 			pauseStartTime = System.currentTimeMillis();
-	        start.Bgm.pauseBGM(); // ★追加
-
+			start.Bgm.pauseBGM(); // ★追加
 
 			for (Enemy e : enemies) {
 				e.pauseTimer();
@@ -271,8 +263,7 @@ public class MapData implements GameMap {
 
 		} else {
 			paused = false;
-	        start.Bgm.resumeBGM(); // ★追加
-
+			start.Bgm.resumeBGM(); // ★追加
 
 			long pauseDuration = System.currentTimeMillis() - pauseStartTime;
 
@@ -285,20 +276,23 @@ public class MapData implements GameMap {
 				modeStartTime += pauseDuration;
 			}
 
+			//フルーツのタイマーもポーズ時間分ずらす
+			if (lastFruitSpawnTime > 0) {
+				lastFruitSpawnTime += pauseDuration;
+			}
+
 			for (Enemy e : enemies) {
 				e.resumeTimer();
-
 			}
 		}
 	}
 
 	// ゲーム全体の定期更新
 	/**
-	 * 1. 一時停止中は何もしない
-	 * 2. プレイヤーが死亡アニメーション中なら、アニメーションの進行のみ行い、
-	 *    アニメーション終了時にHPが残っていればリスポーン、HPが0ならgameOverをtrueにする
-	 * 3. 死亡アニメーション中でなければ、プレイヤー移動・FEVER終了判定・
-	 *    CHASE/SCATTERモードの切り替え・敵の移動・口パク更新・当たり判定を順に行う
+	 * 1. 一時停止中は何もしない 2. プレイヤーが死亡アニメーション中なら、アニメーションの進行のみ行い、
+	 * アニメーション終了時にHPが残っていればリスポーン、HPが0ならgameOverをtrueにする 3.
+	 * 死亡アニメーション中でなければ、プレイヤー移動・FEVER終了判定・
+	 * CHASE/SCATTERモードの切り替え・敵の移動・口パク更新・当たり判定を順に行う
 	 */
 	public void update() {
 		if (paused)
@@ -339,8 +333,7 @@ public class MapData implements GameMap {
 		if (feverEndTime > 0 && System.currentTimeMillis() >= feverEndTime) {
 			feverEndTime = 0;
 			syujinkou.setFever(false);
-		    start.Bgm.stopFeverBGM(); // ★追加：ステージBGMに復帰
-
+			start.Bgm.stopFeverBGM(); // ★追加：ステージBGMに復帰
 
 			for (Enemy e : enemies) {
 				if (e.getCurrentState() == Characters.EnemyState.FEVER) {
@@ -393,18 +386,84 @@ public class MapData implements GameMap {
 			for (Enemy e : enemies) {
 				e.move(map);
 			}
+			checkFruitSpawn();
+			updateFruit();
 		}
 		// 口パクの更新
-		//updateMouth();
+		// updateMouth();
 		// パックマンと敵の当たり判定を毎フレーム確認
 		checkCollision();
 	}
-	
+
 	/**
-	 * プレイヤーの移動処理を行う。
-	 * ワープマスの検出・ワープ処理・壁として扱う扉(7)/巣(8)の判定・実際の移動、
-	 * そして移動後にいるマスにアイテムがあれば取得（スコア加算・FEVER発動）を行う。
-	 * 一時停止中、またはプレイヤーが死亡している場合は何もしない。
+	 * 時間経過 または スコア到達 を条件にフルーツを固定位置に出現させる
+	 */
+	private void checkFruitSpawn() {
+		if (currentFruit != null)
+			return; // 既に出現中なら何もしない
+
+		long now = System.currentTimeMillis();
+		int score = syujinkou.getScore();
+
+		boolean timeCondition = (now - lastFruitSpawnTime) >= FRUIT_TIME_INTERVAL;
+		boolean scoreCondition = (score - lastFruitScore) >= FRUIT_SCORE_INTERVAL;
+
+		if (timeCondition || scoreCondition) {
+			spawnFruit();
+			lastFruitSpawnTime = now;
+			lastFruitScore = score;
+		}
+	}
+
+	private void spawnFruit() {
+
+		// 道(0)かつ、まだドットが残っていない(itemMapがnull)マスだけを候補にする
+		List<int[]> candidates = new ArrayList<>();
+		for (int row = 0; row < map.length; row++) {
+			for (int col = 0; col < map[0].length; col++) {
+				if (map[row][col] == 0 && itemMap[row][col] == null) {
+					candidates.add(new int[] { row, col });
+				}
+			}
+		}
+
+		if (candidates.isEmpty()) {
+			return; // 万が一、道が無ければ何もしない
+		}
+
+		// ランダムに1マス選ぶ
+		java.util.Random random = new java.util.Random();
+		int[] chosen = candidates.get(random.nextInt(candidates.size()));
+		this.fruitRow = chosen[0];
+		this.fruitCol = chosen[1];
+
+		Items.FruitType type = Items.FruitType.random(random);
+		currentFruit = new Items.Fruit(type);
+		map[fruitRow][fruitCol] = FRUIT_VALUE;
+
+		System.out.println(type + "が (" + fruitRow + ", " + fruitCol + ") に出現しました！");
+	}
+
+	/**
+	 * フルーツのタイマー更新。時間切れになったら消す。
+	 */
+	private void updateFruit() {
+		if (currentFruit == null)
+			return;
+
+		currentFruit.update();
+		if (currentFruit.isExpired()) {
+			map[fruitRow][fruitCol] = 0; // 消えたら道に戻す
+			currentFruit = null;
+			fruitRow = -1;
+			fruitCol = -1;
+			System.out.println("フルーツが消えました");
+		}
+	}
+
+	/**
+	 * プレイヤーの移動処理を行う。 ワープマスの検出・ワープ処理・壁として扱う扉(7)/巣(8)の判定・実際の移動、
+	 * そして移動後にいるマスにアイテムがあれば取得（スコア加算・FEVER発動）を行う。 一時停止中、またはプレイヤーが死亡している場合は何もしない。
 	 */
 	public void updatePacman() {
 		if (paused || !syujinkou.isAlive())
@@ -465,8 +524,8 @@ public class MapData implements GameMap {
 
 				syujinkou.setX(newPacX);
 				syujinkou.setY(newPacY);
-				
-				//効果音
+
+				// 効果音
 				SoundManager.play(SoundManager.WARP);
 
 				justWarped = true;
@@ -506,8 +565,7 @@ public class MapData implements GameMap {
 					syujinkou.setFever(true);
 					// 毎回7秒にリセット
 					feverEndTime = System.currentTimeMillis() + 7000;
-				    start.Bgm.playFeverBGM(); // ★追加
-
+					start.Bgm.playFeverBGM(); // ★追加
 
 					for (Enemy e : enemies) {
 						if (e.getCurrentState() != Characters.EnemyState.DEAD) {
@@ -526,6 +584,22 @@ public class MapData implements GameMap {
 				remainingItems--; // ★1個食べたのでカウントを減らす
 				System.out.println("残りのドット数: " + remainingItems); // デバッグ用ログ
 			}
+		}
+		// --- updatePacman()内、既存のitemMap判定の直後あたりに追加 ---
+		// フルーツを食べたかチェック
+		if (currentFruit != null && currentTileY == fruitRow && currentTileX == fruitCol) {
+			currentFruit.onEaten(syujinkou);
+
+			// スコアポップアップ開始
+			fruitPopupScore = currentFruit.getType().getScore();
+			fruitPopupStartTime = System.currentTimeMillis();
+			fruitPopupActive = true;
+			
+			map[fruitRow][fruitCol] = 0;
+			currentFruit = null;
+			fruitRow = -1;
+			fruitCol = -1;
+
 		}
 
 		// 全部食べたかチェック（エサ復活用）
@@ -550,11 +624,10 @@ public class MapData implements GameMap {
 	 * this.itemMap = copyItemMap(this.initialItemMap);
 	 * System.out.println("ステージクリア！エサが復活しました！"); }
 	 */
-	
+
 	/**
-	 * 練習モード用：itemMapを初期状態に戻し、残りアイテム数を最大数にリセットする。
-	 * これにより isCleared() が再び false に戻り、ゲームを終わらせずに
-	 * エサを食べ続けられるようになる（練習モードのループ継続用）。
+	 * 練習モード用：itemMapを初期状態に戻し、残りアイテム数を最大数にリセットする。 これにより isCleared() が再び false
+	 * に戻り、ゲームを終わらせずに エサを食べ続けられるようになる（練習モードのループ継続用）。
 	 */
 	public void respawnDots() {
 		if (this.initialItemMap != null) {
@@ -564,25 +637,30 @@ public class MapData implements GameMap {
 			// 2. 残りアイテム数を初期の総数にリセット（これで isCleared() が false に戻る）
 			this.remainingItems = this.totalItems;
 
+			//フルーツ関連の状態もリセット
+			if (fruitRow != -1 && fruitCol != -1) {
+				this.map[fruitRow][fruitCol] = 0;
+			}
+			this.currentFruit = null;
+			this.fruitRow = -1;
+			this.fruitCol = -1;
+			this.lastFruitSpawnTime = System.currentTimeMillis();
+			this.lastFruitScore = (syujinkou != null) ? syujinkou.getScore() : 0;
+
 			System.out.println("【練習モード】エサが再配置され、残りカウントが " + this.remainingItems + " にリセットされました。");
 		}
 	}
 
-	/*public void updateMouth() {
-		if (paused || !syujinkou.isAlive() || syujinkou.getDirection() == Characters.Direction.NONE)
-			return;
+	/*
+	 * public void updateMouth() { if (paused || !syujinkou.isAlive() ||
+	 * syujinkou.getDirection() == Characters.Direction.NONE) return;
+	 * 
+	 * mouthAngle += mouthOpening * 2; if (mouthAngle <= 10) mouthOpening = +1; if
+	 * (mouthAngle >= 45) mouthOpening = -1; }
+	 */
 
-		mouthAngle += mouthOpening * 2;
-		if (mouthAngle <= 10)
-			mouthOpening = +1;
-		if (mouthAngle >= 45)
-			mouthOpening = -1;
-	}
-	*/
-	
 	/**
-	 * キー入力などから呼ばれ、プレイヤーの次の移動方向をセットする。
-	 * ゲームがまだ開始待ち(waitingStart)の場合は、この最初の入力をトリガーとして
+	 * キー入力などから呼ばれ、プレイヤーの次の移動方向をセットする。 ゲームがまだ開始待ち(waitingStart)の場合は、この最初の入力をトリガーとして
 	 * ゲームを開始状態にし、CHASE/SCATTERタイマーを開始する。
 	 *
 	 * dir→プレイヤーに設定する次の移動方向
@@ -602,18 +680,18 @@ public class MapData implements GameMap {
 
 			modeStartTime = System.currentTimeMillis();
 
+			lastFruitSpawnTime = System.currentTimeMillis(); // ★追加
+
 			System.out.println("ゲーム開始");
 		}
 	}
-	
+
 	// 敵との当たり判定
 	/**
-	 * プレイヤーと各敵との距離をチェックし、一定距離(collisionThreshold)以内なら
-	 * 「衝突」とみなす当たり判定処理。
+	 * プレイヤーと各敵との距離をチェックし、一定距離(collisionThreshold)以内なら 「衝突」とみなす当たり判定処理。
 	 * 敵がFEVER状態の場合はプレイヤーが敵を倒したことになり、スコア加算＆敵をDEAD状態にする。
 	 * それ以外（通常状態の敵）に衝突した場合は、プレイヤーがダメージを受け(takeDamage)、
-	 * 死亡（ミス）アニメーションを開始する(startDying)。
-	 * すでにプレイヤーが死んでいる場合は何もしない。
+	 * 死亡（ミス）アニメーションを開始する(startDying)。 すでにプレイヤーが死んでいる場合は何もしない。
 	 */
 	private void checkCollision() {
 
@@ -636,13 +714,14 @@ public class MapData implements GameMap {
 			if (Math.sqrt(dx * dx + dy * dy) < collisionThreshold) {
 				// FEVER中の敵は食べられる
 				if (e.getCurrentState() == Characters.EnemyState.FEVER) {
-					
-					//効果音
+
+					// 効果音
 					SoundManager.play(SoundManager.ENEMY_DEAD);
-					
-					// 💡 敵を倒したのでスコアを加算（例: 200点）
-					syujinkou.addScore(200);
-					e.setCurrentState(Characters.EnemyState.DEAD);
+
+					// 💡 敵を倒したのでスコアを加算し、その場にスコア表示を開始する
+					int defeatScore = 200;
+					syujinkou.addScore(defeatScore);
+					e.onDefeated(defeatScore);
 					continue;
 				}
 
@@ -651,8 +730,8 @@ public class MapData implements GameMap {
 				}
 
 				System.out.println("💥敵に捕まった！");
-				
-				//効果音
+
+				// 効果音
 				SoundManager.play(SoundManager.DAMAGE);
 
 				syujinkou.takeDamage();
@@ -685,36 +764,43 @@ public class MapData implements GameMap {
 			}
 		}
 	}
-	//ゲームが一時停止中かどうか返す。
+
+	// ゲームが一時停止中かどうか返す。
 	public boolean isPaused() {
 		return paused;
 	}
-	//マップデータ(壁・道・アイテム種別を表す二次元配列)を返す。
+
+	// マップデータ(壁・道・アイテム種別を表す二次元配列)を返す。
 	@Override
 	public int[][] getMap() {
 		return map;
 	}
-	//プレイヤーの現在のX座標(ピクセル)を返す。syujinkouがnullの場合は0を返す。
+
+	// プレイヤーの現在のX座標(ピクセル)を返す。syujinkouがnullの場合は0を返す。
 	@Override
 	public double getPacX() {
 		return syujinkou != null ? syujinkou.getX() : 0;
 	}
-	//プレイヤーの現在のY座標(ピクセル)を返す。syujinkouがnullの場合は0を返す。
+
+	// プレイヤーの現在のY座標(ピクセル)を返す。syujinkouがnullの場合は0を返す。
 	@Override
 	public double getPacY() {
 		return syujinkou != null ? syujinkou.getY() : 0;
 	}
-	//現在のステージ番号(1～3)を返す。
+
+	// 現在のステージ番号(1～3)を返す。
 	@Override
 	public int getStageNumber() {
 		return stageNumber;
 	}
-	//ゲームがまだプレイヤーの初回入力を待っている状態か銅貨を返す。
+
+	// ゲームがまだプレイヤーの初回入力を待っている状態か銅貨を返す。
 	@Override
 	public boolean isWaitingStart() {
 		return waitingStart;
 	}
-	//敵キャラクターのリストを返す。
+
+	// 敵キャラクターのリストを返す。
 	@Override
 	public List<Enemy> getEnemies() {
 		return enemies;
@@ -722,8 +808,7 @@ public class MapData implements GameMap {
 
 	// ※ common.Direction と Characters.Direction の型が合わない場合はキャストや変換を行ってください
 	/**
-	 * プレイヤーの現在の移動方向を取得する。
-	 * syujinkou、またはsyujinkouの方向がnullの場合はDirection.NONEを返す。
+	 * プレイヤーの現在の移動方向を取得する。 syujinkou、またはsyujinkouの方向がnullの場合はDirection.NONEを返す。
 	 * 名前ベースでCharacters.Directionへの変換を試み、失敗した場合もNONEを返す。
 	 */
 	@Override
@@ -741,16 +826,16 @@ public class MapData implements GameMap {
 	}
 
 	// --- getters ---
-	//各マスに配置されているアイテムの二次元配列を返す。
+	// 各マスに配置されているアイテムの二次元配列を返す。
 	public Item[][] getItemMap() {
 		return itemMap;
 	}
-	//口パクアニメーション用の現在の角度を返す。
-	/*public double getMouthAngle() {
-		return mouthAngle;
-	}
-	*/
-	//プレイヤーのキャラクターオブジェを返す。
+
+	// 口パクアニメーション用の現在の角度を返す。
+	/*
+	 * public double getMouthAngle() { return mouthAngle; }
+	 */
+	// プレイヤーのキャラクターオブジェを返す。
 	public Syujinkou getsyujinkou() {
 		return syujinkou;
 	}
@@ -765,13 +850,14 @@ public class MapData implements GameMap {
 	public void setStageNumber(int stageNum) {
 		this.stageNumber = stageNum;
 	}
-	//残りアイテム数が0以下、つまり全てのドット・パワーエサを食べ終えたかどうかを返す。(ステージクリア判定)。
+
+	// 残りアイテム数が0以下、つまり全てのドット・パワーエサを食べ終えたかどうかを返す。(ステージクリア判定)。
 	public boolean isCleared() {
 		return remainingItems <= 0;
 	}
+
 	/**
-	 * FEVER状態の残り時間（ミリ秒）を返す。
-	 * 一時停止中は、一時停止した時点での残り時間を固定して返す。
+	 * FEVER状態の残り時間（ミリ秒）を返す。 一時停止中は、一時停止した時点での残り時間を固定して返す。
 	 * FEVERが発動していない、または既に終了している場合は0以上の値（実質0）を返す。
 	 */
 	public long getFeverRemainingTime() {
@@ -782,9 +868,42 @@ public class MapData implements GameMap {
 
 		return Math.max(0, feverEndTime - System.currentTimeMillis());
 	}
-	//ゲームオーバーになったかどうかを返す(プレイヤーのHPが0になった後、死亡アニメーション終了時にtrueになる)。
+
+	// ゲームオーバーになったかどうかを返す(プレイヤーのHPが0になった後、死亡アニメーション終了時にtrueになる)。
 	public boolean isGameOver() {
 		return gameOver;
+	}
+
+	//フルーツ
+	public Items.Fruit getCurrentFruit() {
+		return currentFruit;
+	}
+
+	// フルーツのスコアポップアップがまだ表示中か判定する（時間経過で自動的にfalseになる）
+	public boolean isFruitPopupActive() {
+		if (fruitPopupActive && System.currentTimeMillis() - fruitPopupStartTime > FRUIT_POPUP_DURATION) {
+			fruitPopupActive = false;
+		}
+		return fruitPopupActive;
+	}
+
+	// 表示するフルーツのスコア値を返す
+	public int getFruitPopupScore() {
+		return fruitPopupScore;
+	}
+
+	// ポップアップの進行度を0.0(開始)〜1.0(終了)で返す
+	public double getFruitPopupProgress() {
+		long elapsed = System.currentTimeMillis() - fruitPopupStartTime;
+		return Math.min(1.0, Math.max(0.0, elapsed / (double) FRUIT_POPUP_DURATION));
+	}
+
+	public int getFruitRow() {
+		return fruitRow;
+	}
+
+	public int getFruitCol() {
+		return fruitCol;
 	}
 
 }

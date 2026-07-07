@@ -58,7 +58,7 @@ public class MapView {
 
 		root.sceneProperty().addListener((observable, oldScene, newScene) -> {
 			if (newScene != null) {
-				test.test2.GameController.applyMobileControls(newScene, this.model);
+				control.GameController.applyMobileControls(newScene, this.model);
 			}
 		});
 	}
@@ -217,6 +217,13 @@ public class MapView {
 					item.draw(gc, x, y, MapData.TILE_SIZE);
 				}
 			}
+		}
+	//  フルーツを描画
+		Items.Fruit fruit = model.getCurrentFruit();
+		if (fruit != null) {
+		    int fx = model.getFruitCol() * MapData.TILE_SIZE;
+		    int fy = model.getFruitRow() * MapData.TILE_SIZE;
+		    fruit.draw(gc, fx, fy, MapData.TILE_SIZE);
 		}
 	}
 	
@@ -378,6 +385,37 @@ public class MapView {
 			gc.setFill(javafx.scene.paint.Color.BLACK);
 			gc.fillOval(enemy.getX() - 2, enemy.getY() - 2, 4, 4);
 		}
+		// ▼ 撃破時のスコアポップアップ表示（ふわっと上に浮かびながらフェードアウト）
+				if (enemy.isScorePopupActive()) {
+					double progress = enemy.getScorePopupProgress(); // 0.0〜1.0
+
+					// 上方向へのオフセット（最大20pxくらい浮かせる）
+					double riseOffset = progress * 20;
+
+					// フェードアウト（後半から徐々に透明に）
+					double alpha = 1.0 - progress;
+
+					double popupX = enemy.getDefeatX();
+					double popupY = enemy.getDefeatY() - MapData.TILE_SIZE / 2.0 - 6 - riseOffset;
+
+					gc.save();
+					gc.setGlobalAlpha(alpha);
+
+					gc.setTextAlign(javafx.scene.text.TextAlignment.CENTER);
+					gc.setTextBaseline(javafx.geometry.VPos.CENTER);
+					gc.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+
+					// 縁取り（黒）
+					gc.setStroke(Color.BLACK);
+					gc.setLineWidth(3);
+					gc.strokeText("+" + enemy.getLastDefeatScore(), popupX, popupY);
+
+					// 本体（白文字）
+					gc.setFill(Color.WHITE);
+					gc.fillText("+" + enemy.getLastDefeatScore(), popupX, popupY);
+
+					gc.restore();
+				}
 	}
 
 	/**
