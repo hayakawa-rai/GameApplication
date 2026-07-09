@@ -27,7 +27,6 @@ public class Gameover extends Application {
 	@Override
 	public void start(Stage stage) {
 		stage.setTitle("ゲームオーバー");
-		// WindowUtil.fillScreen(stage);  最大化
 		stage.setScene(create(stage, null, score));
 		stage.centerOnScreen();
 		stage.show();
@@ -35,8 +34,8 @@ public class Gameover extends Application {
 
 	public static Scene create(Stage stage, Runnable retryAction, int score) {
 		
-	    // ゲームオーバー画面が表示されたタイミングで効果音を再生
-	    start.SoundManager.play(start.SoundManager.GAMEOVER);
+		// ゲームオーバー画面が表示されたタイミングで効果音を再生
+		start.SoundManager.play(start.SoundManager.GAMEOVER);
 
 		// GAME OVER
 		Label gameOverLabel = new Label("GAME OVER");
@@ -63,11 +62,12 @@ public class Gameover extends Application {
 		// ゲームオーバー仙石さん
 		ImageView icon = new ImageView();
 		try {
-			java.net.URL imgUrl = Gameover.class.getResource("/picture/syujinkou(gameover).png");
-			if (imgUrl != null) {
-				icon.setImage(new Image(imgUrl.toExternalForm()));
+			// ⭕【JPro対応】getResourceAsStream に変更し、安全にストリーム読み込み
+			var imgStream = Gameover.class.getResourceAsStream("/picture/syujinkou(gameover).png");
+			if (imgStream != null) {
+				icon.setImage(new Image(imgStream));
 			} else {
-				System.out.println("⚠️ 警告: /syujinkou(gameover).png が見つかりません。画像の表示をスキップします。");
+				System.out.println("⚠️ 警告: /picture/syujinkou(gameover).png が見つかりません。画像の表示をスキップします。");
 			}
 		} catch (Exception e) {
 			System.out.println("⚠️ 画像の読み込みに失敗しました。");
@@ -81,34 +81,34 @@ public class Gameover extends Application {
 		retryBtn.setPrefSize(300, 70);
 		retryBtn.getStyleClass().add("gameover-button");
 		retryBtn.setOnAction(e -> {
-		    start.SoundManager.play(start.SoundManager.RETRY); 
-		    Timeline delay = new Timeline(
-		            new KeyFrame(Duration.millis(500), ev -> {
-		                if (retryAction != null) {
-		                    retryAction.run();
-		                } else {
-		                    System.out.println("⚠️ リトライ処理が登録されていません。");
-		                }
-		            }));
-		        delay.play();
-		    });
+			start.SoundManager.play(start.SoundManager.RETRY); 
+			Timeline delay = new Timeline(
+					new KeyFrame(Duration.millis(500), ev -> {
+						if (retryAction != null) {
+							retryAction.run();
+						} else {
+							System.out.println("⚠️ リトライ処理が登録されていません。");
+						}
+					}));
+			delay.play();
+		});
 
 		// タイトル画面へ戻る
 		Button titleBtn = new Button("タイトルへ");
 		titleBtn.setPrefSize(300, 70);
 		titleBtn.getStyleClass().add("gameover-button");
 		titleBtn.setOnAction(e -> {
-		    start.SoundManager.play(start.SoundManager.SELECT);
+			start.SoundManager.play(start.SoundManager.SELECT);
 
-		    Timeline delay = new Timeline(
-		        new KeyFrame(Duration.millis(500), ev -> {
-		            try {
-		                GameController.switchStart(stage);
-		            } catch (Exception ex) {
-		                ex.printStackTrace();
-		            }
-		        }));
-		    delay.play();
+			Timeline delay = new Timeline(
+					new KeyFrame(Duration.millis(500), ev -> {
+						try {
+							GameController.switchStart(stage);
+						} catch (Exception ex) {
+							ex.printStackTrace();
+						}
+					}));
+			delay.play();
 		});
 
 		// ボタンを縦に並べる
@@ -132,9 +132,10 @@ public class Gameover extends Application {
 		// 背景
 		ImageView bg = new ImageView();
 		try {
-			java.net.URL bgUrl = Gameover.class.getResource("/picture/gameover.jpg");
-			if (bgUrl != null) {
-				bg.setImage(new Image(bgUrl.toExternalForm()));
+			// ⭕【JPro対応】こちらも getResourceAsStream に修正
+			var bgStream = Gameover.class.getResourceAsStream("/picture/gameover.jpg");
+			if (bgStream != null) {
+				bg.setImage(new Image(bgStream));
 			} else {
 				System.out.println("⚠️ 警告: /picture/gameover.jpg が見つかりません。背景の表示をスキップします。");
 			}
@@ -147,22 +148,22 @@ public class Gameover extends Application {
 		Rectangle whiteOverlay = new Rectangle();
 		whiteOverlay.setFill(Color.rgb(255, 255, 255, 0.15));
 
-		// rootのサイズに合わせて伸縮させる
 		bg.fitWidthProperty().bind(root.widthProperty());
 		bg.fitHeightProperty().bind(root.heightProperty());
 
 		whiteOverlay.widthProperty().bind(root.widthProperty());
 		whiteOverlay.heightProperty().bind(root.heightProperty());
 
-		// rootに追加
 		root.getChildren().addAll(bg, whiteOverlay, ui);
 		Scene scene = new Scene(root, 1000, 800);
-
-	    //CSSを接続
-		scene.getStylesheets().add(
-				Gameover.class.getResource("/css/gameover.css").toExternalForm());
-	    
-		//ウィンドウの最小限のサイズを設定
+		
+		// ⭕【JPro対応】CSSの安全な読み込み（Nullチェック追加 ＆ 不要な空白を除去）
+		var cssUrl = Gameover.class.getResource("/css/gameover.css");
+		if (cssUrl != null) {
+			scene.getStylesheets().add(cssUrl.toExternalForm());
+		}
+		
+		// ウィンドウの最小限・最大限のサイズを設定
 		stage.setMinWidth(1000);
 		stage.setMinHeight(800);
 		stage.setMaxWidth(1920); // PC大画面やブラウザ最大化時の最大サイズ制限
