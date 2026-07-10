@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026-07-10 17:44:42,785 [INFO] in scala-execution-context-global-49 - 残りのドット数: 299
 2026-07-10 17:44:43,569 [INFO] in scala-execution-context-global-80 - 残りのドット数: 298
 2026-07-10 17:44:43,809 [INFO] in scala-execution-context-global-80 - 残りのドット数: 297
@@ -582,3 +583,599 @@
 2026-07-10 17:55:52,321 [ERROR] in scala-execution-context-global-436 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
 2026-07-10 17:55:52,321 [ERROR] in scala-execution-context-global-436 - 	at java.base/java.lang.Thread.run(Thread.java:840)
 2026-07-10 17:55:52,334 [INFO] in scala-execution-context-global-436 - [info] com.jpro.JS - received msg: new MainID: 3532 userid: 1242187895
+=======
+2026-07-10 17:29:12,431 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2026-07-10 17:29:12,451 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2026-07-10 17:29:12,493 [INFO] in scala-execution-context-global-52 - [warn] javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @32910ed'
+2026-07-10 17:29:12,866 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.Initializer$ - JavaFX version: 18.0.1-jpro+0-2022-04-04-072947
+2026-07-10 17:29:12,901 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.Initializer$ - finished init!
+2026-07-10 17:29:13,184 [INFO] in scala-execution-context-global-52 - [info] c.jpro - application requested: default
+2026-07-10 17:29:13,188 [INFO] in scala-execution-context-global-52 - [info] c.jpro - Creating Application: default
+2026-07-10 17:29:13,190 [INFO] in scala-execution-context-global-52 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-10 17:29:13,191 [INFO] in scala-execution-context-global-52 - [info] c.jpro - host          localhost:8080
+2026-07-10 17:29:13,191 [INFO] in scala-execution-context-global-52 - [info] c.jpro - uri           /app/ws/default
+2026-07-10 17:29:13,896 [INFO] in scala-execution-context-global-52 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:29:14,787 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 1673299212
+2026-07-10 17:29:15,582 [INFO] in scala-execution-context-global-52 - [info] c.jpro - application requested: 250467453!default
+2026-07-10 17:29:15,583 [INFO] in scala-execution-context-global-52 - [info] c.jpro - Creating Application: 250467453!default
+2026-07-10 17:29:15,583 [INFO] in scala-execution-context-global-52 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:29:15,583 [INFO] in scala-execution-context-global-52 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:29:15,583 [INFO] in scala-execution-context-global-52 - [info] c.jpro - uri           /app/ws/250467453!default
+2026-07-10 17:29:15,636 [INFO] in scala-execution-context-global-52 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:29:15,704 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 1411522414
+2026-07-10 17:29:17,774 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@75793402
+2026-07-10 17:29:17,847 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 1021 userid: 1411522414
+2026-07-10 17:29:19,040 [INFO] in scala-execution-context-global-47 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:29:19,202 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 1496 userid: 1411522414
+2026-07-10 17:29:27,637 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 2441 userid: 1411522414
+2026-07-10 17:29:42,348 [ERROR] in scala-execution-context-global-47 - java.lang.NullPointerException: Cannot invoke "javafx.stage.Window.getProperties()" because "$this" is null
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-47 - 	at simplefx.cores.interfaces.parts.javafx.AllowsExtensionWindow$.extensionMap$extension(CoreJavaFXExtensionSupport.scala:18)
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-47 - 	at com.jpro.meta.stream.Util$.toExtWindow(Util.scala:720)
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-47 - 	at com.jpro.meta.tk.SceneInputListener.getWindowOfInputInWindow$1(SceneInputListener.scala:122)
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-253 - 	at com.jpro.meta.tk.SceneInputListener.getWindowOfInput$1(SceneInputListener.scala:139)
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-253 - 	at com.jpro.meta.tk.SceneInputListener.processInput(SceneInputListener.scala:177)
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-253 - 	at com.jpro.meta.tk.SceneInputListener.$anonfun$new$5(SceneInputListener.scala:49)
+2026-07-10 17:29:42,349 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$Disposer$$anon$1.dispose(CoreTypesDisposer.scala:20)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$ListDisposer.$anonfun$dispose$1(CoreTypesDisposer.scala:29)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$ListDisposer.$anonfun$dispose$1$adapted(CoreTypesDisposer.scala:29)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-52 - 	at scala.collection.immutable.List.foreach(List.scala:431)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-47 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$ListDisposer.dispose(CoreTypesDisposer.scala:29)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreImply$ImplyOperatorForEvent.$anonfun$$eq$eq$greater$4(CoreImply.scala:20)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2026-07-10 17:29:42,350 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.javafx.CoreJavaFXBindable$$anon$2.changed(CoreJavaFXBindable.scala:52)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-52 - 	at com.sun.javafx.binding.ExpressionHelper$Generic.fireValueChangedEvent(ExpressionHelper.java:360)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-52 - 	at com.sun.javafx.binding.ExpressionHelper.fireValueChangedEvent(ExpressionHelper.java:80)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.beans.property.ReadOnlyObjectPropertyBase.fireValueChangedEvent(ReadOnlyObjectPropertyBase.java:80)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.beans.property.ReadOnlyObjectWrapper.fireValueChangedEvent(ReadOnlyObjectWrapper.java:102)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:113)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:147)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.stage.Window.setScene(Window.java:823)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.stage.Stage.setScene(Stage.java:270)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at start.Help.start(Help.java:217)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at control.GameController.switchToHelp(GameController.java:444)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at start.Start.lambda$start$6(Start.java:281)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.scenario.animation.shared.TimelineClipCore.visitKeyFrame(TimelineClipCore.java:239)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.scenario.animation.shared.TimelineClipCore.playTo(TimelineClipCore.java:180)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.animation.Timeline.doPlayTo(Timeline.java:172)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.animation.AnimationAccessorImpl.playTo(AnimationAccessorImpl.java:39)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.scenario.animation.shared.SingleLoopClipEnvelope.timePulse(SingleLoopClipEnvelope.java:103)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.animation.Animation.doTimePulse(Animation.java:1189)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.animation.Animation$1.lambda$timePulse$0(Animation.java:207)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at javafx.animation.Animation$1.timePulse(Animation.java:206)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:343)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:581)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:565)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:558)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$12(QuantumToolkit.java:358)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2026-07-10 17:29:42,351 [ERROR] in scala-execution-context-global-253 - 	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-07-10 17:29:42,478 [INFO] in scala-execution-context-global-487 - [info] com.jpro.JS - received msg: new MainID: 1762 userid: 1673299212
+2026-07-10 17:30:19,655 [INFO] in scala-execution-context-global-487 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:30:19,715 [INFO] in scala-execution-context-global-483 - [info] com.jpro.JS - received msg: new MainID: 6195 userid: 1411522414
+2026-07-10 17:30:21,360 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3c794674
+2026-07-10 17:30:21,402 [INFO] in scala-execution-context-global-483 - [info] com.jpro.JS - received msg: new MainID: 6507 userid: 1411522414
+2026-07-10 17:30:27,248 [INFO] in scala-execution-context-global-487 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:30:27,327 [INFO] in scala-execution-context-global-487 - [info] com.jpro.JS - received msg: new MainID: 7210 userid: 1411522414
+2026-07-10 17:30:28,494 [INFO] in scala-execution-context-global-487 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@60c18b5b
+2026-07-10 17:30:28,552 [INFO] in scala-execution-context-global-487 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@57ccb3e6
+2026-07-10 17:30:28,613 [INFO] in scala-execution-context-global-487 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3266ec7
+2026-07-10 17:30:28,685 [INFO] in scala-execution-context-global-487 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@40d5f703
+2026-07-10 17:30:29,072 [INFO] in scala-execution-context-global-487 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@45db4751
+2026-07-10 17:30:29,114 [INFO] in scala-execution-context-global-487 - [info] com.jpro.JS - received msg: new MainID: 7697 userid: 1411522414
+2026-07-10 17:30:40,012 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,014 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,018 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,023 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,025 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,028 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,031 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,033 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,037 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,040 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,042 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,046 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,067 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,069 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,072 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,075 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,077 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,080 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,084 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,085 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,089 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,093 [INFO] in scala-execution-context-global-483 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:30:40,095 [INFO] in scala-execution-context-global-483 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:30:40,098 [INFO] in scala-execution-context-global-483 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:30:40,109 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2f0db70b
+2026-07-10 17:30:40,168 [INFO] in scala-execution-context-global-483 - 残りのドット数: 305
+2026-07-10 17:30:40,171 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@11c3c5a0
+2026-07-10 17:30:40,198 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@d0a640b
+2026-07-10 17:30:40,232 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5a50866
+2026-07-10 17:30:40,265 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3e4101e9
+2026-07-10 17:30:40,302 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7af02f9e
+2026-07-10 17:30:40,336 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@75c330aa
+2026-07-10 17:30:40,356 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@60a558c
+2026-07-10 17:30:40,377 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1cfc84f2
+2026-07-10 17:30:40,396 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1e6345f8
+2026-07-10 17:30:40,543 [INFO] in scala-execution-context-global-483 - [info] com.jpro.JS - received msg: new MainID: 7975 userid: 1411522414
+2026-07-10 17:30:41,824 [INFO] in scala-execution-context-global-483 - ゲーム開始
+2026-07-10 17:30:41,949 [INFO] in scala-execution-context-global-483 - 残りのドット数: 304
+2026-07-10 17:30:42,189 [INFO] in scala-execution-context-global-487 - 残りのドット数: 303
+2026-07-10 17:30:42,429 [INFO] in scala-execution-context-global-487 - 残りのドット数: 302
+2026-07-10 17:30:42,669 [INFO] in scala-execution-context-global-487 - 残りのドット数: 301
+2026-07-10 17:30:42,909 [INFO] in scala-execution-context-global-487 - 残りのドット数: 300
+2026-07-10 17:30:43,149 [INFO] in scala-execution-context-global-487 - 残りのドット数: 299
+2026-07-10 17:30:43,581 [INFO] in scala-execution-context-global-487 - 残りのドット数: 298
+2026-07-10 17:30:43,821 [INFO] in scala-execution-context-global-487 - 残りのドット数: 297
+2026-07-10 17:30:44,573 [INFO] in scala-execution-context-global-487 - 残りのドット数: 296
+2026-07-10 17:30:44,813 [INFO] in scala-execution-context-global-487 - 残りのドット数: 295
+2026-07-10 17:30:45,054 [INFO] in scala-execution-context-global-487 - 残りのドット数: 294
+2026-07-10 17:30:45,293 [INFO] in scala-execution-context-global-487 - 残りのドット数: 293
+2026-07-10 17:30:45,533 [INFO] in scala-execution-context-global-487 - 残りのドット数: 292
+2026-07-10 17:30:45,774 [INFO] in scala-execution-context-global-487 - 残りのドット数: 291
+2026-07-10 17:30:46,014 [INFO] in scala-execution-context-global-487 - 残りのドット数: 290
+2026-07-10 17:30:46,253 [INFO] in scala-execution-context-global-487 - 残りのドット数: 289
+2026-07-10 17:30:46,493 [INFO] in scala-execution-context-global-487 - 残りのドット数: 288
+2026-07-10 17:30:46,734 [INFO] in scala-execution-context-global-487 - 残りのドット数: 287
+2026-07-10 17:30:46,975 [INFO] in scala-execution-context-global-483 - 残りのドット数: 286
+2026-07-10 17:30:47,213 [INFO] in scala-execution-context-global-487 - 残りのドット数: 285
+2026-07-10 17:30:47,453 [INFO] in scala-execution-context-global-487 - 残りのドット数: 284
+2026-07-10 17:30:47,693 [INFO] in scala-execution-context-global-483 - 残りのドット数: 283
+2026-07-10 17:30:47,933 [INFO] in scala-execution-context-global-483 - 残りのドット数: 282
+2026-07-10 17:30:48,174 [INFO] in scala-execution-context-global-483 - 残りのドット数: 281
+2026-07-10 17:30:48,413 [INFO] in scala-execution-context-global-483 - 残りのドット数: 280
+2026-07-10 17:30:48,829 [INFO] in scala-execution-context-global-487 - CHASE開始
+2026-07-10 17:30:49,373 [INFO] in scala-execution-context-global-486 - 残りのドット数: 279
+2026-07-10 17:30:49,614 [INFO] in scala-execution-context-global-486 - 残りのドット数: 278
+2026-07-10 17:30:49,853 [INFO] in scala-execution-context-global-486 - 残りのドット数: 277
+2026-07-10 17:30:50,093 [INFO] in scala-execution-context-global-486 - 残りのドット数: 276
+2026-07-10 17:30:50,333 [INFO] in scala-execution-context-global-486 - 残りのドット数: 275
+2026-07-10 17:30:50,574 [INFO] in scala-execution-context-global-486 - 残りのドット数: 274
+2026-07-10 17:30:52,991 [INFO] in scala-execution-context-global-486 - SE読込: /music/warp.mp3
+2026-07-10 17:30:52,991 [INFO] in scala-execution-context-global-486 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/warp.mp3
+2026-07-10 17:30:52,991 [INFO] in scala-execution-context-global-486 - SE読込: /music/enemydeadsound.mp3
+2026-07-10 17:30:52,991 [INFO] in scala-execution-context-global-486 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/enemydeadsound.mp3
+2026-07-10 17:30:52,992 [INFO] in scala-execution-context-global-483 - SE読込: /music/syujinkoudeadsound.mp3
+2026-07-10 17:30:52,992 [INFO] in scala-execution-context-global-483 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/syujinkoudeadsound.mp3
+2026-07-10 17:30:52,992 [INFO] in scala-execution-context-global-483 - SE読込: /music/fruiteatsound.mp3
+2026-07-10 17:30:52,992 [INFO] in scala-execution-context-global-483 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/fruiteatsound.mp3
+2026-07-10 17:30:52,993 [INFO] in scala-execution-context-global-483 - SE読込: /music/powerup.mp3
+2026-07-10 17:30:52,993 [INFO] in scala-execution-context-global-483 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/powerup.mp3
+2026-07-10 17:30:52,993 [INFO] in scala-execution-context-global-483 - SE読込: /music/gameover.mp3
+2026-07-10 17:30:52,993 [INFO] in scala-execution-context-global-483 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/gameover.mp3
+2026-07-10 17:30:52,993 [INFO] in scala-execution-context-global-483 - SE読込: /music/retry.mp3
+2026-07-10 17:30:52,993 [INFO] in scala-execution-context-global-483 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/retry.mp3
+2026-07-10 17:30:52,995 [INFO] in scala-execution-context-global-486 - SE読込: /music/select.mp3
+2026-07-10 17:30:52,995 [INFO] in scala-execution-context-global-486 - URL = file:/C:/Users/EMD-576/git/GameApplication/target/classes/music/select.mp3
+2026-07-10 17:30:53,117 [INFO] in scala-execution-context-global-483 - 残りのドット数: 273
+2026-07-10 17:30:53,357 [INFO] in scala-execution-context-global-483 - 残りのドット数: 272
+2026-07-10 17:30:53,598 [INFO] in scala-execution-context-global-483 - 残りのドット数: 271
+2026-07-10 17:30:53,837 [INFO] in scala-execution-context-global-486 - 残りのドット数: 270
+2026-07-10 17:30:54,077 [INFO] in scala-execution-context-global-483 - 残りのドット数: 269
+2026-07-10 17:30:54,318 [INFO] in scala-execution-context-global-486 - 残りのドット数: 268
+2026-07-10 17:30:54,557 [INFO] in scala-execution-context-global-486 - 残りのドット数: 267
+2026-07-10 17:30:54,797 [INFO] in scala-execution-context-global-486 - 残りのドット数: 266
+2026-07-10 17:30:55,037 [INFO] in scala-execution-context-global-486 - 残りのドット数: 265
+2026-07-10 17:30:55,277 [INFO] in scala-execution-context-global-486 - 残りのドット数: 264
+2026-07-10 17:30:56,733 [INFO] in scala-execution-context-global-486 - 残りのドット数: 263
+2026-07-10 17:30:57,454 [INFO] in scala-execution-context-global-486 - 残りのドット数: 262
+2026-07-10 17:30:57,693 [INFO] in scala-execution-context-global-486 - 残りのドット数: 261
+2026-07-10 17:30:58,302 [INFO] in scala-execution-context-global-483 - 残りのドット数: 260
+2026-07-10 17:30:58,542 [INFO] in scala-execution-context-global-483 - 残りのドット数: 259
+2026-07-10 17:30:58,782 [INFO] in scala-execution-context-global-483 - 残りのドット数: 258
+2026-07-10 17:30:58,889 [INFO] in scala-execution-context-global-486 - STRAWBERRYが (23, 16) に出現しました！
+2026-07-10 17:30:58,890 [INFO] in scala-execution-context-global-486 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@395cb97
+2026-07-10 17:30:59,037 [INFO] in scala-execution-context-global-483 - 残りのドット数: 257
+2026-07-10 17:30:59,613 [INFO] in scala-execution-context-global-486 - 残りのドット数: 256
+2026-07-10 17:30:59,853 [INFO] in scala-execution-context-global-483 - 残りのドット数: 255
+2026-07-10 17:31:00,094 [INFO] in scala-execution-context-global-486 - 残りのドット数: 254
+2026-07-10 17:31:00,333 [INFO] in scala-execution-context-global-486 - 残りのドット数: 253
+2026-07-10 17:31:00,574 [INFO] in scala-execution-context-global-486 - 残りのドット数: 252
+2026-07-10 17:31:00,815 [INFO] in scala-execution-context-global-486 - 残りのドット数: 251
+2026-07-10 17:31:01,549 [INFO] in scala-execution-context-global-486 - 残りのドット数: 250
+2026-07-10 17:31:01,789 [INFO] in scala-execution-context-global-486 - 残りのドット数: 249
+2026-07-10 17:31:02,029 [INFO] in scala-execution-context-global-486 - FEVER開始！
+2026-07-10 17:31:02,030 [INFO] in scala-execution-context-global-486 - 残りのドット数: 248
+2026-07-10 17:31:02,031 [INFO] in scala-execution-context-global-486 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@190fa94
+2026-07-10 17:31:02,058 [INFO] in scala-execution-context-global-486 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2da829ad
+2026-07-10 17:31:02,077 [INFO] in scala-execution-context-global-486 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4a890caf
+2026-07-10 17:31:02,096 [INFO] in scala-execution-context-global-486 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4f810387
+2026-07-10 17:31:02,349 [INFO] in scala-execution-context-global-486 - 残りのドット数: 247
+2026-07-10 17:31:02,589 [INFO] in scala-execution-context-global-486 - 残りのドット数: 246
+2026-07-10 17:31:02,829 [INFO] in scala-execution-context-global-486 - 残りのドット数: 245
+2026-07-10 17:31:03,069 [INFO] in scala-execution-context-global-483 - 残りのドット数: 244
+2026-07-10 17:31:03,309 [INFO] in scala-execution-context-global-486 - 残りのドット数: 243
+2026-07-10 17:31:03,549 [INFO] in scala-execution-context-global-483 - 残りのドット数: 242
+2026-07-10 17:31:03,790 [INFO] in scala-execution-context-global-486 - 残りのドット数: 241
+2026-07-10 17:31:04,029 [INFO] in scala-execution-context-global-486 - 残りのドット数: 240
+2026-07-10 17:31:04,269 [INFO] in scala-execution-context-global-483 - 残りのドット数: 239
+2026-07-10 17:31:04,509 [INFO] in scala-execution-context-global-483 - 残りのドット数: 238
+2026-07-10 17:31:04,749 [INFO] in scala-execution-context-global-483 - 残りのドット数: 237
+2026-07-10 17:31:04,989 [INFO] in scala-execution-context-global-483 - 残りのドット数: 236
+2026-07-10 17:31:05,965 [INFO] in scala-execution-context-global-486 - 残りのドット数: 235
+2026-07-10 17:31:06,205 [INFO] in scala-execution-context-global-483 - 残りのドット数: 234
+2026-07-10 17:31:06,494 [INFO] in scala-execution-context-global-483 - 残りのドット数: 233
+2026-07-10 17:31:06,733 [INFO] in scala-execution-context-global-486 - 残りのドット数: 232
+2026-07-10 17:31:06,974 [INFO] in scala-execution-context-global-483 - 残りのドット数: 231
+2026-07-10 17:31:07,215 [INFO] in scala-execution-context-global-483 - 残りのドット数: 230
+2026-07-10 17:31:07,453 [INFO] in scala-execution-context-global-483 - 残りのドット数: 229
+2026-07-10 17:31:07,694 [INFO] in scala-execution-context-global-486 - 残りのドット数: 228
+2026-07-10 17:31:07,933 [INFO] in scala-execution-context-global-486 - 残りのドット数: 227
+2026-07-10 17:31:08,173 [INFO] in scala-execution-context-global-486 - 残りのドット数: 226
+2026-07-10 17:31:08,413 [INFO] in scala-execution-context-global-486 - 残りのドット数: 225
+2026-07-10 17:31:08,573 [INFO] in scala-execution-context-global-486 - フルーツが消えました
+2026-07-10 17:31:08,653 [INFO] in scala-execution-context-global-486 - 残りのドット数: 224
+2026-07-10 17:31:08,893 [INFO] in scala-execution-context-global-483 - 残りのドット数: 223
+2026-07-10 17:31:09,055 [INFO] in scala-execution-context-global-483 - FEVER終了
+2026-07-10 17:31:09,149 [INFO] in scala-execution-context-global-483 - 残りのドット数: 222
+2026-07-10 17:31:09,389 [INFO] in scala-execution-context-global-483 - 残りのドット数: 221
+2026-07-10 17:31:09,966 [INFO] in scala-execution-context-global-486 - 残りのドット数: 220
+2026-07-10 17:31:10,205 [INFO] in scala-execution-context-global-486 - 残りのドット数: 219
+2026-07-10 17:31:10,447 [INFO] in scala-execution-context-global-483 - 残りのドット数: 218
+2026-07-10 17:31:10,685 [INFO] in scala-execution-context-global-486 - 残りのドット数: 217
+2026-07-10 17:31:10,894 [INFO] in scala-execution-context-global-486 - SCATTER開始
+2026-07-10 17:31:10,925 [INFO] in scala-execution-context-global-486 - 残りのドット数: 216
+2026-07-10 17:31:11,165 [INFO] in scala-execution-context-global-486 - 残りのドット数: 215
+2026-07-10 17:31:11,405 [INFO] in scala-execution-context-global-483 - 残りのドット数: 214
+2026-07-10 17:31:11,646 [INFO] in scala-execution-context-global-483 - 残りのドット数: 213
+2026-07-10 17:31:11,885 [INFO] in scala-execution-context-global-483 - 残りのドット数: 212
+2026-07-10 17:31:11,885 [INFO] in scala-execution-context-global-483 - GRAPEが (8, 23) に出現しました！
+2026-07-10 17:31:11,886 [INFO] in scala-execution-context-global-483 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@56edbb55
+2026-07-10 17:31:12,141 [INFO] in scala-execution-context-global-486 - 残りのドット数: 211
+2026-07-10 17:31:12,381 [INFO] in scala-execution-context-global-486 - 残りのドット数: 210
+2026-07-10 17:31:12,621 [INFO] in scala-execution-context-global-486 - 残りのドット数: 209
+2026-07-10 17:31:12,861 [INFO] in scala-execution-context-global-483 - 残りのドット数: 208
+2026-07-10 17:31:13,102 [INFO] in scala-execution-context-global-486 - 残りのドット数: 207
+2026-07-10 17:31:13,341 [INFO] in scala-execution-context-global-483 - 残りのドット数: 206
+2026-07-10 17:31:13,581 [INFO] in scala-execution-context-global-483 - 残りのドット数: 205
+2026-07-10 17:31:14,333 [INFO] in scala-execution-context-global-483 - 残りのドット数: 204
+2026-07-10 17:31:14,574 [INFO] in scala-execution-context-global-486 - 残りのドット数: 203
+2026-07-10 17:31:14,813 [INFO] in scala-execution-context-global-483 - FEVER開始！
+2026-07-10 17:31:14,814 [INFO] in scala-execution-context-global-483 - 残りのドット数: 202
+2026-07-10 17:31:15,053 [INFO] in scala-execution-context-global-486 - 残りのドット数: 201
+2026-07-10 17:31:15,293 [INFO] in scala-execution-context-global-483 - 残りのドット数: 200
+2026-07-10 17:31:15,533 [INFO] in scala-execution-context-global-483 - 残りのドット数: 199
+2026-07-10 17:31:15,773 [INFO] in scala-execution-context-global-483 - 残りのドット数: 198
+2026-07-10 17:31:16,013 [INFO] in scala-execution-context-global-486 - 残りのドット数: 197
+2026-07-10 17:31:16,253 [INFO] in scala-execution-context-global-483 - 残りのドット数: 196
+2026-07-10 17:31:16,494 [INFO] in scala-execution-context-global-483 - 残りのドット数: 195
+2026-07-10 17:31:16,734 [INFO] in scala-execution-context-global-483 - 残りのドット数: 194
+2026-07-10 17:31:17,134 [INFO] in scala-execution-context-global-486 - 残りのドット数: 193
+2026-07-10 17:31:17,373 [INFO] in scala-execution-context-global-483 - 残りのドット数: 192
+2026-07-10 17:31:17,614 [INFO] in scala-execution-context-global-486 - 残りのドット数: 191
+2026-07-10 17:31:17,853 [INFO] in scala-execution-context-global-486 - 残りのドット数: 190
+2026-07-10 17:31:17,903 [INFO] in scala-execution-context-global-486 - CHASE開始
+2026-07-10 17:31:18,093 [INFO] in scala-execution-context-global-486 - 残りのドット数: 189
+2026-07-10 17:31:18,334 [INFO] in scala-execution-context-global-487 - 残りのドット数: 188
+2026-07-10 17:31:18,573 [INFO] in scala-execution-context-global-487 - 残りのドット数: 187
+2026-07-10 17:31:18,814 [INFO] in scala-execution-context-global-486 - 残りのドット数: 186
+2026-07-10 17:31:19,666 [INFO] in scala-execution-context-global-487 - タイトル画面へ戻ります
+2026-07-10 17:31:19,688 [INFO] in scala-execution-context-global-487 - ② timer停止
+2026-07-10 17:31:19,693 [INFO] in scala-execution-context-global-487 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:31:19,841 [INFO] in scala-execution-context-global-487 - [info] com.jpro.JS - received msg: new MainID: 11080 userid: 1411522414
+2026-07-10 17:31:23,903 [INFO] in scala-execution-context-global-486 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-486 - java.lang.NullPointerException: Cannot invoke "javafx.stage.Window.getProperties()" because "$this" is null
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-486 - 	at simplefx.cores.interfaces.parts.javafx.AllowsExtensionWindow$.extensionMap$extension(CoreJavaFXExtensionSupport.scala:18)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.stream.Util$.toExtWindow(Util.scala:720)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.getWindowOfInputInWindow$1(SceneInputListener.scala:122)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.getWindowOfInput$1(SceneInputListener.scala:139)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.processInput(SceneInputListener.scala:177)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at com.jpro.meta.tk.SceneInputListener.$anonfun$new$5(SceneInputListener.scala:49)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$Disposer$$anon$1.dispose(CoreTypesDisposer.scala:20)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$ListDisposer.$anonfun$dispose$1(CoreTypesDisposer.scala:29)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$ListDisposer.$anonfun$dispose$1$adapted(CoreTypesDisposer.scala:29)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at scala.collection.immutable.List.foreach(List.scala:431)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer$ListDisposer.dispose(CoreTypesDisposer.scala:29)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at simplefx.cores.interfaces.parts.CoreImply$ImplyOperatorForEvent.$anonfun$$eq$eq$greater$4(CoreImply.scala:20)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-487 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2026-07-10 17:31:23,926 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-483 - 	at simplefx.cores.interfaces.parts.javafx.CoreJavaFXBindable$$anon$2.changed(CoreJavaFXBindable.scala:52)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-483 - 	at com.sun.javafx.binding.ExpressionHelper$Generic.fireValueChangedEvent(ExpressionHelper.java:360)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-483 - 	at com.sun.javafx.binding.ExpressionHelper.fireValueChangedEvent(ExpressionHelper.java:80)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-483 - 	at javafx.beans.property.ReadOnlyObjectPropertyBase.fireValueChangedEvent(ReadOnlyObjectPropertyBase.java:80)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-483 - 	at javafx.beans.property.ReadOnlyObjectWrapper.fireValueChangedEvent(ReadOnlyObjectWrapper.java:102)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-483 - 	at javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:113)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:147)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.stage.Window.setScene(Window.java:823)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.stage.Stage.setScene(Stage.java:270)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at start.Start.start(Start.java:355)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at control.GameController.switchStart(GameController.java:434)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at start.Help.lambda$start$3(Help.java:185)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.event.Event.fireEvent(Event.java:198)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.scene.Node.fireEvent(Node.java:8797)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.scene.control.Button.fire(Button.java:203)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.event.Event.fireEvent(Event.java:198)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.scene.Scene$MouseHandler.process(Scene.java:3931)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.scene.Scene.processMouseEvent(Scene.java:1918)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2657)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:430)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.monocle.MonocleView.notifyMouse(MonocleView.java:116)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2026-07-10 17:31:23,927 [ERROR] in scala-execution-context-global-486 - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:21)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.monocle.input.fork.NativeMouseInput.notifyMouse(NativeMouseInput.scala:330)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.monocle.input.fork.NativeMouseInput.postMouseEvent(NativeMouseInput.scala:226)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.monocle.input.fork.NativeMouseInput.setState(NativeMouseInput.scala:186)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:21)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.processInputInScene(SceneInputListener.scala:264)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.processInput(SceneInputListener.scala:175)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.processInputs(SceneInputListener.scala:108)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.jpro.meta.tk.SceneInputListener.$anonfun$new$4(SceneInputListener.scala:42)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$3.run(CoreTimeEvent.scala:62)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:456)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2026-07-10 17:31:23,928 [ERROR] in scala-execution-context-global-486 - 	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-07-10 17:31:23,934 [INFO] in scala-execution-context-global-486 - [info] com.jpro.JS - received msg: new MainID: 2230 userid: 1673299212
+2026-07-10 17:31:25,442 [INFO] in scala-execution-context-global-483 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:31:25,442 [INFO] in scala-execution-context-global-483 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:31:25,447 [INFO] in scala-execution-context-global-483 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:31:25 JST 2026      
+2026-07-10 17:31:25,447 [INFO] in scala-execution-context-global-483 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.076 
+2026-07-10 17:31:25,447 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.003  
+2026-07-10 17:31:25,448 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:31:25,448 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:31:25,448 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - raw            : 27974292
+2026-07-10 17:31:25,448 [INFO] in scala-execution-context-global-483 - [info] c.j.i.s.ViewInfo$ - zipped         : 7269634
+2026-07-10 17:31:25,448 [INFO] in scala-execution-context-global-483 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:31:25,931 [INFO] in scala-execution-context-global-486 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:31:25 JST 2026      
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.000 
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - raw            : 4309867
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - zipped         : 1159263
+2026-07-10 17:31:25,932 [INFO] in scala-execution-context-global-486 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:31:26,925 [INFO] in scala-execution-context-global-487 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:32:13,268 [INFO] in scala-execution-context-global-487 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:34:24,398 [INFO] in scala-execution-context-global-52 - [info] c.jpro - application requested: 968949953!default
+2026-07-10 17:34:24,399 [INFO] in scala-execution-context-global-52 - [info] c.jpro - Creating Application: 968949953!default
+2026-07-10 17:34:24,400 [INFO] in scala-execution-context-global-52 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:34:24,402 [INFO] in scala-execution-context-global-52 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:34:24,402 [INFO] in scala-execution-context-global-52 - [info] c.jpro - uri           /app/ws/968949953!default
+2026-07-10 17:34:24,483 [INFO] in scala-execution-context-global-52 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:34:24,604 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 971769798
+2026-07-10 17:34:26,557 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 1762 userid: 971769798
+2026-07-10 17:34:28,248 [INFO] in scala-execution-context-global-52 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:34:28,307 [INFO] in scala-execution-context-global-52 - [info] com.jpro.JS - received msg: new MainID: 2230 userid: 971769798
+2026-07-10 17:36:42,129 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:36:42,130 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:36:42,130 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:36:42 JST 2026      
+2026-07-10 17:36:42,130 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.083 
+2026-07-10 17:36:42,130 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.012  
+2026-07-10 17:36:42,130 [INFO] in scala-execution-context-global-485 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:36:42,131 [INFO] in scala-execution-context-global-485 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:36:42,131 [INFO] in scala-execution-context-global-485 - [info] c.j.i.s.ViewInfo$ - raw            : 4500145
+2026-07-10 17:36:42,131 [INFO] in scala-execution-context-global-485 - [info] c.j.i.s.ViewInfo$ - zipped         : 1317188
+2026-07-10 17:36:42,131 [INFO] in scala-execution-context-global-485 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:37:06,597 [INFO] in scala-execution-context-global-486 - [info] c.jpro - application requested: 22371916!default
+2026-07-10 17:37:06,598 [INFO] in scala-execution-context-global-486 - [info] c.jpro - Creating Application: 22371916!default
+2026-07-10 17:37:06,598 [INFO] in scala-execution-context-global-486 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:37:06,598 [INFO] in scala-execution-context-global-486 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:37:06,598 [INFO] in scala-execution-context-global-486 - [info] c.jpro - uri           /app/ws/22371916!default
+2026-07-10 17:37:06,661 [INFO] in scala-execution-context-global-484 - [info] com.jpro.JS - received msg: new MainID: 476 userid: 446873640
+2026-07-10 17:37:13,252 [INFO] in scala-execution-context-global-484 - [info] com.jpro.JS - received msg: new MainID: 1420 userid: 446873640
+2026-07-10 17:37:21,166 [INFO] in scala-execution-context-global-484 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:37:21,220 [INFO] in scala-execution-context-global-484 - [info] com.jpro.JS - received msg: new MainID: 2230 userid: 446873640
+2026-07-10 17:37:23,051 [INFO] in scala-execution-context-global-484 - [info] com.jpro.JS - received msg: new MainID: 3175 userid: 446873640
+2026-07-10 17:37:30,354 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:37:30,354 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:37:30,354 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:37:30 JST 2026      
+2026-07-10 17:37:30,354 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.136 
+2026-07-10 17:37:30,354 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.039  
+2026-07-10 17:37:30,354 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:37:30,355 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:37:30,355 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - raw            : 898473
+2026-07-10 17:37:30,355 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - zipped         : 250994
+2026-07-10 17:37:30,355 [INFO] in scala-execution-context-global-484 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:38:36,671 [INFO] in scala-execution-context-global-483 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:46:53,764 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2026-07-10 17:46:53,764 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2026-07-10 17:46:53,811 [INFO] in scala-execution-context-global-49 - [warn] javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @73f7ae01'
+2026-07-10 17:46:54,166 [INFO] in scala-execution-context-global-49 - [info] c.j.i.s.Initializer$ - JavaFX version: 18.0.1-jpro+0-2022-04-04-072947
+2026-07-10 17:46:54,198 [INFO] in scala-execution-context-global-49 - [info] c.j.i.s.Initializer$ - finished init!
+2026-07-10 17:46:54,479 [INFO] in scala-execution-context-global-49 - [info] c.jpro - application requested: default
+2026-07-10 17:46:54,483 [INFO] in scala-execution-context-global-49 - [info] c.jpro - Creating Application: default
+2026-07-10 17:46:54,484 [INFO] in scala-execution-context-global-49 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-10 17:46:54,485 [INFO] in scala-execution-context-global-49 - [info] c.jpro - host          localhost:8080
+2026-07-10 17:46:54,485 [INFO] in scala-execution-context-global-49 - [info] c.jpro - uri           /app/ws/default
+2026-07-10 17:46:54,788 [INFO] in scala-execution-context-global-49 - [info] c.jpro - application requested: 22371916!default
+2026-07-10 17:46:54,788 [INFO] in scala-execution-context-global-49 - [info] c.jpro - Creating Application: 22371916!default
+2026-07-10 17:46:54,805 [INFO] in scala-execution-context-global-49 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:46:54,805 [INFO] in scala-execution-context-global-47 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:46:54,805 [INFO] in scala-execution-context-global-47 - [info] c.jpro - uri           /app/ws/22371916!default
+2026-07-10 17:46:54,988 [INFO] in scala-execution-context-global-47 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:46:55,697 [INFO] in scala-execution-context-global-49 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:46:55,776 [INFO] in scala-execution-context-global-49 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 837810247
+2026-07-10 17:46:55,896 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 1324797686
+2026-07-10 17:46:55,963 [INFO] in scala-execution-context-global-80 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-10 17:46:55,967 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:46:55,967 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:46:55,974 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:46:55 JST 2026      
+2026-07-10 17:46:55,974 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:09:24.679 
+2026-07-10 17:46:55,974 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.119  
+2026-07-10 17:46:55,975 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:46:55,975 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:46:55,975 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - raw            : 23312
+2026-07-10 17:46:55,975 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - zipped         : 4065
+2026-07-10 17:46:55,975 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:46:56,141 [INFO] in scala-execution-context-global-47 - [info] c.jpro - application requested: default
+2026-07-10 17:46:56,142 [INFO] in scala-execution-context-global-47 - [info] c.jpro - Creating Application: default
+2026-07-10 17:46:56,142 [INFO] in scala-execution-context-global-47 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:46:56,142 [INFO] in scala-execution-context-global-47 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:46:56,142 [INFO] in scala-execution-context-global-47 - [info] c.jpro - uri           /app/ws/default
+2026-07-10 17:46:56,189 [INFO] in scala-execution-context-global-47 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:46:56,271 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 749974745
+2026-07-10 17:46:56,960 [INFO] in scala-execution-context-global-80 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-47 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:46:57 JST 2026      
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.092 
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.018  
+2026-07-10 17:46:57,397 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:46:57,398 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:46:57,398 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - raw            : 57613
+2026-07-10 17:46:57,398 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - zipped         : 12194
+2026-07-10 17:46:57,398 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:46:57,421 [INFO] in scala-execution-context-global-80 - [info] c.jpro - application requested: default
+2026-07-10 17:46:57,421 [INFO] in scala-execution-context-global-80 - [info] c.jpro - Creating Application: default
+2026-07-10 17:46:57,421 [INFO] in scala-execution-context-global-80 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:46:57,421 [INFO] in scala-execution-context-global-80 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:46:57,421 [INFO] in scala-execution-context-global-80 - [info] c.jpro - uri           /app/ws/default
+2026-07-10 17:46:57,447 [INFO] in scala-execution-context-global-47 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:46:57,523 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 989422136
+2026-07-10 17:46:58,401 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:46:59,799 [INFO] in scala-execution-context-global-80 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7b60da6c
+2026-07-10 17:46:59,877 [INFO] in scala-execution-context-global-80 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@63b577af
+2026-07-10 17:46:59,930 [INFO] in scala-execution-context-global-80 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2f8f4fe5
+2026-07-10 17:47:00,007 [INFO] in scala-execution-context-global-80 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@715f89f8
+2026-07-10 17:47:00,387 [INFO] in scala-execution-context-global-80 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@62bcf622
+2026-07-10 17:47:00,510 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 962 userid: 989422136
+2026-07-10 17:47:08,479 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,481 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,485 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,488 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,490 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,493 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,497 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,499 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,502 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,506 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,507 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,511 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,539 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,541 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,545 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,548 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,549 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,552 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,557 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,559 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,562 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,565 [INFO] in scala-execution-context-global-47 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-10 17:47:08,566 [INFO] in scala-execution-context-global-47 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-10 17:47:08,570 [INFO] in scala-execution-context-global-47 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-10 17:47:08,593 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@63aa9da6
+2026-07-10 17:47:08,655 [INFO] in scala-execution-context-global-47 - 残りのドット数: 305
+2026-07-10 17:47:08,659 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@63a1c085
+2026-07-10 17:47:08,687 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2388c967
+2026-07-10 17:47:08,720 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5b6858da
+2026-07-10 17:47:08,756 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2a800df3
+2026-07-10 17:47:08,789 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@45cec5e
+2026-07-10 17:47:08,823 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4d45215b
+2026-07-10 17:47:08,842 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@ec8b87d
+2026-07-10 17:47:08,861 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2bce58d6
+2026-07-10 17:47:08,880 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@693c1848
+2026-07-10 17:47:09,031 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 1270 userid: 989422136
+2026-07-10 17:47:19,097 [INFO] in scala-execution-context-global-47 - 【デバッグ】強制ステージクリアを実行しました。
+2026-07-10 17:47:19,149 [INFO] in scala-execution-context-global-47 - 🏁 ステージクリア！
+2026-07-10 17:47:19,249 [INFO] in scala-execution-context-global-80 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@14069561
+2026-07-10 17:47:19,774 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 2628 userid: 989422136
+2026-07-10 17:47:23,121 [INFO] in scala-execution-context-global-80 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-10 17:47:23,123 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:47:23,123 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:47:23,123 [INFO] in scala-execution-context-global-80 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:47:23 JST 2026      
+2026-07-10 17:47:23,123 [INFO] in scala-execution-context-global-49 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.084 
+2026-07-10 17:47:23,124 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.006  
+2026-07-10 17:47:23,124 [INFO] in scala-execution-context-global-49 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:47:23,124 [INFO] in scala-execution-context-global-49 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:47:23,124 [INFO] in scala-execution-context-global-49 - [info] c.j.i.s.ViewInfo$ - raw            : 8354268
+2026-07-10 17:47:23,124 [INFO] in scala-execution-context-global-818 - [info] c.j.i.s.ViewInfo$ - zipped         : 2082825
+2026-07-10 17:47:23,124 [INFO] in scala-execution-context-global-818 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:47:23,187 [INFO] in scala-execution-context-global-821 - [info] c.jpro - application requested: default
+2026-07-10 17:47:23,187 [INFO] in scala-execution-context-global-821 - [info] c.jpro - Creating Application: default
+2026-07-10 17:47:23,187 [INFO] in scala-execution-context-global-821 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:47:23,188 [INFO] in scala-execution-context-global-821 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:47:23,188 [INFO] in scala-execution-context-global-821 - [info] c.jpro - uri           /app/ws/default
+2026-07-10 17:47:23,217 [INFO] in scala-execution-context-global-820 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:47:23,287 [INFO] in scala-execution-context-global-820 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 215484685
+2026-07-10 17:47:24,112 [INFO] in scala-execution-context-global-821 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:47:29 JST 2026      
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.177 
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.087  
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - raw            : 214286
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-821 - [info] c.j.i.s.ViewInfo$ - zipped         : 51804
+2026-07-10 17:47:29,395 [INFO] in scala-execution-context-global-821 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:47:29,409 [INFO] in scala-execution-context-global-821 - [info] c.jpro - application requested: default
+2026-07-10 17:47:29,410 [INFO] in scala-execution-context-global-819 - [info] c.jpro - Creating Application: default
+2026-07-10 17:47:29,410 [INFO] in scala-execution-context-global-819 - [info] c.jpro - remoteAddress 192.168.24.109
+2026-07-10 17:47:29,410 [INFO] in scala-execution-context-global-819 - [info] c.jpro - host          192.168.24.152:8080
+2026-07-10 17:47:29,410 [INFO] in scala-execution-context-global-821 - [info] c.jpro - uri           /app/ws/default
+2026-07-10 17:47:29,438 [INFO] in scala-execution-context-global-821 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-10 17:47:29,504 [INFO] in scala-execution-context-global-820 - [info] com.jpro.JS - received msg: new MainID: 469 userid: 1334623274
+2026-07-10 17:47:30,400 [INFO] in scala-execution-context-global-821 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-10 17:47:32,774 [INFO] in scala-execution-context-global-820 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-10 17:47:32,774 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:47:32,774 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-10 17:47:32,774 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - startTime      : Fri Jul 10 17:47:32 JST 2026      
+2026-07-10 17:47:32,774 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.083 
+2026-07-10 17:47:32,774 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.006  
+2026-07-10 17:47:32,775 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-10 17:47:32,775 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-10 17:47:32,775 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - raw            : 125709
+2026-07-10 17:47:32,775 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - zipped         : 30928
+2026-07-10 17:47:32,775 [INFO] in scala-execution-context-global-820 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-10 17:47:33,776 [INFO] in scala-execution-context-global-821 - [info] c.j.i.c.InstanceImpl - closing window!
+>>>>>>> branch 'jpro' of https://github.com/hayakawa-rai/GameApplication.git
