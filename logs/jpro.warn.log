@@ -8119,3 +8119,16 @@ Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.media.Aud
 2026-07-10 16:47:21,325 [WARN] from javafx in application-akka.actor.default-dispatcher-7 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @79f89f32'
 2026-07-10 16:47:37,994 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-17 - Unexpected message form client, closing session.
 2026-07-10 16:49:23,454 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @3a28016a'
+2026-07-10 17:04:07,365 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-15 - Unexpected message form client, closing session.
+2026-07-10 17:10:26,102 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @1907f036'
+2026-07-10 17:10:36,793 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-9 - Unexpected message form client, closing session.
+2026-07-10 17:39:03,490 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5cbeba93'
+2026-07-10 17:40:03,010 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-16 - Unexpected message form client, closing session.
+2026-07-10 17:40:49,827 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @3c3ddf25'
+2026-07-10 17:41:35,717 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-13 - Unexpected message form client, closing session.
+2026-07-10 17:43:11,103 [WARN] from javafx in application-akka.actor.default-dispatcher-7 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @787d4bee'
+2026-07-10 17:43:29,030 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-17 - Unexpected message form client, closing session.
+2026-07-10 17:44:10,039 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @56328481'
+2026-07-10 17:46:41,679 [ERROR] from com.jpro.JS in JavaFX Application Thread - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-10 17:46:41,679 [ERROR] from com.jpro.JS in JavaFX Application Thread - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-10 17:55:15,546 [WARN] from javafx in application-akka.actor.default-dispatcher-5 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @37c237eb'

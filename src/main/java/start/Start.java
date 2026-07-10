@@ -327,8 +327,8 @@ public class Start extends Application {
 		// ？ボタンはシーンサイズに応じて小さめに追従（正方形を維持）
 		btnHelp.prefWidthProperty().bind(scene.widthProperty().multiply(0.05));
 		btnHelp.prefHeightProperty().bind(btnHelp.widthProperty());
-		btnHelp.setMinWidth(36);
-		btnHelp.setMinHeight(36);
+		btnHelp.setMinWidth(40);
+		btnHelp.setMinHeight(40);
 
 		// ？ボタンのフォントサイズもシーン幅に応じて可変にする（12px〜20px）
 		ResponsiveUtil.bindButtonFontAndPadding(btnHelp, scene.widthProperty(),

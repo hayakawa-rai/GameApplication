@@ -325,15 +325,11 @@ public class Help extends Application {
 		img2.setFitHeight(65);
 		img2.setPreserveRatio(true);
 
-		Label orLabel = new Label("または");
-		orLabel.setTextFill(Color.WHITE);
-		orLabel.setFont(Font.font("PixelMplus12", 15));
-
 		ImageView img3 = new ImageView(new Image(getClass().getResource("/picture/yazirusi.png").toExternalForm()));
 		img3.setFitHeight(65);
 		img3.setPreserveRatio(true);
 
-		HBox row = new HBox(8, moveLabel, img2, orLabel, img3);
+		HBox row = new HBox(8, moveLabel, img2, img3);
 		row.setAlignment(Pos.CENTER);
 		return row;
 	}
