@@ -8131,3 +8131,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.media.Aud
 =======
 2026-07-10 16:49:23,454 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @3a28016a'
 >>>>>>> branch 'jpro' of https://github.com/hayakawa-rai/GameApplication.git
+2026-07-10 17:10:05,444 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @7f4990c8'
+2026-07-10 17:19:20,237 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-5 - Unexpected message form client, closing session.
+2026-07-10 17:21:59,717 [WARN] from javafx in application-akka.actor.default-dispatcher-8 - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @4173ccb1'
+2026-07-10 17:24:08,180 [WARN] from com.jpro.internal.server.ViewSerializerActor in application-akka.actor.default-dispatcher-17 - Unexpected message form client, closing session.

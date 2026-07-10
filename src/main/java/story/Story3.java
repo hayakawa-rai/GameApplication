@@ -177,7 +177,7 @@ public class Story3 extends Application {
 		if (endSound != null) endSound.setVolume(0.4);
 
 		List<Dialogue> dialogues = Arrays.asList(
-				new Dialogue("わだたく", "……あれ……？もう、あそべない……？", downSound, Color.RED),
+				new Dialogue("わだたく", "……あれ……？もう、あそべない……？", downSound, Color.PINK),
 				new Dialogue("仙石さん", "終わったか……", null, Color.WHITE),
 				new Dialogue("あにき", "……ペットがやられたな。まあいい。", jumpSound, Color.RED),
 				new Dialogue("あにき", "代わりはいくらでもいる。", null, Color.RED),
