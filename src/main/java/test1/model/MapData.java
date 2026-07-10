@@ -111,9 +111,6 @@ public class MapData implements GameMap {
 	// キャラクター管理
 	// ==================================================
 
-	// マップ上のアイテム配置
-	private Item[][] itemMap;
-
 	// 主人公キャラクター
 	private Syujinkou syujinkou;
 
@@ -139,6 +136,9 @@ public class MapData implements GameMap {
 	// ==================================================
 	// アイテム管理
 	// ==================================================
+
+	// マップ上のアイテム配置
+	private Item[][] itemMap;
 
 	// 初期状態のアイテム配置（復活用)
 	private Item[][] initialItemMap;
@@ -406,6 +406,11 @@ public class MapData implements GameMap {
 			if (syujinkou.updateDyingAnimation()) {
 				if (syujinkou.isAlive()) {
 					syujinkou.resetToStartPosition();
+					if (syujinkou.getHp() == 1) {
+						Bgm.playPinchBGM();
+					} else {
+						Bgm.playStageBGM(stageNumber);
+					}
 					for (Enemy enemy : enemies) {
 						enemy.resetToStartPosition();
 						enemy.setCurrentState(EnemyState.SCATTER);
@@ -432,7 +437,13 @@ public class MapData implements GameMap {
 		if (feverEndTime > 0 && System.currentTimeMillis() >= feverEndTime) {
 			feverEndTime = 0;
 			syujinkou.setFever(false);
-			Bgm.stopFeverBGM(); // ステージBGMに復帰
+
+			// ピンチ時のBGMに変更
+			if (syujinkou.getHp() == 1) {
+				Bgm.playPinchBGM();
+			} else {
+				Bgm.stopFeverBGM();
+			}
 
 			for (Enemy e : enemies) {
 				if (e.getCurrentState() == EnemyState.FEVER) {
@@ -839,6 +850,12 @@ public class MapData implements GameMap {
 				SoundManager.play(SoundManager.DAMAGE);
 
 				syujinkou.takeDamage();
+
+				// HPが1になったらピンチBGM
+				if (syujinkou.getHp() == 1) {
+					Bgm.playPinchBGM();
+				}
+
 				syujinkou.startDying();
 
 				/*
@@ -908,6 +925,21 @@ public class MapData implements GameMap {
 	@Override
 	public List<Enemy> getEnemies() {
 		return enemies;
+	}
+
+	/**
+	 * HPに応じてBGMを切り替える
+	 */
+	private void updatePinchBGM() {
+
+		if (syujinkou == null || syujinkou.isFever()) {
+			return;
+		}
+
+		if (syujinkou.getHp() == 1) {
+			Bgm.playPinchBGM();
+			updatePinchBGM();
+		}
 	}
 
 	// ※ common.Direction と Characters.Direction の型が合わない場合はキャストや変換を行ってください
@@ -1018,11 +1050,11 @@ public class MapData implements GameMap {
 	public int getFruitCol() {
 		return fruitCol;
 	}
-	
+
 	// デバックよう強制クリアボタン
 	public void forceStageClear() {
-	    this.remainingItems = 0;
-	    System.out.println("【デバッグ】強制ステージクリアを実行しました。");
+		this.remainingItems = 0;
+		System.out.println("【デバッグ】強制ステージクリアを実行しました。");
 	}
 
 }
