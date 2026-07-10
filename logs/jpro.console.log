@@ -1,0 +1,867 @@
+2026-07-09 13:31:39,162 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2026-07-09 13:31:39,162 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2026-07-09 13:31:39,216 [INFO] in scala-execution-context-global-51 - [warn] javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @154f1efb'
+2026-07-09 13:31:39,618 [INFO] in scala-execution-context-global-51 - [info] c.j.i.s.Initializer$ - JavaFX version: 18.0.1-jpro+0-2022-04-04-072947
+2026-07-09 13:31:39,640 [INFO] in scala-execution-context-global-51 - [info] c.j.i.s.Initializer$ - finished init!
+2026-07-09 13:31:39,972 [INFO] in scala-execution-context-global-51 - [info] c.jpro - application requested: default
+2026-07-09 13:31:39,978 [INFO] in scala-execution-context-global-51 - [info] c.jpro - Creating Application: default
+2026-07-09 13:31:39,980 [INFO] in scala-execution-context-global-51 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-09 13:31:39,981 [INFO] in scala-execution-context-global-51 - [info] c.jpro - host          localhost:8080
+2026-07-09 13:31:39,981 [INFO] in scala-execution-context-global-51 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 13:31:40,293 [INFO] in scala-execution-context-global-51 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 13:31:41,039 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 1456430362
+2026-07-09 13:31:44,291 [INFO] in scala-execution-context-global-51 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-09 13:31:44,295 [INFO] in scala-execution-context-global-51 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 13:31:44,295 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-09 13:31:44,305 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - startTime      : Thu Jul 09 13:31:44 JST 2026      
+2026-07-09 13:31:44,305 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.002 
+2026-07-09 13:31:44,305 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2026-07-09 13:31:44,308 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-09 13:31:44,309 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-09 13:31:44,309 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - raw            : 122126
+2026-07-09 13:31:44,309 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - zipped         : 28926
+2026-07-09 13:31:44,309 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 13:31:45,298 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-09 13:55:13,422 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2026-07-09 13:55:13,422 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2026-07-09 13:55:13,505 [INFO] in scala-execution-context-global-50 - [warn] javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5a973a24'
+2026-07-09 13:55:13,905 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.Initializer$ - JavaFX version: 18.0.1-jpro+0-2022-04-04-072947
+2026-07-09 13:55:13,930 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.Initializer$ - finished init!
+2026-07-09 13:55:14,229 [INFO] in scala-execution-context-global-50 - [info] c.jpro - application requested: default
+2026-07-09 13:55:14,236 [INFO] in scala-execution-context-global-50 - [info] c.jpro - Creating Application: default
+2026-07-09 13:55:14,238 [INFO] in scala-execution-context-global-50 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-09 13:55:14,239 [INFO] in scala-execution-context-global-50 - [info] c.jpro - host          localhost:8080
+2026-07-09 13:55:14,239 [INFO] in scala-execution-context-global-50 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 13:55:14,574 [INFO] in scala-execution-context-global-50 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 13:55:15,316 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 316892974
+2026-07-09 13:55:21,946 [INFO] in scala-execution-context-global-50 - [info] c.jpro - application requested: default
+2026-07-09 13:55:21,947 [INFO] in scala-execution-context-global-50 - [info] c.jpro - Creating Application: default
+2026-07-09 13:55:21,948 [INFO] in scala-execution-context-global-50 - [info] c.jpro - remoteAddress 192.168.102.19
+2026-07-09 13:55:21,948 [INFO] in scala-execution-context-global-50 - [info] c.jpro - host          192.168.102.19:8080
+2026-07-09 13:55:21,948 [INFO] in scala-execution-context-global-50 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 13:55:21,982 [INFO] in scala-execution-context-global-50 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 13:55:22,083 [INFO] in scala-execution-context-global-47 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 446774587
+2026-07-09 13:55:23,356 [INFO] in scala-execution-context-global-50 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-09 13:55:23,358 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 13:55:23,359 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-09 13:55:23,369 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - startTime      : Thu Jul 09 13:55:23 JST 2026      
+2026-07-09 13:55:23,369 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.001 
+2026-07-09 13:55:23,370 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2026-07-09 13:55:23,370 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-09 13:55:23,370 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-09 13:55:23,370 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - raw            : 78320
+2026-07-09 13:55:23,370 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - zipped         : 19118
+2026-07-09 13:55:23,370 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 13:55:24,353 [INFO] in scala-execution-context-global-50 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-09 13:56:19,865 [INFO] in scala-execution-context-global-50 - [info] c.jpro - application requested: default
+2026-07-09 13:56:19,865 [INFO] in scala-execution-context-global-50 - [info] c.jpro - Creating Application: default
+2026-07-09 13:56:19,865 [INFO] in scala-execution-context-global-50 - [info] c.jpro - remoteAddress 192.168.102.6
+2026-07-09 13:56:19,865 [INFO] in scala-execution-context-global-50 - [info] c.jpro - host          192.168.102.19:8080
+2026-07-09 13:56:19,865 [INFO] in scala-execution-context-global-50 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 13:56:19,901 [INFO] in scala-execution-context-global-50 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 13:56:19,976 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 877770886
+2026-07-09 13:56:23,962 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@26bfe4b4
+2026-07-09 13:56:24,049 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2209521c
+2026-07-09 13:56:24,127 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@473fde48
+2026-07-09 13:56:24,224 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4b5cabe5
+2026-07-09 13:56:24,610 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@58031d86
+2026-07-09 13:56:24,680 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 930 userid: 877770886
+2026-07-09 13:56:29,712 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,714 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,717 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,733 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,735 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,738 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,756 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,758 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,761 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,777 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,779 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,783 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,824 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,826 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,829 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,832 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,834 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,838 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,841 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,843 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,846 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,850 [INFO] in scala-execution-context-global-179 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:56:29,852 [INFO] in scala-execution-context-global-179 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:56:29,855 [INFO] in scala-execution-context-global-179 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:56:29,884 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@14071721
+2026-07-09 13:56:29,958 [INFO] in scala-execution-context-global-179 - 残りのドット数: 305
+2026-07-09 13:56:29,981 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6e8fb060
+2026-07-09 13:56:30,014 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5bd4b0e6
+2026-07-09 13:56:30,054 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6b237ac4
+2026-07-09 13:56:30,089 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@485e5fc4
+2026-07-09 13:56:30,123 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3b93a911
+2026-07-09 13:56:30,145 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@41a20f88
+2026-07-09 13:56:30,165 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4770c5a0
+2026-07-09 13:56:30,186 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@792d8e1b
+2026-07-09 13:56:30,317 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 1790 userid: 877770886
+2026-07-09 13:56:37,945 [INFO] in scala-execution-context-global-50 - ゲーム開始
+2026-07-09 13:56:38,068 [INFO] in scala-execution-context-global-179 - 残りのドット数: 304
+2026-07-09 13:56:38,308 [INFO] in scala-execution-context-global-179 - 残りのドット数: 303
+2026-07-09 13:56:38,546 [INFO] in scala-execution-context-global-179 - 残りのドット数: 302
+2026-07-09 13:56:38,788 [INFO] in scala-execution-context-global-50 - 残りのドット数: 301
+2026-07-09 13:56:39,027 [INFO] in scala-execution-context-global-179 - 残りのドット数: 300
+2026-07-09 13:56:39,267 [INFO] in scala-execution-context-global-179 - 残りのドット数: 299
+2026-07-09 13:56:39,506 [INFO] in scala-execution-context-global-179 - 残りのドット数: 298
+2026-07-09 13:56:39,746 [INFO] in scala-execution-context-global-50 - 残りのドット数: 297
+2026-07-09 13:56:39,988 [INFO] in scala-execution-context-global-50 - 残りのドット数: 296
+2026-07-09 13:56:40,228 [INFO] in scala-execution-context-global-179 - 残りのドット数: 295
+2026-07-09 13:56:40,466 [INFO] in scala-execution-context-global-179 - 残りのドット数: 294
+2026-07-09 13:56:40,706 [INFO] in scala-execution-context-global-179 - 残りのドット数: 293
+2026-07-09 13:56:40,948 [INFO] in scala-execution-context-global-50 - 残りのドット数: 292
+2026-07-09 13:56:41,188 [INFO] in scala-execution-context-global-179 - 残りのドット数: 291
+2026-07-09 13:56:41,426 [INFO] in scala-execution-context-global-47 - 残りのドット数: 290
+2026-07-09 13:56:41,666 [INFO] in scala-execution-context-global-50 - 残りのドット数: 289
+2026-07-09 13:56:41,906 [INFO] in scala-execution-context-global-47 - 残りのドット数: 288
+2026-07-09 13:56:42,147 [INFO] in scala-execution-context-global-50 - 残りのドット数: 287
+2026-07-09 13:56:42,386 [INFO] in scala-execution-context-global-50 - 残りのドット数: 286
+2026-07-09 13:56:42,627 [INFO] in scala-execution-context-global-50 - 残りのドット数: 285
+2026-07-09 13:56:42,866 [INFO] in scala-execution-context-global-50 - 残りのドット数: 284
+2026-07-09 13:56:43,106 [INFO] in scala-execution-context-global-50 - 残りのドット数: 283
+2026-07-09 13:56:43,346 [INFO] in scala-execution-context-global-50 - 残りのドット数: 282
+2026-07-09 13:56:43,587 [INFO] in scala-execution-context-global-47 - 残りのドット数: 281
+2026-07-09 13:56:43,826 [INFO] in scala-execution-context-global-47 - 残りのドット数: 280
+2026-07-09 13:56:44,068 [INFO] in scala-execution-context-global-50 - 残りのドット数: 279
+2026-07-09 13:56:44,946 [INFO] in scala-execution-context-global-47 - CHASE開始
+2026-07-09 13:56:48,290 [INFO] in scala-execution-context-global-50 - 残りのドット数: 278
+2026-07-09 13:56:48,530 [INFO] in scala-execution-context-global-47 - 残りのドット数: 277
+2026-07-09 13:56:48,770 [INFO] in scala-execution-context-global-47 - 残りのドット数: 276
+2026-07-09 13:56:49,012 [INFO] in scala-execution-context-global-47 - 残りのドット数: 275
+2026-07-09 13:56:49,250 [INFO] in scala-execution-context-global-47 - 残りのドット数: 274
+2026-07-09 13:56:49,492 [INFO] in scala-execution-context-global-179 - 残りのドット数: 273
+2026-07-09 13:56:49,730 [INFO] in scala-execution-context-global-179 - 残りのドット数: 272
+2026-07-09 13:56:49,972 [INFO] in scala-execution-context-global-179 - 残りのドット数: 271
+2026-07-09 13:56:50,211 [INFO] in scala-execution-context-global-47 - 残りのドット数: 270
+2026-07-09 13:56:50,258 [INFO] in scala-execution-context-global-179 - 💥敵に捕まった！
+2026-07-09 13:56:50,275 [INFO] in scala-execution-context-global-179 - SE読込: /music/warp.mp3
+2026-07-09 13:56:50,275 [INFO] in scala-execution-context-global-179 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/warp.mp3
+2026-07-09 13:56:50,284 [INFO] in scala-execution-context-global-47 - SE読込: /music/enemydeadsound.mp3
+2026-07-09 13:56:50,285 [INFO] in scala-execution-context-global-47 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/enemydeadsound.mp3
+2026-07-09 13:56:50,294 [INFO] in scala-execution-context-global-179 - SE読込: /music/syujinkoudeadsound.mp3
+2026-07-09 13:56:50,294 [INFO] in scala-execution-context-global-179 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/syujinkoudeadsound.mp3
+2026-07-09 13:56:50,309 [INFO] in scala-execution-context-global-47 - SE読込: /music/fruiteatsound.mp3
+2026-07-09 13:56:50,310 [INFO] in scala-execution-context-global-47 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/fruiteatsound.mp3
+2026-07-09 13:56:50,316 [INFO] in scala-execution-context-global-179 - SE読込: /music/powerup.mp3
+2026-07-09 13:56:50,316 [INFO] in scala-execution-context-global-179 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/powerup.mp3
+2026-07-09 13:56:50,342 [INFO] in scala-execution-context-global-179 - SE読込: /music/gameover.mp3
+2026-07-09 13:56:50,342 [INFO] in scala-execution-context-global-179 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/gameover.mp3
+2026-07-09 13:56:50,359 [INFO] in scala-execution-context-global-47 - SE読込: /music/retry.mp3
+2026-07-09 13:56:50,359 [INFO] in scala-execution-context-global-47 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/retry.mp3
+2026-07-09 13:56:50,360 [INFO] in scala-execution-context-global-179 - SE読込: /music/select.mp3
+2026-07-09 13:56:50,360 [INFO] in scala-execution-context-global-179 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/select.mp3
+2026-07-09 13:56:54,951 [INFO] in scala-execution-context-global-179 - ゲーム開始
+2026-07-09 13:56:56,755 [INFO] in scala-execution-context-global-179 - 残りのドット数: 269
+2026-07-09 13:56:56,994 [INFO] in scala-execution-context-global-47 - 残りのドット数: 268
+2026-07-09 13:56:57,234 [INFO] in scala-execution-context-global-47 - 残りのドット数: 267
+2026-07-09 13:56:57,475 [INFO] in scala-execution-context-global-179 - 残りのドット数: 266
+2026-07-09 13:56:57,827 [INFO] in scala-execution-context-global-179 - 残りのドット数: 265
+2026-07-09 13:56:58,067 [INFO] in scala-execution-context-global-179 - 残りのドット数: 264
+2026-07-09 13:57:00,484 [INFO] in scala-execution-context-global-47 - 残りのドット数: 263
+2026-07-09 13:57:00,723 [INFO] in scala-execution-context-global-47 - 残りのドット数: 262
+2026-07-09 13:57:00,964 [INFO] in scala-execution-context-global-179 - 残りのドット数: 261
+2026-07-09 13:57:01,202 [INFO] in scala-execution-context-global-47 - 残りのドット数: 260
+2026-07-09 13:57:01,442 [INFO] in scala-execution-context-global-47 - 残りのドット数: 259
+2026-07-09 13:57:01,684 [INFO] in scala-execution-context-global-47 - 残りのドット数: 258
+2026-07-09 13:57:01,923 [INFO] in scala-execution-context-global-47 - 残りのドット数: 257
+2026-07-09 13:57:01,955 [INFO] in scala-execution-context-global-47 - CHASE開始
+2026-07-09 13:57:02,163 [INFO] in scala-execution-context-global-179 - 残りのドット数: 256
+2026-07-09 13:57:02,211 [INFO] in scala-execution-context-global-179 - APPLEが (26, 14) に出現しました！
+2026-07-09 13:57:02,214 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@ca3db8a
+2026-07-09 13:57:02,468 [INFO] in scala-execution-context-global-179 - 残りのドット数: 255
+2026-07-09 13:57:04,275 [INFO] in scala-execution-context-global-47 - 残りのドット数: 254
+2026-07-09 13:57:04,611 [INFO] in scala-execution-context-global-47 - 残りのドット数: 253
+2026-07-09 13:57:04,851 [INFO] in scala-execution-context-global-47 - 残りのドット数: 252
+2026-07-09 13:57:05,092 [INFO] in scala-execution-context-global-47 - 残りのドット数: 251
+2026-07-09 13:57:05,331 [INFO] in scala-execution-context-global-179 - 残りのドット数: 250
+2026-07-09 13:57:05,573 [INFO] in scala-execution-context-global-179 - 残りのドット数: 249
+2026-07-09 13:57:05,811 [INFO] in scala-execution-context-global-179 - 残りのドット数: 248
+2026-07-09 13:57:06,051 [INFO] in scala-execution-context-global-179 - 残りのドット数: 247
+2026-07-09 13:57:06,291 [INFO] in scala-execution-context-global-47 - 残りのドット数: 246
+2026-07-09 13:57:06,530 [INFO] in scala-execution-context-global-47 - 残りのドット数: 245
+2026-07-09 13:57:06,771 [INFO] in scala-execution-context-global-179 - 残りのドット数: 244
+2026-07-09 13:57:07,013 [INFO] in scala-execution-context-global-47 - 残りのドット数: 243
+2026-07-09 13:57:07,252 [INFO] in scala-execution-context-global-179 - 残りのドット数: 242
+2026-07-09 13:57:07,492 [INFO] in scala-execution-context-global-179 - 残りのドット数: 241
+2026-07-09 13:57:07,731 [INFO] in scala-execution-context-global-179 - 残りのドット数: 240
+2026-07-09 13:57:07,972 [INFO] in scala-execution-context-global-179 - FEVER開始！
+2026-07-09 13:57:07,974 [INFO] in scala-execution-context-global-179 - 残りのドット数: 239
+2026-07-09 13:57:07,975 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@63f0bbf1
+2026-07-09 13:57:07,993 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7751ffb8
+2026-07-09 13:57:08,012 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@275f4181
+2026-07-09 13:57:08,033 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2d592afd
+2026-07-09 13:57:08,291 [INFO] in scala-execution-context-global-179 - 残りのドット数: 238
+2026-07-09 13:57:08,693 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6980f9c2
+2026-07-09 13:57:10,292 [INFO] in scala-execution-context-global-47 - 残りのドット数: 237
+2026-07-09 13:57:10,532 [INFO] in scala-execution-context-global-179 - 残りのドット数: 236
+2026-07-09 13:57:10,771 [INFO] in scala-execution-context-global-179 - 残りのドット数: 235
+2026-07-09 13:57:11,012 [INFO] in scala-execution-context-global-179 - 残りのドット数: 234
+2026-07-09 13:57:11,251 [INFO] in scala-execution-context-global-47 - 残りのドット数: 233
+2026-07-09 13:57:11,491 [INFO] in scala-execution-context-global-179 - 残りのドット数: 232
+2026-07-09 13:57:11,731 [INFO] in scala-execution-context-global-47 - 残りのドット数: 231
+2026-07-09 13:57:11,956 [INFO] in scala-execution-context-global-47 - フルーツが消えました
+2026-07-09 13:57:11,972 [INFO] in scala-execution-context-global-47 - 残りのドット数: 230
+2026-07-09 13:57:12,340 [INFO] in scala-execution-context-global-47 - YellowEnemyが巣に帰還し、復活しました
+2026-07-09 13:57:12,563 [INFO] in scala-execution-context-global-47 - 残りのドット数: 229
+2026-07-09 13:57:13,523 [INFO] in scala-execution-context-global-47 - 残りのドット数: 228
+2026-07-09 13:57:13,763 [INFO] in scala-execution-context-global-47 - 残りのドット数: 227
+2026-07-09 13:57:14,003 [INFO] in scala-execution-context-global-47 - 残りのドット数: 226
+2026-07-09 13:57:14,245 [INFO] in scala-execution-context-global-47 - 残りのドット数: 225
+2026-07-09 13:57:14,483 [INFO] in scala-execution-context-global-47 - 残りのドット数: 224
+2026-07-09 13:57:14,725 [INFO] in scala-execution-context-global-47 - 残りのドット数: 223
+2026-07-09 13:57:14,964 [INFO] in scala-execution-context-global-47 - 残りのドット数: 222
+2026-07-09 13:57:15,027 [INFO] in scala-execution-context-global-47 - FEVER終了
+2026-07-09 13:57:15,235 [INFO] in scala-execution-context-global-179 - 残りのドット数: 221
+2026-07-09 13:57:15,475 [INFO] in scala-execution-context-global-179 - 残りのドット数: 220
+2026-07-09 13:57:15,475 [INFO] in scala-execution-context-global-179 - ORANGEが (18, 4) に出現しました！
+2026-07-09 13:57:15,479 [INFO] in scala-execution-context-global-47 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@100264a5
+2026-07-09 13:57:15,731 [INFO] in scala-execution-context-global-47 - 残りのドット数: 219
+2026-07-09 13:57:15,971 [INFO] in scala-execution-context-global-47 - 残りのドット数: 218
+2026-07-09 13:57:16,211 [INFO] in scala-execution-context-global-47 - 残りのドット数: 217
+2026-07-09 13:57:16,451 [INFO] in scala-execution-context-global-47 - 残りのドット数: 216
+2026-07-09 13:57:16,691 [INFO] in scala-execution-context-global-47 - 残りのドット数: 215
+2026-07-09 13:57:16,932 [INFO] in scala-execution-context-global-47 - 残りのドット数: 214
+2026-07-09 13:57:17,123 [INFO] in scala-execution-context-global-179 - 💥敵に捕まった！
+2026-07-09 13:57:20,289 [INFO] in scala-execution-context-global-47 - ゲーム開始
+2026-07-09 13:57:20,403 [INFO] in scala-execution-context-global-179 - 残りのドット数: 213
+2026-07-09 13:57:20,644 [INFO] in scala-execution-context-global-179 - 残りのドット数: 212
+2026-07-09 13:57:21,603 [INFO] in scala-execution-context-global-179 - 残りのドット数: 211
+2026-07-09 13:57:21,843 [INFO] in scala-execution-context-global-179 - 残りのドット数: 210
+2026-07-09 13:57:22,083 [INFO] in scala-execution-context-global-179 - 残りのドット数: 209
+2026-07-09 13:57:22,324 [INFO] in scala-execution-context-global-179 - 残りのドット数: 208
+2026-07-09 13:57:22,564 [INFO] in scala-execution-context-global-179 - 残りのドット数: 207
+2026-07-09 13:57:22,804 [INFO] in scala-execution-context-global-179 - 残りのドット数: 206
+2026-07-09 13:57:23,044 [INFO] in scala-execution-context-global-47 - 残りのドット数: 205
+2026-07-09 13:57:24,243 [INFO] in scala-execution-context-global-47 - 残りのドット数: 204
+2026-07-09 13:57:24,483 [INFO] in scala-execution-context-global-47 - 残りのドット数: 203
+2026-07-09 13:57:24,725 [INFO] in scala-execution-context-global-179 - 残りのドット数: 202
+2026-07-09 13:57:24,963 [INFO] in scala-execution-context-global-179 - 残りのドット数: 201
+2026-07-09 13:57:25,205 [INFO] in scala-execution-context-global-47 - 残りのドット数: 200
+2026-07-09 13:57:25,445 [INFO] in scala-execution-context-global-179 - 残りのドット数: 199
+2026-07-09 13:57:25,685 [INFO] in scala-execution-context-global-179 - 残りのドット数: 198
+2026-07-09 13:57:26,646 [INFO] in scala-execution-context-global-179 - 残りのドット数: 197
+2026-07-09 13:57:26,884 [INFO] in scala-execution-context-global-179 - 残りのドット数: 196
+2026-07-09 13:57:27,125 [INFO] in scala-execution-context-global-47 - 残りのドット数: 195
+2026-07-09 13:57:27,300 [INFO] in scala-execution-context-global-179 - CHASE開始
+2026-07-09 13:57:27,364 [INFO] in scala-execution-context-global-179 - 残りのドット数: 194
+2026-07-09 13:57:28,246 [INFO] in scala-execution-context-global-179 - フルーツが消えました
+2026-07-09 13:57:29,061 [INFO] in scala-execution-context-global-47 - 残りのドット数: 193
+2026-07-09 13:57:29,299 [INFO] in scala-execution-context-global-179 - FEVER開始！
+2026-07-09 13:57:29,299 [INFO] in scala-execution-context-global-179 - 残りのドット数: 192
+2026-07-09 13:57:29,732 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@37efd2ba
+2026-07-09 13:57:30,692 [INFO] in scala-execution-context-global-50 - 残りのドット数: 191
+2026-07-09 13:57:30,931 [INFO] in scala-execution-context-global-50 - 残りのドット数: 190
+2026-07-09 13:57:31,171 [INFO] in scala-execution-context-global-50 - 残りのドット数: 189
+2026-07-09 13:57:31,412 [INFO] in scala-execution-context-global-50 - 残りのドット数: 188
+2026-07-09 13:57:31,651 [INFO] in scala-execution-context-global-50 - 残りのドット数: 187
+2026-07-09 13:57:31,892 [INFO] in scala-execution-context-global-50 - 残りのドット数: 186
+2026-07-09 13:57:32,131 [INFO] in scala-execution-context-global-179 - 残りのドット数: 185
+2026-07-09 13:57:32,372 [INFO] in scala-execution-context-global-179 - 残りのドット数: 184
+2026-07-09 13:57:32,372 [INFO] in scala-execution-context-global-179 - GRAPEが (14, 4) に出現しました！
+2026-07-09 13:57:32,373 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@46b71814
+2026-07-09 13:57:32,627 [INFO] in scala-execution-context-global-179 - 残りのドット数: 183
+2026-07-09 13:57:32,693 [INFO] in scala-execution-context-global-179 - BlueEnemyが巣に帰還し、復活しました
+2026-07-09 13:57:33,588 [INFO] in scala-execution-context-global-179 - 残りのドット数: 182
+2026-07-09 13:57:33,828 [INFO] in scala-execution-context-global-179 - 残りのドット数: 181
+2026-07-09 13:57:36,319 [INFO] in scala-execution-context-global-179 - FEVER終了
+2026-07-09 13:57:36,452 [INFO] in scala-execution-context-global-50 - 残りのドット数: 180
+2026-07-09 13:57:36,692 [INFO] in scala-execution-context-global-50 - 残りのドット数: 179
+2026-07-09 13:57:36,933 [INFO] in scala-execution-context-global-50 - 残りのドット数: 178
+2026-07-09 13:57:37,316 [INFO] in scala-execution-context-global-179 - 残りのドット数: 177
+2026-07-09 13:57:37,555 [INFO] in scala-execution-context-global-50 - 残りのドット数: 176
+2026-07-09 13:57:37,797 [INFO] in scala-execution-context-global-50 - 残りのドット数: 175
+2026-07-09 13:57:38,276 [INFO] in scala-execution-context-global-179 - 残りのドット数: 174
+2026-07-09 13:57:38,517 [INFO] in scala-execution-context-global-50 - 残りのドット数: 173
+2026-07-09 13:57:38,756 [INFO] in scala-execution-context-global-179 - 残りのドット数: 172
+2026-07-09 13:57:38,997 [INFO] in scala-execution-context-global-50 - 残りのドット数: 171
+2026-07-09 13:57:39,237 [INFO] in scala-execution-context-global-50 - 残りのドット数: 170
+2026-07-09 13:57:39,477 [INFO] in scala-execution-context-global-50 - 残りのドット数: 169
+2026-07-09 13:57:39,652 [INFO] in scala-execution-context-global-50 - 💥敵に捕まった！
+2026-07-09 13:57:40,627 [INFO] in scala-execution-context-global-50 - 💀 敵に捕まりました...ゲームオーバー画面へ遷移します。
+2026-07-09 13:57:40,672 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@14a95d54
+2026-07-09 13:57:40,687 [INFO] in scala-execution-context-global-179 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6482d558
+2026-07-09 13:57:40,767 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 6752 userid: 877770886
+2026-07-09 13:57:40,775 [INFO] in scala-execution-context-global-50 - [error] com.jpro.JS - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-09 13:57:45,286 [INFO] in scala-execution-context-global-50 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 13:57:45,370 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 7220 userid: 877770886
+2026-07-09 13:57:48,221 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3ef1f771
+2026-07-09 13:57:48,283 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 7532 userid: 877770886
+2026-07-09 13:57:59,716 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,718 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,721 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,725 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,728 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,731 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,733 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,736 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,739 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,742 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,744 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,748 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,764 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,766 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,769 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,772 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,774 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,777 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,781 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,783 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,786 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,790 [INFO] in scala-execution-context-global-50 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 13:57:59,792 [INFO] in scala-execution-context-global-50 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 13:57:59,795 [INFO] in scala-execution-context-global-50 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 13:57:59,805 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@370ed5d7
+2026-07-09 13:57:59,858 [INFO] in scala-execution-context-global-50 - 残りのドット数: 305
+2026-07-09 13:57:59,860 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@460d477c
+2026-07-09 13:57:59,895 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@56f63251
+2026-07-09 13:57:59,927 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4eb9ffc4
+2026-07-09 13:57:59,958 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7566381
+2026-07-09 13:57:59,989 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@46c38f4
+2026-07-09 13:58:00,009 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@24a93e20
+2026-07-09 13:58:00,027 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@43bf3d73
+2026-07-09 13:58:00,045 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@14e73ecf
+2026-07-09 13:58:00,158 [INFO] in scala-execution-context-global-179 - [info] com.jpro.JS - received msg: new MainID: 8572 userid: 877770886
+2026-07-09 13:58:02,631 [INFO] in scala-execution-context-global-179 - ゲーム開始
+2026-07-09 13:58:02,756 [INFO] in scala-execution-context-global-179 - 残りのドット数: 304
+2026-07-09 13:58:02,996 [INFO] in scala-execution-context-global-179 - 残りのドット数: 303
+2026-07-09 13:58:03,238 [INFO] in scala-execution-context-global-179 - 残りのドット数: 302
+2026-07-09 13:58:03,476 [INFO] in scala-execution-context-global-50 - 残りのドット数: 301
+2026-07-09 13:58:03,717 [INFO] in scala-execution-context-global-50 - 残りのドット数: 300
+2026-07-09 13:58:03,957 [INFO] in scala-execution-context-global-50 - 残りのドット数: 299
+2026-07-09 13:58:04,197 [INFO] in scala-execution-context-global-50 - 残りのドット数: 298
+2026-07-09 13:58:04,437 [INFO] in scala-execution-context-global-50 - 残りのドット数: 297
+2026-07-09 13:58:04,677 [INFO] in scala-execution-context-global-50 - 残りのドット数: 296
+2026-07-09 13:58:04,917 [INFO] in scala-execution-context-global-50 - 残りのドット数: 295
+2026-07-09 13:58:05,157 [INFO] in scala-execution-context-global-50 - 残りのドット数: 294
+2026-07-09 13:58:05,396 [INFO] in scala-execution-context-global-179 - 残りのドット数: 293
+2026-07-09 13:58:05,636 [INFO] in scala-execution-context-global-50 - 残りのドット数: 292
+2026-07-09 13:58:05,942 [INFO] in scala-execution-context-global-50 - 残りのドット数: 291
+2026-07-09 13:58:06,181 [INFO] in scala-execution-context-global-50 - 残りのドット数: 290
+2026-07-09 13:58:06,421 [INFO] in scala-execution-context-global-50 - 残りのドット数: 289
+2026-07-09 13:58:06,661 [INFO] in scala-execution-context-global-179 - 残りのドット数: 288
+2026-07-09 13:58:06,901 [INFO] in scala-execution-context-global-179 - 残りのドット数: 287
+2026-07-09 13:58:07,141 [INFO] in scala-execution-context-global-50 - 残りのドット数: 286
+2026-07-09 13:58:07,381 [INFO] in scala-execution-context-global-50 - 残りのドット数: 285
+2026-07-09 13:58:07,621 [INFO] in scala-execution-context-global-50 - 残りのドット数: 284
+2026-07-09 13:58:07,861 [INFO] in scala-execution-context-global-50 - 残りのドット数: 283
+2026-07-09 13:58:08,101 [INFO] in scala-execution-context-global-179 - 残りのドット数: 282
+2026-07-09 13:58:08,342 [INFO] in scala-execution-context-global-179 - 残りのドット数: 281
+2026-07-09 13:58:08,581 [INFO] in scala-execution-context-global-179 - 残りのドット数: 280
+2026-07-09 13:58:08,820 [INFO] in scala-execution-context-global-50 - 残りのドット数: 279
+2026-07-09 13:58:09,060 [INFO] in scala-execution-context-global-179 - 残りのドット数: 278
+2026-07-09 13:58:09,302 [INFO] in scala-execution-context-global-50 - 残りのドット数: 277
+2026-07-09 13:58:09,541 [INFO] in scala-execution-context-global-50 - 残りのドット数: 276
+2026-07-09 13:58:09,637 [INFO] in scala-execution-context-global-50 - CHASE開始
+2026-07-09 13:58:09,780 [INFO] in scala-execution-context-global-50 - 残りのドット数: 275
+2026-07-09 13:58:10,021 [INFO] in scala-execution-context-global-179 - 残りのドット数: 274
+2026-07-09 13:58:10,262 [INFO] in scala-execution-context-global-179 - 残りのドット数: 273
+2026-07-09 13:58:10,501 [INFO] in scala-execution-context-global-179 - 残りのドット数: 272
+2026-07-09 13:58:10,742 [INFO] in scala-execution-context-global-179 - 残りのドット数: 271
+2026-07-09 13:58:10,981 [INFO] in scala-execution-context-global-179 - 残りのドット数: 270
+2026-07-09 13:58:11,685 [INFO] in scala-execution-context-global-179 - 残りのドット数: 269
+2026-07-09 13:58:11,925 [INFO] in scala-execution-context-global-179 - 残りのドット数: 268
+2026-07-09 13:58:12,165 [INFO] in scala-execution-context-global-179 - FEVER開始！
+2026-07-09 13:58:12,165 [INFO] in scala-execution-context-global-179 - 残りのドット数: 267
+2026-07-09 13:58:12,166 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1f06f602
+2026-07-09 13:58:12,186 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4bc01a51
+2026-07-09 13:58:12,205 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@64a116f1
+2026-07-09 13:58:12,226 [INFO] in scala-execution-context-global-50 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@231beae6
+2026-07-09 13:58:12,485 [INFO] in scala-execution-context-global-50 - 残りのドット数: 266
+2026-07-09 13:58:12,772 [INFO] in scala-execution-context-global-179 - 残りのドット数: 265
+2026-07-09 13:58:13,013 [INFO] in scala-execution-context-global-50 - 残りのドット数: 264
+2026-07-09 13:58:13,253 [INFO] in scala-execution-context-global-179 - 残りのドット数: 263
+2026-07-09 13:58:13,493 [INFO] in scala-execution-context-global-179 - 残りのドット数: 262
+2026-07-09 13:58:13,733 [INFO] in scala-execution-context-global-179 - 残りのドット数: 261
+2026-07-09 13:58:13,973 [INFO] in scala-execution-context-global-179 - 残りのドット数: 260
+2026-07-09 13:58:13,973 [INFO] in scala-execution-context-global-179 - GRAPEが (21, 10) に出現しました！
+2026-07-09 13:58:14,213 [INFO] in scala-execution-context-global-179 - 残りのドット数: 259
+2026-07-09 13:58:16,133 [INFO] in scala-execution-context-global-50 - 残りのドット数: 258
+2026-07-09 13:58:16,373 [INFO] in scala-execution-context-global-50 - 残りのドット数: 257
+2026-07-09 13:58:16,614 [INFO] in scala-execution-context-global-50 - 残りのドット数: 256
+2026-07-09 13:58:16,854 [INFO] in scala-execution-context-global-50 - 残りのドット数: 255
+2026-07-09 13:58:17,093 [INFO] in scala-execution-context-global-179 - 残りのドット数: 254
+2026-07-09 13:58:17,333 [INFO] in scala-execution-context-global-50 - 残りのドット数: 253
+2026-07-09 13:58:17,574 [INFO] in scala-execution-context-global-50 - 残りのドット数: 252
+2026-07-09 13:58:17,813 [INFO] in scala-execution-context-global-50 - 残りのドット数: 251
+2026-07-09 13:58:18,053 [INFO] in scala-execution-context-global-50 - 残りのドット数: 250
+2026-07-09 13:58:18,294 [INFO] in scala-execution-context-global-50 - 残りのドット数: 249
+2026-07-09 13:58:18,534 [INFO] in scala-execution-context-global-50 - 残りのドット数: 248
+2026-07-09 13:58:18,774 [INFO] in scala-execution-context-global-50 - 残りのドット数: 247
+2026-07-09 13:58:19,013 [INFO] in scala-execution-context-global-50 - 残りのドット数: 246
+2026-07-09 13:58:19,202 [INFO] in scala-execution-context-global-50 - FEVER終了
+2026-07-09 13:58:19,334 [INFO] in scala-execution-context-global-50 - 残りのドット数: 245
+2026-07-09 13:58:19,573 [INFO] in scala-execution-context-global-50 - 残りのドット数: 244
+2026-07-09 13:58:19,814 [INFO] in scala-execution-context-global-50 - 残りのドット数: 243
+2026-07-09 13:58:20,053 [INFO] in scala-execution-context-global-50 - 残りのドット数: 242
+2026-07-09 13:58:20,293 [INFO] in scala-execution-context-global-50 - 残りのドット数: 241
+2026-07-09 13:58:20,534 [INFO] in scala-execution-context-global-179 - 残りのドット数: 240
+2026-07-09 13:58:20,773 [INFO] in scala-execution-context-global-179 - 残りのドット数: 239
+2026-07-09 13:58:21,013 [INFO] in scala-execution-context-global-50 - 残りのドット数: 238
+2026-07-09 13:58:21,253 [INFO] in scala-execution-context-global-179 - 残りのドット数: 237
+2026-07-09 13:58:21,494 [INFO] in scala-execution-context-global-179 - 残りのドット数: 236
+2026-07-09 13:58:21,733 [INFO] in scala-execution-context-global-50 - 残りのドット数: 235
+2026-07-09 13:58:21,973 [INFO] in scala-execution-context-global-179 - 残りのドット数: 234
+2026-07-09 13:58:22,214 [INFO] in scala-execution-context-global-50 - 残りのドット数: 233
+2026-07-09 13:58:22,453 [INFO] in scala-execution-context-global-50 - 残りのドット数: 232
+2026-07-09 13:58:22,693 [INFO] in scala-execution-context-global-50 - 残りのドット数: 231
+2026-07-09 13:58:22,933 [INFO] in scala-execution-context-global-50 - 残りのドット数: 230
+2026-07-09 13:58:23,173 [INFO] in scala-execution-context-global-50 - 残りのドット数: 229
+2026-07-09 13:58:23,414 [INFO] in scala-execution-context-global-50 - 残りのドット数: 228
+2026-07-09 13:58:23,653 [INFO] in scala-execution-context-global-50 - 残りのドット数: 227
+2026-07-09 13:58:23,654 [INFO] in scala-execution-context-global-50 - フルーツが消えました
+2026-07-09 13:58:23,894 [INFO] in scala-execution-context-global-179 - 残りのドット数: 226
+2026-07-09 13:58:24,133 [INFO] in scala-execution-context-global-47 - 残りのドット数: 225
+2026-07-09 13:58:24,374 [INFO] in scala-execution-context-global-179 - 残りのドット数: 224
+2026-07-09 13:58:24,614 [INFO] in scala-execution-context-global-179 - 残りのドット数: 223
+2026-07-09 13:58:24,853 [INFO] in scala-execution-context-global-179 - 残りのドット数: 222
+2026-07-09 13:58:25,094 [INFO] in scala-execution-context-global-47 - 残りのドット数: 221
+2026-07-09 13:58:25,334 [INFO] in scala-execution-context-global-47 - 残りのドット数: 220
+2026-07-09 13:58:25,573 [INFO] in scala-execution-context-global-47 - 残りのドット数: 219
+2026-07-09 13:58:25,813 [INFO] in scala-execution-context-global-47 - 残りのドット数: 218
+2026-07-09 13:58:26,053 [INFO] in scala-execution-context-global-179 - 残りのドット数: 217
+2026-07-09 13:58:26,294 [INFO] in scala-execution-context-global-47 - 残りのドット数: 216
+2026-07-09 13:58:26,534 [INFO] in scala-execution-context-global-179 - 残りのドット数: 215
+2026-07-09 13:58:26,773 [INFO] in scala-execution-context-global-179 - 残りのドット数: 214
+2026-07-09 13:58:27,014 [INFO] in scala-execution-context-global-179 - 残りのドット数: 213
+2026-07-09 13:58:27,253 [INFO] in scala-execution-context-global-179 - 残りのドット数: 212
+2026-07-09 13:58:27,494 [INFO] in scala-execution-context-global-47 - 残りのドット数: 211
+2026-07-09 13:58:27,733 [INFO] in scala-execution-context-global-179 - 残りのドット数: 210
+2026-07-09 13:58:27,733 [INFO] in scala-execution-context-global-179 - ORANGEが (4, 1) に出現しました！
+2026-07-09 13:58:27,974 [INFO] in scala-execution-context-global-179 - 残りのドット数: 209
+2026-07-09 13:58:28,213 [INFO] in scala-execution-context-global-179 - 残りのドット数: 208
+2026-07-09 13:58:28,454 [INFO] in scala-execution-context-global-47 - 残りのドット数: 207
+2026-07-09 13:58:28,694 [INFO] in scala-execution-context-global-47 - 残りのドット数: 206
+2026-07-09 13:58:28,934 [INFO] in scala-execution-context-global-179 - 残りのドット数: 205
+2026-07-09 13:58:29,174 [INFO] in scala-execution-context-global-179 - 残りのドット数: 204
+2026-07-09 13:58:29,413 [INFO] in scala-execution-context-global-179 - 残りのドット数: 203
+2026-07-09 13:58:29,637 [INFO] in scala-execution-context-global-47 - SCATTER開始
+2026-07-09 13:58:29,653 [INFO] in scala-execution-context-global-179 - 残りのドット数: 202
+2026-07-09 13:58:30,038 [INFO] in scala-execution-context-global-179 - 残りのドット数: 201
+2026-07-09 13:58:30,277 [INFO] in scala-execution-context-global-47 - 残りのドット数: 200
+2026-07-09 13:58:30,518 [INFO] in scala-execution-context-global-179 - 残りのドット数: 199
+2026-07-09 13:58:30,997 [INFO] in scala-execution-context-global-179 - 残りのドット数: 198
+2026-07-09 13:58:31,238 [INFO] in scala-execution-context-global-179 - 残りのドット数: 197
+2026-07-09 13:58:31,477 [INFO] in scala-execution-context-global-179 - 残りのドット数: 196
+2026-07-09 13:58:31,718 [INFO] in scala-execution-context-global-179 - 残りのドット数: 195
+2026-07-09 13:58:32,917 [INFO] in scala-execution-context-global-47 - 残りのドット数: 194
+2026-07-09 13:58:33,158 [INFO] in scala-execution-context-global-179 - 残りのドット数: 193
+2026-07-09 13:58:33,399 [INFO] in scala-execution-context-global-179 - 残りのドット数: 192
+2026-07-09 13:58:33,639 [INFO] in scala-execution-context-global-179 - 残りのドット数: 191
+2026-07-09 13:58:36,646 [INFO] in scala-execution-context-global-47 - CHASE開始
+2026-07-09 13:58:36,999 [INFO] in scala-execution-context-global-47 - ORANGEを食べた！ +500点
+2026-07-09 13:58:40,118 [INFO] in scala-execution-context-global-47 - 残りのドット数: 190
+2026-07-09 13:58:40,357 [INFO] in scala-execution-context-global-47 - 残りのドット数: 189
+2026-07-09 13:58:40,597 [INFO] in scala-execution-context-global-47 - 残りのドット数: 188
+2026-07-09 13:58:40,837 [INFO] in scala-execution-context-global-47 - 残りのドット数: 187
+2026-07-09 13:58:41,077 [INFO] in scala-execution-context-global-47 - 残りのドット数: 186
+2026-07-09 13:58:41,318 [INFO] in scala-execution-context-global-179 - 残りのドット数: 185
+2026-07-09 13:58:41,318 [INFO] in scala-execution-context-global-179 - ORANGEが (10, 20) に出現しました！
+2026-07-09 13:58:41,558 [INFO] in scala-execution-context-global-47 - 残りのドット数: 184
+2026-07-09 13:58:42,486 [INFO] in scala-execution-context-global-47 - 💥敵に捕まった！
+2026-07-09 13:58:47,635 [INFO] in scala-execution-context-global-47 - ゲーム開始
+2026-07-09 13:58:51,798 [INFO] in scala-execution-context-global-179 - 残りのドット数: 183
+2026-07-09 13:58:52,038 [INFO] in scala-execution-context-global-47 - 残りのドット数: 182
+2026-07-09 13:58:52,278 [INFO] in scala-execution-context-global-179 - 残りのドット数: 181
+2026-07-09 13:58:53,240 [INFO] in scala-execution-context-global-179 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 13:58:53,240 [INFO] in scala-execution-context-global-179 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-09 13:58:53,240 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - startTime      : Thu Jul 09 13:58:53 JST 2026      
+2026-07-09 13:58:53,240 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.116 
+2026-07-09 13:58:53,240 [INFO] in scala-execution-context-global-179 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2026-07-09 13:58:53,241 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-09 13:58:53,241 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-09 13:58:53,241 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - raw            : 74910093
+2026-07-09 13:58:53,241 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - zipped         : 19980754
+2026-07-09 13:58:53,241 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 13:58:54,646 [INFO] in scala-execution-context-global-2759 - CHASE開始
+2026-07-09 13:58:56,055 [INFO] in scala-execution-context-global-2759 - フルーツが消えました
+2026-07-09 13:58:56,348 [INFO] in scala-execution-context-global-2759 - [info] c.jpro - application requested: default
+2026-07-09 13:58:56,349 [INFO] in scala-execution-context-global-2759 - [info] c.jpro - Creating Application: default
+2026-07-09 13:58:56,349 [INFO] in scala-execution-context-global-2759 - [info] c.jpro - remoteAddress 192.168.102.6
+2026-07-09 13:58:56,349 [INFO] in scala-execution-context-global-2759 - [info] c.jpro - host          192.168.102.19:8080
+2026-07-09 13:58:56,349 [INFO] in scala-execution-context-global-2759 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 13:58:56,389 [INFO] in scala-execution-context-global-2757 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 13:58:56,489 [INFO] in scala-execution-context-global-2758 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 1551483153
+2026-07-09 14:54:53,410 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2026-07-09 14:54:53,411 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2026-07-09 14:54:53,486 [INFO] in scala-execution-context-global-50 - [warn] javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @29b32a0d'
+2026-07-09 14:54:53,979 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.Initializer$ - JavaFX version: 18.0.1-jpro+0-2022-04-04-072947
+2026-07-09 14:54:54,005 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.Initializer$ - finished init!
+2026-07-09 14:54:54,313 [INFO] in scala-execution-context-global-50 - [info] c.jpro - application requested: default
+2026-07-09 14:54:54,319 [INFO] in scala-execution-context-global-50 - [info] c.jpro - Creating Application: default
+2026-07-09 14:54:54,321 [INFO] in scala-execution-context-global-50 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2026-07-09 14:54:54,322 [INFO] in scala-execution-context-global-50 - [info] c.jpro - host          localhost:8080
+2026-07-09 14:54:54,322 [INFO] in scala-execution-context-global-50 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 14:54:54,593 [INFO] in scala-execution-context-global-50 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 14:54:55,197 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 1163765533
+2026-07-09 14:56:10,078 [INFO] in scala-execution-context-global-50 - [info] c.jpro - application requested: default
+2026-07-09 14:56:10,078 [INFO] in scala-execution-context-global-50 - [info] c.jpro - Creating Application: default
+2026-07-09 14:56:10,079 [INFO] in scala-execution-context-global-50 - [info] c.jpro - remoteAddress 192.168.102.6
+2026-07-09 14:56:10,079 [INFO] in scala-execution-context-global-50 - [info] c.jpro - host          192.168.102.19:8080
+2026-07-09 14:56:10,079 [INFO] in scala-execution-context-global-47 - [info] c.jpro - uri           /app/ws/default
+2026-07-09 14:56:10,114 [INFO] in scala-execution-context-global-47 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 14:56:10,192 [INFO] in scala-execution-context-global-50 - [info] com.jpro.JS - received msg: new MainID: 437 userid: 553822526
+2026-07-09 14:56:16,293 [INFO] in scala-execution-context-global-47 - [warn] c.j.i.s.ViewSerializerActor - Unexpected message form client, closing session.
+2026-07-09 14:56:16,297 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 14:56:16,297 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-09 14:56:16,308 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - startTime      : Thu Jul 09 14:56:16 JST 2026      
+2026-07-09 14:56:16,308 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.001 
+2026-07-09 14:56:16,308 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2026-07-09 14:56:16,309 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-09 14:56:16,309 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-09 14:56:16,309 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - raw            : 3643279
+2026-07-09 14:56:16,309 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.ViewInfo$ - zipped         : 923449
+2026-07-09 14:56:16,310 [INFO] in scala-execution-context-global-50 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 14:56:17,293 [INFO] in scala-execution-context-global-188 - [info] c.j.i.c.InstanceImpl - closing window!
+2026-07-09 14:56:18,529 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@139d0d82
+2026-07-09 14:56:18,618 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5e48f29
+2026-07-09 14:56:18,678 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3cf6b3e6
+2026-07-09 14:56:18,770 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@ff1beb3
+2026-07-09 14:56:19,190 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@534bf2e4
+2026-07-09 14:56:19,221 [INFO] in scala-execution-context-global-188 - [info] com.jpro.JS - received msg: new MainID: 930 userid: 553822526
+2026-07-09 14:56:33,426 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,428 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,431 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,436 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,438 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,442 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,446 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,451 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,460 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,465 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,467 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,471 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,518 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,520 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,524 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,528 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,530 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,533 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,536 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,538 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,542 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,546 [INFO] in scala-execution-context-global-188 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:56:33,548 [INFO] in scala-execution-context-global-188 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:56:33,552 [INFO] in scala-execution-context-global-188 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:56:33,583 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@49a87170
+2026-07-09 14:56:33,658 [INFO] in scala-execution-context-global-188 - 残りのドット数: 305
+2026-07-09 14:56:33,669 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@133a7c69
+2026-07-09 14:56:33,708 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@765b4653
+2026-07-09 14:56:33,749 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@5392770c
+2026-07-09 14:56:33,791 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@c325462
+2026-07-09 14:56:33,830 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2708bab0
+2026-07-09 14:56:33,850 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@e96147
+2026-07-09 14:56:33,870 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@6d7a1583
+2026-07-09 14:56:33,890 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@1c2eb741
+2026-07-09 14:56:34,050 [INFO] in scala-execution-context-global-188 - [info] com.jpro.JS - received msg: new MainID: 1790 userid: 553822526
+2026-07-09 14:56:37,862 [INFO] in scala-execution-context-global-188 - ゲーム開始
+2026-07-09 14:56:37,982 [INFO] in scala-execution-context-global-188 - 残りのドット数: 304
+2026-07-09 14:56:38,222 [INFO] in scala-execution-context-global-188 - 残りのドット数: 303
+2026-07-09 14:56:38,462 [INFO] in scala-execution-context-global-188 - 残りのドット数: 302
+2026-07-09 14:56:38,703 [INFO] in scala-execution-context-global-188 - 残りのドット数: 301
+2026-07-09 14:56:38,942 [INFO] in scala-execution-context-global-188 - 残りのドット数: 300
+2026-07-09 14:56:39,181 [INFO] in scala-execution-context-global-188 - 残りのドット数: 299
+2026-07-09 14:56:39,422 [INFO] in scala-execution-context-global-188 - 残りのドット数: 298
+2026-07-09 14:56:39,662 [INFO] in scala-execution-context-global-188 - 残りのドット数: 297
+2026-07-09 14:56:39,903 [INFO] in scala-execution-context-global-188 - 残りのドット数: 296
+2026-07-09 14:56:40,142 [INFO] in scala-execution-context-global-188 - 残りのドット数: 295
+2026-07-09 14:56:40,382 [INFO] in scala-execution-context-global-188 - 残りのドット数: 294
+2026-07-09 14:56:40,623 [INFO] in scala-execution-context-global-188 - 残りのドット数: 293
+2026-07-09 14:56:40,862 [INFO] in scala-execution-context-global-188 - 残りのドット数: 292
+2026-07-09 14:56:41,102 [INFO] in scala-execution-context-global-188 - 残りのドット数: 291
+2026-07-09 14:56:41,342 [INFO] in scala-execution-context-global-188 - 残りのドット数: 290
+2026-07-09 14:56:43,789 [INFO] in scala-execution-context-global-188 - 残りのドット数: 289
+2026-07-09 14:56:44,030 [INFO] in scala-execution-context-global-188 - FEVER開始！
+2026-07-09 14:56:44,037 [INFO] in scala-execution-context-global-188 - SE読込: /music/warp.mp3
+2026-07-09 14:56:44,037 [INFO] in scala-execution-context-global-188 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/warp.mp3
+2026-07-09 14:56:44,056 [INFO] in scala-execution-context-global-188 - SE読込: /music/enemydeadsound.mp3
+2026-07-09 14:56:44,056 [INFO] in scala-execution-context-global-188 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/enemydeadsound.mp3
+2026-07-09 14:56:44,067 [INFO] in scala-execution-context-global-189 - SE読込: /music/syujinkoudeadsound.mp3
+2026-07-09 14:56:44,068 [INFO] in scala-execution-context-global-189 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/syujinkoudeadsound.mp3
+2026-07-09 14:56:44,085 [INFO] in scala-execution-context-global-189 - SE読込: /music/fruiteatsound.mp3
+2026-07-09 14:56:44,085 [INFO] in scala-execution-context-global-189 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/fruiteatsound.mp3
+2026-07-09 14:56:44,093 [INFO] in scala-execution-context-global-189 - SE読込: /music/powerup.mp3
+2026-07-09 14:56:44,093 [INFO] in scala-execution-context-global-189 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/powerup.mp3
+2026-07-09 14:56:44,114 [INFO] in scala-execution-context-global-188 - SE読込: /music/gameover.mp3
+2026-07-09 14:56:44,115 [INFO] in scala-execution-context-global-188 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/gameover.mp3
+2026-07-09 14:56:44,132 [INFO] in scala-execution-context-global-188 - SE読込: /music/retry.mp3
+2026-07-09 14:56:44,132 [INFO] in scala-execution-context-global-188 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/retry.mp3
+2026-07-09 14:56:44,135 [INFO] in scala-execution-context-global-188 - SE読込: /music/select.mp3
+2026-07-09 14:56:44,135 [INFO] in scala-execution-context-global-188 - URL = file:/C:/pleiades/2026-03/workspace/Game/target/classes/music/select.mp3
+2026-07-09 14:56:44,135 [INFO] in scala-execution-context-global-189 - 残りのドット数: 288
+2026-07-09 14:56:44,137 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4cac16f4
+2026-07-09 14:56:44,156 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2b19a1ef
+2026-07-09 14:56:44,175 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2bd0d0a3
+2026-07-09 14:56:44,195 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@29afea78
+2026-07-09 14:56:44,446 [INFO] in scala-execution-context-global-189 - 残りのドット数: 287
+2026-07-09 14:56:44,735 [INFO] in scala-execution-context-global-189 - 残りのドット数: 286
+2026-07-09 14:56:44,862 [INFO] in scala-execution-context-global-189 - CHASE開始
+2026-07-09 14:56:44,974 [INFO] in scala-execution-context-global-189 - 残りのドット数: 285
+2026-07-09 14:56:45,214 [INFO] in scala-execution-context-global-189 - 残りのドット数: 284
+2026-07-09 14:56:45,455 [INFO] in scala-execution-context-global-189 - 残りのドット数: 283
+2026-07-09 14:56:45,694 [INFO] in scala-execution-context-global-189 - 残りのドット数: 282
+2026-07-09 14:56:45,934 [INFO] in scala-execution-context-global-189 - 残りのドット数: 281
+2026-07-09 14:56:46,175 [INFO] in scala-execution-context-global-189 - 残りのドット数: 280
+2026-07-09 14:56:46,414 [INFO] in scala-execution-context-global-189 - 残りのドット数: 279
+2026-07-09 14:56:46,654 [INFO] in scala-execution-context-global-189 - 残りのドット数: 278
+2026-07-09 14:56:46,894 [INFO] in scala-execution-context-global-189 - 残りのドット数: 277
+2026-07-09 14:56:47,134 [INFO] in scala-execution-context-global-189 - 残りのドット数: 276
+2026-07-09 14:56:47,374 [INFO] in scala-execution-context-global-189 - 残りのドット数: 275
+2026-07-09 14:56:47,614 [INFO] in scala-execution-context-global-189 - 残りのドット数: 274
+2026-07-09 14:56:47,854 [INFO] in scala-execution-context-global-189 - 残りのドット数: 273
+2026-07-09 14:56:48,094 [INFO] in scala-execution-context-global-188 - 残りのドット数: 272
+2026-07-09 14:56:48,334 [INFO] in scala-execution-context-global-188 - 残りのドット数: 271
+2026-07-09 14:56:48,574 [INFO] in scala-execution-context-global-188 - 残りのドット数: 270
+2026-07-09 14:56:48,814 [INFO] in scala-execution-context-global-188 - 残りのドット数: 269
+2026-07-09 14:56:49,054 [INFO] in scala-execution-context-global-188 - 残りのドット数: 268
+2026-07-09 14:56:49,294 [INFO] in scala-execution-context-global-188 - 残りのドット数: 267
+2026-07-09 14:56:49,534 [INFO] in scala-execution-context-global-188 - 残りのドット数: 266
+2026-07-09 14:56:49,774 [INFO] in scala-execution-context-global-188 - 残りのドット数: 265
+2026-07-09 14:56:50,014 [INFO] in scala-execution-context-global-188 - 残りのドット数: 264
+2026-07-09 14:56:50,255 [INFO] in scala-execution-context-global-188 - 残りのドット数: 263
+2026-07-09 14:56:50,494 [INFO] in scala-execution-context-global-188 - 残りのドット数: 262
+2026-07-09 14:56:50,734 [INFO] in scala-execution-context-global-188 - 残りのドット数: 261
+2026-07-09 14:56:50,974 [INFO] in scala-execution-context-global-188 - 残りのドット数: 260
+2026-07-09 14:56:50,997 [INFO] in scala-execution-context-global-188 - STRAWBERRYが (29, 2) に出現しました！
+2026-07-09 14:56:50,998 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3f27aa2f
+2026-07-09 14:56:51,167 [INFO] in scala-execution-context-global-188 - FEVER終了
+2026-07-09 14:56:51,261 [INFO] in scala-execution-context-global-188 - 残りのドット数: 259
+2026-07-09 14:56:51,502 [INFO] in scala-execution-context-global-188 - 残りのドット数: 258
+2026-07-09 14:56:51,742 [INFO] in scala-execution-context-global-188 - 残りのドット数: 257
+2026-07-09 14:56:51,983 [INFO] in scala-execution-context-global-188 - 残りのドット数: 256
+2026-07-09 14:56:52,222 [INFO] in scala-execution-context-global-188 - 残りのドット数: 255
+2026-07-09 14:56:53,102 [INFO] in scala-execution-context-global-188 - 残りのドット数: 254
+2026-07-09 14:56:53,342 [INFO] in scala-execution-context-global-188 - 残りのドット数: 253
+2026-07-09 14:56:53,582 [INFO] in scala-execution-context-global-188 - 残りのドット数: 252
+2026-07-09 14:56:53,822 [INFO] in scala-execution-context-global-188 - 残りのドット数: 251
+2026-07-09 14:56:54,062 [INFO] in scala-execution-context-global-188 - 残りのドット数: 250
+2026-07-09 14:56:54,302 [INFO] in scala-execution-context-global-188 - FEVER開始！
+2026-07-09 14:56:54,302 [INFO] in scala-execution-context-global-188 - 残りのドット数: 249
+2026-07-09 14:56:54,542 [INFO] in scala-execution-context-global-189 - 残りのドット数: 248
+2026-07-09 14:56:54,782 [INFO] in scala-execution-context-global-189 - 残りのドット数: 247
+2026-07-09 14:56:55,022 [INFO] in scala-execution-context-global-189 - 残りのドット数: 246
+2026-07-09 14:56:55,261 [INFO] in scala-execution-context-global-189 - 残りのドット数: 245
+2026-07-09 14:56:55,501 [INFO] in scala-execution-context-global-189 - 残りのドット数: 244
+2026-07-09 14:56:55,741 [INFO] in scala-execution-context-global-189 - 残りのドット数: 243
+2026-07-09 14:56:55,983 [INFO] in scala-execution-context-global-189 - 残りのドット数: 242
+2026-07-09 14:56:56,222 [INFO] in scala-execution-context-global-189 - 残りのドット数: 241
+2026-07-09 14:56:57,550 [INFO] in scala-execution-context-global-189 - 残りのドット数: 240
+2026-07-09 14:56:57,790 [INFO] in scala-execution-context-global-189 - 残りのドット数: 239
+2026-07-09 14:56:58,030 [INFO] in scala-execution-context-global-189 - 残りのドット数: 238
+2026-07-09 14:56:58,269 [INFO] in scala-execution-context-global-189 - 残りのドット数: 237
+2026-07-09 14:56:58,686 [INFO] in scala-execution-context-global-189 - 残りのドット数: 236
+2026-07-09 14:56:58,926 [INFO] in scala-execution-context-global-189 - 残りのドット数: 235
+2026-07-09 14:56:59,166 [INFO] in scala-execution-context-global-189 - 残りのドット数: 234
+2026-07-09 14:56:59,406 [INFO] in scala-execution-context-global-189 - 残りのドット数: 233
+2026-07-09 14:56:59,646 [INFO] in scala-execution-context-global-189 - 残りのドット数: 232
+2026-07-09 14:56:59,886 [INFO] in scala-execution-context-global-189 - 残りのドット数: 231
+2026-07-09 14:57:00,126 [INFO] in scala-execution-context-global-189 - 残りのドット数: 230
+2026-07-09 14:57:00,367 [INFO] in scala-execution-context-global-189 - 残りのドット数: 229
+2026-07-09 14:57:00,623 [INFO] in scala-execution-context-global-189 - フルーツが消えました
+2026-07-09 14:57:01,319 [INFO] in scala-execution-context-global-188 - FEVER終了
+2026-07-09 14:57:02,127 [INFO] in scala-execution-context-global-188 - 残りのドット数: 228
+2026-07-09 14:57:02,366 [INFO] in scala-execution-context-global-188 - 残りのドット数: 227
+2026-07-09 14:57:02,606 [INFO] in scala-execution-context-global-188 - 残りのドット数: 226
+2026-07-09 14:57:02,848 [INFO] in scala-execution-context-global-188 - 残りのドット数: 225
+2026-07-09 14:57:03,086 [INFO] in scala-execution-context-global-189 - 残りのドット数: 224
+2026-07-09 14:57:03,567 [INFO] in scala-execution-context-global-189 - 残りのドット数: 223
+2026-07-09 14:57:03,806 [INFO] in scala-execution-context-global-189 - 残りのドット数: 222
+2026-07-09 14:57:04,046 [INFO] in scala-execution-context-global-189 - 残りのドット数: 221
+2026-07-09 14:57:04,286 [INFO] in scala-execution-context-global-189 - 残りのドット数: 220
+2026-07-09 14:57:04,526 [INFO] in scala-execution-context-global-189 - 残りのドット数: 219
+2026-07-09 14:57:04,766 [INFO] in scala-execution-context-global-189 - 残りのドット数: 218
+2026-07-09 14:57:04,878 [INFO] in scala-execution-context-global-189 - SCATTER開始
+2026-07-09 14:57:05,006 [INFO] in scala-execution-context-global-189 - 残りのドット数: 217
+2026-07-09 14:57:05,246 [INFO] in scala-execution-context-global-189 - 残りのドット数: 216
+2026-07-09 14:57:05,983 [INFO] in scala-execution-context-global-189 - GRAPEが (25, 8) に出現しました！
+2026-07-09 14:57:05,989 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7f239d75
+2026-07-09 14:57:07,662 [INFO] in scala-execution-context-global-189 - 残りのドット数: 215
+2026-07-09 14:57:07,742 [INFO] in scala-execution-context-global-188 - 💥敵に捕まった！
+2026-07-09 14:57:09,704 [INFO] in scala-execution-context-global-188 - ゲーム開始
+2026-07-09 14:57:10,158 [INFO] in scala-execution-context-global-188 - 残りのドット数: 214
+2026-07-09 14:57:10,398 [INFO] in scala-execution-context-global-188 - 残りのドット数: 213
+2026-07-09 14:57:10,638 [INFO] in scala-execution-context-global-188 - 残りのドット数: 212
+2026-07-09 14:57:10,878 [INFO] in scala-execution-context-global-188 - 残りのドット数: 211
+2026-07-09 14:57:11,118 [INFO] in scala-execution-context-global-188 - 残りのドット数: 210
+2026-07-09 14:57:11,359 [INFO] in scala-execution-context-global-188 - 残りのドット数: 209
+2026-07-09 14:57:11,599 [INFO] in scala-execution-context-global-188 - 残りのドット数: 208
+2026-07-09 14:57:11,838 [INFO] in scala-execution-context-global-188 - 残りのドット数: 207
+2026-07-09 14:57:12,079 [INFO] in scala-execution-context-global-188 - 残りのドット数: 206
+2026-07-09 14:57:12,319 [INFO] in scala-execution-context-global-188 - 残りのドット数: 205
+2026-07-09 14:57:12,559 [INFO] in scala-execution-context-global-188 - 残りのドット数: 204
+2026-07-09 14:57:12,798 [INFO] in scala-execution-context-global-188 - 残りのドット数: 203
+2026-07-09 14:57:13,038 [INFO] in scala-execution-context-global-188 - 残りのドット数: 202
+2026-07-09 14:57:13,279 [INFO] in scala-execution-context-global-189 - 残りのドット数: 201
+2026-07-09 14:57:13,518 [INFO] in scala-execution-context-global-189 - 残りのドット数: 200
+2026-07-09 14:57:13,758 [INFO] in scala-execution-context-global-189 - 残りのドット数: 199
+2026-07-09 14:57:13,902 [INFO] in scala-execution-context-global-189 - 💥敵に捕まった！
+2026-07-09 14:57:15,485 [INFO] in scala-execution-context-global-189 - ゲーム開始
+2026-07-09 14:57:19,118 [INFO] in scala-execution-context-global-189 - フルーツが消えました
+2026-07-09 14:57:19,438 [INFO] in scala-execution-context-global-189 - 残りのドット数: 198
+2026-07-09 14:57:19,502 [INFO] in scala-execution-context-global-189 - 💥敵に捕まった！
+2026-07-09 14:57:20,471 [INFO] in scala-execution-context-global-189 - 💀 敵に捕まりました...ゲームオーバー画面へ遷移します。
+2026-07-09 14:57:20,540 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@166852eb
+2026-07-09 14:57:20,557 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@58ff4770
+2026-07-09 14:57:20,647 [INFO] in scala-execution-context-global-189 - [info] com.jpro.JS - received msg: new MainID: 5266 userid: 553822526
+2026-07-09 14:57:20,658 [INFO] in scala-execution-context-global-189 - [error] com.jpro.JS - received msg: Unexpected exception: DLinearGradient((0,0),(0,1),true,DCycle_NO_CYCLE,List((0,RGBA(1,0.37254902720451355,0.37254902720451355,1)), (1,RGBA(0.7764706015586853,0.1568627506494522,0.1568627506494522,1)))) (of class p.Data$DLinearGradient)
+2026-07-09 14:57:24,312 [INFO] in scala-execution-context-global-189 - 【成功】フォントを読み込みました。名前: PixelMplus12 Regular
+2026-07-09 14:57:24,393 [INFO] in scala-execution-context-global-189 - [info] com.jpro.JS - received msg: new MainID: 5740 userid: 553822526
+2026-07-09 14:57:27,082 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3f93362e
+2026-07-09 14:57:27,151 [INFO] in scala-execution-context-global-189 - [info] com.jpro.JS - received msg: new MainID: 6052 userid: 553822526
+2026-07-09 14:57:28,136 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,138 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,142 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,145 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,147 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,150 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,154 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,156 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,159 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,163 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,165 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,169 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,191 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,194 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,196 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,200 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,202 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,206 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,209 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,211 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,214 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,217 [INFO] in scala-execution-context-global-189 - FEVER画像読込成功: /picture/nari_EnemyFever.png
+2026-07-09 14:57:28,219 [INFO] in scala-execution-context-global-189 - DEAD画像読込成功: /picture/nari_EnemyDead.png
+2026-07-09 14:57:28,223 [INFO] in scala-execution-context-global-189 - 【成功】ステージ1用の画像を読み込みました！
+2026-07-09 14:57:28,239 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@326d889a
+2026-07-09 14:57:28,308 [INFO] in scala-execution-context-global-189 - 残りのドット数: 305
+2026-07-09 14:57:28,311 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@2e520982
+2026-07-09 14:57:28,353 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@339a7c9e
+2026-07-09 14:57:28,389 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@9ae1146
+2026-07-09 14:57:28,428 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@273c2e45
+2026-07-09 14:57:28,464 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@665d1317
+2026-07-09 14:57:28,484 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@44d31326
+2026-07-09 14:57:28,503 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@3906ca48
+2026-07-09 14:57:28,525 [INFO] in scala-execution-context-global-189 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@15315980
+2026-07-09 14:57:28,629 [INFO] in scala-execution-context-global-189 - [info] com.jpro.JS - received msg: new MainID: 7098 userid: 553822526
+2026-07-09 14:57:29,756 [INFO] in scala-execution-context-global-189 - ゲーム開始
+2026-07-09 14:57:29,871 [INFO] in scala-execution-context-global-189 - 残りのドット数: 304
+2026-07-09 14:57:30,111 [INFO] in scala-execution-context-global-189 - 残りのドット数: 303
+2026-07-09 14:57:30,350 [INFO] in scala-execution-context-global-189 - 残りのドット数: 302
+2026-07-09 14:57:30,591 [INFO] in scala-execution-context-global-189 - 残りのドット数: 301
+2026-07-09 14:57:30,831 [INFO] in scala-execution-context-global-189 - 残りのドット数: 300
+2026-07-09 14:57:31,070 [INFO] in scala-execution-context-global-189 - 残りのドット数: 299
+2026-07-09 14:57:31,312 [INFO] in scala-execution-context-global-189 - 残りのドット数: 298
+2026-07-09 14:57:31,551 [INFO] in scala-execution-context-global-189 - 残りのドット数: 297
+2026-07-09 14:57:31,790 [INFO] in scala-execution-context-global-189 - 残りのドット数: 296
+2026-07-09 14:57:32,031 [INFO] in scala-execution-context-global-189 - 残りのドット数: 295
+2026-07-09 14:57:32,606 [INFO] in scala-execution-context-global-189 - 残りのドット数: 294
+2026-07-09 14:57:32,853 [INFO] in scala-execution-context-global-189 - 残りのドット数: 293
+2026-07-09 14:57:33,086 [INFO] in scala-execution-context-global-189 - 残りのドット数: 292
+2026-07-09 14:57:33,326 [INFO] in scala-execution-context-global-189 - 残りのドット数: 291
+2026-07-09 14:57:33,566 [INFO] in scala-execution-context-global-189 - 残りのドット数: 290
+2026-07-09 14:57:33,807 [INFO] in scala-execution-context-global-189 - 残りのドット数: 289
+2026-07-09 14:57:34,047 [INFO] in scala-execution-context-global-189 - 残りのドット数: 288
+2026-07-09 14:57:34,287 [INFO] in scala-execution-context-global-188 - 残りのドット数: 287
+2026-07-09 14:57:34,590 [INFO] in scala-execution-context-global-188 - 残りのドット数: 286
+2026-07-09 14:57:34,830 [INFO] in scala-execution-context-global-188 - 残りのドット数: 285
+2026-07-09 14:57:35,550 [INFO] in scala-execution-context-global-188 - 残りのドット数: 284
+2026-07-09 14:57:35,791 [INFO] in scala-execution-context-global-189 - 残りのドット数: 283
+2026-07-09 14:57:36,031 [INFO] in scala-execution-context-global-189 - 残りのドット数: 282
+2026-07-09 14:57:36,270 [INFO] in scala-execution-context-global-189 - 残りのドット数: 281
+2026-07-09 14:57:36,510 [INFO] in scala-execution-context-global-189 - 残りのドット数: 280
+2026-07-09 14:57:36,751 [INFO] in scala-execution-context-global-189 - 残りのドット数: 279
+2026-07-09 14:57:36,766 [INFO] in scala-execution-context-global-189 - CHASE開始
+2026-07-09 14:57:36,990 [INFO] in scala-execution-context-global-189 - 残りのドット数: 278
+2026-07-09 14:57:37,231 [INFO] in scala-execution-context-global-189 - 残りのドット数: 277
+2026-07-09 14:57:37,470 [INFO] in scala-execution-context-global-189 - 残りのドット数: 276
+2026-07-09 14:57:37,710 [INFO] in scala-execution-context-global-189 - 残りのドット数: 275
+2026-07-09 14:57:37,951 [INFO] in scala-execution-context-global-189 - 残りのドット数: 274
+2026-07-09 14:57:40,110 [INFO] in scala-execution-context-global-189 - 残りのドット数: 273
+2026-07-09 14:57:40,351 [INFO] in scala-execution-context-global-189 - 残りのドット数: 272
+2026-07-09 14:57:40,590 [INFO] in scala-execution-context-global-189 - 残りのドット数: 271
+2026-07-09 14:57:40,830 [INFO] in scala-execution-context-global-189 - 残りのドット数: 270
+2026-07-09 14:57:41,070 [INFO] in scala-execution-context-global-189 - 残りのドット数: 269
+2026-07-09 14:57:41,311 [INFO] in scala-execution-context-global-189 - 残りのドット数: 268
+2026-07-09 14:57:41,552 [INFO] in scala-execution-context-global-189 - 残りのドット数: 267
+2026-07-09 14:57:41,790 [INFO] in scala-execution-context-global-189 - 残りのドット数: 266
+2026-07-09 14:57:42,030 [INFO] in scala-execution-context-global-189 - 残りのドット数: 265
+2026-07-09 14:57:42,270 [INFO] in scala-execution-context-global-188 - 残りのドット数: 264
+2026-07-09 14:57:42,510 [INFO] in scala-execution-context-global-188 - FEVER開始！
+2026-07-09 14:57:42,510 [INFO] in scala-execution-context-global-188 - 残りのドット数: 263
+2026-07-09 14:57:42,511 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@7290ab99
+2026-07-09 14:57:42,536 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4542b2d3
+2026-07-09 14:57:42,556 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@c933403
+2026-07-09 14:57:42,574 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@4f6259f4
+2026-07-09 14:57:42,830 [INFO] in scala-execution-context-global-188 - 残りのドット数: 262
+2026-07-09 14:57:43,103 [INFO] in scala-execution-context-global-188 - 残りのドット数: 261
+2026-07-09 14:57:44,766 [INFO] in scala-execution-context-global-188 - APPLEが (23, 15) に出現しました！
+2026-07-09 14:57:44,771 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@46f903e
+2026-07-09 14:57:45,780 [INFO] in scala-execution-context-global-188 - [info] c.j.m.s.Util$ - workaround for image, lossless: true filetype: png img: javafx.scene.image.Image@24aeb9f5
+2026-07-09 14:57:47,263 [INFO] in scala-execution-context-global-188 - APPLEを食べた！ +700点
+2026-07-09 14:57:48,063 [INFO] in scala-execution-context-global-188 - 残りのドット数: 260
+2026-07-09 14:57:48,142 [INFO] in scala-execution-context-global-188 - BlueEnemyが巣に帰還し、復活しました
+2026-07-09 14:57:48,302 [INFO] in scala-execution-context-global-188 - 残りのドット数: 259
+2026-07-09 14:57:48,543 [INFO] in scala-execution-context-global-188 - 残りのドット数: 258
+2026-07-09 14:57:48,783 [INFO] in scala-execution-context-global-188 - 残りのドット数: 257
+2026-07-09 14:57:49,023 [INFO] in scala-execution-context-global-188 - 残りのドット数: 256
+2026-07-09 14:57:49,023 [INFO] in scala-execution-context-global-188 - GRAPEが (26, 10) に出現しました！
+2026-07-09 14:57:49,264 [INFO] in scala-execution-context-global-189 - 残りのドット数: 255
+2026-07-09 14:57:49,502 [INFO] in scala-execution-context-global-189 - 残りのドット数: 254
+2026-07-09 14:57:49,540 [INFO] in scala-execution-context-global-189 - FEVER終了
+2026-07-09 14:57:49,760 [INFO] in scala-execution-context-global-189 - 残りのドット数: 253
+2026-07-09 14:57:49,999 [INFO] in scala-execution-context-global-189 - 残りのドット数: 252
+2026-07-09 14:57:50,238 [INFO] in scala-execution-context-global-189 - 残りのドット数: 251
+2026-07-09 14:57:51,439 [INFO] in scala-execution-context-global-189 - 残りのドット数: 250
+2026-07-09 14:57:51,678 [INFO] in scala-execution-context-global-189 - 残りのドット数: 249
+2026-07-09 14:57:51,920 [INFO] in scala-execution-context-global-189 - 残りのドット数: 248
+2026-07-09 14:57:52,160 [INFO] in scala-execution-context-global-189 - 残りのドット数: 247
+2026-07-09 14:57:52,400 [INFO] in scala-execution-context-global-189 - 残りのドット数: 246
+2026-07-09 14:57:52,640 [INFO] in scala-execution-context-global-189 - 残りのドット数: 245
+2026-07-09 14:57:52,879 [INFO] in scala-execution-context-global-189 - 残りのドット数: 244
+2026-07-09 14:57:53,119 [INFO] in scala-execution-context-global-189 - 残りのドット数: 243
+2026-07-09 14:57:56,766 [INFO] in scala-execution-context-global-189 - SCATTER開始
+2026-07-09 14:57:57,199 [INFO] in scala-execution-context-global-189 - 残りのドット数: 242
+2026-07-09 14:57:57,438 [INFO] in scala-execution-context-global-189 - 残りのドット数: 241
+2026-07-09 14:57:57,679 [INFO] in scala-execution-context-global-189 - 残りのドット数: 240
+2026-07-09 14:57:57,918 [INFO] in scala-execution-context-global-189 - 残りのドット数: 239
+2026-07-09 14:57:58,159 [INFO] in scala-execution-context-global-189 - 残りのドット数: 238
+2026-07-09 14:57:58,398 [INFO] in scala-execution-context-global-189 - 残りのドット数: 237
+2026-07-09 14:57:58,639 [INFO] in scala-execution-context-global-189 - フルーツが消えました
+2026-07-09 14:57:58,783 [INFO] in scala-execution-context-global-189 - 残りのドット数: 236
+2026-07-09 14:57:59,023 [INFO] in scala-execution-context-global-189 - 残りのドット数: 235
+2026-07-09 14:57:59,262 [INFO] in scala-execution-context-global-189 - 残りのドット数: 234
+2026-07-09 14:57:59,503 [INFO] in scala-execution-context-global-189 - 残りのドット数: 233
+2026-07-09 14:57:59,743 [INFO] in scala-execution-context-global-189 - 残りのドット数: 232
+2026-07-09 14:57:59,982 [INFO] in scala-execution-context-global-189 - 残りのドット数: 231
+2026-07-09 14:58:00,223 [INFO] in scala-execution-context-global-189 - 残りのドット数: 230
+2026-07-09 14:58:00,463 [INFO] in scala-execution-context-global-189 - 残りのドット数: 229
+2026-07-09 14:58:00,703 [INFO] in scala-execution-context-global-189 - 残りのドット数: 228
+2026-07-09 14:58:00,943 [INFO] in scala-execution-context-global-189 - 残りのドット数: 227
+2026-07-09 14:58:01,183 [INFO] in scala-execution-context-global-189 - 残りのドット数: 226
+2026-07-09 14:58:01,424 [INFO] in scala-execution-context-global-189 - 残りのドット数: 225
+2026-07-09 14:58:01,663 [INFO] in scala-execution-context-global-189 - 残りのドット数: 224
+2026-07-09 14:58:01,903 [INFO] in scala-execution-context-global-189 - 残りのドット数: 223
+2026-07-09 14:58:02,143 [INFO] in scala-execution-context-global-189 - 残りのドット数: 222
+2026-07-09 14:58:02,384 [INFO] in scala-execution-context-global-189 - 残りのドット数: 221
+2026-07-09 14:58:02,623 [INFO] in scala-execution-context-global-189 - 残りのドット数: 220
+2026-07-09 14:58:02,863 [INFO] in scala-execution-context-global-189 - 残りのドット数: 219
+2026-07-09 14:58:03,103 [INFO] in scala-execution-context-global-189 - 残りのドット数: 218
+2026-07-09 14:58:03,344 [INFO] in scala-execution-context-global-189 - 残りのドット数: 217
+2026-07-09 14:58:03,504 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - startTime      : Thu Jul 09 14:58:03 JST 2026      
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.002 
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.001  
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-188 - [info] c.j.i.s.ViewInfo$ - raw            : 50210826
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-189 - [info] c.j.i.s.ViewInfo$ - zipped         : 13387352
+2026-07-09 14:58:03,505 [INFO] in scala-execution-context-global-189 - [info] c.j.i.s.ViewInfo$ - 
+2026-07-09 14:58:03,583 [INFO] in scala-execution-context-global-47 - 残りのドット数: 216
+2026-07-09 14:58:03,774 [INFO] in scala-execution-context-global-47 - CHASE開始
+2026-07-09 14:58:03,822 [INFO] in scala-execution-context-global-47 - 残りのドット数: 215
+2026-07-09 14:58:04,031 [INFO] in scala-execution-context-global-47 - ORANGEが (17, 15) に出現しました！
