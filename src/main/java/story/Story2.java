@@ -232,8 +232,8 @@ public class Story2 extends Application {
 				new Dialogue("わだたく", "えいっ", atacSound, Color.PINK),
 				new Dialogue("仙石さん", "ぐっ！？", aSound, Color.WHITE),
 				new Dialogue("仙石さん", "な、何だ今の一撃は…！", null, Color.WHITE),
-				new Dialogue("わだたく", "あそぼ？♪", shineSound, Color.RED),
-				new Dialogue("わだたく", "いっぱいあそぼ〜♪", shineSound, Color.RED),
+				new Dialogue("わだたく", "あそぼ？♪", shineSound, Color.PINK),
+				new Dialogue("わだたく", "いっぱいあそぼ〜♪", shineSound, Color.PINK),
 				new Dialogue("あにき", "そいつは俺のペットでな。", null, Color.RED),
 				new Dialogue("あにき", "強そうに見えないが、遊ばれたら最後だ。", jumpSound, Color.RED));
 
