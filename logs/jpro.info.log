@@ -6604,6 +6604,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.media.Aud
 =======
 >>>>>>> branch 'jpro' of https://github.com/hayakawa-rai/GameApplication.git
 >>>>>>> branch 'jpro' of https://github.com/hayakawa-rai/GameApplication.git
+<<<<<<< HEAD
 2026-07-10 16:56:04,043 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: default
 2026-07-10 16:56:04,044 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: default
 2026-07-10 16:56:04,044 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 192.168.24.87
@@ -6907,3 +6908,5 @@ Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.media.Aud
 2026-07-10 17:24:08,191 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 2245751
 2026-07-10 17:24:08,191 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
 2026-07-10 17:24:09,180 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+=======
+>>>>>>> branch 'jpro' of https://github.com/hayakawa-rai/GameApplication.git
